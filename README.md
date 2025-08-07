@@ -337,6 +337,18 @@ Clean Framework was developed through extensive collaboration with AI developmen
 
 If you find Clean Framework useful, please consider giving it a star on GitHub!
 
+Contributions are greatly appreciated! Whether it's fixing bugs, adding features, improving documentation, or sharing ideas - every contribution helps make Clean Framework better for the entire community.
+
+## 👥 Thanks To Our Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 ---
 
 **Clean Framework** - The first CSS framework engineered specifically for the AI-assisted development era. Built with ❤️ for developers and their AI coding companions.

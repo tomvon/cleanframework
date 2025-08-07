@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Framework - Complete Showcase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="clean-framework.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="cf-nav">
+        <div class="cf-container">
+            <div class="cf-nav-container">
+                <a href="#" class="cf-nav-brand">Clean Framework</a>
+                <button class="cf-nav-toggle" onclick="toggleNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="cf-nav-menu">
+                    <li><a href="#foundations" class="cf-nav-link">Foundations</a></li>
+                    <li><a href="#components" class="cf-nav-link">Components</a></li>
+                    <li><a href="#forms" class="cf-nav-link">Forms</a></li>
+                    <li><a href="#layouts" class="cf-nav-link">Layouts</a></li>
+                    <li><a href="#content-blocks" class="cf-nav-link">Content</a></li>
+                    <li><a href="#animations" class="cf-nav-link">Effects</a></li>
+                    <li><button id="themeToggle" class="cf-btn cf-btn-sm" onclick="toggleTheme()">
+                        <i class="fas fa-sun" id="themeIcon"></i>
+                    </button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="cf-hero">
+        <div class="cf-container">
+            <h1 class="cf-hero-title">Clean Framework</h1>
+            <p class="cf-hero-subtitle">A complete framework with clean design and interactive components</p>
+            <div class="cf-mt-4">
+                <a href="https://github.com/tomvon/clean-framework" class="cf-btn cf-btn-primary cf-btn-lg">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Foundations -->
+    <section id="foundations" class="cf-section">
+        <div class="cf-container">
+            <h2 class="cf-text-center cf-mb-5">Foundations</h2>
+            
+            <!-- Typography -->
+            <h3 class="cf-mb-3">Typography</h3>
+            <div class="cf-row">
+                <div class="cf-col">
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                    <h5>Heading 5</h5>
+                    <h6>Heading 6</h6>
+                    <p>This is a paragraph with <a href="#">a link</a> inside it. The Clean Framework provides clean, readable typography with proper spacing and hierarchy.</p>
+                </div>
+            </div>
+            
+            <!-- Cards - The Framework Signature -->
+            <h3 class="cf-mb-3 cf-mt-5">Cards - The Framework Signature</h3>
+            <div class="cf-row">
+                <div class="cf-col-4">
+                    <div class="cf-card">
+                        <div class="cf-card-header">
+                            <h3 class="cf-card-title">Default Card</h3>
+                        </div>
+                        <div class="cf-card-body">
+                            <p>This is the signature Clean Framework card with the characteristic left border accent.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cf-col-4">
+                    <div class="cf-card cf-card-secondary">
+                        <div class="cf-card-header">
+                            <h3 class="cf-card-title">Secondary Card</h3>
+                        </div>
+                        <div class="cf-card-body">
+                            <p>A card with secondary color accent, perfect for highlighting success states.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cf-col-4">
+                    <div class="cf-card cf-card-danger">
+                        <div class="cf-card-header">
+                            <h3 class="cf-card-title">Danger Card</h3>
+                        </div>
+                        <div class="cf-card-body">
+                            <p>Use this for warnings or important alerts that need attention.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Buttons -->
+            <h3 class="cf-mb-3 cf-mt-5">Buttons</h3>
+            
+            <h4>Button Variants</h4>
+            <div class="cf-mb-4">
+                <button class="cf-btn">Primary Button</button>
+                <button class="cf-btn cf-btn-secondary">Secondary Button</button>
+                <button class="cf-btn cf-btn-outline">Outline Button</button>
+            </div>
+
+            <h3>Button Sizes</h3>
+            <div class="cf-mb-4">
+                <button class="cf-btn cf-btn-sm">Small Button</button>
+                <button class="cf-btn">Default Button</button>
+                <button class="cf-btn cf-btn-lg">Large Button</button>
+            </div>
+
+            <h3>Buttons with Icons</h3>
+            <div class="cf-mb-4">
+                <button class="cf-btn">
+                    <i class="fas fa-download"></i>
+                    Download
+                </button>
+                <button class="cf-btn cf-btn-secondary">
+                    <i class="fas fa-heart"></i>
+                    Like
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forms Section -->
+    <section id="forms" class="cf-section" style="background-color: var(--cf-gray-100);">
+        <div class="cf-container">
+            <h2 class="cf-text-center cf-mb-5">Enhanced Forms</h2>
+            
+            <!-- Basic Forms -->
+            <div class="cf-grid cf-grid-2 cf-mb-5">
+                <div class="cf-card">
+                    <h3>Standard Form</h3>
+                    <form>
+                        <div class="cf-form-group">
+                            <label class="cf-form-label">Email Address</label>
+                            <input type="email" class="cf-form-input" placeholder="Enter your email">
+                        </div>
+                        <div class="cf-form-group cf-invalid">
+                            <label class="cf-form-label">Password</label>
+                            <input type="password" class="cf-form-input" placeholder="Enter your password">
+                            <div class="cf-form-help">Password must be at least 8 characters</div>
+                        </div>
+                        <button type="submit" class="cf-btn">Submit</button>
+                    </form>
+                </div>
+                
+                <div class="cf-card">
+                    <h3>Advanced Inputs</h3>
+                    
+                    <!-- Input Group -->
+                    <div class="cf-form-group">
+                        <label class="cf-form-label">Website URL</label>
+                        <div class="cf-input-group">
+                            <span class="cf-input-group-addon">https://</span>
+                            <input type="text" class="cf-form-input" placeholder="example.com">
+                        </div>
+                    </div>
+                    
+                    <!-- Toggle Switch -->
+                    <div class="cf-form-group">
+                        <label class="cf-form-label">Enable Notifications</label>
+                        <label class="cf-toggle">
+                            <input type="checkbox">
+                            <span class="cf-toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <!-- Range Slider -->
+                    <div class="cf-form-group">
+                        <label class="cf-form-label">Budget Range</label>
+                        <input type="range" class="cf-range" min="0" max="100" value="50">
+                    </div>
+                </div>
+            </div>
+
+            <!-- File Upload -->
+            <h3 class="cf-mb-3">File Upload</h3>
+            <div class="cf-card cf-mb-5">
+                <div class="cf-file-upload">
+                    <input type="file" multiple>
+                    <div class="cf-file-upload-area">
+                        <i class="cf-file-upload-icon fas fa-cloud-upload-alt"></i>
+                        <div class="cf-file-upload-text">Click to upload or drag and drop</div>
+                        <div class="cf-file-upload-hint">PNG, JPG, PDF up to 10MB</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkbox and Radio Groups -->
+            <h3 class="cf-mb-3">Selection Controls</h3>
+            <div class="cf-grid cf-grid-2 cf-mb-5">
+                <div class="cf-card">
+                    <h4>Checkbox Group</h4>
+                    <div class="cf-checkbox-group">
+                        <label class="cf-checkbox">
+                            <input type="checkbox" checked>
+                            <span>Option 1</span>
+                        </label>
+                        <label class="cf-checkbox">
+                            <input type="checkbox">
+                            <span>Option 2</span>
+                        </label>
+                        <label class="cf-checkbox">
+                            <input type="checkbox">
+                            <span>Option 3</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="cf-card">
+                    <h4>Radio Group</h4>
+                    <div class="cf-radio-group">
+                        <label class="cf-radio">
+                            <input type="radio" name="choice" checked>
+                            <span>Choice A</span>
+                        </label>
+                        <label class="cf-radio">
+                            <input type="radio" name="choice">
+                            <span>Choice B</span>
+                        </label>
+                        <label class="cf-radio">
+                            <input type="radio" name="choice">
+                            <span>Choice C</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multi-step Form -->
+            <h3 class="cf-mb-3">Multi-step Form</h3>
+            <div class="cf-card">
+                <div class="cf-stepper">
+                    <div class="cf-step cf-completed">
+                        <div class="cf-step-number">1</div>
+                        <div>Personal Info</div>
+                    </div>
+                    <div class="cf-step cf-active">
+                        <div class="cf-step-number">2</div>
+                        <div>Contact Details</div>
+                    </div>
+                    <div class="cf-step">
+                        <div class="cf-step-number">3</div>
+                        <div>Confirmation</div>
+                    </div>
+                </div>
+                <p class="cf-text-center">Step 2 of 3: Please enter your contact information</p>
+            </div>
+            
+            <!-- Multi-Step Form with Navigation -->
+            <h3 class="cf-mb-3 cf-mt-5">Multi-Step Form with Navigation</h3>
+
+            <!-- Form Progress -->
+            <div class="cf-form-progress cf-mb-5">
+                <span class="cf-form-progress-text">Step 1 of 3</span>
+                <div class="cf-form-progress-bar">
+                    <div class="cf-form-progress-fill" style="width: 33%"></div>
+                </div>
+            </div>
+            <div class="cf-form-container" id="formNodesDemo">
+                <!-- Node 1 -->
+                <div class="cf-form-node cf-form-node-active">
+                    <div class="cf-form-node-header">
+                        <h3 class="cf-form-node-title">Personal Information</h3>
+                        <p class="cf-form-node-description">Please provide your basic personal details</p>
+                    </div>
+
+                    <div class="cf-form-group">
+                        <label class="cf-form-label">Full Name</label>
+                        <input type="text" class="cf-form-input" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="cf-form-group">
+                        <label class="cf-form-label">Email Address</label>
+                        <input type="email" class="cf-form-input" placeholder="Enter your email">
+                    </div>
+
+                    <div class="cf-form-group">
+                        <label class="cf-form-label">Phone Number</label>
+                        <input type="tel" class="cf-form-input" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="cf-form-navigation">
+                        <div class="cf-form-nav-left"></div>
+                        <div class="cf-form-nav-center">
+                            <button class="cf-form-nav-dot cf-active"></button>
+                            <button class="cf-form-nav-dot"></button>
+                            <button class="cf-form-nav-dot"></button>
+                        </div>
+                        <div class="cf-form-nav-right">
+                            <button class="cf-btn" onclick="nextFormNode()">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Node 2 -->
+                <div class="cf-form-node">
+                    <div class="cf-form-node-header">
+                        <h3 class="cf-form-node-title">Preferences</h3>
+                        <p class="cf-form-node-description">Tell us about your interests and preferences</p>
+                    </div>
+
+                    <div class="cf-form-group">
+                        <label class="cf-form-label">Interests</label>
+                        <div class="cf-checkbox-group cf-horizontal">
+                            <label class="cf-checkbox">
+                                <input type="checkbox">
+                                <span>Technology</span>
+                            </label>
+                            <label class="cf-checkbox">
+                                <input type="checkbox">
+                                <span>Design</span>
+                            </label>
+                            <label class="cf-checkbox">
+                                <input type="checkbox">
+                                <span>Marketing</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="cf-form-branch">
+                        <div class="cf-form-group">
+                            <label class="cf-form-label">If you selected Technology, which areas?</label>
+                            <select class="cf-form-select">
+                                <option>Frontend Development</option>
+                                <option>Backend Development</option>
+                                <option>Data Science</option>
+                                <option>AI/Machine Learning</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="cf-form-navigation">
+                        <div class="cf-form-nav-left">
+                            <button class="cf-btn cf-btn-outline" onclick="prevFormNode()">Previous</button>
+                        </div>
+                        <div class="cf-form-nav-center">
+                            <button class="cf-form-nav-dot cf-completed"></button>
+                            <button class="cf-form-nav-dot cf-active"></button>
+                            <button class="cf-form-nav-dot"></button>
+                        </div>
+                        <div class="cf-form-nav-right">
+                            <button class="cf-btn" onclick="nextFormNode()">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Node 3 - Review -->
+                <div class="cf-form-node cf-form-node-review">
+                    <div class="cf-form-node-header">
+                        <h3 class="cf-form-node-title">Review & Submit</h3>
+                        <p class="cf-form-node-description">Please review your information before submitting</p>
+                    </div>
+
+                    <div class="cf-form-review">
+                        <div class="cf-review-section">
+                            <h4>Personal Information</h4>
+                            <p><strong>Name:</strong> John Doe</p>
+                            <p><strong>Email:</strong> john@example.com</p>
+                            <p><strong>Phone:</strong> (555) 123-4567</p>
+                        </div>
+                        
+                        <div class="cf-review-section">
+                            <h4>Preferences</h4>
+                            <p><strong>Interests:</strong> Technology, Design</p>
+                            <p><strong>Tech Focus:</strong> Frontend Development</p>
+                        </div>
+                    </div>
+
+                    <div class="cf-form-navigation">
+                        <div class="cf-form-nav-left">
+                            <button class="cf-btn cf-btn-outline" onclick="prevFormNode()">Previous</button>
+                        </div>
+                        <div class="cf-form-nav-center">
+                            <button class="cf-form-nav-dot cf-completed"></button>
+                            <button class="cf-form-nav-dot cf-completed"></button>
+                            <button class="cf-form-nav-dot cf-active"></button>
+                        </div>
+                        <div class="cf-form-nav-right">
+                            <button class="cf-btn cf-btn-secondary" onclick="submitForm()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components -->
+    <section id="components" class="cf-section">
+        <div class="cf-container">
+            <h2 class="cf-text-center cf-mb-5">Components</h2>
+            
+            <!-- Navigation -->
+            <h3 class="cf-mb-3">Navigation</h3>
+
+            <!-- Dropdown Menu -->
+            <h4 class="cf-mb-3">Dropdown Menu</h4>
+            <div class="cf-card cf-mb-5">
+                <div class="cf-dropdown" id="demoDropdown">
+                    <div class="cf-dropdown-toggle" onclick="toggleDropdown()">
+                        <span>Settings</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <ul class="cf-dropdown-menu">
+                        <li><a href="#" class="cf-dropdown-item">Profile</a></li>
+                        <li><a href="#" class="cf-dropdown-item">Account Settings</a></li>
+                        <li><div class="cf-dropdown-divider"></div></li>
+                        <li><a href="#" class="cf-dropdown-item">Logout</a></li>
+                    </ul>
+                </div>
+                <p class="cf-mt-3">Click on "Settings" to see the dropdown in action.</p>
+            </div>
+
+            <!-- Pagination -->
+            <h3 class="cf-mb-3">Pagination</h3>
+            <div class="cf-card">
+                <nav class="cf-pagination">
+                    <a href="#" class="cf-page-link cf-disabled">‹</a>
+                    <a href="#" class="cf-page-link cf-active">1</a>
+                    <a href="#" class="cf-page-link">2</a>
+                    <a href="#" class="cf-page-link">3</a>
+                    <a href="#" class="cf-page-link">4</a>
+                    <a href="#" class="cf-page-link">5</a>
+                    <a href="#" class="cf-page-link">›</a>
+                </nav>
+            </div>
+            
+            <!-- Interactive Components -->
+            <h3 class="cf-mb-3 cf-mt-5">Interactive Components</h3>
+
+            <!-- Alerts -->
+            <h4 class="cf-mb-3">Alerts</h4>
+            <div class="cf-alert">
+                <i class="fas fa-info-circle"></i> This is a default informational alert.
+            </div>
+            <div class="cf-alert cf-alert-success">
+                <i class="fas fa-check-circle"></i> Success! Your action was completed successfully.
+            </div>
+            <div class="cf-alert cf-alert-warning">
+                <i class="fas fa-exclamation-triangle"></i> Warning! Please check your input.
+            </div>
+            <div class="cf-alert cf-alert-danger">
+                <i class="fas fa-times-circle"></i> Error! Something went wrong.
+            </div>
+
+            <!-- Badges -->
+            <h4 class="cf-mb-3 cf-mt-5">Badges</h4>
+            <div>
+                <span class="cf-badge">Primary</span>
+                <span class="cf-badge cf-badge-secondary">Secondary</span>
+                <span class="cf-badge cf-badge-success">Success</span>
+                <span class="cf-badge cf-badge-danger">Danger</span>
+                <span class="cf-badge cf-badge-warning">Warning</span>
+            </div>
+
+            <!-- Progress Bars -->
+            <h4 class="cf-mb-3 cf-mt-5">Progress Bars</h4>
+            <div class="cf-progress">
+                <div class="cf-progress-bar" style="width: 25%">25%</div>
+            </div>
+            <div class="cf-progress">
+                <div class="cf-progress-bar" style="width: 50%">50%</div>
+            </div>
+            <div class="cf-progress">
+                <div class="cf-progress-bar" style="width: 75%">75%</div>
+            </div>
+
+            <!-- Tabs -->
+            <h4 class="cf-mb-3 cf-mt-5">Tabs</h4>
+            <div class="cf-tabs">
+                <ul class="cf-tab-list">
+                    <li class="cf-tab active" onclick="showTab(event, 'tab1')">Tab 1</li>
+                    <li class="cf-tab" onclick="showTab(event, 'tab2')">Tab 2</li>
+                    <li class="cf-tab" onclick="showTab(event, 'tab3')">Tab 3</li>
+                </ul>
+            </div>
+            <div id="tab1" class="cf-tab-content active">
+                <p>Content for Tab 1. This is the default active tab.</p>
+            </div>
+            <div id="tab2" class="cf-tab-content">
+                <p>Content for Tab 2. Click the tab above to see this content.</p>
+            </div>
+            <div id="tab3" class="cf-tab-content">
+                <p>Content for Tab 3. Another tab with different content.</p>
+            </div>
+
+            <!-- Accordions -->
+            <h4 class="cf-mb-3 cf-mt-5">Accordions</h4>
+            <div class="cf-accordion" onclick="toggleAccordion(this)">
+                <div class="cf-accordion-header">
+                    <h4>What is Clean Framework?</h4>
+                </div>
+                <div class="cf-accordion-body">
+                    <p>Clean Framework is a CSS framework extracted from the implicit design patterns that Clean Framework naturally uses when generating web interfaces.</p>
+                </div>
+            </div>
+            <div class="cf-accordion" onclick="toggleAccordion(this)">
+                <div class="cf-accordion-header">
+                    <h4>Why use Clean Framework?</h4>
+                </div>
+                <div class="cf-accordion-body">
+                    <p>It provides a clean, modern design aesthetic with signature elements like left border accents, soft shadows, and excellent typography.</p>
+                </div>
+            </div>
+
+            <!-- Tables -->
+            <h4 class="cf-mb-3 cf-mt-5">Tables</h4>
+            <table class="cf-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Left Border Accent</td>
+                        <td>Signature design element on cards and components</td>
+                        <td><span class="cf-badge cf-badge-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Soft Shadows</td>
+                        <td>Subtle elevation for depth perception</td>
+                        <td><span class="cf-badge cf-badge-success">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Clean Typography</td>
+                        <td>Readable and well-spaced text hierarchy</td>
+                        <td><span class="cf-badge cf-badge-success">Active</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Tooltips -->
+            <h4 class="cf-mb-3 cf-mt-5">Tooltips</h4>
+            <div>
+                <span class="cf-tooltip">
+                    Hover over me
+                    <span class="cf-tooltip-text">This is a tooltip!</span>
+                </span>
+                <span class="cf-tooltip cf-ml-4">
+                    Another tooltip
+                    <span class="cf-tooltip-text">More helpful information here</span>
+                </span>
+            </div>
+
+            <!-- Breadcrumbs -->
+            <h4 class="cf-mb-3 cf-mt-5">Breadcrumbs</h4>
+            <nav>
+                <ol class="cf-breadcrumb">
+                    <li class="cf-breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="cf-breadcrumb-item"><a href="#">Components</a></li>
+                    <li class="cf-breadcrumb-item active">Extended</li>
+                </ol>
+            </nav>
+
+            <!-- Loading States -->
+            <h4 class="cf-mb-3 cf-mt-5">Loading States</h4>
+            <div class="cf-mb-3">
+                <span class="cf-spinner"></span>
+                <span class="cf-ml-3">Loading...</span>
+            </div>
+            <div class="cf-skeleton" style="height: 20px; width: 200px; margin-bottom: 10px;"></div>
+            <div class="cf-skeleton" style="height: 20px; width: 150px;"></div>
+        </div>
+    </section>
+
+    <!-- Layouts -->
+    <section id="layouts" class="cf-section" style="background-color: var(--cf-gray-100);">
+        <div class="cf-container">
+            <h2 class="cf-text-center cf-mb-5">Layouts</h2>
+
+            <!-- CSS Grid Examples -->
+            <h3 class="cf-mb-3">CSS Grid Layouts</h3>
+            <div class="cf-grid cf-grid-3 cf-mb-5">
+                <div class="cf-card">
+                    <h4>Grid Item 1</h4>
+                    <p>Responsive grid system using CSS Grid for modern layouts.</p>
+                </div>
+                <div class="cf-card cf-card-secondary">
+                    <h4>Grid Item 2</h4>
+                    <p>Clean, semantic approach to complex layouts.</p>
+                </div>
+                <div class="cf-card cf-card-info">
+                    <h4>Grid Item 3</h4>
+                    <p>Automatically responsive on mobile devices.</p>
+                </div>
+            </div>
+
+            <!-- Media Object -->
+            <h3 class="cf-mb-3">Media Object</h3>
+            <div class="cf-media cf-card cf-mb-4">
+                <div class="cf-media-object">
+                    <div style="width: 64px; height: 64px; background: var(--cf-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">CF</div>
+                </div>
+                <div class="cf-media-body">
+                    <h4>Clean Framework</h4>
+                    <p>A flexible media object pattern perfect for comments, notifications, or any content with associated media.</p>
+                </div>
+            </div>
+
+            <!-- Article Layout -->
+            <h3 class="cf-mb-3">Article Layout</h3>
+            <article class="cf-article cf-card">
+                <h1>Sample Article</h1>
+                <p>This is optimized for readability with proper line length (65 characters) and spacing.</p>
+                
+                <blockquote>
+                    This is a blockquote with Clean Framework's signature left border accent. Perfect for highlighting important quotes or testimonials.
+                </blockquote>
+                
+                <p>The article layout ensures excellent typography and reading experience across all devices.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Content Blocks Section -->
+    <section id="content-blocks" class="cf-section">
+        <div class="cf-container">
+            <h2 class="cf-text-center cf-mb-5">Specialized Content Blocks</h2>
+
+            <!-- Features -->
+            <h3 class="cf-mb-3">Feature Blocks</h3>
+            <div class="cf-grid cf-grid-3 cf-mb-5">
+                <div class="cf-feature">
+                    <i class="cf-feature-icon fas fa-rocket"></i>
+                    <h3>Fast Performance</h3>
+                    <p>Optimized CSS that loads quickly and renders smoothly across all devices.</p>
+                </div>
+                <div class="cf-feature">
+                    <i class="cf-feature-icon fas fa-paint-brush"></i>
+                    <h3>Beautiful Design</h3>
+                    <p>Clean Framework's natural design aesthetic captured in a reusable framework.</p>
+                </div>
+                <div class="cf-feature">
+                    <i class="cf-feature-icon fas fa-code"></i>
+                    <h3>Clean Code</h3>
+                    <p>Semantic HTML with maintainable CSS that follows best practices.</p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <h3 class="cf-mb-3">Statistics</h3>
+            <div class="cf-grid cf-grid-4 cf-mb-5">
+                <div class="cf-stats">
+                    <div class="cf-stats-number">25+</div>
+                    <div class="cf-stats-label">Components</div>
+                </div>
+                <div class="cf-stats">
+                    <div class="cf-stats-number">100%</div>
+                    <div class="cf-stats-label">Responsive</div>
+                </div>
+                <div class="cf-stats">
+                    <div class="cf-stats-number">∞</div>
+                    <div class="cf-stats-label">Possibilities</div>
+                </div>
+                <div class="cf-stats">
+                    <div class="cf-stats-number">0</div>
+                    <div class="cf-stats-label">JavaScript Required</div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <h3 class="cf-mb-3">Testimonials</h3>
+            <div class="cf-grid cf-grid-2 cf-mb-5">
+                <div class="cf-testimonial">
+                    <div class="cf-testimonial-quote">
+                        This framework perfectly captures Clean Framework's design aesthetic. It's clean, semantic, and incredibly easy to use.
+                    </div>
+                    <img src="assets/images/avatar1.jpg" alt="User" class="cf-testimonial-avatar">
+                    <div class="cf-testimonial-name">Alex Johnson</div>
+                    <div class="cf-testimonial-role">Frontend Developer</div>
+                </div>
+                <div class="cf-testimonial">
+                    <div class="cf-testimonial-quote">
+                        Finally, a CSS framework that prioritizes semantic HTML and clean code over utility classes.
+                    </div>
+                    <img src="assets/images/avatar2.jpg" alt="User" class="cf-testimonial-avatar">
+                    <div class="cf-testimonial-name">Sarah Chen</div>
+                    <div class="cf-testimonial-role">UI/UX Designer</div>
+                </div>
+            </div>
+
+            <!-- Pricing Cards -->
+            <h3 class="cf-mb-3">Pricing Cards</h3>
+            <div class="cf-grid cf-grid-3 cf-mb-5">
+                <div class="cf-pricing">
+                    <div class="cf-pricing-plan">Starter</div>
+                    <div class="cf-pricing-price">Free</div>
+                    <div class="cf-pricing-period">forever</div>
+                    <ul class="cf-pricing-features">
+                        <li>Core components</li>
+                        <li>Basic layouts</li>
+                        <li>Community support</li>
+                    </ul>
+                    <button class="cf-btn cf-btn-outline">Get Started</button>
+                </div>
+                <div class="cf-pricing cf-pricing-featured">
+                    <div class="cf-pricing-plan">Professional</div>
+                    <div class="cf-pricing-price">$29</div>
+                    <div class="cf-pricing-period">per month</div>
+                    <ul class="cf-pricing-features">
+                        <li>All components</li>
+                        <li>Advanced layouts</li>
+                        <li>Priority support</li>
+                        <li>Custom themes</li>
+                    </ul>
+                    <button class="cf-btn">Choose Plan</button>
+                </div>
+                <div class="cf-pricing">
+                    <div class="cf-pricing-plan">Enterprise</div>
+                    <div class="cf-pricing-price">$99</div>
+                    <div class="cf-pricing-period">per month</div>
+                    <ul class="cf-pricing-features">
+                        <li>Everything in Pro</li>
+                        <li>Custom components</li>
+                        <li>Dedicated support</li>
+                        <li>Team training</li>
+                    </ul>
+                    <button class="cf-btn cf-btn-secondary">Contact Sales</button>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cf-cta">
+                <h2>Ready to Build Something Amazing?</h2>
+                <p>Start using Clean Framework today and create beautiful, semantic web interfaces with ease.</p>
+                <button class="cf-btn cf-btn-lg">Get Started Now</button>
+            </div>
+
+            <!-- Timeline -->
+            <h3 class="cf-mb-3 cf-mt-5">Timeline</h3>
+            <div class="cf-timeline">
+                <div class="cf-timeline-item">
+                    <div class="cf-timeline-content">
+                        <div class="cf-timeline-date">January 2024</div>
+                        <h4>Framework Conception</h4>
+                        <p>Discovered Clean Framework's implicit design patterns through extensive analysis.</p>
+                    </div>
+                </div>
+                <div class="cf-timeline-item">
+                    <div class="cf-timeline-content">
+                        <div class="cf-timeline-date">March 2024</div>
+                        <h4>Core Components</h4>
+                        <p>Built the foundation with cards, buttons, forms, and navigation.</p>
+                    </div>
+                </div>
+                <div class="cf-timeline-item">
+                    <div class="cf-timeline-content">
+                        <div class="cf-timeline-date">August 2024</div>
+                        <h4>Advanced Features</h4>
+                        <p>Added specialized content blocks, layouts, and interactive components.</p>
+                    </div>
+                </div>
+                <div class="cf-timeline-item">
+                    <div class="cf-timeline-content">
+                        <div class="cf-timeline-date">Today</div>
+                        <h4>Continuous Evolution</h4>
+                        <p>Framework continues to evolve with new patterns and improvements.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Block -->
+            <h3 class="cf-mb-3 cf-mt-5">Code Blocks</h3>
+            <div class="cf-code">
+&lt;div class="cf-card"&gt;
+    &lt;div class="cf-card-header"&gt;
+        &lt;h3 class="cf-card-title"&gt;Clean &amp; Semantic&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="cf-card-body"&gt;
+        &lt;p&gt;No utility class bloat, just clean HTML.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </div>
+        </div>
+    </section>
+
+    <!-- Effects -->
+    <section id="animations" class="cf-section" style="background-color: var(--cf-gray-100);">
+        <div class="cf-container">
+            <h2 class="cf-text-center cf-mb-5">Effects & Animations</h2>
+
+            <!-- Interactive Cards -->
+            <h3 class="cf-mb-3">Interactive Cards</h3>
+            <div class="cf-grid cf-grid-3 cf-mb-5">
+                <div class="cf-card cf-card-interactive">
+                    <i class="fas fa-magic text-4xl cf-text-primary cf-mb-3"></i>
+                    <h4>Hover Effects</h4>
+                    <p>Smooth animations with shimmer effects on hover.</p>
+                </div>
+                <div class="cf-card cf-card-interactive cf-glow-on-hover">
+                    <i class="fas fa-star text-4xl cf-text-warning cf-mb-3"></i>
+                    <h4>Glow Animation</h4>
+                    <p>Beautiful glow effects that respond to user interaction.</p>
+                </div>
+                <div class="cf-card cf-card-interactive cf-tilt">
+                    <i class="fas fa-cube text-4xl cf-text-info cf-mb-3"></i>
+                    <h4>3D Tilt Effect</h4>
+                    <p>Subtle 3D tilt animation for modern interfaces.</p>
+                </div>
+            </div>
+
+            <!-- Animation Showcase -->
+            <h3 class="cf-mb-3">Entrance Animations</h3>
+            <div class="cf-card cf-mb-5">
+                <button class="cf-btn cf-mb-3" onclick="triggerAnimations()">Trigger Animations</button>
+                <div class="cf-grid cf-grid-4" id="animationDemo">
+                    <div class="cf-card">
+                        <h4>Fade In Up</h4>
+                        <p>Smooth upward fade animation.</p>
+                    </div>
+                    <div class="cf-card cf-card-secondary">
+                        <h4>Scale In</h4>
+                        <p>Gentle scale-in effect.</p>
+                    </div>
+                    <div class="cf-card cf-card-info">
+                        <h4>Slide In Left</h4>
+                        <p>Slide from left animation.</p>
+                    </div>
+                    <div class="cf-card cf-card-warning">
+                        <h4>Slide In Right</h4>
+                        <p>Slide from right animation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Effect Buttons -->
+            <h3 class="cf-mb-3">Interactive Buttons</h3>
+            <div class="cf-card cf-mb-5">
+                <button class="cf-btn cf-btn-glow cf-ripple cf-mr-3">Glow & Ripple</button>
+                <button class="cf-btn cf-btn-secondary cf-bounce cf-mr-3">Bounce Effect</button>
+                <button class="cf-btn cf-btn-outline cf-heartbeat cf-mr-3">Heartbeat</button>
+                <button class="cf-btn cf-float">Floating Button</button>
+            </div>
+
+            <!-- Loading States -->
+            <h3 class="cf-mb-3">Enhanced Loading States</h3>
+            <div class="cf-card">
+                <div class="cf-mb-4">
+                    <h4>Shimmer Skeleton</h4>
+                    <div class="cf-skeleton-shimmer cf-mb-2" style="height: 20px;"></div>
+                    <div class="cf-skeleton-shimmer cf-mb-2" style="height: 20px; width: 80%;"></div>
+                    <div class="cf-skeleton-shimmer" style="height: 20px; width: 60%;"></div>
+                </div>
+                
+                <div class="cf-mb-4">
+                    <h4>Typing Animation</h4>
+                    <div id="typingDemo" class="cf-typing-demo">
+                        <span id="typingText"></span>
+                        <span class="cf-typing-cursor">|</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Media & Gallery -->
+            <h3 class="cf-mb-3 cf-mt-5">Media & Gallery</h3>
+
+            <!-- Image Gallery -->
+            <h4 class="cf-mb-3">Image Gallery</h4>
+            <div class="cf-gallery cf-mb-5">
+                <div class="cf-gallery-item">
+                    <img src="assets/images/gallery1.jpg" alt="Gallery 1" class="cf-gallery-img">
+                    <div class="cf-gallery-overlay">
+                        <div class="cf-gallery-overlay-content">
+                            <h4>Image Title 1</h4>
+                            <p>Beautiful landscape</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cf-gallery-item">
+                    <img src="assets/images/gallery2.jpg" alt="Gallery 2" class="cf-gallery-img">
+                    <div class="cf-gallery-overlay">
+                        <div class="cf-gallery-overlay-content">
+                            <h4>Image Title 2</h4>
+                            <p>Mountain scenery</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cf-gallery-item">
+                    <img src="assets/images/gallery3.jpg" alt="Gallery 3" class="cf-gallery-img">
+                    <div class="cf-gallery-overlay">
+                        <div class="cf-gallery-overlay-content">
+                            <h4>Image Title 3</h4>
+                            <p>Forest path</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cf-gallery-item">
+                    <img src="assets/images/gallery4.jpg" alt="Gallery 4" class="cf-gallery-img">
+                    <div class="cf-gallery-overlay">
+                        <div class="cf-gallery-overlay-content">
+                            <h4>Image Title 4</h4>
+                            <p>Ocean waves</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simple Carousel -->
+            <h4 class="cf-mb-3">Image Carousel</h4>
+            <div class="cf-carousel cf-mb-5" id="demoCarousel">
+                <div class="cf-carousel-container">
+                    <div class="cf-carousel-slide">
+                        <img src="assets/images/carousel1.jpg" alt="Slide 1" class="cf-carousel-img">
+                        <div class="cf-carousel-content">
+                            <h3>Slide 1 Title</h3>
+                            <p>Beautiful mountain landscape with stunning views.</p>
+                        </div>
+                    </div>
+                    <div class="cf-carousel-slide">
+                        <img src="assets/images/carousel2.jpg" alt="Slide 2" class="cf-carousel-img">
+                        <div class="cf-carousel-content">
+                            <h3>Slide 2 Title</h3>
+                            <p>Peaceful forest path perfect for hiking.</p>
+                        </div>
+                    </div>
+                    <div class="cf-carousel-slide">
+                        <img src="assets/images/carousel3.jpg" alt="Slide 3" class="cf-carousel-img">
+                        <div class="cf-carousel-content">
+                            <h3>Slide 3 Title</h3>
+                            <p>Mesmerizing ocean waves and endless horizons.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="cf-carousel-controls cf-carousel-prev" onclick="prevSlide()">‹</button>
+                <button class="cf-carousel-controls cf-carousel-next" onclick="nextSlide()">›</button>
+                <div class="cf-carousel-dots">
+                    <button class="cf-carousel-dot cf-active" onclick="goToSlide(0)"></button>
+                    <button class="cf-carousel-dot" onclick="goToSlide(1)"></button>
+                    <button class="cf-carousel-dot" onclick="goToSlide(2)"></button>
+                </div>
+            </div>
+
+            <!-- Utility Classes Demo -->
+            <h4 class="cf-mb-3">Utility Classes</h4>
+            <div class="cf-card">
+                <div class="cf-grid cf-grid-4 cf-mb-4">
+                    <div class="cf-p-3 cf-bg-primary cf-text-white cf-rounded">Primary Background</div>
+                    <div class="cf-p-3 cf-bg-secondary cf-text-white cf-rounded">Secondary Background</div>
+                    <div class="cf-p-3 cf-bg-warning cf-text-dark cf-rounded">Warning Background</div>
+                    <div class="cf-p-3 cf-bg-info cf-text-white cf-rounded">Info Background</div>
+                </div>
+                
+                <div class="cf-grid cf-grid-4 cf-mb-3">
+                    <div class="cf-text-primary cf-text-center">Primary Text</div>
+                    <div class="cf-text-secondary cf-text-center">Secondary Text</div>
+                    <div class="cf-text-danger cf-text-center">Danger Text</div>
+                    <div class="cf-text-muted cf-text-center">Muted Text</div>
+                </div>
+                
+                <div class="cf-grid cf-grid-4">
+                    <div class="cf-shadow-sm cf-p-3 cf-rounded">Light Shadow</div>
+                    <div class="cf-shadow cf-p-3 cf-rounded">Normal Shadow</div>
+                    <div class="cf-shadow-md cf-p-3 cf-rounded">Medium Shadow</div>
+                    <div class="cf-shadow-lg cf-p-3 cf-rounded">Large Shadow</div>
+                </div>
+            </div>
+            
+            <!-- Advanced Layout Patterns -->
+            <h3 class="cf-mb-3 cf-mt-5">Advanced Layout Patterns</h3>
+
+            <!-- Dashboard Stats Grid -->
+            <h4 class="cf-mb-3">Dashboard Stats Grid</h4>
+            <div class="cf-stats-grid cf-mb-5">
+                <div class="cf-stat-card">
+                    <div class="cf-stat-value">$24,500</div>
+                    <div class="cf-stat-label">Total Revenue</div>
+                    <div class="cf-stat-change cf-positive">↗ +12.5%</div>
+                </div>
+                <div class="cf-stat-card">
+                    <div class="cf-stat-value">1,429</div>
+                    <div class="cf-stat-label">Active Users</div>
+                    <div class="cf-stat-change cf-positive">↗ +5.2%</div>
+                </div>
+                <div class="cf-stat-card">
+                    <div class="cf-stat-value">98.2%</div>
+                    <div class="cf-stat-label">Uptime</div>
+                    <div class="cf-stat-change cf-negative">↘ -0.8%</div>
+                </div>
+                <div class="cf-stat-card">
+                    <div class="cf-stat-value">156</div>
+                    <div class="cf-stat-label">New Orders</div>
+                    <div class="cf-stat-change cf-positive">↗ +23.1%</div>
+                </div>
+            </div>
+
+            <!-- Magazine Layout -->
+            <h4 class="cf-mb-3">Magazine Layout</h4>
+            <div class="cf-magazine cf-mb-5">
+                <div class="cf-magazine-main">
+                    <div class="cf-magazine-featured">
+                        <img src="assets/images/article-featured.jpg" alt="Featured Article">
+                        <div class="cf-magazine-featured-content">
+                            <h2>Building the Future of Web Development</h2>
+                            <p>Exploring the latest trends and technologies shaping modern web development practices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cf-magazine-sidebar">
+                    <div class="cf-magazine-article">
+                        <div class="cf-magazine-article-content">
+                            <h4>CSS Grid Mastery</h4>
+                            <p>Learn advanced CSS Grid techniques for complex layouts.</p>
+                            <small class="cf-text-muted">5 min read</small>
+                        </div>
+                    </div>
+                    <div class="cf-magazine-article">
+                        <div class="cf-magazine-article-content">
+                            <h4>JavaScript Performance</h4>
+                            <p>Optimize your JavaScript for better performance and UX.</p>
+                            <small class="cf-text-muted">8 min read</small>
+                        </div>
+                    </div>
+                    <div class="cf-magazine-article">
+                        <div class="cf-magazine-article-content">
+                            <h4>Design Systems</h4>
+                            <p>Creating scalable design systems for large applications.</p>
+                            <small class="cf-text-muted">12 min read</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multi-Column Text -->
+            <h4 class="cf-mb-3">Multi-Column Text Layout</h4>
+            <div class="cf-card">
+                <div class="cf-columns">
+                    <h4>The Clean Framework Philosophy</h4>
+                    <p>Clean Framework represents a new approach to CSS frameworks, one that prioritizes semantic HTML and clean, maintainable code over utility-class complexity.</p>
+                    
+                    <p>Built on clean design principles, we've created a framework that feels intuitive to both AI systems and human developers. Every component follows consistent principles: semantic class names, signature left-border accents, and responsive design that works out of the box.</p>
+                    
+                    <p>This approach solves the fundamental problem many frameworks face when working with modern development tools. Instead of requiring deep framework knowledge, Clean Framework provides components that work immediately and predictably.</p>
+                    
+                    <h4>Key Design Principles</h4>
+                    <p>The framework is built on several core principles that make it both powerful and approachable. Clean semantic HTML means your markup tells a story about content structure, not visual appearance.</p>
+                </div>
+            </div>
+
+            <!-- CSS Subgrid Layouts -->
+            <h4 class="cf-mb-3">CSS Subgrid Layouts</h4>
+            
+            <!-- E-commerce Product Grid -->
+            <h4 class="cf-mb-3">E-commerce Product Grid</h4>
+            <div class="cf-grid-ecommerce cf-mb-5">
+                <div class="cf-grid-product-card">
+                    <div class="cf-grid-product-image" style="background-image: url('assets/images/product-headphones.jpg');"></div>
+                    <h3 class="cf-grid-product-title">Wireless Headphones</h3>
+                    <p class="cf-grid-product-description">Premium noise-canceling headphones with superior sound quality and comfort.</p>
+                    <div class="cf-grid-product-price">$299.99</div>
+                    <div class="cf-grid-product-actions">
+                        <button class="cf-btn cf-btn-sm">Add to Cart</button>
+                        <button class="cf-btn cf-btn-outline cf-btn-sm">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="cf-grid-product-card">
+                    <div class="cf-grid-product-image" style="background-image: url('assets/images/product-smartwatch.jpg');"></div>
+                    <h3 class="cf-grid-product-title">Smart Watch</h3>
+                    <p class="cf-grid-product-description">Advanced fitness tracking with heart rate monitoring and GPS capabilities.</p>
+                    <div class="cf-grid-product-price">$399.99</div>
+                    <div class="cf-grid-product-actions">
+                        <button class="cf-btn cf-btn-sm">Add to Cart</button>
+                        <button class="cf-btn cf-btn-outline cf-btn-sm">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="cf-grid-product-card">
+                    <div class="cf-grid-product-image" style="background-image: url('assets/images/product-laptop.jpg');"></div>
+                    <h3 class="cf-grid-product-title">Laptop Stand</h3>
+                    <p class="cf-grid-product-description">Ergonomic aluminum laptop stand with adjustable height and angle settings.</p>
+                    <div class="cf-grid-product-price">$79.99</div>
+                    <div class="cf-grid-product-actions">
+                        <button class="cf-btn cf-btn-sm">Add to Cart</button>
+                        <button class="cf-btn cf-btn-outline cf-btn-sm">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article Layout with Subgrid -->
+            <h4 class="cf-mb-3">Article Layout with Sidebar</h4>
+            <div class="cf-grid-article cf-mb-3">
+                <main class="cf-grid-article-main">
+                    <header class="cf-card">
+                        <h2>Understanding CSS Subgrid</h2>
+                        <p class="cf-text-muted">Published on March 15, 2024 by Clean Framework Team</p>
+                    </header>
+                    
+                    <article class="cf-card">
+                        <p>CSS Subgrid is a powerful feature that allows nested grids to participate in the sizing of their parent grid. This creates perfectly aligned layouts that were previously difficult to achieve.</p>
+                        
+                        <p>Clean Framework leverages subgrid extensively to create complex, responsive layouts that maintain visual hierarchy and consistency across all screen sizes.</p>
+                        
+                        <p>With subgrid, you can create magazine-style layouts, product showcases, and dashboard interfaces that automatically align content across multiple levels of nesting.</p>
+                    </article>
+                </main>
+                
+                <aside class="cf-grid-article-sidebar">
+                    <div class="cf-card">
+                        <h4>Table of Contents</h4>
+                        <ul>
+                            <li><a href="#intro">Introduction</a></li>
+                            <li><a href="#basics">Subgrid Basics</a></li>
+                            <li><a href="#examples">Examples</a></li>
+                            <li><a href="#support">Browser Support</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cf-card cf-card-info">
+                        <h4>Quick Tip</h4>
+                        <p>Always test subgrid layouts with fallbacks for browsers that don't support the feature yet.</p>
+                    </div>
+                    
+                    <div class="cf-card">
+                        <h4>Related Articles</h4>
+                        <ul>
+                            <li><a href="#">CSS Grid Fundamentals</a></li>
+                            <li><a href="#">Responsive Design Patterns</a></li>
+                            <li><a href="#">Layout Best Practices</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Complex Magazine Grid -->
+            <h4 class="cf-mb-3">Complex Magazine Grid</h4>
+            <div class="cf-grid-magazine cf-mb-5">
+                <article class="cf-grid-magazine-hero cf-card" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('assets/images/magazine-hero.jpg'); background-size: cover; background-position: center; color: white; padding: var(--cf-spacing-xl); display: flex; flex-direction: column; justify-content: space-between; min-height: 300px;">
+                    <div>
+                        <h2 style="color: white; margin-bottom: var(--cf-spacing-md); font-size: var(--cf-font-size-2xl);">The Future of Web Layouts</h2>
+                        <p style="color: white; opacity: 0.95; font-size: var(--cf-font-size-base); line-height: 1.6;">Exploring how CSS Subgrid is revolutionizing web design patterns and creating new possibilities for complex layouts.</p>
+                    </div>
+                    <div style="margin-top: var(--cf-spacing-lg);">
+                        <button class="cf-btn cf-btn-outline" style="border-color: white; color: white; background: transparent; padding: 0.5rem 1rem; font-size: 0.875rem;">Read More</button>
+                    </div>
+                </article>
+                
+                <article class="cf-grid-magazine-feature cf-card">
+                    <h3>Grid vs. Flexbox</h3>
+                    <p>Understanding when to use CSS Grid versus Flexbox for optimal layout performance and maintainability.</p>
+                    <small class="cf-text-muted">8 min read</small>
+                </article>
+                
+                <div class="cf-grid-magazine-secondary">
+                    <article class="cf-card">
+                        <h4>Browser Support</h4>
+                        <p>Current state of subgrid support across modern browsers.</p>
+                        <small class="cf-text-muted">3 min read</small>
+                    </article>
+                    
+                    <article class="cf-card">
+                        <h4>Performance Tips</h4>
+                        <p>Optimizing complex grid layouts for better rendering performance.</p>
+                        <small class="cf-text-muted">5 min read</small>
+                    </article>
+                </div>
+                
+                <div class="cf-grid-magazine-articles">
+                    <article class="cf-card">
+                        <h4>Getting Started</h4>
+                        <p>A beginner's guide to implementing subgrid in your projects with practical examples.</p>
+                        <small class="cf-text-muted">12 min read</small>
+                    </article>
+                    
+                    <article class="cf-card">
+                        <h4>Advanced Patterns</h4>
+                        <p>Complex subgrid patterns for enterprise applications and content management systems.</p>
+                        <small class="cf-text-muted">15 min read</small>
+                    </article>
+                    
+                    <article class="cf-card">
+                        <h4>Tools & Debugging</h4>
+                        <p>Essential tools and techniques for debugging and optimizing subgrid layouts.</p>
+                        <small class="cf-text-muted">7 min read</small>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Blog Layout Example -->
+            <h4 class="cf-mb-3">Blog Layout with Subgrid</h4>
+            <div class="cf-grid-blog cf-mb-5" style="min-height: 500px;">
+                <header class="cf-grid-blog-header cf-card cf-text-center">
+                    <h2>Clean Framework Blog</h2>
+                    <p>Insights, tutorials, and updates from the Clean Framework community</p>
+                </header>
+                
+                <aside class="cf-grid-blog-sidebar-left">
+                    <div class="cf-card">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#">Tutorials (12)</a></li>
+                            <li><a href="#">News (8)</a></li>
+                            <li><a href="#">Best Practices (15)</a></li>
+                            <li><a href="#">Case Studies (6)</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cf-card cf-card-secondary">
+                        <h4>Newsletter</h4>
+                        <p>Get the latest updates delivered to your inbox.</p>
+                        <div class="cf-form-group">
+                            <input type="email" class="cf-form-input" placeholder="Enter your email">
+                            <button class="cf-btn cf-btn-sm" style="margin-top: var(--cf-spacing-sm);">Subscribe</button>
+                        </div>
+                    </div>
+                </aside>
+                
+                <main class="cf-grid-blog-main">
+                    <div class="cf-card">
+                        <div class="cf-card-header">
+                            <h3 class="cf-card-title">Building Responsive Layouts with Subgrid</h3>
+                            <p class="cf-text-muted">March 20, 2024 • 10 min read</p>
+                        </div>
+                        <div class="cf-card-body">
+                            <p>Learn how to create sophisticated responsive layouts that maintain perfect alignment across all device sizes using CSS Subgrid.</p>
+                        </div>
+                        <div style="padding: 0 var(--cf-spacing-xl) var(--cf-spacing-xl);">
+                            <button class="cf-btn cf-btn-outline">Continue Reading</button>
+                        </div>
+                    </div>
+                </main>
+                
+                <aside class="cf-grid-blog-sidebar-right">
+                    <div class="cf-card">
+                        <h4>Popular Posts</h4>
+                        <ul>
+                            <li><a href="#">CSS Grid Mastery Guide</a></li>
+                            <li><a href="#">Responsive Design Patterns</a></li>
+                            <li><a href="#">Framework Architecture</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cf-card">
+                        <h4>Tags</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                            <span class="cf-tag">CSS</span>
+                            <span class="cf-tag">Grid</span>
+                            <span class="cf-tag">Subgrid</span>
+                            <span class="cf-tag">Layout</span>
+                            <span class="cf-tag">Responsive</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            
+            <!-- Modal -->
+            <h4 class="cf-mb-3 cf-mt-5">Modal</h4>
+            <div class="cf-card cf-mb-5">
+                <button class="cf-btn" onclick="showModal()">Open Modal</button>
+                
+                <div id="demoModal" class="cf-modal">
+                    <div class="cf-modal-content">
+                        <div class="cf-modal-header">
+                            <h3 class="cf-modal-title">Example Modal</h3>
+                            <button class="cf-modal-close" onclick="closeModal()">&times;</button>
+                        </div>
+                        <p>This is a modal dialog. Click the X or outside to close.</p>
+                        <div class="cf-mt-4">
+                            <button class="cf-btn" onclick="closeModal()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cf-footer">
+        <div class="cf-container cf-text-center">
+            <p>&copy; 2024 Clean Framework. A complete framework built on clean design principles.</p>
+        </div>
+    </footer>
+
+    <!-- Clean Framework JavaScript -->
+    <script src="clean-framework.js"></script>
+</body>
+</html>

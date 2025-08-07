@@ -1,0 +1,47 @@
+{
+  "name": "clean-framework",
+  "version": "1.0.0",
+  "description": "The first CSS framework designed specifically for AI-assisted development with predictable patterns and semantic structure",
+  "main": "clean-framework.css",
+  "files": [
+    "clean-framework.css",
+    "clean-framework.js",
+    "clean-framework-demo.html",
+    "assets/",
+    "README.md",
+    "AI_README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "ai-friendly",
+    "ai-assisted",
+    "css",
+    "framework",
+    "semantic",
+    "clean",
+    "responsive",
+    "components",
+    "ui",
+    "frontend",
+    "llm",
+    "code-generation",
+    "predictable",
+    "ai-first"
+  ],
+  "author": "Tom Von Lahndorff",
+  "license": "MIT",
+  "homepage": "https://github.com/tomvon/clean-framework",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomvon/clean-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tomvon/clean-framework/issues"
+  },
+  "scripts": {
+    "demo": "open clean-framework-demo.html"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

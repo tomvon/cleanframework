@@ -1,6 +1,6 @@
 # Clean Framework
 
-**[🔗 View Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework-demo.html){:target="_blank"}** | **[📁 Download CSS](https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.css){:target="_blank"}** | **[📁 Download JS](https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.js){:target="_blank"}**
+<a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework-demo.html" target="_blank"><strong>🔗 View Demo</strong></a> | <a href="https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.css" target="_blank"><strong>📁 Download CSS</strong></a> | <a href="https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.js" target="_blank"><strong>📁 Download JS</strong></a>
 
 A complete framework specifically designed for AI-assisted development. Clean Framework features predictable class names, semantic HTML patterns, and consistent design principles that work seamlessly with AI coding tools and language models.
 

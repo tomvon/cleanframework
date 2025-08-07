@@ -18,15 +18,15 @@ A complete framework specifically designed for AI-assisted development. Clean Fr
 
 ```html
 <!-- Clean Framework -->
-<link rel="stylesheet" href="https://raw.githubusercontent.com/tomvon/cleanframework/main/clean-framework.css">
-<script src="https://raw.githubusercontent.com/tomvon/cleanframework/main/clean-framework.js"></script>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.css">
+<script src="https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.js"></script>
 ```
 
 ### Download
 
 Download the framework files directly:
-- [clean-framework.css](https://raw.githubusercontent.com/tomvon/cleanframework/main/clean-framework.css) (Styles - 80KB)
-- [clean-framework.js](https://raw.githubusercontent.com/tomvon/cleanframework/main/clean-framework.js) (JavaScript - 8KB)
+- [clean-framework.css](https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.css) (Styles - 80KB)
+- [clean-framework.js](https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.js) (JavaScript - 8KB)
 
 ## 🤖 AI-Friendly Features
 

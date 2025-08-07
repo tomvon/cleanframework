@@ -15,6 +15,36 @@
             padding-right: 2rem;
         }
         
+        /* Fix list indentation */
+        #installation ul,
+        #quick-start ul,
+        #customization ul,
+        #container ul,
+        #grid ul,
+        #spacing ul,
+        #buttons ul,
+        #cards ul,
+        #forms ul,
+        #navigation ul,
+        #hero ul,
+        #alerts ul,
+        #badges ul,
+        #modals ul,
+        #tabs ul,
+        #accordions ul,
+        #typography ul,
+        #colors ul,
+        #borders ul,
+        #shadows ul,
+        #animations ul,
+        #css-variables ul,
+        #dark-mode ul,
+        #responsive ul,
+        #javascript ul {
+            padding-left: 1.5rem;
+            margin-left: 0;
+        }
+        
         .docs-nav-link {
             display: block;
             padding: 0.5rem 1rem;
@@ -109,6 +139,86 @@
             padding: 0.125rem 0.375rem;
             border-radius: 3px;
             font-size: 0.875rem;
+        }
+        
+        /* Fix tab and accordion styling in examples */
+        .example-preview .cf-tab-list {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--cf-border-color);
+        }
+        
+        .example-preview .cf-tab {
+            background: none;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            color: var(--cf-text-secondary);
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.3s;
+        }
+        
+        .example-preview .cf-tab:hover {
+            color: var(--cf-primary);
+        }
+        
+        .example-preview .cf-tab.active {
+            color: var(--cf-primary);
+            border-bottom-color: var(--cf-primary);
+        }
+        
+        .example-preview .cf-tab-content {
+            display: none;
+            padding: 1.5rem 0;
+        }
+        
+        .example-preview .cf-tab-content.active {
+            display: block;
+        }
+        
+        .example-preview .cf-accordion {
+            border: 1px solid var(--cf-border-color);
+            border-radius: var(--cf-border-radius);
+            overflow: hidden;
+        }
+        
+        .example-preview .cf-accordion-item {
+            border-bottom: 1px solid var(--cf-border-color);
+        }
+        
+        .example-preview .cf-accordion-item:last-child {
+            border-bottom: none;
+        }
+        
+        .example-preview .cf-accordion-header {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--cf-text-primary);
+            transition: background-color 0.3s;
+        }
+        
+        .example-preview .cf-accordion-header:hover {
+            background-color: var(--cf-bg-light);
+        }
+        
+        .example-preview .cf-accordion-content {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .example-preview .cf-accordion-item.active .cf-accordion-content {
+            max-height: 200px;
+            padding: 1rem 1.5rem;
         }
         
         @media (max-width: 1024px) {

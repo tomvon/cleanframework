@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Framework Documentation</title>
+    <link rel="stylesheet" href="clean-framework.css">
+    <style>
+        /* Documentation specific styles */
+        .docs-sidebar {
+            position: sticky;
+            top: 80px;
+            height: calc(100vh - 100px);
+            overflow-y: auto;
+            padding-right: 2rem;
+        }
+        
+        .docs-nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--cf-text-secondary);
+            text-decoration: none;
+            border-radius: var(--cf-border-radius);
+            margin-bottom: 0.25rem;
+            transition: all 0.2s;
+        }
+        
+        .docs-nav-link:hover {
+            background: var(--cf-bg-light);
+            color: var(--cf-primary);
+        }
+        
+        .docs-nav-link.active {
+            background: var(--cf-primary);
+            color: white;
+        }
+        
+        .docs-nav-section {
+            margin-bottom: 2rem;
+        }
+        
+        .docs-nav-title {
+            font-weight: 600;
+            color: var(--cf-text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .example-preview {
+            padding: 2rem;
+            background: var(--cf-bg-light);
+            border-radius: var(--cf-border-radius);
+            margin-bottom: 1rem;
+        }
+        
+        .example-code {
+            background: var(--cf-bg-dark);
+            color: #e6e6e6;
+            padding: 1.5rem;
+            border-radius: var(--cf-border-radius);
+            overflow-x: auto;
+            margin-bottom: 2rem;
+        }
+        
+        .example-code pre {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        .color-swatch {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .color-swatch-box {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            border: 1px solid var(--cf-border-color);
+        }
+        
+        .variable-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .variable-table th,
+        .variable-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--cf-border-color);
+        }
+        
+        .variable-table th {
+            font-weight: 600;
+            background: var(--cf-bg-light);
+        }
+        
+        .variable-table code {
+            background: var(--cf-bg-light);
+            padding: 0.125rem 0.375rem;
+            border-radius: 3px;
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .docs-sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="cf-nav cf-nav-sticky">
+        <div class="cf-container">
+            <div class="cf-nav-container">
+                <a href="index.html" class="cf-nav-brand">Clean Framework</a>
+                <ul class="cf-nav-menu">
+                    <li><a href="clean-framework-demo.html" class="cf-nav-link">Demo</a></li>
+                    <li><a href="documentation.html" class="cf-nav-link active">Documentation</a></li>
+                    <li><a href="https://github.com/tomvon/cleanframework" class="cf-nav-link">GitHub</a></li>
+                </ul>
+                <button class="cf-nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="cf-hero cf-hero-secondary">
+        <div class="cf-container">
+            <h1 class="cf-hero-title">Documentation</h1>
+            <p class="cf-hero-subtitle">Complete reference for Clean Framework components and utilities</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="cf-section">
+        <div class="cf-container">
+            <div class="cf-row">
+                <!-- Sidebar -->
+                <div class="cf-col-3">
+                    <nav class="docs-sidebar">
+                        <div class="docs-nav-section">
+                            <div class="docs-nav-title">Getting Started</div>
+                            <a href="#installation" class="docs-nav-link">Installation</a>
+                            <a href="#quick-start" class="docs-nav-link">Quick Start</a>
+                            <a href="#customization" class="docs-nav-link">Customization</a>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <div class="docs-nav-title">Layout</div>
+                            <a href="#container" class="docs-nav-link">Container</a>
+                            <a href="#grid" class="docs-nav-link">Grid System</a>
+                            <a href="#spacing" class="docs-nav-link">Spacing</a>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <div class="docs-nav-title">Components</div>
+                            <a href="#buttons" class="docs-nav-link">Buttons</a>
+                            <a href="#cards" class="docs-nav-link">Cards</a>
+                            <a href="#forms" class="docs-nav-link">Forms</a>
+                            <a href="#navigation" class="docs-nav-link">Navigation</a>
+                            <a href="#hero" class="docs-nav-link">Hero Sections</a>
+                            <a href="#alerts" class="docs-nav-link">Alerts</a>
+                            <a href="#badges" class="docs-nav-link">Badges</a>
+                            <a href="#modals" class="docs-nav-link">Modals</a>
+                            <a href="#tabs" class="docs-nav-link">Tabs</a>
+                            <a href="#accordions" class="docs-nav-link">Accordions</a>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <div class="docs-nav-title">Utilities</div>
+                            <a href="#typography" class="docs-nav-link">Typography</a>
+                            <a href="#colors" class="docs-nav-link">Colors</a>
+                            <a href="#borders" class="docs-nav-link">Borders</a>
+                            <a href="#shadows" class="docs-nav-link">Shadows</a>
+                            <a href="#animations" class="docs-nav-link">Animations</a>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <div class="docs-nav-title">Advanced</div>
+                            <a href="#css-variables" class="docs-nav-link">CSS Variables</a>
+                            <a href="#dark-mode" class="docs-nav-link">Dark Mode</a>
+                            <a href="#responsive" class="docs-nav-link">Responsive Design</a>
+                            <a href="#javascript" class="docs-nav-link">JavaScript API</a>
+                        </div>
+                    </nav>
+                </div>
+                
+                <!-- Content -->
+                <div class="cf-col-9">
+                    <!-- Installation -->
+                    <section id="installation" class="cf-mb-5">
+                        <h2 class="cf-h2">Installation</h2>
+                        <p>There are several ways to include Clean Framework in your project:</p>
+                        
+                        <h3 class="cf-h3">CDN</h3>
+                        <div class="example-code">
+                            <pre>&lt;!-- Clean Framework CSS --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/clean-framework.css"&gt;
+
+&lt;!-- Clean Framework JavaScript --&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/clean-framework.js"&gt;&lt;/script&gt;</pre>
+                        </div>
+                        
+                        <h3 class="cf-h3">Download</h3>
+                        <p>Download the files directly and include them in your project:</p>
+                        <div class="cf-mb-3">
+                            <a href="clean-framework.css" download class="cf-btn cf-btn-primary">Download CSS</a>
+                            <a href="clean-framework.js" download class="cf-btn cf-btn-secondary">Download JS</a>
+                        </div>
+                    </section>
+
+                    <!-- Quick Start -->
+                    <section id="quick-start" class="cf-mb-5">
+                        <h2 class="cf-h2">Quick Start</h2>
+                        <p>Start with this basic HTML template:</p>
+                        
+                        <div class="example-code">
+                            <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" data-theme="light"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Clean Framework Site&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/clean-framework.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;nav class="cf-nav"&gt;
+        &lt;div class="cf-container"&gt;
+            &lt;div class="cf-nav-container"&gt;
+                &lt;a href="#" class="cf-nav-brand"&gt;My Site&lt;/a&gt;
+                &lt;ul class="cf-nav-menu"&gt;
+                    &lt;li&gt;&lt;a href="#" class="cf-nav-link"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" class="cf-nav-link"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;section class="cf-hero"&gt;
+        &lt;div class="cf-container"&gt;
+            &lt;h1 class="cf-hero-title"&gt;Welcome to Clean Framework&lt;/h1&gt;
+            &lt;p class="cf-hero-subtitle"&gt;Build beautiful, semantic websites&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/clean-framework.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </div>
+                    </section>
+
+                    <!-- Customization -->
+                    <section id="customization" class="cf-mb-5">
+                        <h2 class="cf-h2">Customization</h2>
+                        <p>Clean Framework uses CSS custom properties for easy customization. Override any of these variables in your CSS:</p>
+                        
+                        <div class="example-code">
+                            <pre>:root {
+    /* Colors */
+    --cf-primary: #667eea;
+    --cf-secondary: #48bb78;
+    --cf-accent: #ed8936;
+    
+    /* Typography */
+    --cf-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --cf-font-size-base: 16px;
+    
+    /* Spacing */
+    --cf-spacing-xs: 0.25rem;
+    --cf-spacing-sm: 0.5rem;
+    --cf-spacing-md: 1rem;
+    --cf-spacing-lg: 1.5rem;
+    --cf-spacing-xl: 2rem;
+    
+    /* Borders */
+    --cf-border-radius: 8px;
+    --cf-border-width: 1px;
+}</pre>
+                        </div>
+                    </section>
+
+                    <!-- Container -->
+                    <section id="container" class="cf-mb-5">
+                        <h2 class="cf-h2">Container</h2>
+                        <p>The container provides a responsive fixed-width layout:</p>
+                        
+                        <div class="example-preview">
+                            <div class="cf-container" style="background: rgba(102, 126, 234, 0.1); padding: 1rem;">
+                                <p>This is a container</p>
+                            </div>
+                        </div>
+                        
+                        <div class="example-code">
+                            <pre>&lt;div class="cf-container"&gt;
+    &lt;!-- Your content here --&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Container Sizes</h3>
+                        <ul>
+                            <li><strong>Default:</strong> max-width: 1200px</li>
+                            <li><strong>Small:</strong> max-width: 800px (use <code>cf-container-sm</code>)</li>
+                            <li><strong>Large:</strong> max-width: 1400px (use <code>cf-container-lg</code>)</li>
+                        </ul>
+                    </section>
+
+                    <!-- Grid System -->
+                    <section id="grid" class="cf-mb-5">
+                        <h2 class="cf-h2">Grid System</h2>
+                        <p>Clean Framework includes a flexible 12-column grid system:</p>
+                        
+                        <div class="example-preview">
+                            <div class="cf-row">
+                                <div class="cf-col-4">
+                                    <div style="background: rgba(102, 126, 234, 0.2); padding: 1rem; text-align: center;">
+                                        cf-col-4
+                                    </div>
+                                </div>
+                                <div class="cf-col-4">
+                                    <div style="background: rgba(102, 126, 234, 0.2); padding: 1rem; text-align: center;">
+                                        cf-col-4
+                                    </div>
+                                </div>
+                                <div class="cf-col-4">
+                                    <div style="background: rgba(102, 126, 234, 0.2); padding: 1rem; text-align: center;">
+                                        cf-col-4
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-code">
+                            <pre>&lt;div class="cf-row"&gt;
+    &lt;div class="cf-col-4"&gt;Column 1&lt;/div&gt;
+    &lt;div class="cf-col-4"&gt;Column 2&lt;/div&gt;
+    &lt;div class="cf-col-4"&gt;Column 3&lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Responsive Columns</h3>
+                        <p>Use responsive column classes for different screen sizes:</p>
+                        <ul>
+                            <li><code>cf-col-*</code> - All screen sizes</li>
+                            <li><code>cf-col-sm-*</code> - Small screens and up (≥576px)</li>
+                            <li><code>cf-col-md-*</code> - Medium screens and up (≥768px)</li>
+                            <li><code>cf-col-lg-*</code> - Large screens and up (≥1024px)</li>
+                            <li><code>cf-col-xl-*</code> - Extra large screens and up (≥1280px)</li>
+                        </ul>
+                    </section>
+
+                    <!-- Spacing -->
+                    <section id="spacing" class="cf-mb-5">
+                        <h2 class="cf-h2">Spacing</h2>
+                        <p>Use spacing utility classes for margin and padding:</p>
+                        
+                        <h3 class="cf-h4">Margin Classes</h3>
+                        <ul>
+                            <li><code>cf-m-*</code> - Margin on all sides</li>
+                            <li><code>cf-mt-*</code> - Margin top</li>
+                            <li><code>cf-mr-*</code> - Margin right</li>
+                            <li><code>cf-mb-*</code> - Margin bottom</li>
+                            <li><code>cf-ml-*</code> - Margin left</li>
+                            <li><code>cf-mx-*</code> - Margin left and right</li>
+                            <li><code>cf-my-*</code> - Margin top and bottom</li>
+                        </ul>
+                        
+                        <h3 class="cf-h4">Padding Classes</h3>
+                        <ul>
+                            <li><code>cf-p-*</code> - Padding on all sides</li>
+                            <li><code>cf-pt-*</code> - Padding top</li>
+                            <li><code>cf-pr-*</code> - Padding right</li>
+                            <li><code>cf-pb-*</code> - Padding bottom</li>
+                            <li><code>cf-pl-*</code> - Padding left</li>
+                            <li><code>cf-px-*</code> - Padding left and right</li>
+                            <li><code>cf-py-*</code> - Padding top and bottom</li>
+                        </ul>
+                        
+                        <h3 class="cf-h4">Spacing Sizes</h3>
+                        <p>Replace * with: <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code></p>
+                    </section>
+
+                    <!-- Buttons -->
+                    <section id="buttons" class="cf-mb-5">
+                        <h2 class="cf-h2">Buttons</h2>
+                        <p>Clean Framework provides several button styles:</p>
+                        
+                        <div class="example-preview">
+                            <button class="cf-btn">Default</button>
+                            <button class="cf-btn cf-btn-primary">Primary</button>
+                            <button class="cf-btn cf-btn-secondary">Secondary</button>
+                            <button class="cf-btn cf-btn-accent">Accent</button>
+                            <button class="cf-btn cf-btn-outline">Outline</button>
+                            <button class="cf-btn cf-btn-ghost">Ghost</button>
+                        </div>
+                        
+                        <div class="example-code">
+                            <pre>&lt;button class="cf-btn"&gt;Default&lt;/button&gt;
+&lt;button class="cf-btn cf-btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="cf-btn cf-btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="cf-btn cf-btn-accent"&gt;Accent&lt;/button&gt;
+&lt;button class="cf-btn cf-btn-outline"&gt;Outline&lt;/button&gt;
+&lt;button class="cf-btn cf-btn-ghost"&gt;Ghost&lt;/button&gt;</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Button Sizes</h3>
+                        <div class="example-preview">
+                            <button class="cf-btn cf-btn-sm">Small</button>
+                            <button class="cf-btn">Default</button>
+                            <button class="cf-btn cf-btn-lg">Large</button>
+                        </div>
+                        
+                        <div class="example-code">
+                            <pre>&lt;button class="cf-btn cf-btn-sm"&gt;Small&lt;/button&gt;
+&lt;button class="cf-btn"&gt;Default&lt;/button&gt;
+&lt;button class="cf-btn cf-btn-lg"&gt;Large&lt;/button&gt;</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Button States</h3>
+                        <div class="example-preview">
+                            <button class="cf-btn cf-btn-primary" disabled>Disabled</button>
+                            <button class="cf-btn cf-btn-primary cf-loading">Loading</button>
+                        </div>
+                    </section>
+
+                    <!-- Cards -->
+                    <section id="cards" class="cf-mb-5">
+                        <h2 class="cf-h2">Cards</h2>
+                        <p>Cards are flexible content containers:</p>
+                        
+                        <div class="example-preview">
+                            <div class="cf-row">
+                                <div class="cf-col-6">
+                                    <div class="cf-card">
+                                        <div class="cf-card-header">
+                                            <h3 class="cf-card-title">Card Title</h3>
+                                        </div>
+                                        <div class="cf-card-body">
+                                            <p>This is a basic card with header and body sections.</p>
+                                        </div>
+                                        <div class="cf-card-footer">
+                                            <button class="cf-btn cf-btn-primary">Action</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cf-col-6">
+                                    <div class="cf-card cf-card-secondary">
+                                        <h3 class="cf-card-title">Secondary Card</h3>
+                                        <p>Cards can have different color themes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-code">
+                            <pre>&lt;div class="cf-card"&gt;
+    &lt;div class="cf-card-header"&gt;
+        &lt;h3 class="cf-card-title"&gt;Card Title&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="cf-card-body"&gt;
+        &lt;p&gt;Card content goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cf-card-footer"&gt;
+        &lt;button class="cf-btn cf-btn-primary"&gt;Action&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Card Variations</h3>
+                        <ul>
+                            <li><code>cf-card</code> - Default card</li>
+                            <li><code>cf-card cf-card-primary</code> - Primary themed</li>
+                            <li><code>cf-card cf-card-secondary</code> - Secondary themed</li>
+                            <li><code>cf-card cf-card-accent</code> - Accent themed</li>
+                            <li><code>cf-card cf-card-hover</code> - With hover effect</li>
+                        </ul>
+                    </section>
+
+                    <!-- Forms -->
+                    <section id="forms" class="cf-mb-5">
+                        <h2 class="cf-h2">Forms</h2>
+                        <p>Form components with consistent styling:</p>
+                        
+                        <div class="example-preview">
+                            <form>
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Email</label>
+                                    <input type="email" class="cf-form-input" placeholder="Enter your email">
+                                    <small class="cf-form-text">We'll never share your email.</small>
+                                </div>
+                                
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Password</label>
+                                    <input type="password" class="cf-form-input" placeholder="Enter password">
+                                </div>
+                                
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Message</label>
+                                    <textarea class="cf-form-textarea" rows="3" placeholder="Enter your message"></textarea>
+                                </div>
+                                
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Select Option</label>
+                                    <select class="cf-form-select">
+                                        <option>Choose an option</option>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="cf-form-group">
+                                    <label class="cf-form-checkbox">
+                                        <input type="checkbox">
+                                        <span>I agree to the terms</span>
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="cf-btn cf-btn-primary">Submit</button>
+                            </form>
+                        </div>
+                        
+                        <div class="example-code">
+                            <pre>&lt;form&gt;
+    &lt;div class="cf-form-group"&gt;
+        &lt;label class="cf-form-label"&gt;Email&lt;/label&gt;
+        &lt;input type="email" class="cf-form-input" placeholder="Enter your email"&gt;
+        &lt;small class="cf-form-text"&gt;We'll never share your email.&lt;/small&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="cf-form-group"&gt;
+        &lt;label class="cf-form-label"&gt;Message&lt;/label&gt;
+        &lt;textarea class="cf-form-textarea" rows="3"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="cf-form-group"&gt;
+        &lt;label class="cf-form-checkbox"&gt;
+            &lt;input type="checkbox"&gt;
+            &lt;span&gt;I agree to the terms&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    
+    &lt;button type="submit" class="cf-btn cf-btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Form States</h3>
+                        <div class="example-preview">
+                            <div class="cf-form-group">
+                                <label class="cf-form-label">Success State</label>
+                                <input type="text" class="cf-form-input cf-success" value="Valid input">
+                            </div>
+                            <div class="cf-form-group">
+                                <label class="cf-form-label">Error State</label>
+                                <input type="text" class="cf-form-input cf-error" value="Invalid input">
+                                <small class="cf-form-text cf-text-error">Please enter a valid value.</small>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Navigation -->
+                    <section id="navigation" class="cf-mb-5">
+                        <h2 class="cf-h2">Navigation</h2>
+                        <p>Responsive navigation component:</p>
+                        
+                        <div class="example-code">
+                            <pre>&lt;nav class="cf-nav"&gt;
+    &lt;div class="cf-container"&gt;
+        &lt;div class="cf-nav-container"&gt;
+            &lt;a href="#" class="cf-nav-brand"&gt;Brand&lt;/a&gt;
+            &lt;ul class="cf-nav-menu"&gt;
+                &lt;li&gt;&lt;a href="#" class="cf-nav-link active"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="cf-nav-link"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="cf-nav-link"&gt;Services&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="cf-nav-link"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;button class="cf-nav-toggle" aria-label="Toggle navigation"&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Navigation Variations</h3>
+                        <ul>
+                            <li><code>cf-nav</code> - Default navigation</li>
+                            <li><code>cf-nav cf-nav-dark</code> - Dark navigation</li>
+                            <li><code>cf-nav cf-nav-sticky</code> - Sticky navigation</li>
+                            <li><code>cf-nav cf-nav-transparent</code> - Transparent navigation</li>
+                        </ul>
+                    </section>
+
+                    <!-- Hero Sections -->
+                    <section id="hero" class="cf-mb-5">
+                        <h2 class="cf-h2">Hero Sections</h2>
+                        <p>Create impactful hero sections:</p>
+                        
+                        <div class="example-code">
+                            <pre>&lt;section class="cf-hero"&gt;
+    &lt;div class="cf-container"&gt;
+        &lt;h1 class="cf-hero-title"&gt;Welcome to Our Site&lt;/h1&gt;
+        &lt;p class="cf-hero-subtitle"&gt;Build something amazing&lt;/p&gt;
+        &lt;div class="cf-hero-actions"&gt;
+            &lt;a href="#" class="cf-btn cf-btn-primary cf-btn-lg"&gt;Get Started&lt;/a&gt;
+            &lt;a href="#" class="cf-btn cf-btn-outline cf-btn-lg"&gt;Learn More&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Hero Variations</h3>
+                        <ul>
+                            <li><code>cf-hero</code> - Default hero</li>
+                            <li><code>cf-hero cf-hero-primary</code> - Primary themed</li>
+                            <li><code>cf-hero cf-hero-secondary</code> - Secondary themed</li>
+                            <li><code>cf-hero cf-hero-dark</code> - Dark hero</li>
+                            <li><code>cf-hero cf-hero-centered</code> - Center aligned</li>
+                        </ul>
+                    </section>
+
+                    <!-- Alerts -->
+                    <section id="alerts" class="cf-mb-5">
+                        <h2 class="cf-h2">Alerts</h2>
+                        <p>Display important messages:</p>
+                        
+                        <div class="example-preview">
+                            <div class="cf-alert">
+                                <strong>Default!</strong> This is a default alert.
+                            </div>
+                            <div class="cf-alert cf-alert-primary">
+                                <strong>Primary!</strong> This is a primary alert.
+                            </div>
+                            <div class="cf-alert cf-alert-success">
+                                <strong>Success!</strong> Your action was completed successfully.
+                            </div>
+                            <div class="cf-alert cf-alert-warning">
+                                <strong>Warning!</strong> Please review before proceeding.
+                            </div>
+                            <div class="cf-alert cf-alert-error">
+                                <strong>Error!</strong> Something went wrong.
+                            </div>
+                        </div>
+                        
+                        <div class="example-code">
+                            <pre>&lt;div class="cf-alert cf-alert-success"&gt;
+    &lt;strong&gt;Success!&lt;/strong&gt; Your action was completed successfully.
+&lt;/div&gt;</pre>
+                        </div>
+                    </section>
+
+                    <!-- Badges -->
+                    <section id="badges" class="cf-mb-5">
+                        <h2 class="cf-h2">Badges</h2>
+                        <p>Small status indicators:</p>
+                        
+                        <div class="example-preview">
+                            <span class="cf-badge">Default</span>
+                            <span class="cf-badge cf-badge-primary">Primary</span>
+                            <span class="cf-badge cf-badge-secondary">Secondary</span>
+                            <span class="cf-badge cf-badge-success">Success</span>
+                            <span class="cf-badge cf-badge-warning">Warning</span>
+                            <span class="cf-badge cf-badge-error">Error</span>
+                        </div>
+                        
+                        <div class="example-code">
+                            <pre>&lt;span class="cf-badge cf-badge-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="cf-badge cf-badge-success"&gt;Success&lt;/span&gt;</pre>
+                        </div>
+                    </section>
+
+                    <!-- Modals -->
+                    <section id="modals" class="cf-mb-5">
+                        <h2 class="cf-h2">Modals</h2>
+                        <p>Display content in a modal overlay:</p>
+                        
+                        <div class="example-preview">
+                            <button class="cf-btn cf-btn-primary" onclick="openModal('demo-modal')">Open Modal</button>
+                        </div>
+                        
+                        <div class="example-code">
+                            <pre>&lt;!-- Trigger Button --&gt;
+&lt;button class="cf-btn cf-btn-primary" onclick="openModal('myModal')"&gt;Open Modal&lt;/button&gt;
+
+&lt;!-- Modal Structure --&gt;
+&lt;div class="cf-modal" id="myModal"&gt;
+    &lt;div class="cf-modal-content"&gt;
+        &lt;div class="cf-modal-header"&gt;
+            &lt;h3 class="cf-modal-title"&gt;Modal Title&lt;/h3&gt;
+            &lt;button class="cf-modal-close" onclick="closeModal('myModal')"&gt;&times;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="cf-modal-body"&gt;
+            &lt;p&gt;Modal content goes here.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="cf-modal-footer"&gt;
+            &lt;button class="cf-btn cf-btn-ghost" onclick="closeModal('myModal')"&gt;Cancel&lt;/button&gt;
+            &lt;button class="cf-btn cf-btn-primary"&gt;Save Changes&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </section>
+
+                    <!-- Tabs -->
+                    <section id="tabs" class="cf-mb-5">
+                        <h2 class="cf-h2">Tabs</h2>
+                        <p>Organize content with tabs:</p>
+                        
+                        <div class="example-preview">
+                            <div class="cf-tabs">
+                                <div class="cf-tab-list">
+                                    <button class="cf-tab active" onclick="switchTab(event, 'tab1')">Tab 1</button>
+                                    <button class="cf-tab" onclick="switchTab(event, 'tab2')">Tab 2</button>
+                                    <button class="cf-tab" onclick="switchTab(event, 'tab3')">Tab 3</button>
+                                </div>
+                                <div class="cf-tab-content active" id="tab1">
+                                    <p>Content for tab 1</p>
+                                </div>
+                                <div class="cf-tab-content" id="tab2">
+                                    <p>Content for tab 2</p>
+                                </div>
+                                <div class="cf-tab-content" id="tab3">
+                                    <p>Content for tab 3</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-code">
+                            <pre>&lt;div class="cf-tabs"&gt;
+    &lt;div class="cf-tab-list"&gt;
+        &lt;button class="cf-tab active" onclick="switchTab(event, 'tab1')"&gt;Tab 1&lt;/button&gt;
+        &lt;button class="cf-tab" onclick="switchTab(event, 'tab2')"&gt;Tab 2&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="cf-tab-content active" id="tab1"&gt;
+        &lt;p&gt;Content for tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="cf-tab-content" id="tab2"&gt;
+        &lt;p&gt;Content for tab 2&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </section>
+
+                    <!-- Accordions -->
+                    <section id="accordions" class="cf-mb-5">
+                        <h2 class="cf-h2">Accordions</h2>
+                        <p>Collapsible content sections:</p>
+                        
+                        <div class="example-preview">
+                            <div class="cf-accordion">
+                                <div class="cf-accordion-item">
+                                    <button class="cf-accordion-header" onclick="toggleAccordion(event)">
+                                        Accordion Item 1
+                                    </button>
+                                    <div class="cf-accordion-content">
+                                        <p>Content for accordion item 1</p>
+                                    </div>
+                                </div>
+                                <div class="cf-accordion-item">
+                                    <button class="cf-accordion-header" onclick="toggleAccordion(event)">
+                                        Accordion Item 2
+                                    </button>
+                                    <div class="cf-accordion-content">
+                                        <p>Content for accordion item 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-code">
+                            <pre>&lt;div class="cf-accordion"&gt;
+    &lt;div class="cf-accordion-item"&gt;
+        &lt;button class="cf-accordion-header" onclick="toggleAccordion(event)"&gt;
+            Accordion Item 1
+        &lt;/button&gt;
+        &lt;div class="cf-accordion-content"&gt;
+            &lt;p&gt;Content for accordion item 1&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </section>
+
+                    <!-- Typography -->
+                    <section id="typography" class="cf-mb-5">
+                        <h2 class="cf-h2">Typography</h2>
+                        <p>Clean Framework includes a complete typography system:</p>
+                        
+                        <div class="example-preview">
+                            <h1 class="cf-h1">Heading 1</h1>
+                            <h2 class="cf-h2">Heading 2</h2>
+                            <h3 class="cf-h3">Heading 3</h3>
+                            <h4 class="cf-h4">Heading 4</h4>
+                            <h5 class="cf-h5">Heading 5</h5>
+                            <h6 class="cf-h6">Heading 6</h6>
+                            
+                            <p class="cf-lead">This is a lead paragraph with larger text.</p>
+                            <p>This is a regular paragraph with normal text.</p>
+                            <p class="cf-text-small">This is small text.</p>
+                        </div>
+                        
+                        <h3 class="cf-h4">Text Utilities</h3>
+                        <ul>
+                            <li><code>cf-text-left</code> - Left aligned text</li>
+                            <li><code>cf-text-center</code> - Center aligned text</li>
+                            <li><code>cf-text-right</code> - Right aligned text</li>
+                            <li><code>cf-text-justify</code> - Justified text</li>
+                            <li><code>cf-text-uppercase</code> - UPPERCASE TEXT</li>
+                            <li><code>cf-text-lowercase</code> - lowercase text</li>
+                            <li><code>cf-text-capitalize</code> - Capitalize Text</li>
+                            <li><code>cf-font-bold</code> - Bold text</li>
+                            <li><code>cf-font-normal</code> - Normal weight</li>
+                            <li><code>cf-font-light</code> - Light weight</li>
+                        </ul>
+                    </section>
+
+                    <!-- Colors -->
+                    <section id="colors" class="cf-mb-5">
+                        <h2 class="cf-h2">Colors</h2>
+                        <p>Color utility classes for text and backgrounds:</p>
+                        
+                        <h3 class="cf-h4">Text Colors</h3>
+                        <div class="example-preview">
+                            <p class="cf-text-primary">Primary text color</p>
+                            <p class="cf-text-secondary">Secondary text color</p>
+                            <p class="cf-text-accent">Accent text color</p>
+                            <p class="cf-text-success">Success text color</p>
+                            <p class="cf-text-warning">Warning text color</p>
+                            <p class="cf-text-error">Error text color</p>
+                        </div>
+                        
+                        <h3 class="cf-h4">Background Colors</h3>
+                        <div class="example-preview">
+                            <div class="cf-p-3 cf-mb-2 cf-bg-primary cf-text-white">Primary background</div>
+                            <div class="cf-p-3 cf-mb-2 cf-bg-secondary cf-text-white">Secondary background</div>
+                            <div class="cf-p-3 cf-mb-2 cf-bg-accent cf-text-white">Accent background</div>
+                            <div class="cf-p-3 cf-mb-2 cf-bg-light">Light background</div>
+                            <div class="cf-p-3 cf-mb-2 cf-bg-dark cf-text-white">Dark background</div>
+                        </div>
+                    </section>
+
+                    <!-- Borders -->
+                    <section id="borders" class="cf-mb-5">
+                        <h2 class="cf-h2">Borders</h2>
+                        <p>Border utility classes:</p>
+                        
+                        <div class="example-preview">
+                            <div class="cf-p-3 cf-mb-2 cf-border">Default border</div>
+                            <div class="cf-p-3 cf-mb-2 cf-border-top">Top border only</div>
+                            <div class="cf-p-3 cf-mb-2 cf-border cf-border-primary">Primary colored border</div>
+                            <div class="cf-p-3 cf-mb-2 cf-border cf-rounded-lg">Large rounded corners</div>
+                        </div>
+                        
+                        <h3 class="cf-h4">Border Classes</h3>
+                        <ul>
+                            <li><code>cf-border</code> - All borders</li>
+                            <li><code>cf-border-top</code> - Top border</li>
+                            <li><code>cf-border-right</code> - Right border</li>
+                            <li><code>cf-border-bottom</code> - Bottom border</li>
+                            <li><code>cf-border-left</code> - Left border</li>
+                            <li><code>cf-border-0</code> - Remove borders</li>
+                        </ul>
+                        
+                        <h3 class="cf-h4">Rounded Corners</h3>
+                        <ul>
+                            <li><code>cf-rounded</code> - Default radius</li>
+                            <li><code>cf-rounded-sm</code> - Small radius</li>
+                            <li><code>cf-rounded-lg</code> - Large radius</li>
+                            <li><code>cf-rounded-full</code> - Full radius</li>
+                            <li><code>cf-rounded-0</code> - No radius</li>
+                        </ul>
+                    </section>
+
+                    <!-- Shadows -->
+                    <section id="shadows" class="cf-mb-5">
+                        <h2 class="cf-h2">Shadows</h2>
+                        <p>Box shadow utilities:</p>
+                        
+                        <div class="example-preview">
+                            <div class="cf-row">
+                                <div class="cf-col-3">
+                                    <div class="cf-p-4 cf-bg-white cf-shadow-sm cf-mb-3">Small shadow</div>
+                                </div>
+                                <div class="cf-col-3">
+                                    <div class="cf-p-4 cf-bg-white cf-shadow cf-mb-3">Default shadow</div>
+                                </div>
+                                <div class="cf-col-3">
+                                    <div class="cf-p-4 cf-bg-white cf-shadow-md cf-mb-3">Medium shadow</div>
+                                </div>
+                                <div class="cf-col-3">
+                                    <div class="cf-p-4 cf-bg-white cf-shadow-lg cf-mb-3">Large shadow</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="cf-h4">Shadow Classes</h3>
+                        <ul>
+                            <li><code>cf-shadow-sm</code> - Small shadow</li>
+                            <li><code>cf-shadow</code> - Default shadow</li>
+                            <li><code>cf-shadow-md</code> - Medium shadow</li>
+                            <li><code>cf-shadow-lg</code> - Large shadow</li>
+                            <li><code>cf-shadow-none</code> - Remove shadow</li>
+                        </ul>
+                    </section>
+
+                    <!-- Animations -->
+                    <section id="animations" class="cf-mb-5">
+                        <h2 class="cf-h2">Animations</h2>
+                        <p>Built-in animation classes:</p>
+                        
+                        <div class="example-preview">
+                            <button class="cf-btn cf-btn-primary cf-animate-pulse">Pulse</button>
+                            <button class="cf-btn cf-btn-secondary cf-animate-bounce">Bounce</button>
+                            <div class="cf-spinner cf-mt-3"></div>
+                        </div>
+                        
+                        <h3 class="cf-h4">Animation Classes</h3>
+                        <ul>
+                            <li><code>cf-animate-fade-in</code> - Fade in animation</li>
+                            <li><code>cf-animate-slide-up</code> - Slide up animation</li>
+                            <li><code>cf-animate-slide-down</code> - Slide down animation</li>
+                            <li><code>cf-animate-pulse</code> - Pulse animation</li>
+                            <li><code>cf-animate-bounce</code> - Bounce animation</li>
+                            <li><code>cf-spinner</code> - Loading spinner</li>
+                        </ul>
+                    </section>
+
+                    <!-- CSS Variables -->
+                    <section id="css-variables" class="cf-mb-5">
+                        <h2 class="cf-h2">CSS Variables</h2>
+                        <p>Complete list of CSS custom properties:</p>
+                        
+                        <h3 class="cf-h4">Color Variables</h3>
+                        <table class="variable-table">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Default Value</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>--cf-primary</code></td>
+                                    <td>
+                                        <span class="color-swatch">
+                                            <span class="color-swatch-box" style="background: #667eea;"></span>
+                                            #667eea
+                                        </span>
+                                    </td>
+                                    <td>Primary brand color</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--cf-secondary</code></td>
+                                    <td>
+                                        <span class="color-swatch">
+                                            <span class="color-swatch-box" style="background: #48bb78;"></span>
+                                            #48bb78
+                                        </span>
+                                    </td>
+                                    <td>Secondary brand color</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--cf-accent</code></td>
+                                    <td>
+                                        <span class="color-swatch">
+                                            <span class="color-swatch-box" style="background: #ed8936;"></span>
+                                            #ed8936
+                                        </span>
+                                    </td>
+                                    <td>Accent color</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--cf-success</code></td>
+                                    <td>
+                                        <span class="color-swatch">
+                                            <span class="color-swatch-box" style="background: #48bb78;"></span>
+                                            #48bb78
+                                        </span>
+                                    </td>
+                                    <td>Success state color</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--cf-warning</code></td>
+                                    <td>
+                                        <span class="color-swatch">
+                                            <span class="color-swatch-box" style="background: #f59e0b;"></span>
+                                            #f59e0b
+                                        </span>
+                                    </td>
+                                    <td>Warning state color</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--cf-error</code></td>
+                                    <td>
+                                        <span class="color-swatch">
+                                            <span class="color-swatch-box" style="background: #ef4444;"></span>
+                                            #ef4444
+                                        </span>
+                                    </td>
+                                    <td>Error state color</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3 class="cf-h4">Typography Variables</h3>
+                        <table class="variable-table">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Default Value</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>--cf-font-sans</code></td>
+                                    <td>System font stack</td>
+                                    <td>Sans-serif font family</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--cf-font-mono</code></td>
+                                    <td>Monospace stack</td>
+                                    <td>Monospace font family</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--cf-font-size-base</code></td>
+                                    <td>16px</td>
+                                    <td>Base font size</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--cf-line-height-base</code></td>
+                                    <td>1.5</td>
+                                    <td>Base line height</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3 class="cf-h4">Spacing Variables</h3>
+                        <table class="variable-table">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Default Value</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>--cf-spacing-xs</code></td>
+                                    <td>0.25rem</td>
+                                    <td>Extra small spacing</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--cf-spacing-sm</code></td>
+                                    <td>0.5rem</td>
+                                    <td>Small spacing</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--cf-spacing-md</code></td>
+                                    <td>1rem</td>
+                                    <td>Medium spacing</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--cf-spacing-lg</code></td>
+                                    <td>1.5rem</td>
+                                    <td>Large spacing</td>
+                                </tr>
+                                <tr>
+                                    <td><code>--cf-spacing-xl</code></td>
+                                    <td>2rem</td>
+                                    <td>Extra large spacing</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Dark Mode -->
+                    <section id="dark-mode" class="cf-mb-5">
+                        <h2 class="cf-h2">Dark Mode</h2>
+                        <p>Clean Framework includes built-in dark mode support:</p>
+                        
+                        <div class="example-code">
+                            <pre>&lt;!-- Enable dark mode --&gt;
+&lt;html lang="en" data-theme="dark"&gt;
+
+&lt;!-- Toggle dark mode with JavaScript --&gt;
+&lt;script&gt;
+    // Toggle dark mode
+    function toggleDarkMode() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+    }
+&lt;/script&gt;</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Dark Mode Variables</h3>
+                        <p>All colors automatically adjust in dark mode. You can customize dark mode colors:</p>
+                        
+                        <div class="example-code">
+                            <pre>[data-theme="dark"] {
+    --cf-bg-primary: #1a202c;
+    --cf-bg-secondary: #2d3748;
+    --cf-text-primary: #f7fafc;
+    --cf-text-secondary: #e2e8f0;
+}</pre>
+                        </div>
+                    </section>
+
+                    <!-- Responsive Design -->
+                    <section id="responsive" class="cf-mb-5">
+                        <h2 class="cf-h2">Responsive Design</h2>
+                        <p>Clean Framework uses a mobile-first approach:</p>
+                        
+                        <h3 class="cf-h4">Breakpoints</h3>
+                        <table class="variable-table">
+                            <thead>
+                                <tr>
+                                    <th>Breakpoint</th>
+                                    <th>Min Width</th>
+                                    <th>CSS Variable</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Small (sm)</td>
+                                    <td>576px</td>
+                                    <td><code>--cf-breakpoint-sm</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Medium (md)</td>
+                                    <td>768px</td>
+                                    <td><code>--cf-breakpoint-md</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Large (lg)</td>
+                                    <td>1024px</td>
+                                    <td><code>--cf-breakpoint-lg</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Extra Large (xl)</td>
+                                    <td>1280px</td>
+                                    <td><code>--cf-breakpoint-xl</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3 class="cf-h4">Responsive Utilities</h3>
+                        <ul>
+                            <li><code>cf-hide-sm</code> - Hide on small screens and up</li>
+                            <li><code>cf-hide-md</code> - Hide on medium screens and up</li>
+                            <li><code>cf-hide-lg</code> - Hide on large screens and up</li>
+                            <li><code>cf-show-sm</code> - Show only on small screens and up</li>
+                            <li><code>cf-show-md</code> - Show only on medium screens and up</li>
+                            <li><code>cf-show-lg</code> - Show only on large screens and up</li>
+                        </ul>
+                    </section>
+
+                    <!-- JavaScript API -->
+                    <section id="javascript" class="cf-mb-5">
+                        <h2 class="cf-h2">JavaScript API</h2>
+                        <p>Clean Framework includes JavaScript functions for interactive components:</p>
+                        
+                        <h3 class="cf-h4">Modal Functions</h3>
+                        <div class="example-code">
+                            <pre>// Open a modal
+openModal('modalId');
+
+// Close a modal
+closeModal('modalId');
+
+// Toggle a modal
+toggleModal('modalId');</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Tab Functions</h3>
+                        <div class="example-code">
+                            <pre>// Switch to a specific tab
+switchTab(event, 'tabId');
+
+// Initialize tabs (called automatically)
+initTabs();</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Accordion Functions</h3>
+                        <div class="example-code">
+                            <pre>// Toggle accordion item
+toggleAccordion(event);
+
+// Open specific accordion
+openAccordion('accordionId');
+
+// Close all accordions
+closeAllAccordions();</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Navigation Functions</h3>
+                        <div class="example-code">
+                            <pre>// Toggle mobile navigation
+toggleNav();
+
+// Close mobile navigation
+closeNav();</pre>
+                        </div>
+                        
+                        <h3 class="cf-h4">Utility Functions</h3>
+                        <div class="example-code">
+                            <pre>// Toggle dark mode
+toggleDarkMode();
+
+// Show notification
+showNotification('message', 'type', duration);
+
+// Smooth scroll to element
+smoothScrollTo('elementId');</pre>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Modal -->
+    <div class="cf-modal" id="demo-modal">
+        <div class="cf-modal-content">
+            <div class="cf-modal-header">
+                <h3 class="cf-modal-title">Example Modal</h3>
+                <button class="cf-modal-close" onclick="closeModal('demo-modal')">&times;</button>
+            </div>
+            <div class="cf-modal-body">
+                <p>This is an example modal dialog. Click the X or outside the modal to close it.</p>
+            </div>
+            <div class="cf-modal-footer">
+                <button class="cf-btn cf-btn-ghost" onclick="closeModal('demo-modal')">Cancel</button>
+                <button class="cf-btn cf-btn-primary">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="clean-framework.js"></script>
+    <script>
+        // Smooth scroll for documentation navigation
+        document.querySelectorAll('.docs-nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    
+                    // Update active state
+                    document.querySelectorAll('.docs-nav-link').forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Highlight active section on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPos = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.docs-nav-link').forEach(l => l.classList.remove('active'));
+                    const activeLink = document.querySelector(`.docs-nav-link[href="#${sectionId}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

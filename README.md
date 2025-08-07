@@ -16,7 +16,7 @@ A complete framework specifically designed for AI-assisted development. Clean Fr
 
 ## 🚀 Quick Start
 
-### CDN (Recommended for testing)
+### CDN
 
 ```html
 <!-- Clean Framework -->

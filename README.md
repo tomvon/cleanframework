@@ -1,6 +1,6 @@
 # Clean Framework
 
-**[🔗 Live Demo](https://tomvon.github.io/cleanframework/clean-framework-demo.html)** | **[📁 Download CSS](https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.css)** | **[📁 Download JS](https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.js)**
+**[🔗 View Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework-demo.html)** | **[📁 Download CSS](https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.css)** | **[📁 Download JS](https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.js)**
 
 A complete framework specifically designed for AI-assisted development. Clean Framework features predictable class names, semantic HTML patterns, and consistent design principles that work seamlessly with AI coding tools and language models.
 
@@ -245,7 +245,7 @@ This predictable structure allows AI models to generate accurate, consistent cod
 
 ## 📖 Examples
 
-See the **[Live Demo](https://tomvon.github.io/cleanframework/clean-framework-demo.html)** for a comprehensive showcase of all components and layouts.
+See the **[Live Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework-demo.html)** for a comprehensive showcase of all components and layouts.
 
 ### Basic Page Structure
 ```html
@@ -323,7 +323,7 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 
 ## 📚 Resources
 
-- [Live Demo](https://tomvon.github.io/cleanframework/clean-framework-demo.html) - Live component showcase
+- [Live Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework-demo.html) - Live component showcase
 - [Documentation](https://github.com/tomvon/cleanframework/wiki) - Detailed guides
 - [Issues](https://github.com/tomvon/cleanframework/issues) - Bug reports & feature requests
 

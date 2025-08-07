@@ -18,15 +18,15 @@ A complete framework specifically designed for AI-assisted development. Clean Fr
 
 ```html
 <!-- Clean Framework -->
-<link rel="stylesheet" href="https://raw.githubusercontent.com/tomvon/clean-framework/main/clean-framework.css">
-<script src="https://raw.githubusercontent.com/tomvon/clean-framework/main/clean-framework.js"></script>
+<link rel="stylesheet" href="https://raw.githubusercontent.com/tomvon/cleanframework/main/clean-framework.css">
+<script src="https://raw.githubusercontent.com/tomvon/cleanframework/main/clean-framework.js"></script>
 ```
 
 ### Download
 
 Download the framework files directly:
-- [clean-framework.css](https://raw.githubusercontent.com/tomvon/clean-framework/main/clean-framework.css) (Styles - 80KB)
-- [clean-framework.js](https://raw.githubusercontent.com/tomvon/clean-framework/main/clean-framework.js) (JavaScript - 8KB)
+- [clean-framework.css](https://raw.githubusercontent.com/tomvon/cleanframework/main/clean-framework.css) (Styles - 80KB)
+- [clean-framework.js](https://raw.githubusercontent.com/tomvon/cleanframework/main/clean-framework.js) (JavaScript - 8KB)
 
 ## 🤖 AI-Friendly Features
 
@@ -322,8 +322,8 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 ## 📚 Resources
 
 - [Demo Page](clean-framework-demo.html) - Live component showcase
-- [Documentation](https://github.com/tomvon/clean-framework/wiki) - Detailed guides
-- [Issues](https://github.com/tomvon/clean-framework/issues) - Bug reports & feature requests
+- [Documentation](https://github.com/tomvon/cleanframework/wiki) - Detailed guides
+- [Issues](https://github.com/tomvon/cleanframework/issues) - Bug reports & feature requests
 
 ## 🙏 Acknowledgments
 

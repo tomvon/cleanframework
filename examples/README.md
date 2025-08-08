@@ -6,11 +6,11 @@ Real-world examples of Clean Framework implementations designed to help develope
 
 ### Basic Examples
 - **Landing Page** - Complete startup homepage with hero, features, and pricing sections
-  - [🌐 View Live](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/latest/examples/basic/landing-page/index.html) | [📄 Source Code](basic/landing-page/index.html)
+  - [🌐 View Live](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/v1.0.0/examples/basic/landing-page/index.html) | [📄 Source Code](basic/landing-page/index.html)
 - **Contact Form** - Advanced contact form with file upload and validation patterns  
-  - [🌐 View Live](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/latest/examples/basic/contact-form/index.html) | [📄 Source Code](basic/contact-form/index.html)
+  - [🌐 View Live](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/v1.0.0/examples/basic/contact-form/index.html) | [📄 Source Code](basic/contact-form/index.html)
 - **Pricing Table** - Interactive pricing comparison with toggle functionality
-  - [🌐 View Live](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/latest/examples/basic/pricing-table/index.html) | [📄 Source Code](basic/pricing-table/index.html)
+  - [🌐 View Live](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/v1.0.0/examples/basic/pricing-table/index.html) | [📄 Source Code](basic/pricing-table/index.html)
 
 ## 📋 What Each Example Includes
 - Complete working HTML page

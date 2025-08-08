@@ -57,9 +57,60 @@ curl -X POST https://purge.jsdelivr.net/gh/tomvon/cleanframework@latest/clean-fr
 curl -X POST https://purge.jsdelivr.net/gh/tomvon/cleanframework@latest/clean-framework.js
 ```
 
+## URL Patterns Reference
+
+### CDN Links (jsdelivr)
+Use `@latest` - automatically points to newest release:
+```html
+<!-- ✅ CORRECT - Auto-updates with new releases -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/clean-framework.css">
+<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/clean-framework.js"></script>
+
+<!-- ❌ WRONG - Don't use specific versions in docs -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v1.0.0/clean-framework.css">
+```
+
+### HTML Preview Links (GitHub Raw)
+Use specific release tag - GitHub raw doesn't support `@latest`:
+```
+✅ CORRECT - Use actual release tag
+https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/v1.0.0/examples/basic/contact-form/index.html
+
+❌ WRONG - GitHub doesn't recognize @latest
+https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/latest/examples/basic/contact-form/index.html
+```
+
+## Files That Auto-Update vs Manual Update
+
+### ✅ Auto-Update (Use @latest - No manual changes needed)
+- `README.md` - CDN installation instructions
+- `AI_README.md` - Page templates 
+- `documentation.html` - Code examples
+- `examples/*/index.html` - All example HTML files
+
+### 📝 Manual Update Required (Use specific release tag)
+- `examples/README.md` - HTML Preview links must use `v1.0.0`, `v1.1.0`, etc.
+
+## Release Checklist
+
+When creating a new release:
+
+1. **✅ Auto-updates (no action needed):**
+   - CDN links automatically point to new release
+   - All examples automatically get latest framework
+
+2. **📝 Manual update required:**
+   ```bash
+   # Update HTML Preview URLs to new release
+   sed -i 's/v1.0.0/v1.1.0/g' examples/README.md
+   git add examples/README.md
+   git commit -m "Update HTML Preview URLs to v1.1.0"
+   ```
+
 ## Benefits of This Approach
 
 - ✅ **Automatic updates** - `@latest` always gets newest release
-- ✅ **No cache issues** - Releases create new URLs
+- ✅ **No cache issues** - Releases create new URLs  
 - ✅ **Version control** - Users can pin to specific versions if needed
 - ✅ **Professional** - Follows standard practice for CDN libraries
+- ✅ **Mostly automatic** - Only HTML Preview links need manual updates

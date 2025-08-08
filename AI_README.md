@@ -1,6 +1,6 @@
-# AI Developer Guide: Clean Framework
+# AI Implementation Guide: Clean Framework
 
-This guide is designed to help AI systems understand, work with, and enhance the Clean Framework effectively.
+This guide helps AI systems understand how to use Clean Framework when building projects. It contains patterns, conventions, and best practices for generating Clean Framework code.
 
 ## 🤖 Framework Philosophy for AI Systems
 

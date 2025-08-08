@@ -118,7 +118,14 @@
     window.showModal = function(modalId = "demoModal") {
         const modal = document.getElementById(modalId);
         if (modal) {
+            // Remove any existing active state first
+            modal.classList.remove("active");
+            // Force a reflow to ensure the state change is applied
+            modal.offsetHeight;
+            // Add active state
             modal.classList.add("active");
+            // Prevent body scrolling
+            document.body.style.overflow = 'hidden';
         }
     };
 
@@ -126,13 +133,26 @@
         const modal = document.getElementById(modalId);
         if (modal) {
             modal.classList.remove("active");
+            // Restore body scrolling
+            document.body.style.overflow = '';
         }
     };
 
-    // Close modal when clicking outside
+    // Close modal when clicking outside or pressing escape
     document.addEventListener('click', function(event) {
         if (event.target.classList.contains('cf-modal')) {
             event.target.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            const activeModal = document.querySelector('.cf-modal.active');
+            if (activeModal) {
+                activeModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         }
     });
 

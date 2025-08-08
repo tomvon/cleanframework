@@ -39,7 +39,7 @@
             <h1 class="cf-hero-title">Clean Framework</h1>
             <p class="cf-hero-subtitle">A complete framework with clean design and interactive components</p>
             <div class="cf-mt-4">
-                <a href="https://github.com/tomvon/cleanframework" class="cf-btn cf-btn-primary cf-btn-lg">View on GitHub</a>
+                <a href="https://github.com/tomvon/cleanframework" class="cf-btn cf-btn-outline cf-btn-lg">View on GitHub</a>
                 <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/documentation.html" class="cf-btn cf-btn-outline cf-btn-lg">Documentation</a>
             </div>
         </div>
@@ -53,19 +53,72 @@
             <!-- Typography -->
             <h3 class="cf-mb-3">Typography</h3>
             <div class="cf-row">
-                <div class="cf-col">
-                    <h1>Heading 1</h1>
-                    <h2>Heading 2</h2>
-                    <h3>Heading 3</h3>
-                    <h4>Heading 4</h4>
-                    <h5>Heading 5</h5>
-                    <h6>Heading 6</h6>
-                    <p>This is a paragraph with <a href="#">a link</a> inside it. The Clean Framework provides clean, readable typography with proper spacing and hierarchy.</p>
+                <div class="cf-col-6">
+                    <div class="cf-card">
+                        <h2>The Future of Web Design</h2>
+                        <p>Web design has evolved significantly over the past decade. Modern frameworks like <strong>Clean Framework</strong> emphasize <em>semantic markup</em> and <mark>clean design principles</mark>.</p>
+                        
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Semantic HTML structure</li>
+                            <li>Responsive design patterns</li>
+                            <li>AI-friendly class naming
+                                <ul>
+                                    <li>Predictable conventions</li>
+                                    <li>Self-documenting code</li>
+                                </ul>
+                            </li>
+                            <li>Consistent visual hierarchy</li>
+                        </ul>
+
+                        <h4>Implementation Steps</h4>
+                        <ol>
+                            <li>Include the CSS framework</li>
+                            <li>Structure your HTML semantically</li>
+                            <li>Apply Clean Framework classes</li>
+                            <li>Customize with CSS variables</li>
+                        </ol>
+
+                        <blockquote>
+                            <p>Clean Framework represents a new approach to CSS frameworks—one designed from the ground up to work seamlessly with AI tools and modern development workflows.</p>
+                            <cite>Clean Framework Documentation</cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="cf-col-6">
+                    <div class="cf-card">
+                        <h3>Typography Elements</h3>
+                        
+                        <h4>Text Formatting</h4>
+                        <p>Use <code>cf-btn</code> for buttons and <code>cf-card</code> for containers. You can also use <abbr title="Cascading Style Sheets">CSS</abbr> variables for customization.</p>
+                        
+                        <p><small>This is small text that provides additional context or disclaimers.</small></p>
+                        
+                        <hr>
+                        
+                        <h4>Definition List</h4>
+                        <dl>
+                            <dt>Semantic HTML</dt>
+                            <dd>HTML that introduces meaning to the web page rather than just presentation.</dd>
+                            
+                            <dt>CSS Variables</dt>
+                            <dd>Custom properties that allow you to store values in CSS and reuse them throughout your stylesheet.</dd>
+                            
+                            <dt>Clean Framework</dt>
+                            <dd>A CSS framework designed specifically for AI-assisted development.</dd>
+                        </dl>
+
+                        <h4>Code Example</h4>
+                        <pre><code>&lt;div class="cf-card"&gt;
+  &lt;h3&gt;Card Title&lt;/h3&gt;
+  &lt;p&gt;Card content&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
                 </div>
             </div>
             
-            <!-- Cards - The Framework Signature -->
-            <h3 class="cf-mb-3 cf-mt-5">Cards - The Framework Signature</h3>
+            <!-- Cards -->
+            <h3 class="cf-mb-3 cf-mt-5">Cards</h3>
             <div class="cf-row">
                 <div class="cf-col-4">
                     <div class="cf-card">
@@ -837,10 +890,14 @@
             <!-- Special Effect Buttons -->
             <h3 class="cf-mb-3">Interactive Buttons</h3>
             <div class="cf-card cf-mb-5">
-                <button class="cf-btn cf-btn-glow cf-ripple cf-mr-3">Glow & Ripple</button>
-                <button class="cf-btn cf-btn-secondary cf-bounce cf-mr-3">Bounce Effect</button>
-                <button class="cf-btn cf-btn-outline cf-heartbeat cf-mr-3">Heartbeat</button>
-                <button class="cf-btn cf-float">Floating Button</button>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                    <button class="cf-btn cf-btn-glow cf-ripple">Glow & Ripple</button>
+                    <button class="cf-btn cf-btn-secondary cf-bounce">Bounce Effect</button>
+                    <button class="cf-btn cf-btn-outline cf-heartbeat">Heartbeat</button>
+                    <button class="cf-btn cf-btn-accent cf-shake">Shake Effect</button>
+                    <button class="cf-btn cf-btn-primary cf-pulse">Pulse Effect</button>
+                    <button class="cf-btn cf-float">Floating Button</button>
+                </div>
             </div>
 
             <!-- Loading States -->
@@ -1257,22 +1314,23 @@
             <h4 class="cf-mb-3 cf-mt-5">Modal</h4>
             <div class="cf-card cf-mb-5">
                 <button class="cf-btn" onclick="showModal()">Open Modal</button>
-                
-                <div id="demoModal" class="cf-modal">
-                    <div class="cf-modal-content">
-                        <div class="cf-modal-header">
-                            <h3 class="cf-modal-title">Example Modal</h3>
-                            <button class="cf-modal-close" onclick="closeModal()">&times;</button>
-                        </div>
-                        <p>This is a modal dialog. Click the X or outside to close.</p>
-                        <div class="cf-mt-4">
-                            <button class="cf-btn" onclick="closeModal()">Close</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
+
+    <!-- Demo Modal -->
+    <div id="demoModal" class="cf-modal">
+        <div class="cf-modal-content">
+            <div class="cf-modal-header">
+                <h3 class="cf-modal-title">Example Modal</h3>
+                <button class="cf-modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <p>This is a modal dialog. Click the X or outside to close.</p>
+            <div class="cf-mt-4">
+                <button class="cf-btn" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="cf-footer">

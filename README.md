@@ -45,13 +45,14 @@ Clean Framework is a complete framework with styles and interactive components:
 
 **Foundation Elements**
 - CSS Variables & Reset
-- Typography system
+- Comprehensive typography system (headings, lists, blockquotes, code)
 - Layout utilities (container, grid, flexbox)
 - Card components with visual accents
 - Button variations
 - Navigation components
 - Form elements
 - Hero sections
+- Code blocks with copy functionality
 - Responsive utilities
 
 **Advanced Components**
@@ -241,6 +242,42 @@ This predictable structure allows AI models to generate accurate, consistent cod
     <div class="cf-tab active">Tab 1</div>
     <div class="cf-tab-content active">Content 1</div>
 </div>
+```
+
+### Code Blocks
+```html
+<!-- Code Block -->
+<div class="cf-code">
+    <button class="cf-code-copy" onclick="copyCode(this)">Copy</button>
+    <pre>const greeting = 'Hello, World!';
+console.log(greeting);</pre>
+</div>
+
+<!-- Inline Code -->
+<p>Use the <code class="cf-code-inline">cf-btn</code> class for buttons.</p>
+```
+
+### Typography
+```html
+<!-- Rich Typography -->
+<h2>Article Title</h2>
+<p>Clean Framework provides <strong>comprehensive typography</strong> with proper spacing and hierarchy.</p>
+
+<blockquote>
+    <p>Clean, semantic design that works seamlessly with AI tools.</p>
+    <cite>Clean Framework</cite>
+</blockquote>
+
+<ul>
+    <li>Semantic HTML elements</li>
+    <li>Consistent spacing</li>
+    <li>Nested list support
+        <ul>
+            <li>Multiple levels</li>
+            <li>Proper styling</li>
+        </ul>
+    </li>
+</ul>
 ```
 
 ## 📖 Examples

@@ -112,6 +112,174 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Lists */
+ul, ol {
+    margin-bottom: var(--cf-spacing-md);
+    padding-left: var(--cf-spacing-xl);
+    color: var(--cf-gray-700);
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    margin-bottom: var(--cf-spacing-xs);
+    line-height: 1.6;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* Nested lists */
+ul ul, ol ol, ul ol, ol ul {
+    margin-top: var(--cf-spacing-xs);
+    margin-bottom: var(--cf-spacing-xs);
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+ul ul ul {
+    list-style-type: square;
+}
+
+/* Blockquotes */
+blockquote {
+    margin: var(--cf-spacing-xl) 0;
+    padding: var(--cf-spacing-lg);
+    background: var(--cf-gray-100);
+    border-left: 4px solid var(--cf-primary);
+    border-radius: 0 var(--cf-border-radius) var(--cf-border-radius) 0;
+    font-size: var(--cf-font-size-lg);
+    font-style: italic;
+    color: var(--cf-gray-700);
+    position: relative;
+}
+
+blockquote p {
+    margin-bottom: var(--cf-spacing-sm);
+    color: inherit;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: var(--cf-spacing-md);
+    font-size: var(--cf-font-size-sm);
+    font-style: normal;
+    color: var(--cf-gray-500);
+    font-weight: 500;
+}
+
+blockquote cite::before {
+    content: '— ';
+}
+
+/* Code elements */
+code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.875em;
+    background-color: var(--cf-gray-100);
+    color: var(--cf-primary);
+    padding: 0.125rem 0.375rem;
+    border-radius: var(--cf-border-radius-sm);
+    border: 1px solid var(--cf-gray-300);
+}
+
+pre {
+    margin: var(--cf-spacing-md) 0;
+    padding: var(--cf-spacing-lg);
+    background: var(--cf-dark);
+    color: #e6e6e6;
+    border-radius: var(--cf-border-radius);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+}
+
+/* Horizontal rule */
+hr {
+    margin: var(--cf-spacing-xl) 0;
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--cf-gray-300), transparent);
+}
+
+/* Text emphasis */
+strong, b {
+    font-weight: 600;
+    color: var(--cf-dark);
+}
+
+em, i {
+    font-style: italic;
+}
+
+mark {
+    background-color: rgba(102, 126, 234, 0.2);
+    color: var(--cf-dark);
+    padding: 0.125rem 0.25rem;
+    border-radius: var(--cf-border-radius-sm);
+}
+
+small {
+    font-size: var(--cf-font-size-sm);
+    color: var(--cf-gray-500);
+}
+
+/* Definition lists */
+dl {
+    margin-bottom: var(--cf-spacing-md);
+}
+
+dt {
+    font-weight: 600;
+    color: var(--cf-dark);
+    margin-top: var(--cf-spacing-md);
+}
+
+dt:first-child {
+    margin-top: 0;
+}
+
+dd {
+    margin-left: var(--cf-spacing-lg);
+    margin-bottom: var(--cf-spacing-sm);
+    color: var(--cf-gray-700);
+}
+
+/* Address and citation */
+address {
+    font-style: normal;
+    line-height: 1.6;
+    margin-bottom: var(--cf-spacing-md);
+    color: var(--cf-gray-700);
+}
+
+/* Abbreviations */
+abbr[title] {
+    border-bottom: 1px dotted var(--cf-gray-500);
+    cursor: help;
+    text-decoration: none;
+}
+
 /* ========================================
    3. LAYOUT
    ======================================== */
@@ -130,6 +298,7 @@ a:hover {
 .cf-row {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
     margin: 0 calc(-1 * var(--cf-spacing-md));
 }
 
@@ -137,16 +306,58 @@ a:hover {
     flex: 1;
     padding: 0 var(--cf-spacing-md);
     min-width: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-.cf-col-auto { flex: 0 0 auto; }
-.cf-col-1 { flex: 0 0 8.333%; }
-.cf-col-2 { flex: 0 0 16.667%; }
-.cf-col-3 { flex: 0 0 25%; }
-.cf-col-4 { flex: 0 0 33.333%; }
-.cf-col-6 { flex: 0 0 50%; }
-.cf-col-8 { flex: 0 0 66.667%; }
-.cf-col-12 { flex: 0 0 100%; }
+.cf-col-auto { 
+    flex: 0 0 auto;
+    padding: 0 var(--cf-spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+.cf-col-1 { 
+    flex: 0 0 8.333%;
+    padding: 0 var(--cf-spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+.cf-col-2 { 
+    flex: 0 0 16.667%;
+    padding: 0 var(--cf-spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+.cf-col-3 { 
+    flex: 0 0 25%;
+    padding: 0 var(--cf-spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+.cf-col-4 { 
+    flex: 0 0 33.333%;
+    padding: 0 var(--cf-spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+.cf-col-6 { 
+    flex: 0 0 50%;
+    padding: 0 var(--cf-spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+.cf-col-8 { 
+    flex: 0 0 66.667%;
+    padding: 0 var(--cf-spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+.cf-col-12 { 
+    flex: 0 0 100%;
+    padding: 0 var(--cf-spacing-md);
+    display: flex;
+    flex-direction: column;
+}
 
 /* ========================================
    4. CARDS (The Clean Framework Signature!)
@@ -161,6 +372,9 @@ a:hover {
     transition: var(--cf-transition);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 /* The signature left border */
@@ -202,6 +416,15 @@ a:hover {
 .cf-card-info::before { background: var(--cf-info); }
 .cf-card-borderless::before { display: none; }
 
+.cf-card-hover {
+    cursor: pointer;
+}
+
+.cf-card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--cf-shadow-md);
+}
+
 /* ========================================
    5. BUTTONS
    ======================================== */
@@ -218,7 +441,7 @@ a:hover {
     text-decoration: none;
     color: var(--cf-white);
     background-color: var(--cf-primary);
-    border: 2px solid transparent;
+    border: 2px solid var(--cf-primary);
     border-radius: var(--cf-border-radius-sm);
     cursor: pointer;
     transition: var(--cf-transition);
@@ -226,7 +449,6 @@ a:hover {
 }
 
 .cf-btn:hover {
-    background-color: var(--cf-primary-dark);
     transform: translateY(-1px);
     box-shadow: var(--cf-shadow);
     text-decoration: none;
@@ -237,6 +459,18 @@ a:hover {
 }
 
 /* Button variants */
+.cf-btn-primary {
+    background-color: var(--cf-primary);
+    color: var(--cf-white);
+    border-color: var(--cf-primary);
+}
+
+.cf-btn-primary:hover {
+    background-color: var(--cf-primary-dark);
+    border-color: var(--cf-primary-dark);
+    color: var(--cf-white);
+}
+
 .cf-btn-secondary {
     background-color: var(--cf-gray-700);
     color: var(--cf-white);
@@ -248,13 +482,15 @@ a:hover {
 
 .cf-btn-outline {
     background-color: transparent;
-    color: var(--cf-primary);
-    border-color: var(--cf-primary);
+    color: var(--cf-white);
+    border-color: var(--cf-white);
+    opacity: 1;
 }
 
 .cf-btn-outline:hover {
-    background-color: var(--cf-primary);
-    color: var(--cf-white);
+    background-color: var(--cf-white);
+    color: var(--cf-primary);
+    border-color: var(--cf-white);
 }
 
 /* Button sizes */
@@ -301,6 +537,20 @@ a:hover {
     list-style: none;
     gap: var(--cf-spacing-lg);
     align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.cf-nav-menu li {
+    display: flex;
+    align-items: center;
+}
+
+.cf-nav-menu li button {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cf-nav-link {
@@ -309,6 +559,8 @@ a:hover {
     transition: var(--cf-transition);
     display: flex;
     align-items: center;
+    height: 44px;
+    line-height: 1;
 }
 
 .cf-nav-link:hover {
@@ -1060,12 +1312,74 @@ a:hover {
     color: var(--cf-dark);
 }
 
+.cf-badge-error {
+    background-color: var(--cf-danger);
+}
+
 /* ========================================
-   13. MODALS
+   13. CODE BLOCKS
+   ======================================== */
+
+.cf-code {
+    position: relative;
+    background: var(--cf-dark);
+    color: #e6e6e6;
+    border-radius: var(--cf-border-radius);
+    margin: var(--cf-spacing-md) 0;
+    overflow: hidden;
+}
+
+.cf-code pre {
+    margin: 0;
+    padding: var(--cf-spacing-lg);
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: var(--cf-font-size-sm);
+    line-height: 1.5;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cf-code-inline {
+    display: inline;
+    padding: 0.125rem 0.375rem;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.875em;
+    background-color: var(--cf-gray-100);
+    color: var(--cf-primary);
+    border-radius: var(--cf-border-radius-sm);
+    border: 1px solid var(--cf-gray-300);
+}
+
+.cf-code-copy {
+    position: absolute;
+    top: var(--cf-spacing-sm);
+    right: var(--cf-spacing-sm);
+    padding: var(--cf-spacing-xs) var(--cf-spacing-sm);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--cf-border-radius-sm);
+    color: #e6e6e6;
+    font-size: var(--cf-font-size-sm);
+    cursor: pointer;
+    transition: var(--cf-transition);
+}
+
+.cf-code-copy:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cf-code-copy.copied {
+    background: var(--cf-secondary);
+    border-color: var(--cf-secondary);
+    color: var(--cf-white);
+}
+
+/* ========================================
+   14. MODALS
    ======================================== */
 
 .cf-modal {
-    display: none;
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -1073,13 +1387,17 @@ a:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    animation: cf-fadeIn 0.3s ease;
-}
-
-.cf-modal.active {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.cf-modal.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .cf-modal-content {
@@ -1089,7 +1407,12 @@ a:hover {
     box-shadow: var(--cf-shadow-lg);
     max-width: 500px;
     width: 90%;
-    animation: cf-slideIn 0.3s ease;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.cf-modal.active .cf-modal-content {
+    transform: translateY(0);
 }
 
 .cf-modal-header {
@@ -2484,16 +2807,7 @@ a:hover {
     animation: cf-float 3s ease-in-out infinite;
 }
 
-/* Shake Animation for Errors */
-@keyframes cf-shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    75% { transform: translateX(5px); }
-}
-
-.cf-shake {
-    animation: cf-shake 0.5s ease-in-out;
-}
+/* Shake Animation for Errors - moved to interactive section */
 
 /* Bounce Animation */
 @keyframes cf-bounce {
@@ -2502,8 +2816,28 @@ a:hover {
     60% { transform: translateY(-5px); }
 }
 
-.cf-bounce {
-    animation: cf-bounce 1s ease;
+.cf-bounce:hover {
+    animation: cf-bounce 0.6s ease;
+}
+
+@keyframes cf-shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+    20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+.cf-shake:hover {
+    animation: cf-shake 0.5s ease-in-out;
+}
+
+@keyframes cf-pulse-scale {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.cf-pulse:hover {
+    animation: cf-pulse-scale 0.4s ease-in-out;
 }
 
 /* Enhanced Button Interactions */
@@ -3545,6 +3879,22 @@ a:hover {
 [data-theme="dark"] .cf-code {
     background: #0f1419;
     color: #e6e6e6;
+}
+
+[data-theme="dark"] code {
+    background-color: var(--cf-gray-100);
+    color: var(--cf-primary);
+    border-color: var(--cf-gray-300);
+}
+
+[data-theme="dark"] pre {
+    background: #0f1419;
+    color: #e6e6e6;
+}
+
+[data-theme="dark"] pre code {
+    background: none;
+    color: inherit;
 }
 
 /* Footer styles */

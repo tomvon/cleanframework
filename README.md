@@ -39,6 +39,20 @@ Download the framework files directly:
 - **Logical Hierarchy**: CSS classes that mirror content hierarchy
 - **Pattern Recognition**: Repeating design motifs that AI can easily identify and replicate
 
+## 🤖 AI Documentation
+
+Clean Framework includes specialized documentation for AI-assisted development:
+
+- **[AI_README.md](AI_README.md)** - For developers using Clean Framework with AI assistants
+  - Share this with your AI when building projects with Clean Framework
+  - Contains component patterns, naming conventions, and usage guidelines
+  - Optimized for AI comprehension and code generation
+
+- **[AI_DEV.md](AI_DEV.md)** - For AI assistants working on Clean Framework itself
+  - Internal development guidelines for maintaining the framework
+  - Dogfooding principles and synchronization requirements
+  - Not needed for general Clean Framework usage
+
 ## 📦 What's Included
 
 Clean Framework is a complete framework with styles and interactive components:
@@ -361,7 +375,7 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 ## 📚 Resources
 
 - [Live Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework-demo.html) - Live component showcase
-- [Documentation](https://github.com/tomvon/cleanframework/wiki) - Detailed guides
+- [Documentation](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/documentation.html) - Complete framework documentation
 - [Issues](https://github.com/tomvon/cleanframework/issues) - Bug reports & feature requests
 
 ## 🙏 Acknowledgments

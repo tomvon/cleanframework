@@ -41,15 +41,23 @@ Clean Framework was designed with AI-assisted development in mind. Every class n
 
 /* Buttons */
 .cf-btn                           /* Base button */
+.cf-btn-primary                   /* Primary variant */
+.cf-btn-secondary                 /* Secondary variant */
 .cf-btn-outline                   /* Outline variant */
 .cf-btn-sm                        /* Size modifier */
+.cf-btn-lg                        /* Large size modifier */
 .cf-btn.cf-loading                /* Loading state */
+.cf-btn-interactive-shake         /* Shake animation on hover */
+.cf-btn-interactive-pulse         /* Pulse animation on hover */
 
 /* Forms */
 .cf-form-group                    /* Form group container */
 .cf-form-input                    /* Input element */
 .cf-form-label                    /* Label element */
+.cf-form-textarea                 /* Textarea element */
+.cf-form-select                   /* Select element */
 .cf-form-node                     /* Multi-step form section */
+.cf-form-node-active              /* Active form step */
 ```
 
 ## 🏗️ Component Architecture
@@ -74,6 +82,17 @@ Clean Framework was designed with AI-assisted development in mind. Every class n
     <div class="cf-form-group">
         <label class="cf-form-label">Label Text</label>
         <input type="text" class="cf-form-input" placeholder="Placeholder">
+    </div>
+    <div class="cf-form-group">
+        <label class="cf-form-label">Select</label>
+        <select class="cf-form-select">
+            <option>Option 1</option>
+            <option>Option 2</option>
+        </select>
+    </div>
+    <div class="cf-form-group">
+        <label class="cf-form-label">Message</label>
+        <textarea class="cf-form-textarea" placeholder="Enter message"></textarea>
     </div>
     <button type="submit" class="cf-btn cf-btn-primary">Submit</button>
 </form>
@@ -127,6 +146,58 @@ All visual aspects are controlled by CSS custom properties. When generating comp
 --cf-font-size-4xl: 2.5rem;      /* 40px */
 ```
 
+## 📝 Typography System
+
+Clean Framework includes comprehensive typography styles:
+
+### Typography Elements
+```html
+<!-- Headings with proper hierarchy -->
+<h1>Page Title</h1>
+<h2>Section Title</h2>
+<h3>Subsection Title</h3>
+
+<!-- Rich text elements -->
+<p>Paragraph with <strong>bold</strong> and <em>italic</em> text.</p>
+
+<!-- Lists -->
+<ul>
+    <li>Unordered list item</li>
+    <li>Nested support
+        <ul>
+            <li>Nested item</li>
+        </ul>
+    </li>
+</ul>
+
+<ol>
+    <li>Ordered list item</li>
+    <li>With proper numbering</li>
+</ol>
+
+<!-- Blockquotes -->
+<blockquote>
+    <p>Quoted content with proper styling.</p>
+    <cite>Source Name</cite>
+</blockquote>
+
+<!-- Definition lists -->
+<dl>
+    <dt>Term</dt>
+    <dd>Definition with proper spacing and indentation.</dd>
+</dl>
+
+<!-- Code blocks -->
+<div class="cf-code">
+    <button class="cf-code-copy" onclick="copyCode(this)">Copy</button>
+    <pre>const example = 'code';
+console.log(example);</pre>
+</div>
+
+<!-- Inline code -->
+<p>Use <code class="cf-code-inline">cf-btn</code> for buttons.</p>
+```
+
 ## 🧩 Component Generation Guidelines
 
 ### When generating new components:
@@ -160,11 +231,13 @@ All visual aspects are controlled by CSS custom properties. When generating comp
    ```html
    <div class="cf-container">
        <div class="cf-row">
-           <div class="cf-col-4"><!-- 33% width --></div>
-           <div class="cf-col-8"><!-- 67% width --></div>
+           <div class="cf-col-4"><!-- 33% width with padding --></div>
+           <div class="cf-col-8"><!-- 67% width with padding --></div>
        </div>
    </div>
    ```
+   
+   **Note**: All numbered columns (cf-col-1 through cf-col-12) include horizontal padding for proper spacing.
 
 ## 🔧 Advanced Component Patterns
 
@@ -197,17 +270,23 @@ All visual aspects are controlled by CSS custom properties. When generating comp
 
 ### Interactive Components
 ```html
-<!-- Modal -->
+<!-- Modal (place outside of flex containers) -->
 <div class="cf-modal" id="myModal">
     <div class="cf-modal-content">
         <div class="cf-modal-header">
             <h3 class="cf-modal-title">Modal Title</h3>
-            <button class="cf-modal-close">&times;</button>
+            <button class="cf-modal-close" onclick="closeModal('myModal')">&times;</button>
         </div>
         <div class="cf-modal-body">
             <p>Modal content</p>
         </div>
     </div>
+</div>
+
+<!-- Interactive Buttons -->
+<div class="cf-btn-interactive-wrapper">
+    <button class="cf-btn cf-btn-interactive-shake">Shake Effect</button>
+    <button class="cf-btn cf-btn-interactive-pulse">Pulse Effect</button>
 </div>
 
 <!-- Tabs -->
@@ -322,11 +401,43 @@ All visual aspects are controlled by CSS custom properties. When generating comp
 .cf-notification-warning::before { background: var(--cf-warning); }
 ```
 
+## 🎯 Common AI Pitfalls to Avoid
+
+### Modal Placement
+```html
+<!-- WRONG: Modal inside card/flex container -->
+<div class="cf-card">
+    <div class="cf-modal">...</div>
+</div>
+
+<!-- CORRECT: Modal at body level -->
+<body>
+    <div class="cf-modal">...</div>
+</body>
+```
+
+### Button Variants
+```html
+<!-- WRONG: Using non-existent classes -->
+<button class="cf-btn-blue">Button</button>
+
+<!-- CORRECT: Use framework variants -->
+<button class="cf-btn cf-btn-primary">Button</button>
+```
+
+### Grid Columns
+```html
+<!-- All columns include padding automatically -->
+<div class="cf-col-4"><!-- Has padding: 0 var(--cf-spacing-md) --></div>
+```
+
 ## 📚 Learning Resources
 
 - **Main Documentation**: `README.md`
 - **Component Showcase**: `clean-framework-demo.html`
+- **Interactive Documentation**: `documentation.html`
 - **Framework File**: `clean-framework.css` (Complete framework)
+- **JavaScript**: `clean-framework.js` (Interactive functionality)
 - **Examples**: All demo HTML shows proper usage patterns
 
 ---

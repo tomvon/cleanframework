@@ -466,6 +466,233 @@ cfFileUpload.clearFiles(upload);
 <div class="cf-col-4"><!-- Has padding: 0 var(--cf-spacing-md) --></div>
 ```
 
+## 📄 Complete Page Template
+
+### Basic HTML Structure
+Always use this template as your starting point:
+
+```html
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/clean-framework.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="cf-nav">
+        <div class="cf-container">
+            <div class="cf-nav-container">
+                <a href="#" class="cf-nav-brand">Your Brand</a>
+                <button class="cf-nav-toggle" onclick="toggleNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="cf-nav-menu">
+                    <li><a href="#" class="cf-nav-link active">Home</a></li>
+                    <li><a href="#" class="cf-nav-link">About</a></li>
+                    <li><a href="#" class="cf-nav-link">Services</a></li>
+                    <li><a href="#" class="cf-nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="cf-hero">
+        <div class="cf-container">
+            <h1 class="cf-hero-title">Your Hero Title</h1>
+            <p class="cf-hero-subtitle">Your compelling subtitle</p>
+            <div class="cf-mt-4">
+                <a href="#" class="cf-btn cf-btn-outline cf-btn-lg">Primary Action</a>
+                <a href="#" class="cf-btn cf-btn-outline cf-btn-lg">Secondary Action</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="cf-section">
+        <div class="cf-container">
+            <h2 class="cf-text-center cf-mb-4">Section Title</h2>
+            <div class="cf-row">
+                <div class="cf-col-4">
+                    <article class="cf-card">
+                        <div class="cf-card-header">
+                            <h3 class="cf-card-title">Card Title</h3>
+                        </div>
+                        <div class="cf-card-body">
+                            <p>Card content goes here.</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- Repeat for more cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="cf-section">
+        <div class="cf-container">
+            <div class="cf-row">
+                <div class="cf-col-6">
+                    <h2>Contact Us</h2>
+                    <form>
+                        <div class="cf-form-group">
+                            <label class="cf-form-label">Name</label>
+                            <input type="text" class="cf-form-input" placeholder="Your name">
+                        </div>
+                        <div class="cf-form-group">
+                            <label class="cf-form-label">Email</label>
+                            <input type="email" class="cf-form-input" placeholder="your@email.com">
+                        </div>
+                        <div class="cf-form-group">
+                            <label class="cf-form-label">Message</label>
+                            <textarea class="cf-form-textarea" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="cf-btn cf-btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/clean-framework.js"></script>
+</body>
+</html>
+```
+
+### Key Template Rules:
+1. **Always include Font Awesome** for icons
+2. **Use semantic HTML** elements (`nav`, `section`, `article`)
+3. **Wrap content** in `.cf-container` and `.cf-row`
+4. **Include JavaScript** before closing body tag
+5. **NO custom CSS needed** - use framework classes only
+
+## 🎨 Available Utility Classes
+
+### Spacing (Margins & Padding)
+```css
+.cf-mt-1, .cf-mt-2, .cf-mt-3, .cf-mt-4, .cf-mt-5    /* margin-top */
+.cf-mb-1, .cf-mb-2, .cf-mb-3, .cf-mb-4, .cf-mb-5    /* margin-bottom */
+.cf-ml-1, .cf-ml-2, .cf-ml-3, .cf-ml-4, .cf-ml-5    /* margin-left */
+.cf-mr-1, .cf-mr-2, .cf-mr-3, .cf-mr-4, .cf-mr-5    /* margin-right */
+.cf-pt-1, .cf-pt-2, .cf-pt-3, .cf-pt-4, .cf-pt-5    /* padding-top */
+.cf-pb-1, .cf-pb-2, .cf-pb-3, .cf-pb-4, .cf-pb-5    /* padding-bottom */
+```
+
+### Text Utilities
+```css
+.cf-text-center     /* text-align: center */
+.cf-text-left       /* text-align: left */
+.cf-text-right      /* text-align: right */
+.cf-text-bold       /* font-weight: bold */
+.cf-text-uppercase  /* text-transform: uppercase */
+```
+
+### Layout Utilities
+```css
+.cf-container       /* Main container with max-width */
+.cf-row            /* Flex row container */
+.cf-col-1 to .cf-col-12  /* Column widths */
+.cf-section        /* Section spacing */
+```
+
+### Component Classes (DO NOT INVENT NEW ONES)
+```css
+/* Navigation */
+.cf-nav, .cf-nav-container, .cf-nav-brand, .cf-nav-menu, .cf-nav-link, .cf-nav-toggle
+
+/* Hero */
+.cf-hero, .cf-hero-title, .cf-hero-subtitle
+
+/* Cards */
+.cf-card, .cf-card-header, .cf-card-body, .cf-card-footer, .cf-card-title
+.cf-card-primary, .cf-card-secondary, .cf-card-accent
+
+/* Buttons */
+.cf-btn, .cf-btn-primary, .cf-btn-secondary, .cf-btn-outline, .cf-btn-sm, .cf-btn-lg
+
+/* Forms */
+.cf-form-group, .cf-form-label, .cf-form-input, .cf-form-textarea, .cf-form-select
+
+/* File Upload */
+.cf-file-upload, .cf-file-upload-area, .cf-file-upload-icon, .cf-file-upload-text
+
+/* Modals */
+.cf-modal, .cf-modal-content, .cf-modal-header, .cf-modal-body, .cf-modal-title
+
+/* Grid */
+.cf-grid, .cf-grid-2, .cf-grid-3, .cf-grid-4
+```
+
+**IMPORTANT**: Only use classes listed above. Do not create or use classes like:
+- `cf-bg-light` (doesn't exist)
+- `cf-hero-image` (doesn't exist) 
+- `cf-card-icon` (doesn't exist)
+- `cf-footer` (doesn't exist)
+- `cf-social-icons` (doesn't exist)
+
+## 🚨 Critical Mistakes to Avoid
+
+### ❌ WRONG Examples:
+```html
+<!-- Don't create custom CSS -->
+<style>
+:root { --primary-color: #667eea; }
+.btn-primary { background: var(--primary-color) !important; }
+</style>
+
+<!-- Don't use non-existent classes -->
+<div class="cf-bg-light">...</div>        <!-- cf-bg-light doesn't exist -->
+<div class="cf-hero-image">...</div>      <!-- cf-hero-image doesn't exist -->
+<div class="cf-card-icon">...</div>       <!-- cf-card-icon doesn't exist -->
+
+<!-- Don't break HTML structure -->
+<div class="cf-nav-container">            <!-- Missing <nav> wrapper -->
+    <a href="#" class="cf-nav-brand">Brand</a>
+</nav>                                    <!-- Closes tag that was never opened -->
+
+<!-- Don't use wrong form structure -->
+<div class="cf-form-group">
+    <input class="cf-form-input">         <!-- Missing label -->
+    <input class="cf-form-input">         <!-- Multiple inputs in one group -->
+</div>
+```
+
+### ✅ CORRECT Examples:
+```html
+<!-- Use framework colors through existing classes -->
+<button class="cf-btn cf-btn-primary">Primary</button>
+<button class="cf-btn cf-btn-secondary">Secondary</button>
+
+<!-- Use existing utility classes -->
+<div class="cf-text-center cf-mt-4 cf-mb-3">Centered with spacing</div>
+
+<!-- Proper HTML structure -->
+<nav class="cf-nav">
+    <div class="cf-container">
+        <div class="cf-nav-container">
+            <!-- nav content -->
+        </div>
+    </div>
+</nav>
+
+<!-- Correct form structure -->
+<div class="cf-form-group">
+    <label class="cf-form-label">Name</label>
+    <input type="text" class="cf-form-input">
+</div>
+<div class="cf-form-group">
+    <label class="cf-form-label">Email</label>
+    <input type="email" class="cf-form-input">
+</div>
+```
+
 ## 📚 Learning Resources
 
 - **Main Documentation**: `README.md`

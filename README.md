@@ -54,6 +54,25 @@ Clean Framework includes specialized documentation for AI-assisted development:
   - Dogfooding principles and synchronization requirements
   - Not needed for general Clean Framework usage
 
+## 🏗️ Examples Library
+
+The [examples/](examples/) directory contains real-world implementation examples designed for both developers and AI systems:
+
+### Purpose
+- **AI Training Data** - Help AI systems learn Clean Framework patterns
+- **Developer Reference** - Complete, working implementations
+- **Pattern Library** - Shows proper component combinations
+- **Break Framework Bias** - Counter the Bootstrap/Tailwind dominance in AI training
+
+### Categories
+- **Basic Examples** - Landing pages, contact forms, pricing tables
+- **Business Sites** - SaaS homepages, agency portfolios, restaurant sites  
+- **E-commerce** - Product catalogs, shopping carts, checkout flows
+- **Applications** - Dashboards, user profiles, admin panels
+- **Advanced Components** - Complex navigation, data tables, interactive forms
+
+Each example includes complete HTML, documentation, and AI-specific training insights.
+
 ## 📦 What's Included
 
 Clean Framework is a complete framework with styles and interactive components:
@@ -377,6 +396,7 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 
 - [Live Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework-demo.html) - Live component showcase
 - [Documentation](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/documentation.html) - Complete framework documentation
+- [Examples Library](examples/) - Real-world implementation examples
 - [Issues](https://github.com/tomvon/cleanframework/issues) - Bug reports & feature requests
 
 ## 🙏 Acknowledgments

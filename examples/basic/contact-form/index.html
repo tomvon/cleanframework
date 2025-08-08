@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Clean Framework Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../../clean-framework.css">
+</head>
+<body>
+    <!-- Simple Navigation -->
+    <nav class="cf-nav">
+        <div class="cf-container">
+            <div class="cf-nav-container">
+                <a href="#" class="cf-nav-brand">ContactPro</a>
+                <button class="cf-nav-toggle" onclick="toggleNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="cf-nav-menu">
+                    <li><a href="#" class="cf-nav-link">Home</a></li>
+                    <li><a href="#" class="cf-nav-link">About</a></li>
+                    <li><a href="#" class="cf-nav-link">Services</a></li>
+                    <li><a href="#" class="cf-nav-link active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="cf-hero">
+        <div class="cf-container">
+            <h1 class="cf-hero-title">Get in Touch</h1>
+            <p class="cf-hero-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="cf-section">
+        <div class="cf-container">
+            <div class="cf-row">
+                <!-- Contact Form -->
+                <div class="cf-col-8">
+                    <article class="cf-card">
+                        <div class="cf-card-header">
+                            <h2 class="cf-card-title">Send us a Message</h2>
+                        </div>
+                        <div class="cf-card-body">
+                            <form>
+                                <!-- Basic Information -->
+                                <div class="cf-row">
+                                    <div class="cf-col-6">
+                                        <div class="cf-form-group">
+                                            <label class="cf-form-label">First Name *</label>
+                                            <input type="text" class="cf-form-input" placeholder="John" required>
+                                        </div>
+                                    </div>
+                                    <div class="cf-col-6">
+                                        <div class="cf-form-group">
+                                            <label class="cf-form-label">Last Name *</label>
+                                            <input type="text" class="cf-form-input" placeholder="Doe" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Email Address *</label>
+                                    <input type="email" class="cf-form-input" placeholder="john@company.com" required>
+                                </div>
+
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Phone Number</label>
+                                    <input type="tel" class="cf-form-input" placeholder="+1 (555) 123-4567">
+                                </div>
+
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Company</label>
+                                    <input type="text" class="cf-form-input" placeholder="Your Company Name">
+                                </div>
+
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Subject *</label>
+                                    <select class="cf-form-select" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="support">Technical Support</option>
+                                        <option value="sales">Sales Question</option>
+                                        <option value="partnership">Partnership Opportunity</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Message *</label>
+                                    <textarea class="cf-form-textarea" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+                                </div>
+
+                                <!-- File Upload Example -->
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Attachments</label>
+                                    <div class="cf-file-upload">
+                                        <input type="file" multiple accept=".pdf,.doc,.docx,.txt,.jpg,.png">
+                                        <div class="cf-file-upload-area">
+                                            <i class="cf-file-upload-icon fas fa-paperclip"></i>
+                                            <div class="cf-file-upload-text">Click to attach files or drag and drop</div>
+                                            <div class="cf-file-upload-hint">PDF, DOC, images up to 5MB each</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Checkbox Agreement -->
+                                <div class="cf-form-group">
+                                    <label class="cf-checkbox">
+                                        <input type="checkbox" required>
+                                        <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> *</span>
+                                    </label>
+                                </div>
+
+                                <!-- Optional Newsletter -->
+                                <div class="cf-form-group">
+                                    <label class="cf-checkbox">
+                                        <input type="checkbox">
+                                        <span>Subscribe to our newsletter for updates and tips</span>
+                                    </label>
+                                </div>
+
+                                <div class="cf-form-group">
+                                    <button type="submit" class="cf-btn cf-btn-primary cf-btn-lg">Send Message</button>
+                                    <button type="reset" class="cf-btn cf-btn-outline cf-ml-2">Clear Form</button>
+                                </div>
+                            </form>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Contact Information Sidebar -->
+                <div class="cf-col-4">
+                    <div class="cf-card cf-card-secondary cf-mb-4">
+                        <div class="cf-card-header">
+                            <h3 class="cf-card-title">Contact Information</h3>
+                        </div>
+                        <div class="cf-card-body">
+                            <div class="cf-mb-3">
+                                <div class="cf-d-flex cf-align-center cf-mb-2">
+                                    <i class="fas fa-map-marker-alt cf-text-secondary cf-mr-2" style="width: 20px;"></i>
+                                    <strong>Address</strong>
+                                </div>
+                                <p class="cf-ml-4">123 Business Avenue<br>Suite 100<br>San Francisco, CA 94105</p>
+                            </div>
+
+                            <div class="cf-mb-3">
+                                <div class="cf-d-flex cf-align-center cf-mb-2">
+                                    <i class="fas fa-phone cf-text-secondary cf-mr-2" style="width: 20px;"></i>
+                                    <strong>Phone</strong>
+                                </div>
+                                <p class="cf-ml-4">+1 (555) 123-4567</p>
+                            </div>
+
+                            <div class="cf-mb-3">
+                                <div class="cf-d-flex cf-align-center cf-mb-2">
+                                    <i class="fas fa-envelope cf-text-secondary cf-mr-2" style="width: 20px;"></i>
+                                    <strong>Email</strong>
+                                </div>
+                                <p class="cf-ml-4">hello@contactpro.com</p>
+                            </div>
+
+                            <div class="cf-mb-3">
+                                <div class="cf-d-flex cf-align-center cf-mb-2">
+                                    <i class="fas fa-clock cf-text-secondary cf-mr-2" style="width: 20px;"></i>
+                                    <strong>Business Hours</strong>
+                                </div>
+                                <p class="cf-ml-4">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Contact Methods -->
+                    <div class="cf-card cf-mb-4">
+                        <div class="cf-card-header">
+                            <h3 class="cf-card-title">Quick Contact</h3>
+                        </div>
+                        <div class="cf-card-body">
+                            <p class="cf-mb-3">Need immediate assistance?</p>
+                            <button class="cf-btn cf-btn-outline" style="width: 100%; margin-bottom: 0.5rem;">
+                                <i class="fas fa-phone cf-mr-2"></i>Call Now
+                            </button>
+                            <button class="cf-btn cf-btn-outline" style="width: 100%; margin-bottom: 0.5rem;">
+                                <i class="fas fa-comments cf-mr-2"></i>Live Chat
+                            </button>
+                            <button class="cf-btn cf-btn-outline" style="width: 100%;">
+                                <i class="fas fa-calendar cf-mr-2"></i>Schedule Meeting
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Links -->
+                    <div class="cf-card">
+                        <div class="cf-card-header">
+                            <h3 class="cf-card-title">Before You Contact Us</h3>
+                        </div>
+                        <div class="cf-card-body">
+                            <p class="cf-mb-3">You might find what you're looking for here:</p>
+                            <ul style="list-style: none; padding: 0;">
+                                <li class="cf-mb-2">
+                                    <a href="#" style="display: flex; align-items: center;">
+                                        <i class="fas fa-question-circle" style="margin-right: 0.5rem; color: var(--cf-primary);"></i>
+                                        Frequently Asked Questions
+                                    </a>
+                                </li>
+                                <li class="cf-mb-2">
+                                    <a href="#" style="display: flex; align-items: center;">
+                                        <i class="fas fa-book" style="margin-right: 0.5rem; color: var(--cf-primary);"></i>
+                                        Documentation
+                                    </a>
+                                </li>
+                                <li class="cf-mb-2">
+                                    <a href="#" style="display: flex; align-items: center;">
+                                        <i class="fas fa-video" style="margin-right: 0.5rem; color: var(--cf-primary);"></i>
+                                        Video Tutorials
+                                    </a>
+                                </li>
+                                <li class="cf-mb-2">
+                                    <a href="#" style="display: flex; align-items: center;">
+                                        <i class="fas fa-users" style="margin-right: 0.5rem; color: var(--cf-primary);"></i>
+                                        Community Forum
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Response Time Information -->
+    <section class="cf-section">
+        <div class="cf-container">
+            <div class="cf-card cf-card-accent">
+                <div class="cf-card-body">
+                    <div class="cf-text-center">
+                        <i class="fas fa-clock" style="font-size: 2rem; color: var(--cf-primary); margin-bottom: 1rem;"></i>
+                        <h3>We're Here to Help</h3>
+                        <p>We typically respond to messages within 2-4 hours during business hours. For urgent matters, please call us directly or use the live chat option.</p>
+                        <div class="cf-mt-3">
+                            <span style="background: var(--cf-secondary); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; margin-right: 0.5rem;">
+                                <i class="fas fa-circle" style="font-size: 0.5rem; margin-right: 0.25rem;"></i>
+                                Currently Online
+                            </span>
+                            <span style="color: var(--cf-gray-600); font-size: 0.875rem;">Average response time: 2.3 hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Framework JavaScript -->
+    <script src="../../../clean-framework.js"></script>
+</body>
+</html>

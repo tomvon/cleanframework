@@ -282,6 +282,40 @@ When adding components, update ALL of these files:
 3. **documentation.html** - Add usage documentation with examples
 4. **AI_README.md** - Add class names to the reference lists
 5. **README.md** - Update "What's Included" if it's a major addition
+6. **examples/** - Create or update examples that demonstrate the new component
+
+## 📁 Examples Library Management
+
+The examples library is critical for AI training and must be maintained alongside framework development.
+
+### Examples Workflow
+1. **New Framework Features** → Always create example usage
+2. **Framework Issues Found** → Check if examples expose the issue
+3. **Examples Issues Found** → Fix in framework, not with custom CSS
+4. **Pattern Discovery** → Document in examples for future reference
+
+### When Adding New Examples:
+- [ ] Create complete HTML page (no lorem ipsum)
+- [ ] Write detailed README.md explaining patterns
+- [ ] Use ONLY Clean Framework classes (no custom CSS)
+- [ ] Include proper semantic HTML structure
+- [ ] Test in both light and dark modes
+- [ ] Update examples/README.md with new entry
+- [ ] Add to AI_README.md learning resources
+
+### Examples Categories:
+- **examples/basic/** - Fundamental patterns (landing, contact, pricing)
+- **examples/business/** - Real business sites (SaaS, agency, restaurant)
+- **examples/ecommerce/** - Online store patterns (catalog, cart, product)
+- **examples/applications/** - App-like interfaces (dashboard, profile, admin)
+- **examples/components/** - Advanced component combinations
+
+### Dogfooding Through Examples:
+If examples can't be built with Clean Framework classes alone, the framework is incomplete. Examples should:
+- ✅ Expose framework limitations
+- ✅ Drive new component development  
+- ✅ Validate framework completeness
+- ❌ Never use custom CSS workarounds
 
 ## ⚠️ Never Forget
 

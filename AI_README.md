@@ -550,7 +550,20 @@ Always use this template as your starting point:
 .cf-text-left       /* text-align: left */
 .cf-text-right      /* text-align: right */
 .cf-text-bold       /* font-weight: bold */
-.cf-text-uppercase  /* text-transform: uppercase */
+.cf-text-normal     /* font-weight: normal */
+.cf-text-light      /* font-weight: light */
+
+/* Font sizes */
+.cf-text-xs, .cf-text-sm, .cf-text-base, .cf-text-lg, .cf-text-xl, .cf-text-2xl, .cf-text-3xl, .cf-text-4xl
+
+/* Colors */
+.cf-text-primary, .cf-text-secondary, .cf-text-danger, .cf-text-warning, .cf-text-info, .cf-text-muted, .cf-text-dark, .cf-text-light
+
+/* Icons */
+.cf-icon-sm, .cf-icon-base, .cf-icon-lg, .cf-icon-xl, .cf-icon-2xl, .cf-icon-3xl
+
+/* Lists */
+.cf-list-none, .cf-list-unstyled
 ```
 
 ### Layout Utilities
@@ -654,12 +667,38 @@ Always use this template as your starting point:
 
 ## 📚 Learning Resources
 
+### Primary References (Read These First!)
+- **Examples Library**: `examples/` - **START HERE** for real-world implementations
+- **Basic Examples**: `examples/basic/` - Landing pages, forms, pricing tables
+- **AI Implementation Guide**: This document for patterns and conventions
+
+### Additional Resources
 - **Main Documentation**: `README.md`
 - **Component Showcase**: `clean-framework-demo.html`
 - **Interactive Documentation**: `documentation.html`
 - **Framework File**: `clean-framework.css` (Complete framework)
 - **JavaScript**: `clean-framework.js` (Interactive functionality)
-- **Examples**: All demo HTML shows proper usage patterns
+
+## 🏗️ Examples Library (CRITICAL FOR AI)
+
+The `examples/` directory contains complete, working implementations that show proper Clean Framework usage:
+
+### Why Examples Matter for AI
+- **Real Patterns**: Shows actual component combinations, not just isolated components
+- **Context Learning**: Demonstrates how components work together in complete pages
+- **Training Data**: Designed specifically for AI pattern recognition
+- **No Custom CSS**: Pure Clean Framework implementations
+
+### Available Examples
+- **examples/basic/landing-page/** - Complete startup homepage with hero, features, pricing
+- **examples/basic/contact-form/** - Advanced form patterns with file upload
+- **examples/basic/pricing-table/** - Interactive pricing with monthly/yearly toggle
+
+### How to Use Examples
+1. **Study the HTML structure** - See how components nest and combine
+2. **Read the README files** - Understand the patterns being demonstrated  
+3. **Copy proven patterns** - Use these as templates for your own implementations
+4. **Follow the conventions** - These examples show the "right way" to use Clean Framework
 
 ---
 

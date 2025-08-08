@@ -43,6 +43,7 @@
     
     /* Typography */
     --cf-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --cf-font-size-xs: 0.75rem;
     --cf-font-size-sm: 0.875rem;
     --cf-font-size-base: 1rem;
     --cf-font-size-lg: 1.125rem;
@@ -295,6 +296,11 @@ abbr[title] {
     padding: var(--cf-spacing-2xl) 0;
 }
 
+/* Pricing sections need extra top padding for badge overflow */
+.cf-section-pricing {
+    padding: calc(var(--cf-spacing-2xl) + 1rem) 0 var(--cf-spacing-2xl) 0;
+}
+
 .cf-row {
     display: flex;
     flex-wrap: wrap;
@@ -306,57 +312,59 @@ abbr[title] {
     flex: 1;
     padding: 0 var(--cf-spacing-md);
     min-width: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 .cf-col-auto { 
     flex: 0 0 auto;
     padding: 0 var(--cf-spacing-md);
-    display: flex;
-    flex-direction: column;
 }
 .cf-col-1 { 
     flex: 0 0 8.333%;
     padding: 0 var(--cf-spacing-md);
-    display: flex;
-    flex-direction: column;
 }
 .cf-col-2 { 
     flex: 0 0 16.667%;
     padding: 0 var(--cf-spacing-md);
-    display: flex;
-    flex-direction: column;
 }
 .cf-col-3 { 
     flex: 0 0 25%;
     padding: 0 var(--cf-spacing-md);
-    display: flex;
-    flex-direction: column;
 }
 .cf-col-4 { 
     flex: 0 0 33.333%;
     padding: 0 var(--cf-spacing-md);
-    display: flex;
-    flex-direction: column;
+}
+.cf-col-5 { 
+    flex: 0 0 41.667%;
+    padding: 0 var(--cf-spacing-md);
 }
 .cf-col-6 { 
     flex: 0 0 50%;
     padding: 0 var(--cf-spacing-md);
-    display: flex;
-    flex-direction: column;
+}
+.cf-col-7 { 
+    flex: 0 0 58.333%;
+    padding: 0 var(--cf-spacing-md);
 }
 .cf-col-8 { 
     flex: 0 0 66.667%;
     padding: 0 var(--cf-spacing-md);
-    display: flex;
-    flex-direction: column;
+}
+.cf-col-9 { 
+    flex: 0 0 75%;
+    padding: 0 var(--cf-spacing-md);
+}
+.cf-col-10 { 
+    flex: 0 0 83.333%;
+    padding: 0 var(--cf-spacing-md);
+}
+.cf-col-11 { 
+    flex: 0 0 91.667%;
+    padding: 0 var(--cf-spacing-md);
 }
 .cf-col-12 { 
     flex: 0 0 100%;
     padding: 0 var(--cf-spacing-md);
-    display: flex;
-    flex-direction: column;
 }
 
 /* ========================================
@@ -372,9 +380,11 @@ abbr[title] {
     transition: var(--cf-transition);
     position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+}
+
+/* Cards with badges or elements extending outside need visible overflow */
+.cf-card-featured {
+    overflow: visible;
 }
 
 /* The signature left border */
@@ -718,6 +728,51 @@ abbr[title] {
 .cf-text-left { text-align: left; }
 .cf-text-center { text-align: center; }
 .cf-text-right { text-align: right; }
+
+/* Font weight utilities */
+.cf-text-bold { font-weight: 600; }
+.cf-text-normal { font-weight: 400; }
+.cf-text-light { font-weight: 300; }
+
+/* Font size utilities */
+.cf-text-xs { font-size: var(--cf-font-size-xs); }
+.cf-text-sm { font-size: var(--cf-font-size-sm); }
+.cf-text-base { font-size: var(--cf-font-size-base); }
+.cf-text-lg { font-size: var(--cf-font-size-lg); }
+.cf-text-xl { font-size: var(--cf-font-size-xl); }
+.cf-text-2xl { font-size: var(--cf-font-size-2xl); }
+.cf-text-3xl { font-size: var(--cf-font-size-3xl); }
+.cf-text-4xl { font-size: var(--cf-font-size-4xl); }
+
+/* Color utilities */
+.cf-text-primary { color: var(--cf-primary); }
+.cf-text-secondary { color: var(--cf-secondary); }
+.cf-text-danger { color: var(--cf-danger); }
+.cf-text-warning { color: var(--cf-warning); }
+.cf-text-info { color: var(--cf-info); }
+.cf-text-muted { color: var(--cf-gray-600); }
+.cf-text-dark { color: var(--cf-dark); }
+.cf-text-light { color: var(--cf-gray-400); }
+
+/* Icon size utilities */
+.cf-icon-sm { font-size: 1rem; }
+.cf-icon-base { font-size: 1.25rem; }
+.cf-icon-lg { font-size: 1.5rem; }
+.cf-icon-xl { font-size: 2rem; }
+.cf-icon-2xl { font-size: 2.5rem; }
+.cf-icon-3xl { font-size: 3rem; }
+
+/* List utilities */
+.cf-list-none { 
+    list-style: none; 
+    padding-left: 0; 
+    margin: 0;
+}
+
+.cf-list-unstyled { 
+    list-style: none; 
+    padding-left: 0; 
+}
 
 /* Display */
 .cf-d-none { display: none; }

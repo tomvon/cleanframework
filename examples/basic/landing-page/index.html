@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStart - Launch Your Ideas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/clean-framework.css">
+</head>
+<body>
+    <!-- Navigation - Clean Framework standard pattern -->
+    <nav class="cf-nav">
+        <div class="cf-container">
+            <div class="cf-nav-container">
+                <a href="#" class="cf-nav-brand">TechStart</a>
+                <button class="cf-nav-toggle" onclick="toggleNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="cf-nav-menu">
+                    <li><a href="#" class="cf-nav-link active">Home</a></li>
+                    <li><a href="#features" class="cf-nav-link">Features</a></li>
+                    <li><a href="#pricing" class="cf-nav-link">Pricing</a></li>
+                    <li><a href="#contact" class="cf-nav-link">Contact</a></li>
+                    <li><button class="cf-btn cf-btn-sm" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Demonstrates cf-hero with proper button styling -->
+    <section class="cf-hero">
+        <div class="cf-container">
+            <h1 class="cf-hero-title">Launch Your Next Big Idea</h1>
+            <p class="cf-hero-subtitle">Transform your vision into reality with our comprehensive startup platform</p>
+            <div class="cf-mt-4">
+                <a href="#" class="cf-btn cf-btn-outline cf-btn-lg">Get Started Free</a>
+                <a href="#features" class="cf-btn cf-btn-outline cf-btn-lg">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section - Card grid pattern with cf-row/cf-col -->
+    <section id="features" class="cf-section">
+        <div class="cf-container">
+            <h2 class="cf-text-center cf-mb-4">Why Choose TechStart?</h2>
+            <div class="cf-row">
+                <div class="cf-col-4">
+                    <article class="cf-card">
+                        <div class="cf-card-header">
+                            <i class="fas fa-rocket" style="font-size: 2rem; color: var(--cf-primary); margin-bottom: 1rem;"></i>
+                            <h3 class="cf-card-title">Fast Launch</h3>
+                        </div>
+                        <div class="cf-card-body">
+                            <p>Get your startup off the ground in days, not months. Our streamlined process handles the complexity.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="cf-col-4">
+                    <article class="cf-card cf-card-primary">
+                        <div class="cf-card-header">
+                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--cf-primary); margin-bottom: 1rem;"></i>
+                            <h3 class="cf-card-title">Enterprise Security</h3>
+                        </div>
+                        <div class="cf-card-body">
+                            <p>Bank-level security from day one. Your data and your customers' data is protected with industry-leading encryption.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="cf-col-4">
+                    <article class="cf-card cf-card-secondary">
+                        <div class="cf-card-header">
+                            <i class="fas fa-chart-line" style="font-size: 2rem; color: var(--cf-secondary); margin-bottom: 1rem;"></i>
+                            <h3 class="cf-card-title">Growth Analytics</h3>
+                        </div>
+                        <div class="cf-card-body">
+                            <p>Track your progress with detailed analytics and insights. Make data-driven decisions from launch to scale.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section - Simple grid layout -->
+    <section class="cf-section">
+        <div class="cf-container">
+            <div class="cf-row">
+                <div class="cf-col-6">
+                    <h2>Trusted by Growing Companies</h2>
+                    <p class="cf-mb-4">Join thousands of entrepreneurs who have successfully launched with TechStart. Our platform has powered over 10,000 successful launches.</p>
+                    <div class="cf-row">
+                        <div class="cf-col-6">
+                            <div class="cf-text-center cf-mb-3">
+                                <div style="font-size: 2.5rem; font-weight: bold; color: var(--cf-primary);">10K+</div>
+                                <div>Startups Launched</div>
+                            </div>
+                        </div>
+                        <div class="cf-col-6">
+                            <div class="cf-text-center cf-mb-3">
+                                <div style="font-size: 2.5rem; font-weight: bold; color: var(--cf-secondary);">99.9%</div>
+                                <div>Uptime</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cf-col-6">
+                    <div class="cf-card">
+                        <div class="cf-card-body">
+                            <blockquote>
+                                <p>"TechStart made launching our SaaS product incredibly simple. What would have taken months of setup was done in a weekend."</p>
+                                <cite>Sarah Johnson, CEO of DataFlow</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section - Pricing cards with proper spacing -->
+    <section id="pricing" class="cf-section">
+        <div class="cf-container">
+            <h2 class="cf-text-center cf-mb-4">Simple, Transparent Pricing</h2>
+            <div class="cf-row">
+                <div class="cf-col-4">
+                    <div class="cf-card">
+                        <div class="cf-card-header">
+                            <h3 class="cf-card-title">Starter</h3>
+                            <div style="font-size: 2rem; font-weight: bold;">$29<span style="font-size: 1rem; font-weight: normal;">/month</span></div>
+                        </div>
+                        <div class="cf-card-body">
+                            <ul style="list-style: none; padding: 0;">
+                                <li class="cf-mb-2"><i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.5rem;"></i>Up to 3 projects</li>
+                                <li class="cf-mb-2"><i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.5rem;"></i>Basic analytics</li>
+                                <li class="cf-mb-2"><i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.5rem;"></i>Email support</li>
+                            </ul>
+                        </div>
+                        <div class="cf-card-footer">
+                            <button class="cf-btn cf-btn-outline" style="width: 100%;">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cf-col-4">
+                    <div class="cf-card cf-card-primary">
+                        <div class="cf-card-header">
+                            <h3 class="cf-card-title">Professional</h3>
+                            <div style="font-size: 2rem; font-weight: bold;">$79<span style="font-size: 1rem; font-weight: normal;">/month</span></div>
+                        </div>
+                        <div class="cf-card-body">
+                            <ul style="list-style: none; padding: 0;">
+                                <li class="cf-mb-2"><i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.5rem;"></i>Unlimited projects</li>
+                                <li class="cf-mb-2"><i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.5rem;"></i>Advanced analytics</li>
+                                <li class="cf-mb-2"><i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.5rem;"></i>Priority support</li>
+                                <li class="cf-mb-2"><i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.5rem;"></i>Custom integrations</li>
+                            </ul>
+                        </div>
+                        <div class="cf-card-footer">
+                            <button class="cf-btn cf-btn-primary" style="width: 100%;">Most Popular</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cf-col-4">
+                    <div class="cf-card">
+                        <div class="cf-card-header">
+                            <h3 class="cf-card-title">Enterprise</h3>
+                            <div style="font-size: 2rem; font-weight: bold;">Custom</div>
+                        </div>
+                        <div class="cf-card-body">
+                            <ul style="list-style: none; padding: 0;">
+                                <li class="cf-mb-2"><i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.5rem;"></i>Everything in Pro</li>
+                                <li class="cf-mb-2"><i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.5rem;"></i>Dedicated support</li>
+                                <li class="cf-mb-2"><i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.5rem;"></i>SLA guarantee</li>
+                                <li class="cf-mb-2"><i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.5rem;"></i>White-label options</li>
+                            </ul>
+                        </div>
+                        <div class="cf-card-footer">
+                            <button class="cf-btn cf-btn-outline" style="width: 100%;">Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Form with proper Clean Framework structure -->
+    <section id="contact" class="cf-section">
+        <div class="cf-container">
+            <div class="cf-row">
+                <div class="cf-col-6">
+                    <h2>Ready to Launch?</h2>
+                    <p class="cf-mb-4">Get in touch with our team and we'll help you get started. No commitment required.</p>
+                    
+                    <div class="cf-mb-4">
+                        <h4>Why thousands choose TechStart:</h4>
+                        <ul>
+                            <li>30-day money-back guarantee</li>
+                            <li>No setup fees or hidden costs</li>
+                            <li>Cancel anytime</li>
+                            <li>24/7 customer support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cf-col-6">
+                    <div class="cf-card">
+                        <div class="cf-card-header">
+                            <h3 class="cf-card-title">Start Your Free Trial</h3>
+                        </div>
+                        <div class="cf-card-body">
+                            <form>
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Full Name</label>
+                                    <input type="text" class="cf-form-input" placeholder="Enter your full name">
+                                </div>
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Email Address</label>
+                                    <input type="email" class="cf-form-input" placeholder="your@company.com">
+                                </div>
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Company Name</label>
+                                    <input type="text" class="cf-form-input" placeholder="Your company name">
+                                </div>
+                                <div class="cf-form-group">
+                                    <label class="cf-form-label">Project Type</label>
+                                    <select class="cf-form-select">
+                                        <option>Choose your focus</option>
+                                        <option>SaaS Application</option>
+                                        <option>E-commerce Store</option>
+                                        <option>Mobile App</option>
+                                        <option>Marketplace</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="cf-btn cf-btn-primary" style="width: 100%;">Start Free Trial</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Simple footer pattern -->
+    <footer class="cf-section" style="background: var(--cf-gray-900); color: var(--cf-white); margin-top: 3rem;">
+        <div class="cf-container">
+            <div class="cf-row">
+                <div class="cf-col-4">
+                    <h4 style="color: var(--cf-white);">TechStart</h4>
+                    <p>Empowering entrepreneurs to launch successful startups with confidence.</p>
+                </div>
+                <div class="cf-col-4">
+                    <h5 style="color: var(--cf-white);">Product</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li class="cf-mb-2"><a href="#" style="color: var(--cf-gray-300);">Features</a></li>
+                        <li class="cf-mb-2"><a href="#" style="color: var(--cf-gray-300);">Pricing</a></li>
+                        <li class="cf-mb-2"><a href="#" style="color: var(--cf-gray-300);">Security</a></li>
+                        <li class="cf-mb-2"><a href="#" style="color: var(--cf-gray-300);">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="cf-col-4">
+                    <h5 style="color: var(--cf-white);">Support</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li class="cf-mb-2"><a href="#" style="color: var(--cf-gray-300);">Documentation</a></li>
+                        <li class="cf-mb-2"><a href="#" style="color: var(--cf-gray-300);">Help Center</a></li>
+                        <li class="cf-mb-2"><a href="#" style="color: var(--cf-gray-300);">Contact</a></li>
+                        <li class="cf-mb-2"><a href="#" style="color: var(--cf-gray-300);">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border-color: var(--cf-gray-700); margin: 2rem 0;">
+            <div class="cf-text-center">
+                <p style="color: var(--cf-gray-400);">© 2024 TechStart. All rights reserved. Built with Clean Framework.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Clean Framework JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/clean-framework.js"></script>
+</body>
+</html>

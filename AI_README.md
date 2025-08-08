@@ -438,7 +438,7 @@ Always use this template as your starting point:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Page Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/clean-framework.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/clean-framework.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -520,7 +520,7 @@ Always use this template as your starting point:
     </section>
 
     <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/clean-framework.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/clean-framework.js"></script>
 </body>
 </html>
 ```

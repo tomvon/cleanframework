@@ -20,8 +20,8 @@ A complete framework specifically designed for AI-assisted development. Clean Fr
 
 ```html
 <!-- Clean Framework -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/clean-framework.css">
-<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/clean-framework.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/clean-framework.css">
+<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/clean-framework.js"></script>
 ```
 
 ### Download

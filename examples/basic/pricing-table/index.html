@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - Clean Framework Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../../clean-framework.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="cf-nav">
+        <div class="cf-container">
+            <div class="cf-nav-container">
+                <a href="#" class="cf-nav-brand">CloudSync</a>
+                <button class="cf-nav-toggle" onclick="toggleNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="cf-nav-menu">
+                    <li><a href="#" class="cf-nav-link">Home</a></li>
+                    <li><a href="#" class="cf-nav-link">Features</a></li>
+                    <li><a href="#" class="cf-nav-link active">Pricing</a></li>
+                    <li><a href="#" class="cf-nav-link">Support</a></li>
+                    <li><button class="cf-btn cf-btn-sm" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="themeIcon"></i>
+                    </button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Hero -->
+    <section class="cf-hero">
+        <div class="cf-container">
+            <h1 class="cf-hero-title">Simple, Transparent Pricing</h1>
+            <p class="cf-hero-subtitle">Choose the perfect plan for your team. No hidden fees, cancel anytime.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Toggle Section -->
+    <section class="cf-section cf-section-pricing">
+        <div class="cf-container">
+            <div class="cf-text-center cf-mb-5">
+                <div style="display: inline-flex; background: var(--cf-gray-100); border-radius: 2rem; padding: 0.25rem;">
+                    <button class="cf-btn cf-btn-sm cf-btn-primary" style="border-radius: 1.5rem;" onclick="togglePricing('monthly')">
+                        Monthly
+                    </button>
+                    <button class="cf-btn cf-btn-sm" style="border-radius: 1.5rem; background: transparent; border: none; color: var(--cf-gray-600);" onclick="togglePricing('yearly')">
+                        Yearly <span style="background: var(--cf-secondary); color: white; padding: 0.125rem 0.5rem; border-radius: 1rem; font-size: 0.75rem; margin-left: 0.25rem;">Save 20%</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="cf-row">
+                <!-- Starter Plan -->
+                <div class="cf-col-4">
+                    <article class="cf-card">
+                        <div class="cf-card-header">
+                            <div class="cf-text-center">
+                                <h3 class="cf-card-title">Starter</h3>
+                                <p style="color: var(--cf-gray-600); margin-bottom: 1rem;">Perfect for individuals</p>
+                                <div class="pricing-amount">
+                                    <span class="monthly-price" style="font-size: 3rem; font-weight: bold;">$9</span>
+                                    <span class="yearly-price" style="font-size: 3rem; font-weight: bold; display: none;">$7</span>
+                                    <span style="color: var(--cf-gray-600);">/month</span>
+                                </div>
+                                <p class="yearly-billing" style="color: var(--cf-gray-500); font-size: 0.875rem; display: none;">
+                                    Billed annually ($84/year)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cf-card-body">
+                            <ul style="list-style: none; padding: 0;">
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>5GB storage</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Up to 3 projects</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Basic file sharing</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Email support</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-times" style="color: var(--cf-gray-400); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span style="color: var(--cf-gray-500);">Advanced analytics</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-times" style="color: var(--cf-gray-400); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span style="color: var(--cf-gray-500);">Priority support</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cf-card-footer">
+                            <button class="cf-btn cf-btn-outline" style="width: 100%;">Start Free Trial</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Professional Plan (Featured) -->
+                <div class="cf-col-4">
+                    <article class="cf-card cf-card-primary cf-card-featured" style="position: relative; transform: scale(1.05);">
+                        <div style="position: absolute; top: -0.5rem; left: 50%; transform: translateX(-50%); background: var(--cf-secondary); color: white; padding: 0.25rem 1rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 500;">
+                            Most Popular
+                        </div>
+                        <div class="cf-card-header">
+                            <div class="cf-text-center">
+                                <h3 class="cf-card-title">Professional</h3>
+                                <p style="color: var(--cf-gray-600); margin-bottom: 1rem;">Best for small teams</p>
+                                <div class="pricing-amount">
+                                    <span class="monthly-price" style="font-size: 3rem; font-weight: bold;">$29</span>
+                                    <span class="yearly-price" style="font-size: 3rem; font-weight: bold; display: none;">$23</span>
+                                    <span style="color: var(--cf-gray-600);">/month</span>
+                                </div>
+                                <p class="yearly-billing" style="color: var(--cf-gray-500); font-size: 0.875rem; display: none;">
+                                    Billed annually ($276/year)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cf-card-body">
+                            <ul style="list-style: none; padding: 0;">
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>100GB storage</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Unlimited projects</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Advanced file sharing</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Priority support</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Advanced analytics</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Team collaboration</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cf-card-footer">
+                            <button class="cf-btn cf-btn-primary" style="width: 100%;">Start Free Trial</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="cf-col-4">
+                    <article class="cf-card">
+                        <div class="cf-card-header">
+                            <div class="cf-text-center">
+                                <h3 class="cf-card-title">Enterprise</h3>
+                                <p style="color: var(--cf-gray-600); margin-bottom: 1rem;">For large organizations</p>
+                                <div class="pricing-amount">
+                                    <span style="font-size: 3rem; font-weight: bold;">Custom</span>
+                                </div>
+                                <p style="color: var(--cf-gray-500); font-size: 0.875rem;">
+                                    Contact us for pricing
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cf-card-body">
+                            <ul style="list-style: none; padding: 0;">
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Unlimited storage</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Everything in Professional</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Advanced security</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Dedicated support</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>Custom integrations</span>
+                                </li>
+                                <li class="cf-mb-3" style="display: flex; align-items: center;">
+                                    <i class="fas fa-check" style="color: var(--cf-secondary); margin-right: 0.75rem; font-size: 0.875rem;"></i>
+                                    <span>SLA guarantee</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cf-card-footer">
+                            <button class="cf-btn cf-btn-outline" style="width: 100%;">Contact Sales</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="cf-section">
+        <div class="cf-container">
+            <h2 class="cf-text-center cf-mb-4">Compare All Features</h2>
+            <div class="cf-card">
+                <div class="cf-card-body" style="padding: 0;">
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="background: var(--cf-gray-50);">
+                                    <th style="padding: 1rem; text-align: left; border-bottom: 1px solid var(--cf-gray-200);">Features</th>
+                                    <th style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-200);">Starter</th>
+                                    <th style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-200); background: rgba(102, 126, 234, 0.1);">Professional</th>
+                                    <th style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-200);">Enterprise</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 1rem; border-bottom: 1px solid var(--cf-gray-100);">Storage Space</td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100);">5GB</td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100); background: rgba(102, 126, 234, 0.05);">100GB</td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100);">Unlimited</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem; border-bottom: 1px solid var(--cf-gray-100);">Number of Projects</td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100);">3</td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100); background: rgba(102, 126, 234, 0.05);">Unlimited</td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100);">Unlimited</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem; border-bottom: 1px solid var(--cf-gray-100);">File Sharing</td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100);"><i class="fas fa-check" style="color: var(--cf-secondary);"></i></td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100); background: rgba(102, 126, 234, 0.05);"><i class="fas fa-check" style="color: var(--cf-secondary);"></i></td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100);"><i class="fas fa-check" style="color: var(--cf-secondary);"></i></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem; border-bottom: 1px solid var(--cf-gray-100);">Advanced Analytics</td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100);"><i class="fas fa-times" style="color: var(--cf-gray-400);"></i></td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100); background: rgba(102, 126, 234, 0.05);"><i class="fas fa-check" style="color: var(--cf-secondary);"></i></td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100);"><i class="fas fa-check" style="color: var(--cf-secondary);"></i></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem; border-bottom: 1px solid var(--cf-gray-100);">Team Collaboration</td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100);"><i class="fas fa-times" style="color: var(--cf-gray-400);"></i></td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100); background: rgba(102, 126, 234, 0.05);"><i class="fas fa-check" style="color: var(--cf-secondary);"></i></td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100);"><i class="fas fa-check" style="color: var(--cf-secondary);"></i></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem; border-bottom: 1px solid var(--cf-gray-100);">Priority Support</td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100);"><i class="fas fa-times" style="color: var(--cf-gray-400);"></i></td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100); background: rgba(102, 126, 234, 0.05);"><i class="fas fa-check" style="color: var(--cf-secondary);"></i></td>
+                                    <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--cf-gray-100);"><i class="fas fa-check" style="color: var(--cf-secondary);"></i></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1rem;">Custom Integrations</td>
+                                    <td style="padding: 1rem; text-align: center;"><i class="fas fa-times" style="color: var(--cf-gray-400);"></i></td>
+                                    <td style="padding: 1rem; text-align: center; background: rgba(102, 126, 234, 0.05);"><i class="fas fa-times" style="color: var(--cf-gray-400);"></i></td>
+                                    <td style="padding: 1rem; text-align: center;"><i class="fas fa-check" style="color: var(--cf-secondary);"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="cf-section">
+        <div class="cf-container">
+            <h2 class="cf-text-center cf-mb-4">Frequently Asked Questions</h2>
+            <div class="cf-row">
+                <div class="cf-col-6">
+                    <div class="cf-card cf-mb-3">
+                        <div class="cf-card-body">
+                            <h4>Can I change plans anytime?</h4>
+                            <p>Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and billing is prorated.</p>
+                        </div>
+                    </div>
+                    <div class="cf-card cf-mb-3">
+                        <div class="cf-card-body">
+                            <h4>What payment methods do you accept?</h4>
+                            <p>We accept all major credit cards, PayPal, and bank transfers for enterprise customers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cf-col-6">
+                    <div class="cf-card cf-mb-3">
+                        <div class="cf-card-body">
+                            <h4>Is there a free trial?</h4>
+                            <p>Yes! All plans come with a 14-day free trial. No credit card required to start.</p>
+                        </div>
+                    </div>
+                    <div class="cf-card cf-mb-3">
+                        <div class="cf-card-body">
+                            <h4>What happens to my data if I cancel?</h4>
+                            <p>Your data remains accessible for 30 days after cancellation. You can export everything before permanent deletion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cf-section">
+        <div class="cf-container">
+            <div class="cf-card cf-card-primary">
+                <div class="cf-card-body">
+                    <div class="cf-text-center">
+                        <h2>Ready to get started?</h2>
+                        <p class="cf-mb-4">Join thousands of teams already using CloudSync to collaborate better.</p>
+                        <button class="cf-btn cf-btn-primary cf-btn-lg cf-mr-2">Start Free Trial</button>
+                        <button class="cf-btn cf-btn-outline cf-btn-lg">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Framework JavaScript -->
+    <script src="../../../clean-framework.js"></script>
+    <script>
+        // Simple pricing toggle functionality
+        function togglePricing(period) {
+            const monthlyPrices = document.querySelectorAll('.monthly-price');
+            const yearlyPrices = document.querySelectorAll('.yearly-price');
+            const yearlyBilling = document.querySelectorAll('.yearly-billing');
+            const buttons = document.querySelectorAll('[onclick*="togglePricing"]');
+
+            if (period === 'yearly') {
+                monthlyPrices.forEach(el => el.style.display = 'none');
+                yearlyPrices.forEach(el => el.style.display = 'inline');
+                yearlyBilling.forEach(el => el.style.display = 'block');
+                
+                buttons[0].className = 'cf-btn cf-btn-sm';
+                buttons[0].style.background = 'transparent';
+                buttons[0].style.border = 'none';
+                buttons[0].style.color = 'var(--cf-gray-600)';
+                buttons[1].className = 'cf-btn cf-btn-sm cf-btn-primary';
+                buttons[1].style.borderRadius = '1.5rem';
+                buttons[1].style.background = '';
+                buttons[1].style.border = '';
+                buttons[1].style.color = '';
+            } else {
+                monthlyPrices.forEach(el => el.style.display = 'inline');
+                yearlyPrices.forEach(el => el.style.display = 'none');
+                yearlyBilling.forEach(el => el.style.display = 'none');
+                
+                buttons[0].className = 'cf-btn cf-btn-sm cf-btn-primary';
+                buttons[0].style.borderRadius = '1.5rem';
+                buttons[0].style.background = '';
+                buttons[0].style.border = '';
+                buttons[0].style.color = '';
+                buttons[1].className = 'cf-btn cf-btn-sm';
+                buttons[1].style.background = 'transparent';
+                buttons[1].style.border = 'none';
+                buttons[1].style.color = 'var(--cf-gray-600)';
+            }
+        }
+    </script>
+</body>
+</html>

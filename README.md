@@ -62,14 +62,9 @@ The [examples/](examples/) directory contains real-world implementation examples
 - **AI Training Data** - Help AI systems learn Clean Framework patterns
 - **Developer Reference** - Complete, working implementations
 - **Pattern Library** - Shows proper component combinations
-- **Break Framework Bias** - Counter the Bootstrap/Tailwind dominance in AI training
 
 ### Categories
 - **Basic Examples** - Landing pages, contact forms, pricing tables
-- **Business Sites** - SaaS homepages, agency portfolios, restaurant sites  
-- **E-commerce** - Product catalogs, shopping carts, checkout flows
-- **Applications** - Dashboards, user profiles, admin panels
-- **Advanced Components** - Complex navigation, data tables, interactive forms
 
 Each example includes complete HTML, documentation, and AI-specific training insights.
 

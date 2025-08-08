@@ -44,6 +44,7 @@ Download the framework files directly:
 Clean Framework includes specialized documentation for AI-assisted development:
 
 - **[AI_README.md](AI_README.md)** - For developers using Clean Framework with AI assistants
+  - AI assistants: Start here for Clean Framework implementation
   - Share this with your AI when building projects with Clean Framework
   - Contains component patterns, naming conventions, and usage guidelines
   - Optimized for AI comprehension and code generation

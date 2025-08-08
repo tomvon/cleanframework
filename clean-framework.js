@@ -350,4 +350,164 @@
     // Initialize scroll animations
     document.addEventListener('DOMContentLoaded', initScrollAnimations);
 
+    // ========================================
+    // FILE UPLOAD FUNCTIONALITY
+    // ========================================
+
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeFileUploads();
+    });
+
+    function initializeFileUploads() {
+        const fileUploads = document.querySelectorAll('.cf-file-upload');
+        
+        fileUploads.forEach(upload => {
+            const input = upload.querySelector('input[type="file"]');
+            const area = upload.querySelector('.cf-file-upload-area');
+            
+            if (!input || !area) return;
+            
+            // Handle file selection
+            input.addEventListener('change', function(e) {
+                handleFiles(upload, e.target.files);
+            });
+            
+            // Handle drag and drop
+            area.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                upload.classList.add('cf-dragover');
+            });
+            
+            area.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                upload.classList.remove('cf-dragover');
+            });
+            
+            area.addEventListener('drop', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                upload.classList.remove('cf-dragover');
+                
+                const files = e.dataTransfer.files;
+                input.files = files;
+                handleFiles(upload, files);
+            });
+        });
+    }
+
+    function handleFiles(uploadElement, files) {
+        if (!files || files.length === 0) return;
+        
+        // Find or create preview area
+        let preview = uploadElement.parentElement.querySelector('.cf-file-preview');
+        if (!preview) {
+            preview = document.createElement('div');
+            preview.className = 'cf-file-preview';
+            uploadElement.parentElement.appendChild(preview);
+        }
+        
+        // Clear existing previews
+        preview.innerHTML = '';
+        
+        // Add file previews
+        Array.from(files).forEach(file => {
+            const fileItem = createFilePreview(file);
+            preview.appendChild(fileItem);
+        });
+        
+        // Trigger custom event for developers to handle
+        const event = new CustomEvent('cf-file-selected', {
+            detail: { files: files },
+            bubbles: true
+        });
+        uploadElement.dispatchEvent(event);
+    }
+
+    function createFilePreview(file) {
+        const item = document.createElement('div');
+        item.className = 'cf-file-item';
+        
+        const icon = document.createElement('i');
+        icon.className = 'fas fa-file cf-file-item-icon';
+        
+        // Set icon based on file type
+        if (file.type.startsWith('image/')) {
+            icon.className = 'fas fa-image cf-file-item-icon';
+        } else if (file.type === 'application/pdf') {
+            icon.className = 'fas fa-file-pdf cf-file-item-icon';
+        } else if (file.type.includes('word') || file.type.includes('document')) {
+            icon.className = 'fas fa-file-word cf-file-item-icon';
+        }
+        
+        const info = document.createElement('div');
+        info.className = 'cf-file-item-info';
+        
+        const name = document.createElement('div');
+        name.className = 'cf-file-item-name';
+        name.textContent = file.name;
+        
+        const size = document.createElement('div');
+        size.className = 'cf-file-item-size';
+        size.textContent = formatFileSize(file.size);
+        
+        const remove = document.createElement('button');
+        remove.className = 'cf-file-item-remove';
+        remove.innerHTML = '&times;';
+        remove.onclick = function() {
+            item.remove();
+        };
+        
+        info.appendChild(name);
+        info.appendChild(size);
+        
+        item.appendChild(icon);
+        item.appendChild(info);
+        item.appendChild(remove);
+        
+        // If it's an image, show thumbnail
+        if (file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                icon.style.display = 'none';
+                const img = document.createElement('img');
+                img.className = 'cf-file-item-thumbnail';
+                img.src = e.target.result;
+                item.insertBefore(img, info);
+            };
+            reader.readAsDataURL(file);
+        }
+        
+        return item;
+    }
+
+    function formatFileSize(bytes) {
+        if (bytes < 1024) return bytes + ' B';
+        if (bytes < 1048576) return Math.round(bytes / 1024) + ' KB';
+        return Math.round(bytes / 1048576 * 10) / 10 + ' MB';
+    }
+
+    // Public API for file uploads
+    window.cfFileUpload = {
+        getFiles: function(uploadElement) {
+            const input = uploadElement.querySelector('input[type="file"]');
+            return input ? input.files : null;
+        },
+        
+        clearFiles: function(uploadElement) {
+            const input = uploadElement.querySelector('input[type="file"]');
+            if (input) input.value = '';
+            
+            const preview = uploadElement.parentElement.querySelector('.cf-file-preview');
+            if (preview) preview.innerHTML = '';
+        },
+        
+        onFileSelected: function(uploadElement, callback) {
+            uploadElement.addEventListener('cf-file-selected', function(e) {
+                callback(e.detail.files);
+            });
+        }
+    };
+
 })();

@@ -58,6 +58,15 @@ Clean Framework was designed with AI-assisted development in mind. Every class n
 .cf-form-select                   /* Select element */
 .cf-form-node                     /* Multi-step form section */
 .cf-form-node-active              /* Active form step */
+
+/* File Upload */
+.cf-file-upload                   /* File upload container */
+.cf-file-upload-area              /* Drag/drop area */
+.cf-file-upload-icon              /* Upload icon */
+.cf-file-upload-text              /* Main text */
+.cf-file-upload-hint              /* Hint text */
+.cf-file-preview                  /* Preview container */
+.cf-file-item                     /* Individual file item */
 ```
 
 ## 🏗️ Component Architecture
@@ -288,6 +297,32 @@ console.log(example);</pre>
     <button class="cf-btn cf-btn-interactive-shake">Shake Effect</button>
     <button class="cf-btn cf-btn-interactive-pulse">Pulse Effect</button>
 </div>
+
+<!-- File Upload with JavaScript API -->
+<div class="cf-file-upload" id="myUpload">
+    <input type="file" multiple accept="image/*,.pdf">
+    <div class="cf-file-upload-area">
+        <i class="cf-file-upload-icon fas fa-cloud-upload-alt"></i>
+        <div class="cf-file-upload-text">Click to upload or drag and drop</div>
+        <div class="cf-file-upload-hint">PNG, JPG, PDF up to 10MB</div>
+    </div>
+</div>
+
+<script>
+// File Upload API
+const upload = document.getElementById('myUpload');
+
+// Listen for file selection
+cfFileUpload.onFileSelected(upload, function(files) {
+    // Handle files - upload to server, etc.
+});
+
+// Get selected files
+const files = cfFileUpload.getFiles(upload);
+
+// Clear all files
+cfFileUpload.clearFiles(upload);
+</script>
 
 <!-- Tabs -->
 <div class="cf-tabs">

@@ -2376,6 +2376,82 @@ abbr[title] {
     color: var(--cf-gray-500);
 }
 
+/* File Preview Area */
+.cf-file-preview {
+    margin-top: var(--cf-spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--cf-spacing-sm);
+}
+
+.cf-file-item {
+    display: flex;
+    align-items: center;
+    padding: var(--cf-spacing-md);
+    background: var(--cf-gray-50);
+    border-radius: var(--cf-border-radius-sm);
+    position: relative;
+    transition: var(--cf-transition);
+}
+
+.cf-file-item:hover {
+    background: var(--cf-gray-100);
+}
+
+.cf-file-item-icon {
+    font-size: 1.5rem;
+    color: var(--cf-gray-600);
+    margin-right: var(--cf-spacing-md);
+    width: 40px;
+    text-align: center;
+}
+
+.cf-file-item-thumbnail {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: var(--cf-border-radius-sm);
+    margin-right: var(--cf-spacing-md);
+}
+
+.cf-file-item-info {
+    flex: 1;
+}
+
+.cf-file-item-name {
+    font-weight: 500;
+    color: var(--cf-gray-900);
+    margin-bottom: 0.25rem;
+}
+
+.cf-file-item-size {
+    font-size: var(--cf-font-size-sm);
+    color: var(--cf-gray-600);
+}
+
+.cf-file-item-remove {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    color: var(--cf-gray-500);
+    font-size: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--cf-border-radius-sm);
+    transition: var(--cf-transition);
+}
+
+.cf-file-item-remove:hover {
+    background: var(--cf-gray-200);
+    color: var(--cf-danger);
+}
+
 /* Checkbox and Radio Enhancements */
 .cf-checkbox,
 .cf-radio {

@@ -627,6 +627,57 @@
                                 <small class="cf-form-text cf-text-error">Please enter a valid value.</small>
                             </div>
                         </div>
+                        
+                        <h3 class="cf-h4">File Upload</h3>
+                        <p>Advanced file upload with drag-and-drop support:</p>
+                        
+                        <div class="example-preview">
+                            <div class="cf-file-upload">
+                                <input type="file" multiple accept="image/*,.pdf">
+                                <div class="cf-file-upload-area">
+                                    <i class="cf-file-upload-icon fas fa-cloud-upload-alt"></i>
+                                    <div class="cf-file-upload-text">Click to upload or drag and drop</div>
+                                    <div class="cf-file-upload-hint">PNG, JPG, PDF up to 10MB</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="cf-code"><button class="cf-code-copy" onclick="copyCode(this)">Copy</button>
+                            <pre>&lt;div class="cf-file-upload" id="myFileUpload"&gt;
+    &lt;input type="file" multiple accept="image/*,.pdf"&gt;
+    &lt;div class="cf-file-upload-area"&gt;
+        &lt;i class="cf-file-upload-icon fas fa-cloud-upload-alt"&gt;&lt;/i&gt;
+        &lt;div class="cf-file-upload-text"&gt;Click to upload or drag and drop&lt;/div&gt;
+        &lt;div class="cf-file-upload-hint"&gt;PNG, JPG, PDF up to 10MB&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// Listen for file selection
+const fileUpload = document.getElementById('myFileUpload');
+cfFileUpload.onFileSelected(fileUpload, function(files) {
+    console.log('Files selected:', files);
+    // Upload files to your server
+});
+
+// Get selected files
+const files = cfFileUpload.getFiles(fileUpload);
+
+// Clear files
+cfFileUpload.clearFiles(fileUpload);
+&lt;/script&gt;</pre>
+                        </div>
+                        
+                        <h4>Features</h4>
+                        <ul>
+                            <li>Drag and drop support</li>
+                            <li>Multiple file selection</li>
+                            <li>File preview with thumbnails for images</li>
+                            <li>File type icons</li>
+                            <li>Size formatting</li>
+                            <li>Remove individual files</li>
+                            <li>Custom events for integration</li>
+                        </ul>
                     </section>
 
                     <!-- Navigation -->

@@ -395,47 +395,6 @@ cfFileUpload.clearFiles(upload);
 4. **Design Consistency**: Does it match the framework aesthetic?
 5. **Class Naming**: Do class names follow the convention?
 
-### Browser Compatibility
-- Supports modern browsers with graceful fallbacks
-- CSS Grid with Subgrid fallbacks included
-- Uses CSS custom properties (IE11+ support)
-
-## 🚀 Extending the Framework
-
-### Adding New Components:
-1. Follow the existing naming convention
-2. Use CSS custom properties for theming
-3. Include consistent design elements (accents, shadows)
-4. Provide responsive behavior
-5. Add proper documentation
-
-### Example New Component:
-```css
-/* New component following framework patterns */
-.cf-notification {
-    background: var(--cf-white);
-    border-radius: var(--cf-border-radius);
-    box-shadow: var(--cf-shadow);
-    padding: var(--cf-spacing-lg);
-    position: relative;
-    overflow: hidden;
-}
-
-.cf-notification::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: var(--cf-border-width);
-    background: var(--cf-info);
-}
-
-.cf-notification-success::before { background: var(--cf-secondary); }
-.cf-notification-danger::before { background: var(--cf-danger); }
-.cf-notification-warning::before { background: var(--cf-warning); }
-```
-
 ## 🎯 Common AI Pitfalls to Avoid
 
 ### Modal Placement

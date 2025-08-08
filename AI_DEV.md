@@ -212,6 +212,77 @@ Examples:
 4. Responsive breakpoints
 5. Dark mode implementation
 
+## 🚀 Extending the Framework
+
+Clean Framework is a work in progress and should continuously evolve. When adding new components:
+
+### Adding New Components:
+1. **Follow the existing naming convention** exactly
+2. **Use CSS custom properties** for all theming
+3. **Include consistent design elements** (signature accents, shadows, spacing)
+4. **Provide responsive behavior** with proper breakpoints
+5. **Add proper documentation** to all relevant files
+6. **Test thoroughly** in both light and dark modes
+
+### Example New Component:
+```css
+/* New component following framework patterns */
+.cf-notification {
+    background: var(--cf-white);
+    border-radius: var(--cf-border-radius);
+    box-shadow: var(--cf-shadow);
+    padding: var(--cf-spacing-lg);
+    position: relative;
+    overflow: hidden;
+    margin: var(--cf-spacing-md) 0;
+}
+
+/* Signature left border accent */
+.cf-notification::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--cf-border-width);
+    background: var(--cf-info);
+}
+
+/* Variants following the pattern */
+.cf-notification-success::before { background: var(--cf-secondary); }
+.cf-notification-danger::before { background: var(--cf-danger); }
+.cf-notification-warning::before { background: var(--cf-warning); }
+
+/* Interactive states */
+.cf-notification-dismissible {
+    padding-right: calc(var(--cf-spacing-lg) + 2rem);
+}
+
+.cf-notification-close {
+    position: absolute;
+    top: var(--cf-spacing-sm);
+    right: var(--cf-spacing-sm);
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--cf-gray-600);
+    transition: var(--cf-transition);
+}
+
+.cf-notification-close:hover {
+    color: var(--cf-gray-900);
+}
+```
+
+### Documentation Requirements:
+When adding components, update ALL of these files:
+1. **clean-framework.css** - Add the component styles
+2. **clean-framework-demo.html** - Show the component in action
+3. **documentation.html** - Add usage documentation with examples
+4. **AI_README.md** - Add class names to the reference lists
+5. **README.md** - Update "What's Included" if it's a major addition
+
 ## ⚠️ Never Forget
 
 1. **Dogfood everything** - If Clean Framework can do it, use Clean Framework
@@ -219,6 +290,7 @@ Examples:
 3. **Test everything** - Both themes, all screen sizes
 4. **Keep it clean** - Follow the established patterns
 5. **Synchronize files** - All documentation must match implementation
+6. **Framework evolves** - Clean Framework is always a work in progress
 
 ---
 

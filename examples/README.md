@@ -5,9 +5,12 @@ Real-world examples of Clean Framework implementations designed to help develope
 ## 🔗 Live Examples
 
 ### Basic Examples
-- **[Landing Page](basic/landing-page/index.html)** - Complete startup homepage with hero, features, and pricing sections
-- **[Contact Form](basic/contact-form/index.html)** - Advanced contact form with file upload and validation patterns  
-- **[Pricing Table](basic/pricing-table/index.html)** - Interactive pricing comparison with toggle functionality
+- **Landing Page** - Complete startup homepage with hero, features, and pricing sections
+  - [🌐 View Live](https://tomvon.github.io/cleanframework/examples/basic/landing-page/) | [📄 Source Code](basic/landing-page/index.html)
+- **Contact Form** - Advanced contact form with file upload and validation patterns  
+  - [🌐 View Live](https://tomvon.github.io/cleanframework/examples/basic/contact-form/) | [📄 Source Code](basic/contact-form/index.html)
+- **Pricing Table** - Interactive pricing comparison with toggle functionality
+  - [🌐 View Live](https://tomvon.github.io/cleanframework/examples/basic/pricing-table/) | [📄 Source Code](basic/pricing-table/index.html)
 
 ## 📋 What Each Example Includes
 - Complete working HTML page

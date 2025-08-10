@@ -36,7 +36,7 @@ $tables = $tables ?? [
             ],
             [
                 'id' => 2,
-                'avatar' => 'img/samples/pexels-irosantos-1853991.jpg',
+                'avatar' => 'img/samples/pexels-fabianwiktor-994605.jpg',
                 'name' => 'Jane Smith',
                 'email' => 'jane@example.com',
                 'role' => 'Editor',
@@ -45,7 +45,7 @@ $tables = $tables ?? [
             ],
             [
                 'id' => 3,
-                'avatar' => 'img/samples/pexels-michael-steinberg-2916467.jpg',
+                'avatar' => 'img/samples/pexels-george-desipris-801857.jpg',
                 'name' => 'Mike Johnson',
                 'email' => 'mike@example.com',
                 'role' => 'User',
@@ -63,7 +63,7 @@ $tables = $tables ?? [
             ],
             [
                 'id' => 5,
-                'avatar' => 'img/samples/pexels-irosantos-1853991.jpg',
+                'avatar' => 'img/samples/pexels-fabianwiktor-994605.jpg',
                 'name' => 'Alex Chen',
                 'email' => 'alex@example.com',
                 'role' => 'User',
@@ -72,7 +72,7 @@ $tables = $tables ?? [
             ],
             [
                 'id' => 6,
-                'avatar' => 'img/samples/pexels-michael-steinberg-2916467.jpg',
+                'avatar' => 'img/samples/pexels-george-desipris-801857.jpg',
                 'name' => 'Emma Brown',
                 'email' => 'emma@example.com',
                 'role' => 'Editor',
@@ -90,7 +90,7 @@ $tables = $tables ?? [
             ],
             [
                 'id' => 8,
-                'avatar' => 'img/samples/pexels-irosantos-1853991.jpg',
+                'avatar' => 'img/samples/pexels-fabianwiktor-994605.jpg',
                 'name' => 'Lisa Garcia',
                 'email' => 'lisa@example.com',
                 'role' => 'Admin',

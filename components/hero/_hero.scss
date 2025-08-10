@@ -1,0 +1,49 @@
+// Hero Component
+
+.hero {
+    background: 
+        linear-gradient(135deg, rgba(102, 126, 234, 0.5), rgba(72, 187, 120, 0.5)),
+        url('img/samples/pexels-sebastian-189349.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--card);
+    text-align: center;
+    padding: 6rem 0;
+    position: relative;
+    
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 2;
+    }
+    
+    p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .buttons {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+// Responsive hero
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 0;
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        p {
+            font-size: 1.125rem;
+        }
+    }
+}

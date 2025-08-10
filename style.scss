@@ -1,0 +1,20 @@
+// Clean Framework v2 - Main Styles
+// Component-based SCSS architecture
+
+// Foundation variables and mixins
+@use 'components/layout/layout';
+
+// Typography system
+@use 'components/typography/typography';
+
+// Component styles
+@use 'components/header/header';
+@use 'components/navigation/navigation';
+@use 'components/hero/hero';
+@use 'components/cards/cards';
+@use 'components/buttons/buttons';
+@use 'components/form/form';
+@use 'components/pricing/pricing';
+@use 'components/modal/modal';
+@use 'components/dropdown/dropdown';
+@use 'components/table/table';

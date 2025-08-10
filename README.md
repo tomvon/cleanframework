@@ -1,421 +1,159 @@
-# Clean Framework (Beta)
+# Clean Framework v2
 
-**[🔗 View Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework-demo.html)** | **[📖 Documentation](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/documentation.html)** | **[📁 Download CSS](https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.css)** | **[📁 Download JS](https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.js)**
+**Semantic HTML. Component CSS. No Bullshit.**
 
-A complete framework specifically designed for AI-assisted development. Clean Framework features predictable class names, semantic HTML patterns, and consistent design principles that work seamlessly with AI coding tools and language models.
+Clean Framework v2 is a complete rewrite focused on semantic HTML patterns and component-based CSS. No utility pollution. No complexity. Just clean, predictable code that works.
 
-![Clean Framework Demo](assets/images/clean-framework-hero.png)
+## The Problem
 
-## 🎯 Core Principles
-
-- **AI-First Design** - Built specifically for AI-assisted development
-- **Predictable Class Names** - Every class follows logical, semantic naming
-- **Semantic HTML Structure** - Markup that tells a clear content story
-- **Consistent Design Patterns** - Repeatable visual and structural patterns
-- **Zero Surprises** - Framework behavior that AI models can predict and generate
-
-## 🚀 Quick Start
-
-### CDN
+Modern CSS frameworks have gone insane:
 
 ```html
-<!-- Clean Framework -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/clean-framework.css">
-<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/clean-framework.js"></script>
+<!-- This is NOT clean -->
+<div class="flex flex-col lg:flex-row gap-4 p-6 bg-white rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
 ```
 
-### Download
+This is utility pollution. This is mental overhead. This is the opposite of clean.
 
-Download the framework files directly:
-- [clean-framework.css](https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.css) (Styles - 80KB)
-- [clean-framework.js](https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework.js) (JavaScript - 8KB)
+## The Solution
 
-## 🤖 AI-Friendly Features
-
-**Designed for Large Language Models**
-- **Predictable Naming**: `.cf-card`, `.cf-btn-primary`, `.cf-form-group` - every class name is self-documenting
-- **Consistent Patterns**: All components follow the same structural conventions
-- **Semantic HTML First**: Uses proper HTML5 elements (`<article>`, `<section>`, `<nav>`) over generic divs
-- **Logical Hierarchy**: CSS classes that mirror content hierarchy
-- **Pattern Recognition**: Repeating design motifs that AI can easily identify and replicate
-
-## 🤖 AI Documentation
-
-Clean Framework includes specialized documentation for AI-assisted development:
-
-- **[AI_README.md](AI_README.md)** - For developers using Clean Framework with AI assistants
-  - AI assistants: Start here for Clean Framework implementation
-  - Share this with your AI when building projects with Clean Framework
-  - Contains component patterns, naming conventions, and usage guidelines
-  - Optimized for AI comprehension and code generation
-
-- **[AI_DEV.md](AI_DEV.md)** - For AI assistants working on Clean Framework itself
-  - Internal development guidelines for maintaining the framework
-  - Dogfooding principles and synchronization requirements
-  - Not needed for general Clean Framework usage
-
-## 🏗️ Examples Library
-
-The [examples/](examples/) directory contains real-world implementation examples designed for both developers and AI systems:
-
-### Purpose
-- **AI Training Data** - Help AI systems learn Clean Framework patterns
-- **Developer Reference** - Complete, working implementations
-- **Pattern Library** - Shows proper component combinations
-
-### Categories
-- **Basic Examples** - Landing pages, contact forms, pricing tables
-
-Each example includes complete HTML, documentation, and AI-specific training insights.
-
-## 📦 What's Included
-
-Clean Framework is a complete framework with styles and interactive components:
-
-**Foundation Elements**
-- CSS Variables & Reset
-- Comprehensive typography system (headings, lists, blockquotes, code)
-- Layout utilities (container, grid, flexbox)
-- Card components with visual accents
-- Button variations
-- Navigation components
-- Form elements
-- Hero sections
-- Code blocks with copy functionality
-- Responsive utilities
-
-**Advanced Components**
-- CSS Subgrid layouts
-- Animations and micro-interactions  
-- Complex form components (multi-step, validation)
-- Interactive components (modals, tabs, accordions)
-- Media components (galleries, carousels)
-- Dashboard layouts
-- Magazine-style grids
-
-## 🎨 Design Philosophy
-
-Clean Framework emphasizes **visual consistency** and **semantic structure**:
+Semantic HTML that reads like English:
 
 ```html
-<div class="cf-card">
-    <h3 class="cf-card-title">Default Card</h3>
-    <p>Clean, consistent styling with visual accents</p>
-</div>
-
-<div class="cf-card cf-card-secondary">
-    <h3 class="cf-card-title">Secondary Card</h3>
-    <p>Themed variations for different contexts</p>
+<!-- This IS clean -->
+<div class="cards">
+  <div class="card">
+    <h3>Simple Feature</h3>
+    <p>Just write what you mean.</p>
+  </div>
 </div>
 ```
 
-## 🌟 Key Components
+## Core Components
 
-### Cards (The Foundation)
-```html
-<div class="cf-card">
-    <div class="cf-card-header">
-        <h3 class="cf-card-title">Card Title</h3>
-    </div>
-    <div class="cf-card-body">
-        <p>Clean, structured content with consistent styling.</p>
-    </div>
-</div>
-```
+Clean Framework v2 includes essential semantic components:
 
-### Forms
-```html
-<div class="cf-form-group">
-    <label class="cf-form-label">Email</label>
-    <input type="email" class="cf-form-input" placeholder="Enter email">
-</div>
-```
+**Layout & Structure:**
+- `.nav` - Navigation bars with theme support
+- `.hero` - Hero sections with call-to-action
+- `.section` - Page sections
+- `.container` - Content containers
+- `.footer` - Page footers
 
-### Buttons
-```html
-<button class="cf-btn">Primary Button</button>
-<button class="cf-btn cf-btn-secondary">Secondary</button>
-<button class="cf-btn cf-btn-outline">Outline</button>
-```
+**Content & UI:**
+- `.cards` / `.card` - Card grid containers and individual cards
+- `.buttons` / `.button` - Button containers and individual buttons
+- `.form` - Form containers with comprehensive field styling
+- `.modal` - Modal dialogs and overlays
+- `.dropdown` - Dropdown menus and selects
+- `.table` - Data tables with sorting and pagination
 
-### Navigation
-```html
-<nav class="cf-nav">
-    <div class="cf-container">
-        <div class="cf-nav-container">
-            <a href="#" class="cf-nav-brand">Brand</a>
-            <ul class="cf-nav-menu">
-                <li><a href="#" class="cf-nav-link">Home</a></li>
-                <li><a href="#" class="cf-nav-link active">About</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-```
+**Features:**
+- Dark/light/system theme switching
+- Multi-step forms with validation
+- Responsive design across all components
+- Component-based SCSS architecture
 
-## 📱 Responsive Design
+That's it. No `.btn-outline-secondary-lg-hover-active` nonsense.
 
-Clean Framework uses a mobile-first approach with intuitive breakpoints:
+## Quick Start
 
-```css
-/* Mobile first - base styles */
-.cf-col { flex: 0 0 100%; }
-
-/* Tablet and up */
-@media (min-width: 768px) {
-    .cf-col-6 { flex: 0 0 50%; }
-}
-
-/* Desktop and up */  
-@media (min-width: 1024px) {
-    .cf-col-4 { flex: 0 0 33.333%; }
-}
-```
-
-## 🎭 CSS Variables
-
-Customize the entire framework with CSS custom properties:
-
-```css
-:root {
-    --cf-primary: #667eea;        /* Main brand color */
-    --cf-secondary: #48bb78;      /* Success/secondary color */
-    --cf-border-radius: 8px;      /* Global border radius */
-    --cf-spacing-md: 1rem;        /* Base spacing unit */
-    --cf-font-sans: 'Your Font'; /* Typography */
-}
-```
-
-## 🌙 Dark Mode
-
-Built-in dark mode support:
-
-```html
-<html data-theme="dark">
-    <!-- Automatic dark mode for all components -->
-</html>
-```
-
-## 🤖 AI Code Generation
-
-Clean Framework is optimized for AI code generation. Here's what makes it work:
-
-### Predictable Class Patterns
-```html
-<!-- AI can easily predict these patterns -->
-<div class="cf-card cf-card-primary">
-    <div class="cf-card-header">
-        <h3 class="cf-card-title">Card Title</h3>
-    </div>
-    <div class="cf-card-body">
-        <p>Content</p>
-    </div>
-</div>
-```
-
-### Semantic HTML Structure
-```html
-<!-- Framework encourages proper semantic HTML -->
-<article class="cf-card">
-    <header class="cf-card-header">
-        <h2>Article Title</h2>
-    </header>
-    <section class="cf-card-body">
-        <p>Article content...</p>
-    </section>
-</article>
-```
-
-### Consistent Naming Convention
-- `.cf-[component]` - Base component
-- `.cf-[component]-[variant]` - Component variants  
-- `.cf-[component]-[element]` - Child elements
-- `.cf-[component].cf-[state]` - Component states
-
-This predictable structure allows AI models to generate accurate, consistent code without requiring extensive framework-specific training.
-
-## 🚀 Advanced Components
-
-### Multi-Step Forms
-```html
-<div class="cf-form-container">
-    <div class="cf-form-node cf-form-node-active">
-        <!-- Step content with navigation -->
-    </div>
-</div>
-```
-
-### CSS Subgrid Layouts
-```html
-<div class="cf-grid-article">
-    <main class="cf-grid-article-main">
-        <!-- Perfectly aligned content -->
-    </main>
-    <aside class="cf-grid-article-sidebar">
-        <!-- Sidebar that aligns with main -->
-    </aside>
-</div>
-```
-
-### Interactive Components
-```html
-<!-- Modal -->
-<div class="cf-modal" id="myModal">
-    <div class="cf-modal-content">
-        <!-- Modal content -->
-    </div>
-</div>
-
-<!-- Tabs -->
-<div class="cf-tabs">
-    <div class="cf-tab active">Tab 1</div>
-    <div class="cf-tab-content active">Content 1</div>
-</div>
-```
-
-### Code Blocks
-```html
-<!-- Code Block -->
-<div class="cf-code">
-    <button class="cf-code-copy" onclick="copyCode(this)">Copy</button>
-    <pre>const greeting = 'Hello, World!';
-console.log(greeting);</pre>
-</div>
-
-<!-- Inline Code -->
-<p>Use the <code class="cf-code-inline">cf-btn</code> class for buttons.</p>
-```
-
-### Typography
-```html
-<!-- Rich Typography -->
-<h2>Article Title</h2>
-<p>Clean Framework provides <strong>comprehensive typography</strong> with proper spacing and hierarchy.</p>
-
-<blockquote>
-    <p>Clean, semantic design that works seamlessly with AI tools.</p>
-    <cite>Clean Framework</cite>
-</blockquote>
-
-<ul>
-    <li>Semantic HTML elements</li>
-    <li>Consistent spacing</li>
-    <li>Nested list support
-        <ul>
-            <li>Multiple levels</li>
-            <li>Proper styling</li>
-        </ul>
-    </li>
-</ul>
-```
-
-## 📖 Examples
-
-See the **[Live Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework-demo.html)** for a comprehensive showcase of all components and layouts.
-
-### Basic Page Structure
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="clean-framework.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Your content here -->
-    
-    <!-- Before closing body tag -->
-    <script src="clean-framework.js"></script>
-</body>
-<body>
-    <nav class="cf-nav">
-        <div class="cf-container">
-            <div class="cf-nav-container">
-                <a href="#" class="cf-nav-brand">My Site</a>
-            </div>
+    <nav class="nav">
+        <div class="container">
+            <a href="#" class="brand">Your Brand</a>
+            <ul class="menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
         </div>
     </nav>
 
-    <section class="cf-hero">
-        <div class="cf-container">
-            <h1 class="cf-hero-title">Welcome</h1>
-            <p class="cf-hero-subtitle">Clean, semantic design</p>
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome</h1>
+            <p>This is clean.</p>
+            <div class="buttons">
+                <button class="button primary">Get Started</button>
+                <button class="button secondary">Learn More</button>
+            </div>
         </div>
     </section>
 
-    <section class="cf-section">
-        <div class="cf-container">
-            <div class="cf-row">
-                <div class="cf-col-4">
-                    <div class="cf-card">
-                        <h3>Feature 1</h3>
-                        <p>Clean, structured content</p>
-                    </div>
+    <section class="section">
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <h3>Feature One</h3>
+                    <p>Simple and semantic.</p>
+                </div>
+                <div class="card">
+                    <h3>Feature Two</h3>
+                    <p>No mental translation required.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Company</p>
+        </div>
+    </footer>
+    
+    <script src="main.js"></script>
 </body>
 </html>
 ```
 
-## 🛠️ Development
+## Why Clean v2?
 
-### Browser Support
-- Chrome 88+
-- Firefox 87+  
+### ✅ Semantic HTML
+HTML that tells the story of your content, not your styling choices.
+
+### ✅ Component-Based CSS  
+`.cards`, `.card`, `.nav` - components that make sense.
+
+### ✅ AI-Friendly
+Predictable patterns that AI can generate without framework-specific training.
+
+### ✅ Minimal Footprint
+~500 lines of CSS. No bloat. Fast loading.
+
+### ✅ Beautiful Defaults
+It just works out of the box. No configuration needed.
+
+### ✅ Human Readable
+Show someone the HTML without CSS - they'll understand the structure.
+
+## The Test
+
+The ultimate test: **Show someone your HTML without the CSS.** Can they understand what the page is supposed to look like? 
+
+If yes, you're using Clean Framework correctly.  
+If no, you're probably overcomplicating it.
+
+## Examples
+
+- **[index.php](index.php)** - Complete landing page showing all components
+
+## Browser Support
+
+- Chrome 90+
+- Firefox 88+ 
 - Safari 14+
-- Edge 88+
+- Edge 90+
 
-### CSS Features Used
-- CSS Grid & Subgrid (with fallbacks)
-- CSS Custom Properties
-- Flexbox
-- CSS Animations
-- Container Queries (progressive enhancement)
+## License
 
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file for details.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) first.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📚 Resources
-
-- [Live Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/clean-framework-demo.html) - Live component showcase
-- [Documentation](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/documentation.html) - Complete framework documentation
-- [Examples Library](examples/) - Real-world implementation examples
-- [Issues](https://github.com/tomvon/cleanframework/issues) - Bug reports & feature requests
-
-## 🙏 Acknowledgments
-
-Clean Framework was developed through extensive collaboration with AI development tools to create optimal patterns for AI-assisted coding. This framework represents a new approach to CSS frameworks - one designed from the ground up to work seamlessly with large language models and AI coding assistants.
-
-**AI Development Philosophy**: Every design decision prioritizes predictability and pattern consistency to enable AI tools to generate accurate, maintainable code. This framework serves as a bridge between human design intent and AI code generation capabilities.
-
-## ⭐ Support
-
-If you find Clean Framework useful, please consider giving it a star on GitHub!
-
-Contributions are greatly appreciated! Whether it's fixing bugs, adding features, improving documentation, or sharing ideas - every contribution helps make Clean Framework better for the entire community.
-
-## 👥 Thanks To Our Contributors
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+MIT License. Use it, abuse it, make it better.
 
 ---
 
-**Clean Framework** - The first CSS framework engineered specifically for the AI-assisted development era. Built with ❤️ for developers and their AI coding companions.
+**Clean Framework v2 - Because your HTML should tell a story, not solve a puzzle.**

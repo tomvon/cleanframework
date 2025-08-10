@@ -1,4 +1,6 @@
-# Clean Framework v2
+# Clean Framework v2 (Alpha)
+
+**[🚀 View Live Demo](https://github.com/tomfinley/cleanframework/blob/main/index.php)** | **[📖 Documentation](https://github.com/tomfinley/cleanframework)**
 
 **Semantic HTML. Component CSS. No Bullshit.**
 
@@ -141,7 +143,8 @@ If no, you're probably overcomplicating it.
 
 ## Examples
 
-- **[index.php](index.php)** - Complete landing page showing all components
+- **[Live Demo](http://localhost/cleanframework/)** - Complete landing page showing all components
+- **[Source Code](index.php)** - View the PHP source code
 
 ## Browser Support
 

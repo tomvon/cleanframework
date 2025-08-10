@@ -1,6 +1,6 @@
 # Clean Framework v2 (Alpha)
 
-**[🚀 View Live Demo](https://github.com/tomfinley/cleanframework/blob/main/index.php)** | **[📖 Documentation](https://github.com/tomfinley/cleanframework)**
+**[🚀 View Live Demo](https://htmlpreview.github.io/?https://github.com/tomfinley/cleanframework/blob/main/preview.html)** | **[📖 Documentation](https://github.com/tomfinley/cleanframework)**
 
 **Semantic HTML. Component CSS. No Bullshit.**
 

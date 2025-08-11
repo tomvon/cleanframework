@@ -1,6 +1,6 @@
 # Clean Framework
 
-**[View Live Demo](https://cleanframework.dev)** | **[Components](components-showcase.php)** | **[Documentation](COMPONENTS.md)**
+**[View Live Demo](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/index.php)** | **[Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/components-showcase.php)** | **[Documentation](COMPONENTS.md)**
 
 **Semantic HTML. Readable CSS.**
 

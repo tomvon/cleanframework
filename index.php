@@ -1,427 +1,88 @@
 <?php
 /**
- * Clean Framework v2 - Example Page
- * Component-based architecture with PHP includes
+ * Clean Framework - Main Landing Page
+ * Organized showcase of framework capabilities
  */
 
-
-// Page data
-$brand = 'CleanCorp';
+$brand = 'Clean Framework';
 $nav_items = [
-    ['url' => '#', 'label' => 'Home', 'active' => true],
-    ['url' => '#', 'label' => 'About'],
-    ['url' => '#', 'label' => 'Services'],
-    ['url' => '#', 'label' => 'Contact']
+    ['url' => 'index.php', 'label' => 'Home', 'active' => true],
+    ['url' => 'form-components.php', 'label' => 'Forms'],
+    ['url' => 'ui-components.php', 'label' => 'UI Components'],
+    ['url' => 'layout-components.php', 'label' => 'Layout'],
+    ['url' => 'marketing-components.php', 'label' => 'Marketing'],
+    ['url' => 'components-showcase.php', 'label' => 'All Components']
 ];
 
-$hero_title = 'Clean Framework v2';
-$hero_subtitle = 'Semantic HTML. Component CSS. No utility pollution.';
-$hero_buttons = [
-    ['url' => '#', 'label' => 'Get Started', 'type' => 'primary'],
-    ['url' => '#', 'label' => 'Learn More', 'type' => 'secondary']
+// Component categories
+$component_categories = [
+    [
+        'title' => 'Form Components',
+        'description' => 'Complete form elements with built-in validation and accessibility features.',
+        'icon' => 'fas fa-edit',
+        'url' => 'form-components.php',
+        'components' => ['Text inputs', 'Multi-step forms', 'File uploads', 'Validation', 'Input groups', 'Form layouts']
+    ],
+    [
+        'title' => 'UI Components',
+        'description' => 'Interactive components with consistent behavior and styling.',
+        'icon' => 'fas fa-cube',
+        'url' => 'ui-components.php',
+        'components' => ['Buttons', 'Modals', 'Dropdowns', 'Tables', 'Tabs', 'Alerts', 'Tooltips', 'Badges']
+    ],
+    [
+        'title' => 'Layout Components',
+        'description' => 'Structural components for content organization and layout.',
+        'icon' => 'fas fa-th-large',
+        'url' => 'layout-components.php',
+        'components' => ['Cards', 'Accordions', 'Breadcrumbs', 'Progress bars', 'Pricing tables']
+    ],
+    [
+        'title' => 'Marketing Components',
+        'description' => 'Conversion-focused components for landing pages and marketing sites.',
+        'icon' => 'fas fa-rocket',
+        'url' => 'marketing-components.php',
+        'components' => ['Hero sections', 'Features', 'Testimonials', 'CTA sections', 'Stats counters']
+    ]
 ];
 
-$cards = [
+// Framework features
+$framework_features = [
     [
         'icon' => 'fas fa-code',
         'title' => 'Semantic HTML',
-        'content' => 'HTML that tells a story. No mental translation required. Just write what you mean.'
+        'description' => 'Intuitive class names that describe content structure. Write `.card` for cards, `.nav` for navigation.',
+        'details' => ['Human-readable class names', 'Self-documenting markup', 'AI-friendly patterns']
     ],
     [
-        'icon' => 'fas fa-rocket',
-        'title' => 'Lightning Fast',
-        'content' => '500 lines of CSS. No bloat. No complexity. Just beautiful, fast websites.'
+        'icon' => 'fas fa-feather-alt',
+        'title' => 'Lightweight',
+        'description' => 'Only 500 lines of CSS. Fast loading times with minimal overhead.',
+        'details' => ['12kb minified CSS', 'Zero dependencies', 'Pure CSS & vanilla JS']
     ],
     [
-        'icon' => 'fas fa-robot',
-        'title' => 'AI-Friendly',
-        'content' => 'Predictable patterns that AI can understand without training. Perfect for modern development.'
-    ]
-];
-
-// Image-based cards for showcasing
-$image_cards = [
-    [
-        'image' => 'img/samples/pexels-earano-1330219.jpg',
-        'title' => 'Beautiful Design',
-        'content' => 'Clean, modern layouts that look great on any device. Every detail crafted with care.',
-        'button' => ['url' => '#', 'label' => 'Learn More', 'type' => 'primary']
+        'icon' => 'fas fa-puzzle-piece',
+        'title' => 'Modular Design',
+        'description' => 'Independent components that can be used together or separately as needed.',
+        'details' => ['Modular architecture', 'Independent components', 'Easy to maintain']
     ],
     [
-        'image' => 'img/samples/pexels-fabianwiktor-994605.jpg',
-        'title' => 'Developer Experience',
-        'content' => 'Write less code, build more features. Intuitive patterns that make sense.',
-        'button' => ['url' => '#', 'label' => 'Get Started', 'type' => 'secondary']
+        'icon' => 'fas fa-mobile-alt',
+        'title' => 'Responsive',
+        'description' => 'Mobile-first design that adapts seamlessly to any screen size or device.',
+        'details' => ['Touch-friendly interactions', 'Flexible layouts', 'Progressive enhancement']
     ],
     [
-        'image' => 'img/samples/pexels-george-desipris-801857.jpg',
-        'title' => 'Performance First',
-        'content' => 'Optimized for speed and efficiency. Your users will thank you.',
-        'button' => ['url' => '#', 'label' => 'View Demo', 'type' => 'primary']
-    ]
-];
-
-$form_fields = [
-    [
-        'name' => 'name',
-        'label' => 'Your Name',
-        'type' => 'text',
-        'placeholder' => 'John Doe',
-        'required' => true
+        'icon' => 'fas fa-accessibility',
+        'title' => 'Accessible',
+        'description' => 'WCAG 2.1 compliant with proper ARIA attributes and keyboard navigation support.',
+        'details' => ['WCAG 2.1 compliant', 'Screen reader friendly', 'Keyboard navigation']
     ],
     [
-        'name' => 'email',
-        'label' => 'Email Address',
-        'type' => 'email',
-        'placeholder' => 'john@example.com',
-        'required' => true
-    ],
-    [
-        'name' => 'message',
-        'label' => 'Message',
-        'type' => 'textarea',
-        'placeholder' => 'Tell us what you think...',
-        'required' => true
-    ]
-];
-
-$submit_label = 'Send Message';
-
-// Pricing data
-$pricing_plans = [
-    [
-        'name' => 'Starter',
-        'price' => 9,
-        'period' => '/month',
-        'description' => 'Perfect for individuals',
-        'featured' => false,
-        'features' => [
-            'Up to 3 projects',
-            'Basic support',
-            'Export to PDF',
-            ['text' => 'Advanced analytics', 'disabled' => true],
-            ['text' => 'Priority support', 'disabled' => true]
-        ],
-        'button' => [
-            'label' => 'Get Started',
-            'url' => '#',
-            'type' => 'secondary'
-        ]
-    ],
-    [
-        'name' => 'Professional',
-        'price' => 29,
-        'period' => '/month',
-        'description' => 'Best for small teams',
-        'featured' => true,
-        'badge' => 'Most Popular',
-        'features' => [
-            'Unlimited projects',
-            'Priority support',
-            'Export to PDF & Excel',
-            'Advanced analytics',
-            'Team collaboration'
-        ],
-        'button' => [
-            'label' => 'Get Started',
-            'url' => '#',
-            'type' => 'primary'
-        ]
-    ],
-    [
-        'name' => 'Enterprise',
-        'price' => 99,
-        'period' => '/month',
-        'description' => 'For large organizations',
-        'featured' => false,
-        'features' => [
-            'Everything in Professional',
-            'Dedicated support',
-            'Custom integrations',
-            'SLA guarantee',
-            'Advanced security'
-        ],
-        'button' => [
-            'label' => 'Contact Sales',
-            'url' => '#',
-            'type' => 'secondary'
-        ]
-    ]
-];
-
-// Multi-step form data
-$form_steps = [
-    [
-        'title' => 'Personal Information',
-        'description' => 'Tell us about yourself',
-        'label' => 'Personal',
-        'fields' => [
-            [
-                'name' => 'first_name',
-                'label' => 'First Name',
-                'type' => 'text',
-                'placeholder' => 'John',
-                'value' => 'John',
-                'required' => true
-            ],
-            [
-                'name' => 'last_name',
-                'label' => 'Last Name',
-                'type' => 'text',
-                'placeholder' => 'Doe',
-                'value' => 'Smith',
-                'required' => true
-            ],
-            [
-                'name' => 'email',
-                'label' => 'Email Address',
-                'type' => 'email',
-                'placeholder' => 'john@example.com',
-                'value' => 'john.smith@example.com',
-                'required' => true
-            ],
-            [
-                'name' => 'phone',
-                'label' => 'Phone Number',
-                'type' => 'tel',
-                'placeholder' => '(555) 123-4567',
-                'value' => '(555) 987-6543'
-            ],
-            [
-                'name' => 'birth_date',
-                'label' => 'Date of Birth',
-                'type' => 'date',
-                'value' => '1990-05-15'
-            ]
-        ]
-    ],
-    [
-        'title' => 'Preferences & Settings',
-        'description' => 'Customize your experience',
-        'label' => 'Preferences',
-        'fields' => [
-            [
-                'name' => 'experience_level',
-                'label' => 'Experience Level',
-                'type' => 'range',
-                'min' => 1,
-                'max' => 10,
-                'value' => 7,
-                'help' => 'Rate your experience from beginner (1) to expert (10)'
-            ],
-            [
-                'name' => 'budget',
-                'label' => 'Budget Range',
-                'type' => 'number',
-                'min' => 1000,
-                'max' => 100000,
-                'step' => 500,
-                'placeholder' => '10000',
-                'value' => '15000'
-            ],
-            [
-                'name' => 'brand_color',
-                'label' => 'Preferred Brand Color',
-                'type' => 'color',
-                'value' => '#10B981'
-            ],
-            [
-                'name' => 'services',
-                'label' => 'Services Interested In',
-                'type' => 'checkbox',
-                'value' => ['web-design', 'web-dev', 'consulting'],
-                'options' => [
-                    'web-design' => 'Web Design',
-                    'web-dev' => 'Web Development',
-                    'mobile-app' => 'Mobile App Development',
-                    'consulting' => 'Technical Consulting',
-                    'maintenance' => 'Ongoing Maintenance'
-                ]
-            ]
-        ]
-    ],
-    [
-        'title' => 'Project Details',
-        'description' => 'Tell us about your project',
-        'label' => 'Project',
-        'fields' => [
-            [
-                'name' => 'project_type',
-                'label' => 'Primary Project Type',
-                'type' => 'radio',
-                'required' => true,
-                'value' => 'redesign',
-                'options' => [
-                    'new-website' => 'Brand New Website',
-                    'redesign' => 'Website Redesign',
-                    'mobile-app' => 'Mobile Application',
-                    'web-app' => 'Web Application',
-                    'ecommerce' => 'E-commerce Store'
-                ]
-            ],
-            [
-                'name' => 'timeline',
-                'label' => 'Desired Timeline',
-                'type' => 'select',
-                'required' => true,
-                'value' => '2-3-months',
-                'options' => [
-                    '' => 'Select timeline',
-                    '1-2-weeks' => '1-2 weeks',
-                    '1-month' => '1 month',
-                    '2-3-months' => '2-3 months',
-                    '3-6-months' => '3-6 months',
-                    'flexible' => 'Flexible'
-                ]
-            ],
-            [
-                'name' => 'project_description',
-                'label' => 'Project Description',
-                'type' => 'textarea',
-                'placeholder' => 'Tell us more about your project goals, target audience, and specific requirements...',
-                'value' => 'We need to redesign our existing website to make it more modern and user-friendly. The current site feels outdated and doesn\'t reflect our brand properly. We\'re looking for a clean, professional design that showcases our services effectively and improves conversion rates.',
-                'required' => true
-            ]
-        ]
-    ],
-    [
-        'title' => 'Additional Information',
-        'description' => 'Final details and attachments',
-        'label' => 'Extras',
-        'fields' => [
-            [
-                'name' => 'company_website',
-                'label' => 'Current Website (if any)',
-                'type' => 'url',
-                'placeholder' => 'https://example.com',
-                'value' => 'https://mycompany.com'
-            ],
-            [
-                'name' => 'project_files',
-                'label' => 'Project Files or References',
-                'type' => 'file',
-                'accept' => '.pdf,.doc,.docx,.png,.jpg,.jpeg,.zip',
-                'help' => 'Upload any relevant documents, wireframes, or reference materials'
-            ],
-            [
-                'name' => 'additional_notes',
-                'label' => 'Additional Notes',
-                'type' => 'textarea',
-                'placeholder' => 'Any other information we should know?',
-                'value' => 'We would like to maintain our current branding colors but are open to suggestions for improvement. Mobile responsiveness is very important to us as most of our traffic comes from mobile devices.'
-            ],
-            [
-                'name' => 'newsletter',
-                'label' => 'Communication Preferences',
-                'type' => 'checkbox',
-                'value' => ['newsletter', 'updates'],
-                'options' => [
-                    'newsletter' => 'Subscribe to our newsletter',
-                    'updates' => 'Receive project updates via email',
-                    'marketing' => 'Receive marketing communications'
-                ]
-            ]
-        ]
-    ],
-    [
-        'title' => 'Advanced Input Types',
-        'description' => 'Showcase all form input capabilities',
-        'label' => 'Advanced',
-        'fields' => [
-            [
-                'name' => 'search_query',
-                'label' => 'Search Query',
-                'type' => 'search',
-                'placeholder' => 'Search for anything...',
-                'value' => 'clean framework'
-            ],
-            [
-                'name' => 'password',
-                'label' => 'Password',
-                'type' => 'password',
-                'placeholder' => 'Enter secure password',
-                'value' => 'mysecurepassword123'
-            ],
-            [
-                'name' => 'appointment_time',
-                'label' => 'Appointment Time',
-                'type' => 'time',
-                'value' => '14:30'
-            ],
-            [
-                'name' => 'deadline_datetime',
-                'label' => 'Project Deadline',
-                'type' => 'datetime-local',
-                'value' => '2024-12-01T09:00'
-            ],
-            [
-                'name' => 'project_week',
-                'label' => 'Start Week',
-                'type' => 'week',
-                'value' => '2024-W45'
-            ],
-            [
-                'name' => 'launch_month',
-                'label' => 'Launch Month',
-                'type' => 'month',
-                'value' => '2024-12'
-            ]
-        ]
-    ],
-    [
-        'title' => 'Interactive Components',
-        'description' => 'Advanced UI components and interactions',
-        'label' => 'Interactive',
-        'fields' => [
-            [
-                'name' => 'satisfaction_rating',
-                'label' => 'Satisfaction Rating',
-                'type' => 'star-rating',
-                'max' => 5,
-                'value' => 4
-            ],
-            [
-                'name' => 'email_notifications',
-                'label' => 'Enable Email Notifications',
-                'type' => 'toggle',
-                'value' => true
-            ],
-            [
-                'name' => 'skills_multiselect',
-                'label' => 'Technical Skills',
-                'type' => 'select',
-                'multiple' => true,
-                'value' => ['javascript', 'php', 'css'],
-                'options' => [
-                    'html' => 'HTML',
-                    'css' => 'CSS',
-                    'javascript' => 'JavaScript',
-                    'php' => 'PHP',
-                    'python' => 'Python',
-                    'react' => 'React',
-                    'vue' => 'Vue.js',
-                    'nodejs' => 'Node.js'
-                ]
-            ],
-            [
-                'name' => 'hourly_rate',
-                'label' => 'Hourly Rate',
-                'type' => 'input-group',
-                'prefix' => '$',
-                'suffix' => '/hr',
-                'input_type' => 'number',
-                'value' => '75',
-                'min' => 10,
-                'max' => 500
-            ],
-            [
-                'name' => 'project_files_enhanced',
-                'label' => 'Project Files (Drag & Drop)',
-                'type' => 'file-upload-area',
-                'accept' => '.pdf,.doc,.docx,.png,.jpg,.jpeg,.zip,.sketch,.fig',
-                'help' => 'Drag files here or click to browse. Supports documents, images, and design files.'
-            ]
-        ]
+        'icon' => 'fas fa-palette',
+        'title' => 'Theme Support',
+        'description' => 'Built-in dark mode with automatic system preference detection and manual controls.',
+        'details' => ['System preference detection', 'Manual theme toggle', 'Custom color schemes']
     ]
 ];
 ?>
@@ -431,89 +92,220 @@ $form_steps = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clean Framework v2 - Component Architecture</title>
+    <title>Clean Framework - Semantic CSS Framework</title>
+    <meta name="description" content="Clean Framework: A semantic, component-based CSS framework. No utility pollution, just clean code that makes sense.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css?v=<?= time() ?>">
 </head>
 <body>
     <?php include 'components/header/header.php'; ?>
 
-    <?php include 'components/hero/hero.php'; ?>
-
-    <section class="section features">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <h2 class="text-center">Why Choose Clean?</h2>
-            <?php include 'components/cards/cards.php'; ?>
+            <div class="hero-content">
+                <h1 class="hero-title">Clean Framework</h1>
+                <p class="hero-subtitle">Semantic HTML. Readable CSS.</p>
+                <p class="hero-description">
+                    A CSS framework built on semantic HTML and intuitive class names. No cryptic abbreviations or utility classes to memorize.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#examples" class="button primary large">
+                        <i class="fas fa-eye" aria-hidden="true"></i>
+                        See It Work
+                    </a>
+                    <a href="components-showcase.php" class="button secondary large">
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
+                        All Components
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="section">
+    <!-- Features Section -->
+    <section id="features" class="section">
         <div class="container">
-            <h2 class="text-center">Simple, Transparent Pricing</h2>
-            <p class="text-center">Choose the perfect plan for your needs</p>
-            <?php include 'components/pricing/pricing.php'; ?>
+            <div class="features-section">
+                <div class="features-header">
+                    <h2>Why Clean Framework?</h2>
+                    <p>Semantic components that make development faster and maintenance easier</p>
+                </div>
+                
+                <div class="features-grid features-grid-3">
+                    <?php foreach($framework_features as $feature): ?>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="<?= $feature['icon'] ?>" aria-hidden="true"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title"><?= $feature['title'] ?></h3>
+                                <p class="feature-description"><?= $feature['description'] ?></p>
+                                <ul class="feature-details">
+                                    <?php foreach($feature['details'] as $detail): ?>
+                                        <li><i class="fas fa-check" aria-hidden="true"></i> <?= $detail ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="section">
+    <!-- Component Categories -->
+    <section id="examples" class="section">
         <div class="container">
-            <h2 class="text-center">Showcase Gallery</h2>
-            <p class="text-center">See what's possible with Clean Framework</p>
-            <?php $cards = $image_cards; include 'components/cards/cards.php'; ?>
+            <div class="section-header">
+                <h2>Explore Components</h2>
+                <p>Browse our organized collection of components by category</p>
+            </div>
+            
+            <div class="features-cards">
+                <?php foreach($component_categories as $category): ?>
+                    <div class="feature-card">
+                        <div class="feature-card-header">
+                            <div class="feature-icon">
+                                <i class="<?= $category['icon'] ?>" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="feature-title"><?= $category['title'] ?></h3>
+                        </div>
+                        <div class="feature-card-content">
+                            <p class="feature-description"><?= $category['description'] ?></p>
+                            
+                            <ul class="feature-details">
+                                <?php foreach(array_slice($category['components'], 0, 6) as $component): ?>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> <?= $component ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                            
+                            <div style="margin-top: 1.5rem;">
+                                <a href="<?= $category['url'] ?>" class="button primary">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    View Components
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
     </section>
 
+    <!-- Quick Stats -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Get Started Today</h2>
-            <p class="text-center">Complete our comprehensive 6-step form to get a custom quote</p>
-            <?php include 'components/form/form-multi.php'; ?>
+            <div class="stats-section">
+                <div class="stats-header">
+                    <h2>Built for Performance</h2>
+                    <p>Numbers that matter</p>
+                </div>
+                
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-file-code" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-card-content">
+                            <div class="stat-value">
+                                <span class="stat-number" data-value="12">0</span>
+                                <span class="stat-suffix">kb</span>
+                            </div>
+                            <h3 class="stat-label">CSS Size</h3>
+                            <p class="stat-description">Minified and compressed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-cubes" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-card-content">
+                            <div class="stat-value">
+                                <span class="stat-number" data-value="25">0</span>
+                                <span class="stat-suffix">+</span>
+                            </div>
+                            <h3 class="stat-label">Components</h3>
+                            <p class="stat-description">Ready to use</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-feather-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-card-content">
+                            <div class="stat-value">
+                                <span class="stat-number" data-value="0">0</span>
+                                <span class="stat-suffix"></span>
+                            </div>
+                            <h3 class="stat-label">Dependencies</h3>
+                            <p class="stat-description">Pure CSS & JS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-card-content">
+                            <div class="stat-value">
+                                <span class="stat-number" data-value="100">0</span>
+                                <span class="stat-suffix">/100</span>
+                            </div>
+                            <h3 class="stat-label">Lighthouse</h3>
+                            <p class="stat-description">Perfect score</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- CTA Section -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Get In Touch</h2>
-            <?php include 'components/form/form.php'; ?>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="text-center">Modal Examples</h2>
-            <p class="text-center">Clean Framework includes a powerful modal component for dialogs, forms, and confirmations.</p>
-            <?php include 'components/modal/modal.php'; ?>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="text-center">Dropdown Components</h2>
-            <p class="text-center">Versatile dropdown menus for navigation, selections, and actions</p>
-            <?php include 'components/dropdown/dropdown.php'; ?>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="text-center">Table Component</h2>
-            <p class="text-center">Responsive data tables with sorting, filtering, and actions</p>
-            <?php include 'components/table/table.php'; ?>
+            <div class="cta-section cta-gradient cta-centered">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Get Started?</h2>
+                    <p class="cta-subtitle">Join developers who trust Clean Framework</p>
+                    <p class="cta-description">
+                        Start building beautiful, semantic websites today. No learning curve, just clean code.
+                    </p>
+                    
+                    <div class="cta-buttons">
+                        <a href="components-showcase.php" class="button primary large">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                            View Full Showcase
+                        </a>
+                        <a href="#examples" class="button secondary-white large">
+                            <i class="fas fa-cube" aria-hidden="true"></i>
+                            Browse Components
+                        </a>
+                    </div>
+                    
+                    <ul class="cta-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> No build process required</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Copy and paste ready</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Fully responsive</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 CleanCorp. Built with Clean Framework v2.</p>
+            <p>&copy; 2024 Clean Framework. Built with semantic HTML and component-based CSS.</p>
         </div>
     </footer>
 
     <!-- Component JavaScript files -->
     <script src="components/navigation/navigation.js"></script>
-    <script src="components/form/form.js"></script>
-    <script src="components/modal/modal.js"></script>
-    <script src="components/dropdown/dropdown.js"></script>
-    <script src="components/table/table.js"></script>
+    <script src="components/stats/stats.js"></script>
+    <script src="components/features/features.js"></script>
+    <script src="components/cta/cta.js"></script>
     
     <!-- Main JavaScript -->
     <script src="main.js"></script>

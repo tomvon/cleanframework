@@ -1,24 +1,24 @@
-# Clean Framework - The Manifesto
+# Clean Framework Philosophy
 
-## What Went Wrong
+## The Challenge
 
-We built exactly what we set out to destroy: another utility-first framework polluted with hundreds of classes. We turned semantic HTML into this:
+CSS frameworks should simplify development, not complicate it. Yet many frameworks lead to HTML like this:
 
 ```html
-<!-- This is NOT clean -->
+<!-- Complex utility chains -->
 <div class="cf-row cf-row-tight cf-equal-height cf-mb-4">
   <div class="cf-col-4 cf-p-2 cf-mx-auto">
     <div class="cf-card cf-card-full cf-card-interactive cf-badge-primary cf-mb-2">
 ```
 
-This is Tailwind with a `cf-` prefix. This is the opposite of clean.
+This approach creates maintenance challenges and requires extensive framework-specific knowledge.
 
-## What Clean Actually Means
+## Our Approach
 
-Clean means HTML that reads like English:
+Clean means HTML that communicates structure clearly:
 
 ```html
-<!-- This IS clean -->
+<!-- Semantic and readable -->
 <div class="hero">
   <h1>Welcome</h1>
   <p>Simple and semantic.</p>
@@ -32,34 +32,34 @@ Clean means HTML that reads like English:
 </div>
 ```
 
-## The Real Vision
+## Core Principles
 
-- **Semantic HTML first** - Structure that tells a story
-- **Component-based CSS** - `.cards`, `.card`, `.hero`, `.nav`  
-- **No utility pollution** - Maybe 15 classes total
-- **AI-friendly patterns** - Predictable and obvious
-- **Human-readable code** - No mental translation required
+- **Semantic HTML** - Classes that describe content structure and meaning
+- **Intuitive naming** - `.cards`, `.card`, `.hero`, `.nav` map to UI concepts  
+- **Focused scope** - 15 essential components, not hundreds of utilities
+- **Tool-friendly** - Predictable patterns that work with AI and automation
+- **Human-readable** - Code that remains clear to developers over time
 
-## What We Build
+## Implementation
 
-1. **~15 semantic components** - Not 800+ utility classes
-2. **~500 lines of CSS** - Not 4,600 lines
-3. **Obvious patterns** - AI can predict without training
-4. **Beautiful defaults** - It just works out of the box
+1. **15 semantic components** - Cover essential UI patterns without bloat
+2. **500 lines of CSS** - Efficient, focused codebase
+3. **Consistent patterns** - Predictable structure across all components
+4. **Zero configuration** - Include CSS and start building
 
 ## Success Metrics
 
-- Can AI generate correct HTML without seeing the CSS?
-- Does the HTML tell the story of the content?
-- Would a designer understand the structure?
-- Is it faster than vanilla CSS?
+- AI can generate correct HTML without documentation
+- Developers can understand markup structure at a glance  
+- Designers can interpret layout from HTML alone
+- Development is faster than utility-based approaches
 
-If the answer to any is "no", we've failed again.
+These principles guide every design decision.
 
 ## The Test
 
-The ultimate test: Show someone the HTML without the CSS. Can they understand what the page is supposed to look like? If yes, we've succeeded.
+Show someone your HTML without the CSS. If they can understand the page structure and content organization, the semantic approach is working.
 
 ---
 
-**Clean Framework v2: Semantic HTML. Component CSS. No Bullshit.**
+**Clean Framework: Semantic HTML architecture for modern web development.**

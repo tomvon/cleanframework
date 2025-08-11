@@ -1,8 +1,8 @@
-# Clean Framework v2 - Architecture Guide
+# Clean Framework - Architecture Guide
 
 ## Component-Based Architecture
 
-Clean Framework v2 uses a modular, component-based architecture with PHP includes, SCSS modules, and optional JavaScript enhancements.
+Clean Framework uses a modular, component-based architecture with PHP includes, SCSS modules, and optional JavaScript enhancements.
 
 ## Directory Structure
 

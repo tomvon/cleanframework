@@ -1,39 +1,65 @@
-# Clean Framework v2 (Alpha)
+# Clean Framework
 
-**[🚀 View Live Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/preview.html)** | **[📋 Components](https://github.com/tomvon/cleanframework/tree/master/components)**
+**[View Live Demo](https://cleanframework.dev)** | **[Components](components-showcase.php)** | **[Documentation](COMPONENTS.md)**
 
-**Semantic HTML. Component CSS. No Bullshit.**
+**Semantic HTML. Readable CSS.**
 
-Clean Framework v2 is a complete rewrite focused on semantic HTML patterns and component-based CSS. No utility pollution. No complexity. Just clean, predictable code that works.
+Clean Framework provides semantic HTML components with intuitive class names. No cryptic abbreviations or utility classes to memorize.
 
-## The Problem
+## The Challenge
 
-Modern CSS frameworks have gone insane:
+Utility-first frameworks result in HTML like this:
 
 ```html
-<!-- This is NOT clean -->
+<!-- Complex utility chains -->
 <div class="flex flex-col lg:flex-row gap-4 p-6 bg-white rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
 ```
 
-This is utility pollution. This is mental overhead. This is the opposite of clean.
+This approach works but requires memorizing hundreds of class names and creates maintenance challenges.
 
-## The Solution
+## Clean Framework Approach
 
-Semantic HTML that reads like English:
+Write HTML that describes content structure:
 
 ```html
-<!-- This IS clean -->
+<!-- Semantic and clear -->
 <div class="cards">
   <div class="card">
-    <h3>Simple Feature</h3>
-    <p>Just write what you mean.</p>
+    <h3>Feature Title</h3>
+    <p>Feature description.</p>
   </div>
 </div>
 ```
 
+The HTML structure communicates intent clearly to developers, designers, and tools.
+
+## Getting Started
+
+### Installation
+
+1. **Download or clone** the repository
+2. **Include the CSS** in your HTML:
+   ```html
+   <link rel="stylesheet" href="style.css">
+   ```
+3. **Add optional JavaScript** for enhanced functionality:
+   ```html
+   <script src="main.js"></script>
+   ```
+4. **Start building** with semantic HTML patterns
+
+### Component Documentation
+
+- **[Framework Overview](index.php)** - Core concepts and getting started
+- **[Form Components](form-components.php)** - Input fields, validation, multi-step forms
+- **[UI Components](ui-components.php)** - Buttons, modals, dropdowns, alerts, tooltips
+- **[Layout Components](layout-components.php)** - Cards, grids, accordions, progress bars
+- **[Marketing Components](marketing-components.php)** - Heroes, features, testimonials, CTAs
+- **[Complete Showcase](components-showcase.php)** - All components with examples
+
 ## Core Components
 
-Clean Framework v2 includes essential semantic components:
+Clean Framework includes 20+ essential semantic components:
 
 **Layout & Structure:**
 - `.nav` - Navigation bars with theme support
@@ -41,49 +67,77 @@ Clean Framework v2 includes essential semantic components:
 - `.section` - Page sections
 - `.container` - Content containers
 - `.footer` - Page footers
+- `.cards` / `.card` - Card layouts and containers
+- `.accordion` - Collapsible content sections
+- `.breadcrumb` - Navigation hierarchy
 
-**Content & UI:**
-- `.cards` / `.card` - Card grid containers and individual cards
-- `.buttons` / `.button` - Button containers and individual buttons
+**Forms & Inputs:**
 - `.form` - Form containers with comprehensive field styling
+- `.form-multi` - Multi-step forms with progress tracking
+- All HTML5 input types with consistent styling
+- Validation states and error handling
+
+**UI Components:**
+- `.buttons` / `.button` - Button containers and variants
 - `.modal` - Modal dialogs and overlays
-- `.dropdown` - Dropdown menus and selects
+- `.dropdown` - Dropdown menus and navigation
 - `.table` - Data tables with sorting and pagination
+- `.tabs` - Tabbed content organization
+- `.alert` / `.toast` - Notifications and alerts
+- `.tooltip` - Contextual help tooltips
+- `.badge` - Status indicators and labels
+- `.progress` - Progress bars and loading states
 
-**Features:**
+**Marketing Components:**
+- `.testimonials` - Customer reviews with ratings
+- `.features` - Feature showcases with multiple layouts
+- `.cta` - Call-to-action sections
+- `.stats` - Animated statistics and counters
+- `.pricing` - Pricing tables and plans
+
+**Key Features:**
 - Dark/light/system theme switching
-- Multi-step forms with validation
-- Responsive design across all components
+- Fully responsive design
+- Progressive JavaScript enhancement
 - Component-based SCSS architecture
+- Semantic, accessible HTML
 
-That's it. No `.btn-outline-secondary-lg-hover-active` nonsense.
+Focused on essential components with clear naming conventions.
 
 ## Quick Start
+
+## Implementation
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Framework Application</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="nav">
         <div class="container">
-            <a href="#" class="brand">Your Brand</a>
+            <a href="#" class="brand">Brand</a>
             <ul class="menu">
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <section class="hero">
         <div class="container">
-            <h1>Welcome</h1>
-            <p>This is clean.</p>
-            <div class="buttons">
-                <button class="button primary">Get Started</button>
-                <button class="button secondary">Learn More</button>
+            <div class="hero-content">
+                <h1 class="hero-title">Application Title</h1>
+                <p class="hero-description">Clear, concise description of purpose.</p>
+                <div class="hero-buttons">
+                    <button class="button primary">Primary Action</button>
+                    <button class="button secondary">Secondary Action</button>
+                </div>
             </div>
         </div>
     </section>
@@ -92,12 +146,8 @@ That's it. No `.btn-outline-secondary-lg-hover-active` nonsense.
         <div class="container">
             <div class="cards">
                 <div class="card">
-                    <h3>Feature One</h3>
-                    <p>Simple and semantic.</p>
-                </div>
-                <div class="card">
-                    <h3>Feature Two</h3>
-                    <p>No mental translation required.</p>
+                    <h3 class="card-title">Feature</h3>
+                    <p class="card-content">Feature description.</p>
                 </div>
             </div>
         </div>
@@ -105,7 +155,7 @@ That's it. No `.btn-outline-secondary-lg-hover-active` nonsense.
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Your Company</p>
+            <p>&copy; 2024 Company Name</p>
         </div>
     </footer>
     
@@ -114,49 +164,107 @@ That's it. No `.btn-outline-secondary-lg-hover-active` nonsense.
 </html>
 ```
 
-## Why Clean v2?
+## Why Choose Clean Framework?
 
-### ✅ Semantic HTML
-HTML that tells the story of your content, not your styling choices.
+### Semantic HTML
+HTML that describes content meaning rather than visual appearance. Classes like `.card` and `.nav` map directly to UI concepts.
 
-### ✅ Component-Based CSS  
-`.cards`, `.card`, `.nav` - components that make sense.
+### Intuitive Class Names
+Learn 15 component names instead of hundreds of utility classes. If it looks like a button, it's called `.button`.
 
-### ✅ AI-Friendly
-Predictable patterns that AI can generate without framework-specific training.
+### Minimal Learning Curve
+Built on familiar HTML patterns and common UI terminology. No framework-specific concepts to master.
 
-### ✅ Minimal Footprint
-~500 lines of CSS. No bloat. Fast loading.
+### Focused Scope
+15 essential components in 500 lines of CSS. Covers common use cases without unnecessary complexity.
 
-### ✅ Beautiful Defaults
-It just works out of the box. No configuration needed.
+### Zero Configuration
+Include the CSS file and start building. No build tools, compilation steps, or configuration required.
 
-### ✅ Human Readable
-Show someone the HTML without CSS - they'll understand the structure.
+### Maintainable Code
+Self-documenting HTML that remains readable months later. Reduces cognitive load during development.
 
 ## The Test
 
-The ultimate test: **Show someone your HTML without the CSS.** Can they understand what the page is supposed to look like? 
+**Core Principle**: HTML structure should be self-explanatory. Good markup tells the content story without requiring CSS knowledge.
 
-If yes, you're using Clean Framework correctly.  
-If no, you're probably overcomplicating it.
 
-## Examples
+## Project Structure
 
-- **[Live Demo](http://localhost/cleanframework/)** - Complete landing page showing all components
-- **[Source Code](index.php)** - View the PHP source code
+```
+cleanframework/
+├── README.md                 # This file
+├── MANIFESTO.md             # Framework philosophy 
+├── COMPONENTS.md            # Detailed component documentation
+├── index.php                # Landing page
+├── form-components.php      # Form components showcase
+├── ui-components.php        # UI components showcase
+├── layout-components.php    # Layout components showcase
+├── marketing-components.php # Marketing components showcase
+├── components-showcase.php  # All components in one page
+├── style.css               # Compiled CSS (use this in production)
+├── style.scss              # Main SCSS source file
+├── main.js                 # Progressive JavaScript enhancements
+└── components/             # Modular component architecture
+    ├── accordion/          # Collapsible content sections
+    ├── alert/              # Toast notifications
+    ├── badge/              # Status indicators
+    ├── breadcrumb/         # Navigation hierarchy
+    ├── cards/              # Content containers
+    ├── cta/                # Call-to-action sections
+    ├── dropdown/           # Dropdown menus
+    ├── features/           # Feature showcases
+    ├── footer/             # Page footers
+    ├── form/               # Forms and inputs
+    ├── header/             # Page headers
+    ├── hero/               # Hero sections
+    ├── modal/              # Dialog overlays
+    ├── navigation/         # Site navigation
+    ├── pricing/            # Pricing tables
+    ├── progress/           # Progress indicators
+    ├── stats/              # Statistics counters
+    ├── table/              # Data tables
+    ├── tabs/               # Tabbed content
+    ├── testimonials/       # Customer reviews
+    └── tooltip/            # Contextual help
+```
+
+## Documentation
+
+- **[MANIFESTO.md](MANIFESTO.md)** - The philosophy behind Clean Framework
+- **[COMPONENTS.md](COMPONENTS.md)** - Complete component documentation with examples
+- **Component showcase pages** - Interactive examples of all components
+
+## Technical Overview
+
+**Components**: 20+ semantic UI components  
+**CSS Size**: 500 lines of compiled CSS  
+**Dependencies**: None  
+**JavaScript**: Optional progressive enhancement  
+**Theming**: CSS custom properties with automatic dark mode  
+**Accessibility**: WCAG 2.1 AA compliant with ARIA support  
+**Browser Support**: Modern browsers (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)  
+**Setup Time**: Under 5 minutes
 
 ## Browser Support
 
-- Chrome 90+
-- Firefox 88+ 
-- Safari 14+
-- Edge 90+
+- ✅ Chrome 90+
+- ✅ Firefox 88+ 
+- ✅ Safari 14+
+- ✅ Edge 90+
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Maintain semantic HTML principles
+4. Test across supported browsers
+5. Submit pull request with clear description
 
 ## License
 
-MIT License. Use it, abuse it, make it better.
+MIT License. Use it, modify it, make it better.
 
 ---
 
-**Clean Framework v2 - Because your HTML should tell a story, not solve a puzzle.**
+**Clean Framework - Semantic HTML architecture for modern web development.**

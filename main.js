@@ -1,5 +1,5 @@
 /**
- * Clean Framework v2 - Main JavaScript
+ * Clean Framework - Main JavaScript
  * 
  * This file will be the compiled output if you use Prepros to concatenate.
  * For now, it manually includes component functionality.
@@ -27,8 +27,63 @@ document.addEventListener('DOMContentLoaded', function() {
         window.Table.init();
     }
     
-    // Initialize other components as they're created
-    console.log('Clean Framework v2 initialized');
+    // Initialize Tabs component
+    if (window.Tabs) {
+        window.Tabs.init();
+    }
+    
+    // Initialize Alerts component
+    if (window.Alerts) {
+        window.Alerts.init();
+    }
+    
+    // Initialize Accordion component
+    if (window.Accordion) {
+        window.Accordion.init();
+    }
+    
+    // Initialize Tooltip component
+    if (window.Tooltip) {
+        window.Tooltip.init();
+    }
+    
+    // Initialize Breadcrumb component
+    if (window.Breadcrumb) {
+        window.Breadcrumb.init();
+    }
+    
+    // Initialize Badge component
+    if (window.Badge) {
+        window.Badge.init();
+    }
+    
+    // Initialize Progress component
+    if (window.Progress) {
+        window.Progress.init();
+    }
+    
+    // Initialize Testimonials component
+    if (window.Testimonials) {
+        window.Testimonials.init();
+    }
+    
+    // Initialize Features component
+    if (window.Features) {
+        window.Features.init();
+    }
+    
+    // Initialize CTA component
+    if (window.CTA) {
+        window.CTA.init();
+    }
+    
+    // Initialize Stats component
+    if (window.Stats) {
+        window.Stats.init();
+    }
+    
+    // All components initialized
+    console.log('Clean Framework initialized');
 });
 
 // Global utilities

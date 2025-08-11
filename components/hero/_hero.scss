@@ -33,6 +33,23 @@
     }
 }
 
+// Smaller hero variant for internal pages
+.hero-small {
+    padding: 3rem 0;
+    background: var(--muted);
+    color: var(--foreground);
+    
+    .hero-title {
+        font-size: 2.5rem;
+        color: var(--foreground);
+    }
+    
+    .hero-description {
+        font-size: 1.125rem;
+        color: var(--muted-foreground);
+    }
+}
+
 // Responsive hero
 @media (max-width: 768px) {
     .hero {
@@ -44,6 +61,14 @@
         
         p {
             font-size: 1.125rem;
+        }
+    }
+    
+    .hero-small {
+        padding: 2rem 0;
+        
+        .hero-title {
+            font-size: 2rem;
         }
     }
 }

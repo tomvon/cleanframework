@@ -1,6 +1,6 @@
 # Clean Framework
 
-**[View Live Demo](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/index.php)** | **[Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/components-showcase.php)** | **[Documentation](COMPONENTS.md)**
+**[View Live Demo](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/index.html)** | **[Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/components-showcase.html)** | **[Documentation](COMPONENTS.md)**
 
 **Semantic HTML. Readable CSS.**
 
@@ -48,14 +48,14 @@ The HTML structure communicates intent clearly to developers, designers, and too
    ```
 4. **Start building** with semantic HTML patterns
 
-### Component Documentation
+### Live Examples
 
-- **[Framework Overview](index.php)** - Core concepts and getting started
-- **[Form Components](form-components.php)** - Input fields, validation, multi-step forms
-- **[UI Components](ui-components.php)** - Buttons, modals, dropdowns, alerts, tooltips
-- **[Layout Components](layout-components.php)** - Cards, grids, accordions, progress bars
-- **[Marketing Components](marketing-components.php)** - Heroes, features, testimonials, CTAs
-- **[Complete Showcase](components-showcase.php)** - All components with examples
+- **[Framework Overview](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/index.html)** - Core concepts and getting started
+- **[Form Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/form-components.html)** - Input fields, validation, multi-step forms
+- **[UI Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/ui-components.html)** - Buttons, modals, dropdowns, alerts, tooltips
+- **[Layout Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/layout-components.html)** - Cards, grids, accordions, progress bars
+- **[Marketing Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/marketing-components.html)** - Heroes, features, testimonials, CTAs
+- **[Complete Showcase](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/components-showcase.html)** - All components with examples
 
 ## Core Components
 
@@ -196,12 +196,19 @@ cleanframework/
 ├── README.md                 # This file
 ├── MANIFESTO.md             # Framework philosophy 
 ├── COMPONENTS.md            # Detailed component documentation
-├── index.php                # Landing page
-├── form-components.php      # Form components showcase
-├── ui-components.php        # UI components showcase
-├── layout-components.php    # Layout components showcase
-├── marketing-components.php # Marketing components showcase
-├── components-showcase.php  # All components in one page
+├── demo/                    # Static HTML demos (GitHub compatible)
+│   ├── index.html           # Main landing page demo
+│   ├── form-components.html # Form components demo
+│   ├── ui-components.html   # UI components demo
+│   ├── layout-components.html # Layout components demo
+│   ├── marketing-components.html # Marketing components demo
+│   └── components-showcase.html # Complete showcase demo
+├── index.php                # Landing page (PHP source)
+├── form-components.php      # Form components (PHP source)
+├── ui-components.php        # UI components (PHP source)
+├── layout-components.php    # Layout components (PHP source)
+├── marketing-components.php # Marketing components (PHP source)
+├── components-showcase.php  # All components (PHP source)
 ├── style.css               # Compiled CSS (use this in production)
 ├── style.scss              # Main SCSS source file
 ├── main.js                 # Progressive JavaScript enhancements
@@ -233,7 +240,8 @@ cleanframework/
 
 - **[MANIFESTO.md](MANIFESTO.md)** - The philosophy behind Clean Framework
 - **[COMPONENTS.md](COMPONENTS.md)** - Complete component documentation with examples
-- **Component showcase pages** - Interactive examples of all components
+- **PHP source files** - Dynamic examples for local development (requires PHP server)
+- **Static demo files** - Pre-rendered HTML versions for easy viewing on GitHub
 
 ## Technical Overview
 

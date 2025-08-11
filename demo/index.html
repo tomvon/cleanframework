@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Framework - Semantic CSS Framework</title>
+    <meta name="description" content="Clean Framework: A semantic, component-based CSS framework. No utility pollution, just clean code that makes sense.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <!-- Navigation Component -->
+        <nav class="nav">
+            <div class="container">
+                <a href="#" class="brand">Clean Framework</a>
+                <div class="nav-right">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html" class="active">Home</a>
+                        </li>
+                        <li>
+                            <a href="form-components.html">Forms</a>
+                        </li>
+                        <li>
+                            <a href="ui-components.html">UI Components</a>
+                        </li>
+                        <li>
+                            <a href="layout-components.html">Layout</a>
+                        </li>
+                        <li>
+                            <a href="marketing-components.html">Marketing</a>
+                        </li>
+                        <li>
+                            <a href="components-showcase.html">All Components</a>
+                        </li>
+                    </ul>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme mode">
+                        <i class="theme-icon sun fas fa-sun active"></i>
+                        <i class="theme-icon moon fas fa-moon"></i>
+                        <i class="theme-icon system fas fa-circle-half-stroke"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Clean Framework</h1>
+                <p class="hero-subtitle">Semantic HTML. Readable CSS.</p>
+                <p class="hero-description">
+                    A CSS framework built on semantic HTML and intuitive class names. No cryptic abbreviations or utility classes to memorize.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#examples" class="button primary large">
+                        <i class="fas fa-eye" aria-hidden="true"></i>
+                        See It Work
+                    </a>
+                    <a href="components-showcase.html" class="button secondary large">
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
+                        All Components
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="features-section">
+                <div class="features-header">
+                    <h2>Why Clean Framework?</h2>
+                    <p>Semantic components that make development faster and maintenance easier</p>
+                </div>
+                
+                <div class="features-grid features-grid-3">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Semantic HTML</h3>
+                            <p class="feature-description">Intuitive class names that describe content structure. Write `.card` for cards, `.nav` for navigation.</p>
+                            <ul class="feature-details">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Human-readable class names</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Self-documenting markup</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> AI-friendly patterns</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-feather-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Lightweight</h3>
+                            <p class="feature-description">Only 500 lines of CSS. Fast loading times with minimal overhead.</p>
+                            <ul class="feature-details">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 12kb minified CSS</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Zero dependencies</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Pure CSS & vanilla JS</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Modular Design</h3>
+                            <p class="feature-description">Independent components that can be used together or separately as needed.</p>
+                            <ul class="feature-details">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Modular architecture</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Independent components</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Easy to maintain</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Responsive</h3>
+                            <p class="feature-description">Mobile-first design that adapts seamlessly to any screen size or device.</p>
+                            <ul class="feature-details">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Touch-friendly interactions</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Flexible layouts</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Progressive enhancement</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-accessibility" aria-hidden="true"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Accessible</h3>
+                            <p class="feature-description">WCAG 2.1 compliant with proper ARIA attributes and keyboard navigation support.</p>
+                            <ul class="feature-details">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> WCAG 2.1 compliant</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Screen reader friendly</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Keyboard navigation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette" aria-hidden="true"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Theme Support</h3>
+                            <p class="feature-description">Built-in dark mode with automatic system preference detection and manual controls.</p>
+                            <ul class="feature-details">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> System preference detection</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Manual theme toggle</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Custom color schemes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component Categories -->
+    <section id="examples" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Components</h2>
+                <p>Browse our organized collection of components by category</p>
+            </div>
+            
+            <div class="features-cards">
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-icon">
+                            <i class="fas fa-edit" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-title">Form Components</h3>
+                    </div>
+                    <div class="feature-card-content">
+                        <p class="feature-description">Complete form elements with built-in validation and accessibility features.</p>
+                        
+                        <ul class="feature-details">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Text inputs</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Multi-step forms</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> File uploads</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Validation</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Input groups</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Form layouts</li>
+                        </ul>
+                        
+                        <div style="margin-top: 1.5rem;">
+                            <a href="form-components.html" class="button primary">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                View Components
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-icon">
+                            <i class="fas fa-cube" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-title">UI Components</h3>
+                    </div>
+                    <div class="feature-card-content">
+                        <p class="feature-description">Interactive components with consistent behavior and styling.</p>
+                        
+                        <ul class="feature-details">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Buttons</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Modals</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Dropdowns</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Tables</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Tabs</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Alerts</li>
+                        </ul>
+                        
+                        <div style="margin-top: 1.5rem;">
+                            <a href="ui-components.html" class="button primary">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                View Components
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-icon">
+                            <i class="fas fa-th-large" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-title">Layout Components</h3>
+                    </div>
+                    <div class="feature-card-content">
+                        <p class="feature-description">Structural components for content organization and layout.</p>
+                        
+                        <ul class="feature-details">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Cards</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Accordions</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Breadcrumbs</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Progress bars</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Pricing tables</li>
+                        </ul>
+                        
+                        <div style="margin-top: 1.5rem;">
+                            <a href="layout-components.html" class="button primary">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                View Components
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-header">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-title">Marketing Components</h3>
+                    </div>
+                    <div class="feature-card-content">
+                        <p class="feature-description">Conversion-focused components for landing pages and marketing sites.</p>
+                        
+                        <ul class="feature-details">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Hero sections</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Features</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Testimonials</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> CTA sections</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Stats counters</li>
+                        </ul>
+                        
+                        <div style="margin-top: 1.5rem;">
+                            <a href="marketing-components.html" class="button primary">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                View Components
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="section">
+        <div class="container">
+            <div class="stats-section">
+                <div class="stats-header">
+                    <h2>Built for Performance</h2>
+                    <p>Numbers that matter</p>
+                </div>
+                
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-file-code" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-card-content">
+                            <div class="stat-value">
+                                <span class="stat-number" data-value="12">0</span>
+                                <span class="stat-suffix">kb</span>
+                            </div>
+                            <h3 class="stat-label">CSS Size</h3>
+                            <p class="stat-description">Minified and compressed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-cubes" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-card-content">
+                            <div class="stat-value">
+                                <span class="stat-number" data-value="25">0</span>
+                                <span class="stat-suffix">+</span>
+                            </div>
+                            <h3 class="stat-label">Components</h3>
+                            <p class="stat-description">Ready to use</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-feather-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-card-content">
+                            <div class="stat-value">
+                                <span class="stat-number" data-value="0">0</span>
+                                <span class="stat-suffix"></span>
+                            </div>
+                            <h3 class="stat-label">Dependencies</h3>
+                            <p class="stat-description">Pure CSS & JS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-card-icon">
+                            <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-card-content">
+                            <div class="stat-value">
+                                <span class="stat-number" data-value="100">0</span>
+                                <span class="stat-suffix">/100</span>
+                            </div>
+                            <h3 class="stat-label">Lighthouse</h3>
+                            <p class="stat-description">Perfect score</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-section cta-gradient cta-centered">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Get Started?</h2>
+                    <p class="cta-subtitle">Join developers who trust Clean Framework</p>
+                    <p class="cta-description">
+                        Start building beautiful, semantic websites today. No learning curve, just clean code.
+                    </p>
+                    
+                    <div class="cta-buttons">
+                        <a href="components-showcase.html" class="button primary large">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                            View Full Showcase
+                        </a>
+                        <a href="#examples" class="button secondary-white large">
+                            <i class="fas fa-cube" aria-hidden="true"></i>
+                            Browse Components
+                        </a>
+                    </div>
+                    
+                    <ul class="cta-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> No build process required</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Copy and paste ready</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Fully responsive</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Clean Framework. Built with semantic HTML and component-based CSS.</p>
+        </div>
+    </footer>
+
+    <!-- Component JavaScript files -->
+    <script src="../components/navigation/navigation.js"></script>
+    <script src="../components/stats/stats.js"></script>
+    <script src="../components/features/features.js"></script>
+    <script src="../components/cta/cta.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="../main.js"></script>
+</body>
+</html>

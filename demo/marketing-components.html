@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Components - Clean Framework</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <!-- Navigation Component -->
+        <nav class="nav">
+            <div class="container">
+                <a href="#" class="brand">Clean Framework</a>
+                <div class="nav-right">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="form-components.html">Forms</a>
+                        </li>
+                        <li>
+                            <a href="ui-components.html">UI Components</a>
+                        </li>
+                        <li>
+                            <a href="layout-components.html">Layout</a>
+                        </li>
+                        <li>
+                            <a href="marketing-components.html" class="active">Marketing</a>
+                        </li>
+                        <li>
+                            <a href="components-showcase.html">All Components</a>
+                        </li>
+                    </ul>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme mode">
+                        <i class="theme-icon sun fas fa-sun active"></i>
+                        <i class="theme-icon moon fas fa-moon"></i>
+                        <i class="theme-icon system fas fa-circle-half-stroke"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero hero-small">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Marketing Components</h1>
+                <p class="hero-description">The building blocks that actually convert visitors into customers</p>
+                <div class="hero-buttons">
+                    <a href="index.html" class="button secondary">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        Back to Home
+                    </a>
+                    <a href="components-showcase.html" class="button primary">
+                        <i class="fas fa-eye" aria-hidden="true"></i>
+                        All Components
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Sections -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Hero Sections</h2>
+            <p class="text-center">First impressions that actually impress</p>
+        </div>
+    </section>
+    
+    <!-- Example Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Clean Framework</h1>
+            <p>Semantic HTML. Component CSS. No utility pollution.</p>
+            
+            <div class="buttons">
+                <a href="#" class="button primary">Get Started</a>
+                <a href="#" class="button secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Feature Sections</h2>
+            <p class="text-center">Show off what makes your product special</p>
+            
+            <div class="features-section">
+                <div class="features-header">
+                    <h2>Why Choose Clean Framework?</h2>
+                    <p>Everything you need to build beautiful, fast, and accessible websites</p>
+                </div>
+                
+                <!-- Grid Layout -->
+                <div class="features-grid features-grid-3">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Semantic HTML</h3>
+                            <p class="feature-description">HTML that tells a story. No mental translation required. Just write what you mean and let the framework handle the rest.</p>
+                            <ul class="feature-details">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Predictable class names</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Human-readable markup</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> AI-friendly patterns</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Lightning Fast</h3>
+                            <p class="feature-description">Only 500 lines of CSS. No bloat, no complexity. Clean Framework delivers beautiful, performant websites without the overhead.</p>
+                            <ul class="feature-details">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Minimal CSS footprint</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Optimized for performance</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> No unused styles</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Component-Based</h3>
+                            <p class="feature-description">Each component is self-contained with its own styles and JavaScript. Build complex interfaces from simple, reusable pieces.</p>
+                            <ul class="feature-details">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Modular architecture</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Easy to maintain</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Scalable design system</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Testimonials</h2>
+            <p class="text-center">Let your happy customers do the selling for you</p>
+            
+            <div class="testimonials-section">
+                <div class="testimonials-header">
+                    <h2>What Our Users Say</h2>
+                    <p>Join thousands of developers who trust Clean Framework for their projects</p>
+                </div>
+                
+                <!-- Featured Testimonial -->
+                <div class="testimonial-featured">
+                    <div class="testimonial-content">
+                        <blockquote class="testimonial-quote">
+                            "Clean Framework has completely transformed how we build websites. The semantic approach makes our code so much cleaner and easier to maintain."
+                        </blockquote>
+                        <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="../img/samples/pexels-earano-1330219.jpg" alt="Sarah Chen" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Sarah Chen</div>
+                            <div class="testimonial-role">Lead Developer at TechCorp Inc.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component-spacer"></div>
+                
+                <!-- Testimonials Grid -->
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </div>
+                            <blockquote class="testimonial-quote">
+                                "The component-based architecture is brilliant. No more fighting with utility classes - everything just makes sense."
+                            </blockquote>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="../img/samples/pexels-fabianwiktor-994605.jpg" alt="Marcus Rodriguez" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Marcus Rodriguez</div>
+                                <div class="testimonial-role">Frontend Architect</div>
+                                <div class="testimonial-company">Design Studio</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </div>
+                            <blockquote class="testimonial-quote">
+                                "Finally, a CSS framework that speaks human language! Clean Framework saves us hours of development time."
+                            </blockquote>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="../img/samples/pexels-george-desipris-801857.jpg" alt="Emily Watson" class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Emily Watson</div>
+                                <div class="testimonial-role">Product Manager</div>
+                                <div class="testimonial-company">StartupCo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats/Counters -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Stats & Counters</h2>
+            <p class="text-center">Big numbers that make your business look impressive</p>
+            
+            <div class="stats-section">
+                <div class="stats-header">
+                    <h2>Trusted by Thousands</h2>
+                    <p>Numbers that speak for themselves</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item" data-color="primary">
+                        <div class="stat-icon">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value">
+                                <span class="stat-number" data-value="10000">0</span>
+                                <span class="stat-suffix">+</span>
+                            </div>
+                            <h3 class="stat-label">Happy Customers</h3>
+                            <p class="stat-description">Developers using Clean Framework</p>
+                        </div>
+                    </div>
+                    <div class="stat-item" data-color="success">
+                        <div class="stat-icon">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value">
+                                <span class="stat-number" data-value="500">0</span>
+                                <span class="stat-suffix">k</span>
+                            </div>
+                            <h3 class="stat-label">Lines of Code</h3>
+                            <p class="stat-description">Saved with our framework</p>
+                        </div>
+                    </div>
+                    <div class="stat-item" data-color="info">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value">
+                                <span class="stat-number" data-value="99.9">0</span>
+                                <span class="stat-suffix">%</span>
+                            </div>
+                            <h3 class="stat-label">Uptime</h3>
+                            <p class="stat-description">Reliable performance</p>
+                        </div>
+                    </div>
+                    <div class="stat-item" data-color="warning">
+                        <div class="stat-icon">
+                            <i class="fas fa-headset" aria-hidden="true"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value">
+                                <span class="stat-number" data-value="24">0</span>
+                                <span class="stat-suffix">/7</span>
+                            </div>
+                            <h3 class="stat-label">Support</h3>
+                            <p class="stat-description">Always here to help</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Sections -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Call-to-Action Sections</h2>
+            <p class="text-center">The final push that turns visitors into customers</p>
+            
+            <!-- Primary CTA Section -->
+            <div class="cta-section cta-primary cta-centered cta-gradient">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Get Started?</h2>
+                    <p class="cta-subtitle">Join thousands of developers who trust Clean Framework</p>
+                    <p class="cta-description">Start building beautiful, fast websites today with our component-based CSS framework. No learning curve, just clean code.</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="#" class="button primary">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                            Start Free Trial
+                        </a>
+                        <a href="#" class="button secondary-white">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                            View Documentation
+                        </a>
+                    </div>
+                    
+                    <ul class="cta-features">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> No credit card required</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 14-day free trial</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Cancel anytime</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="component-spacer"></div>
+
+            <!-- Newsletter CTA Section -->
+            <div class="cta-section cta-newsletter cta-split cta-light">
+                <div class="cta-content">
+                    <div class="cta-text">
+                        <h2 class="cta-title">Stay Updated</h2>
+                        <p class="cta-subtitle">Get the latest updates and tips</p>
+                        <p class="cta-description">Subscribe to our newsletter for framework updates, best practices, and exclusive content.</p>
+                    </div>
+                    
+                    <div class="cta-form">
+                        <form class="newsletter-form" action="#" method="post">
+                            <div class="form-group-inline">
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    placeholder="Enter your email address"
+                                    required
+                                    aria-label="Email address"
+                                    class="form-control"
+                                >
+                                <button type="submit" class="button primary">
+                                    Subscribe
+                                </button>
+                            </div>
+                            <p class="form-privacy">We respect your privacy. Unsubscribe at any time.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Examples -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Marketing Layouts</h2>
+            <p class="text-center">Proven patterns that actually work</p>
+            
+            <div class="layout-examples">
+                <!-- Value Proposition -->
+                <div class="section-header">
+                    <h3>Value Proposition</h3>
+                    <p>Clear benefit-focused messaging</p>
+                </div>
+                
+                <div style="background: var(--card); padding: 3rem; border-radius: var(--radius); border: 1px solid var(--border); text-align: center; margin-bottom: 3rem;">
+                    <h4 style="font-size: 2rem; margin-bottom: 1rem; color: var(--foreground);">Save 10 Hours Per Week</h4>
+                    <p style="font-size: 1.25rem; margin-bottom: 2rem; color: var(--muted-foreground);">
+                        Clean Framework eliminates the complexity of utility classes, letting you focus on building features instead of fighting CSS.
+                    </p>
+                    <div class="buttons">
+                        <button class="button primary large">Start Saving Time</button>
+                        <button class="button secondary large">See How It Works</button>
+                    </div>
+                </div>
+
+                <!-- Social Proof -->
+                <div class="section-header">
+                    <h3>Social Proof Bar</h3>
+                    <p>Build trust with user statistics</p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, var(--primary), var(--primary-hover)); color: white; padding: 2rem; border-radius: var(--radius); text-align: center; margin-bottom: 3rem;">
+                    <p style="font-size: 1.125rem; margin-bottom: 1rem; opacity: 0.9;">
+                        Trusted by developers worldwide
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
+                        <div>
+                            <div style="font-size: 2rem; font-weight: 700;">10,000+</div>
+                            <div style="opacity: 0.8;">Downloads</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: 700;">500+</div>
+                            <div style="opacity: 0.8;">GitHub Stars</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: 700;">50+</div>
+                            <div style="opacity: 0.8;">Contributors</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Clean Framework. Built with semantic HTML and component-based CSS.</p>
+        </div>
+    </footer>
+
+    <!-- Component JavaScript files -->
+    <script src="../components/navigation/navigation.js"></script>
+    <script src="../components/features/features.js"></script>
+    <script src="../components/testimonials/testimonials.js"></script>
+    <script src="../components/stats/stats.js"></script>
+    <script src="../components/cta/cta.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="../main.js"></script>
+</body>
+</html>

@@ -654,10 +654,10 @@ All components follow ARIA guidelines:
 
 ---
 
-For live examples of all components, visit the showcase pages:
+For live examples of all components, visit the demo pages:
 
-- [Form Components](form-components.php)
-- [UI Components](ui-components.php)
-- [Layout Components](layout-components.php)
-- [Marketing Components](marketing-components.php)
-- [All Components](components-showcase.php)
+- [Form Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/form-components.html)
+- [UI Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/ui-components.html)
+- [Layout Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/layout-components.html)
+- [Marketing Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/marketing-components.html)
+- [Complete Showcase](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/components-showcase.html)

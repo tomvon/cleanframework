@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Components - Clean Framework</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <!-- Navigation Component -->
+        <nav class="nav">
+            <div class="container">
+                <a href="#" class="brand">Clean Framework</a>
+                <div class="nav-right">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="form-components.html">Forms</a>
+                        </li>
+                        <li>
+                            <a href="ui-components.html">UI Components</a>
+                        </li>
+                        <li>
+                            <a href="layout-components.html" class="active">Layout</a>
+                        </li>
+                        <li>
+                            <a href="marketing-components.html">Marketing</a>
+                        </li>
+                        <li>
+                            <a href="components-showcase.html">All Components</a>
+                        </li>
+                    </ul>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme mode">
+                        <i class="theme-icon sun fas fa-sun active"></i>
+                        <i class="theme-icon moon fas fa-moon"></i>
+                        <i class="theme-icon system fas fa-circle-half-stroke"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero hero-small">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Layout Components</h1>
+                <p class="hero-description">Building blocks that actually help you build things</p>
+                <div class="hero-buttons">
+                    <a href="index.html" class="button secondary">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        Back to Home
+                    </a>
+                    <a href="components-showcase.html" class="button primary">
+                        <i class="fas fa-eye" aria-hidden="true"></i>
+                        All Components
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Cards</h2>
+            <p class="text-center">Perfect little boxes for your content</p>
+            
+            <!-- Icon Cards -->
+            <div class="cards">
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Semantic HTML</h3>
+                    <p>HTML that tells a story. No mental translation required. Just write what you mean.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>500 lines of CSS. No bloat. No complexity. Just beautiful, fast websites.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Friendly</h3>
+                    <p>Predictable patterns that AI can understand without training. Perfect for modern development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Cards -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Image Cards</h2>
+            <p class="text-center">Cards with pictures that don't break your layout</p>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../img/samples/pexels-earano-1330219.jpg" alt="Beautiful Design" />
+                    </div>
+                    <h3>Beautiful Design</h3>
+                    <p>Clean, modern layouts that look great on any device. Every detail crafted with care.</p>
+                    <a href="#" class="button primary">Learn More</a>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../img/samples/pexels-fabianwiktor-994605.jpg" alt="Developer Experience" />
+                    </div>
+                    <h3>Developer Experience</h3>
+                    <p>Write less code, build more features. Intuitive patterns that make sense.</p>
+                    <a href="#" class="button secondary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Pricing Tables</h2>
+            <p class="text-center">Make your pricing crystal clear (and actually convert)</p>
+            
+            <div class="pricing">
+                <div class="plans">
+                    <div class="plan">
+                        <h3 class="name">Starter</h3>
+                        
+                        <div class="price">
+                            <span class="currency">$</span>9
+                            <span class="period">/month</span>
+                        </div>
+                        
+                        <p class="description">Perfect for individuals</p>
+                        
+                        <ul class="features">
+                            <li>Up to 3 projects</li>
+                            <li>Basic support</li>
+                            <li>Export to PDF</li>
+                            <li class="disabled">Advanced analytics</li>
+                        </ul>
+                        
+                        <a href="#" class="button secondary">Get Started</a>
+                    </div>
+                    <div class="plan featured">
+                        <div class="badge">Most Popular</div>
+                        
+                        <h3 class="name">Professional</h3>
+                        
+                        <div class="price">
+                            <span class="currency">$</span>29
+                            <span class="period">/month</span>
+                        </div>
+                        
+                        <p class="description">Best for small teams</p>
+                        
+                        <ul class="features">
+                            <li>Unlimited projects</li>
+                            <li>Priority support</li>
+                            <li>Export to PDF & Excel</li>
+                            <li>Advanced analytics</li>
+                        </ul>
+                        
+                        <a href="#" class="button primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accordion -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Accordions</h2>
+            <p class="text-center">Hide and show content without JavaScript wizardry</p>
+            
+            <div class="accordion" id="faq-accordion">
+                <div class="accordion-item accordion-item-open">
+                    <button class="accordion-header" 
+                            id="faq-accordion-header-getting-started"
+                            onclick="toggleAccordionItem('faq-accordion', 'getting-started')"
+                            aria-expanded="true"
+                            aria-controls="faq-accordion-content-getting-started">
+                        <span class="accordion-title">How do I get started with Clean Framework?</span>
+                        <span class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </button>
+                    
+                    <div class="accordion-content" 
+                         id="faq-accordion-content-getting-started"
+                         role="region"
+                         aria-labelledby="faq-accordion-header-getting-started">
+                        <div class="accordion-body">
+                            Getting started is simple! Download the framework, include the CSS file in your project, and start using semantic HTML components. No complex build process required.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" 
+                            id="faq-accordion-header-browser-support"
+                            onclick="toggleAccordionItem('faq-accordion', 'browser-support')"
+                            aria-expanded="false"
+                            aria-controls="faq-accordion-content-browser-support">
+                        <span class="accordion-title">What browsers are supported?</span>
+                        <span class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </button>
+                    
+                    <div class="accordion-content accordion-content-closed" 
+                         id="faq-accordion-content-browser-support"
+                         role="region"
+                         aria-labelledby="faq-accordion-header-browser-support">
+                        <div class="accordion-body">
+                            Clean Framework supports all modern browsers including Chrome, Firefox, Safari, and Edge. We use progressive enhancement to ensure compatibility across different environments.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" 
+                            id="faq-accordion-header-customization"
+                            onclick="toggleAccordionItem('faq-accordion', 'customization')"
+                            aria-expanded="false"
+                            aria-controls="faq-accordion-content-customization">
+                        <span class="accordion-title">Can I customize the design?</span>
+                        <span class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </button>
+                    
+                    <div class="accordion-content accordion-content-closed" 
+                         id="faq-accordion-content-customization"
+                         role="region"
+                         aria-labelledby="faq-accordion-header-customization">
+                        <div class="accordion-body">
+                            Absolutely! Clean Framework uses CSS custom properties (variables) that make it easy to customize colors, spacing, and typography. You can also override any styles to match your brand.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" 
+                            id="faq-accordion-header-components"
+                            onclick="toggleAccordionItem('faq-accordion', 'components')"
+                            aria-expanded="false"
+                            aria-controls="faq-accordion-content-components">
+                        <span class="accordion-title">What components are included?</span>
+                        <span class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </button>
+                    
+                    <div class="accordion-content accordion-content-closed" 
+                         id="faq-accordion-content-components"
+                         role="region"
+                         aria-labelledby="faq-accordion-header-components">
+                        <div class="accordion-body">
+                            The framework includes buttons, forms, modals, dropdowns, tables, tabs, alerts, accordions, and more. Each component is designed to work together seamlessly while maintaining semantic HTML.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" 
+                            id="faq-accordion-header-performance"
+                            onclick="toggleAccordionItem('faq-accordion', 'performance')"
+                            aria-expanded="false"
+                            aria-controls="faq-accordion-content-performance">
+                        <span class="accordion-title">How does it perform?</span>
+                        <span class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </button>
+                    
+                    <div class="accordion-content accordion-content-closed" 
+                         id="faq-accordion-content-performance"
+                         role="region"
+                         aria-labelledby="faq-accordion-header-performance">
+                        <div class="accordion-body">
+                            Clean Framework is designed for performance with minimal CSS footprint, no JavaScript dependencies for basic functionality, and optimized for fast loading times.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumbs -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Breadcrumbs</h2>
+            <p class="text-center">Help users find their way back home</p>
+            
+            <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="#">Home</a>
+                        <span class="breadcrumb-separator" aria-hidden="true">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Components</a>
+                        <span class="breadcrumb-separator" aria-hidden="true">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Navigation</a>
+                        <span class="breadcrumb-separator" aria-hidden="true">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </li>
+                    <li class="breadcrumb-item breadcrumb-current">
+                        <span aria-current="page">Breadcrumbs</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="component-spacer-small"></div>
+
+            <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="#">Dashboard</a>
+                        <span class="breadcrumb-separator" aria-hidden="true">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">User Management</a>
+                        <span class="breadcrumb-separator" aria-hidden="true">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </li>
+                    <li class="breadcrumb-item breadcrumb-current">
+                        <span aria-current="page">Edit Profile</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="component-spacer-small"></div>
+
+            <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="#">E-commerce</a>
+                        <span class="breadcrumb-separator" aria-hidden="true">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Electronics</a>
+                        <span class="breadcrumb-separator" aria-hidden="true">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Smartphones</a>
+                        <span class="breadcrumb-separator" aria-hidden="true">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </li>
+                    <li class="breadcrumb-item breadcrumb-current">
+                        <span aria-current="page">iPhone 15 Pro</span>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Progress Bars -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Progress Bars</h2>
+            <p class="text-center">Show progress without making users guess</p>
+            
+            <div class="progress-group">
+                <h3>Basic Progress</h3>
+                <div class="progress-items">
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Upload Progress</span>
+                        </div>
+                        <div class="progress progress-primary" 
+                             role="progressbar" 
+                             aria-valuenow="65" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100"
+                             aria-label="Upload Progress progress">
+                            <div class="progress-bar" data-width="65%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Profile Completion</span>
+                        </div>
+                        <div class="progress progress-success" 
+                             role="progressbar" 
+                             aria-valuenow="85" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100"
+                             aria-label="Profile Completion progress">
+                            <div class="progress-bar" data-width="85%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Storage Used</span>
+                        </div>
+                        <div class="progress progress-warning" 
+                             role="progressbar" 
+                             aria-valuenow="42" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100"
+                             aria-label="Storage Used progress">
+                            <div class="progress-bar" data-width="42%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Memory Usage</span>
+                        </div>
+                        <div class="progress progress-danger" 
+                             role="progressbar" 
+                             aria-valuenow="78" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100"
+                             aria-label="Memory Usage progress">
+                            <div class="progress-bar" data-width="78%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="component-spacer-small"></div>
+            
+            <div class="progress-group">
+                <h3>Skill Levels</h3>
+                <div class="progress-items">
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">JavaScript</span>
+                        </div>
+                        <div class="progress progress-success" 
+                             role="progressbar" 
+                             aria-valuenow="90" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100"
+                             aria-label="JavaScript progress">
+                            <div class="progress-bar" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">CSS/SCSS</span>
+                        </div>
+                        <div class="progress progress-primary" 
+                             role="progressbar" 
+                             aria-valuenow="75" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100"
+                             aria-label="CSS/SCSS progress">
+                            <div class="progress-bar" data-width="75%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">PHP</span>
+                        </div>
+                        <div class="progress progress-info" 
+                             role="progressbar" 
+                             aria-valuenow="60" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100"
+                             aria-label="PHP progress">
+                            <div class="progress-bar" data-width="60%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Python</span>
+                        </div>
+                        <div class="progress progress-warning" 
+                             role="progressbar" 
+                             aria-valuenow="45" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100"
+                             aria-label="Python progress">
+                            <div class="progress-bar" data-width="45%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="component-spacer-small"></div>
+            
+            <div class="progress-group">
+                <h3>Project Status</h3>
+                <div class="progress-items">
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Clean Framework</span>
+                            <span class="progress-value">95%</span>
+                        </div>
+                        <div class="progress progress-success" 
+                             role="progressbar" 
+                             aria-valuenow="95" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100"
+                             aria-label="Clean Framework progress">
+                            <div class="progress-bar" data-width="95%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Documentation</span>
+                            <span class="progress-value">70%</span>
+                        </div>
+                        <div class="progress progress-primary" 
+                             role="progressbar" 
+                             aria-valuenow="70" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100"
+                             aria-label="Documentation progress">
+                            <div class="progress-bar" data-width="70%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Testing</span>
+                            <span class="progress-value">30%</span>
+                        </div>
+                        <div class="progress progress-warning" 
+                             role="progressbar" 
+                             aria-valuenow="30" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100"
+                             aria-label="Testing progress">
+                            <div class="progress-bar" data-width="30%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layout Examples -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Grid Layouts</h2>
+            <p class="text-center">Grids that actually make sense</p>
+            
+            <div class="layout-examples">
+                <div class="section-header">
+                    <h3>Two Column Layout</h3>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+                    <div style="background: var(--card); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                        <h4>Left Column</h4>
+                        <p>This is the left column content. Perfect for main content or primary information.</p>
+                    </div>
+                    <div style="background: var(--card); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                        <h4>Right Column</h4>
+                        <p>This is the right column content. Great for sidebars or secondary information.</p>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <h3>Three Column Layout</h3>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                    <div style="background: var(--card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                        <h4>Column 1</h4>
+                        <p>First column content.</p>
+                    </div>
+                    <div style="background: var(--card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                        <h4>Column 2</h4>
+                        <p>Second column content.</p>
+                    </div>
+                    <div style="background: var(--card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                        <h4>Column 3</h4>
+                        <p>Third column content.</p>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <h3>Container & Sections</h3>
+                </div>
+                
+                <div style="background: var(--muted); padding: 2rem; border-radius: var(--radius); margin-bottom: 2rem;">
+                    <div style="max-width: 1200px; margin: 0 auto; background: var(--card); padding: 2rem; border-radius: var(--radius);">
+                        <h4>Container Example</h4>
+                        <p>This demonstrates the container component with max-width and automatic centering. Perfect for maintaining readable line lengths and consistent layouts across different screen sizes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Clean Framework. Built with semantic HTML and component-based CSS.</p>
+        </div>
+    </footer>
+
+    <!-- Component JavaScript files -->
+    <script src="../components/navigation/navigation.js"></script>
+    <script src="../components/accordion/accordion.js"></script>
+    <script src="../components/breadcrumb/breadcrumb.js"></script>
+    <script src="../components/progress/progress.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="../main.js"></script>
+</body>
+</html>

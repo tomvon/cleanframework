@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Components - Clean Framework</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <!-- Navigation Component -->
+        <nav class="nav">
+            <div class="container">
+                <a href="#" class="brand">Clean Framework</a>
+                <div class="nav-right">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="form-components.html">Forms</a>
+                        </li>
+                        <li>
+                            <a href="ui-components.html" class="active">UI Components</a>
+                        </li>
+                        <li>
+                            <a href="layout-components.html">Layout</a>
+                        </li>
+                        <li>
+                            <a href="marketing-components.html">Marketing</a>
+                        </li>
+                        <li>
+                            <a href="components-showcase.html">All Components</a>
+                        </li>
+                    </ul>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme mode">
+                        <i class="theme-icon sun fas fa-sun active"></i>
+                        <i class="theme-icon moon fas fa-moon"></i>
+                        <i class="theme-icon system fas fa-circle-half-stroke"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero hero-small">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">UI Components</h1>
+                <p class="hero-description">Interactive elements with consistent behavior and professional styling</p>
+                <div class="hero-buttons">
+                    <a href="index.html" class="button secondary">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        Back to Home
+                    </a>
+                    <a href="components-showcase.html" class="button primary">
+                        <i class="fas fa-eye" aria-hidden="true"></i>
+                        All Components
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Buttons</h2>
+            <p class="text-center">Multiple button styles and states for different actions</p>
+            
+            <div class="buttons">
+                <button class="button primary">Primary Button</button>
+                <button class="button secondary">Secondary Button</button>
+                <button class="button success">Success Button</button>
+                <button class="button warning">Warning Button</button>
+                <button class="button danger">Danger Button</button>
+            </div>
+
+            <div class="buttons">
+                <button class="button primary large">
+                    <i class="fas fa-rocket" aria-hidden="true"></i>
+                    Large Button
+                </button>
+                <button class="button secondary">
+                    <i class="fas fa-download" aria-hidden="true"></i>
+                    Regular Button
+                </button>
+                <button class="button primary small">Small Button</button>
+            </div>
+
+            <div class="buttons">
+                <button class="button primary" disabled>Disabled Primary</button>
+                <button class="button secondary" disabled>Disabled Secondary</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alerts -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Alerts & Toasts</h2>
+            <p class="text-center">User notifications for success, error, warning, and info messages</p>
+            
+            <div class="buttons">
+                <button class="button primary" onclick="showToast('Operation completed successfully!', 'success')">
+                    <i class="fas fa-check-circle" aria-hidden="true"></i> Success Alert
+                </button>
+                <button class="button secondary" onclick="showToast('Here is some helpful information.', 'info')">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i> Info Alert
+                </button>
+                <button class="button warning" onclick="showToast('Please review your settings.', 'warning')">
+                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Warning Alert
+                </button>
+                <button class="button danger" onclick="showToast('Something went wrong!', 'error')">
+                    <i class="fas fa-times-circle" aria-hidden="true"></i> Error Alert
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Modals</h2>
+            <p class="text-center">Accessible dialog windows for forms, confirmations, and content</p>
+            
+            <!-- Modal Container -->
+            <div class="modal-container">
+                <!-- Example Modal -->
+                <div class="modal" id="example-modal" data-size="medium">
+                    <div class="modal-backdrop" onclick="closeModal('example-modal')"></div>
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button class="modal-close" onclick="closeModal('example-modal')" aria-label="Close modal">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            
+                            <div class="modal-header">
+                                <h2 class="modal-title">Example Modal</h2>
+                            </div>
+                            
+                            <div class="modal-body">
+                                <p>This is a simple modal dialog. You can put any content here.</p>
+                            </div>
+                            
+                            <div class="modal-footer">
+                                <button class="button secondary" onclick="closeModal('example-modal')">Cancel</button>
+                                <button class="button primary">Save Changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Confirm Modal -->
+                <div class="modal" id="confirm-modal" data-size="small">
+                    <div class="modal-backdrop" onclick="closeModal('confirm-modal')"></div>
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button class="modal-close" onclick="closeModal('confirm-modal')" aria-label="Close modal">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            
+                            <div class="modal-header">
+                                <h2 class="modal-title">Confirm Action</h2>
+                            </div>
+                            
+                            <div class="modal-body">
+                                <p>Are you sure you want to proceed with this action?</p>
+                            </div>
+                            
+                            <div class="modal-footer">
+                                <button class="button secondary" onclick="closeModal('confirm-modal')">Cancel</button>
+                                <button class="button danger" onclick="confirmAction()">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Form Modal -->
+                <div class="modal" id="form-modal" data-size="medium">
+                    <div class="modal-backdrop" onclick="closeModal('form-modal')"></div>
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button class="modal-close" onclick="closeModal('form-modal')" aria-label="Close modal">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            
+                            <div class="modal-header">
+                                <h2 class="modal-title">Contact Form</h2>
+                            </div>
+                            
+                            <div class="modal-body">
+                                <form class="form">
+                                    <div class="group">
+                                        <label for="modal-name">Name</label>
+                                        <input type="text" id="modal-name" name="name" required>
+                                    </div>
+                                    <div class="group">
+                                        <label for="modal-email">Email</label>
+                                        <input type="email" id="modal-email" name="email" required>
+                                    </div>
+                                    <div class="group">
+                                        <label for="modal-message">Message</label>
+                                        <textarea id="modal-message" name="message" rows="4" required></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                            <div class="modal-footer">
+                                <button class="button secondary" onclick="closeModal('form-modal')">Cancel</button>
+                                <button class="button primary" onclick="submitModalForm()">Send Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Modal -->
+                <div class="modal" id="image-modal" data-size="large">
+                    <div class="modal-backdrop" onclick="closeModal('image-modal')"></div>
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button class="modal-close" onclick="closeModal('image-modal')" aria-label="Close modal">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            
+                            <div class="modal-header">
+                                <h2 class="modal-title">Image Gallery</h2>
+                            </div>
+                            
+                            <div class="modal-body">
+                                <div class="modal-gallery">
+                                    <img src="../img/samples/pexels-pixabay-414320.jpg" alt="Full size image" class="modal-gallery-image">
+                                    <p class="text-center">Click the image to view full size</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example trigger buttons for demonstration -->
+            <div class="modal-examples">
+                <button class="button primary" onclick="openModal('example-modal')">
+                    Open Example Modal
+                </button>
+                <button class="button secondary" onclick="openModal('confirm-modal')">
+                    Open Confirm Dialog
+                </button>
+                <button class="button primary" onclick="openModal('form-modal')">
+                    Open Form Modal
+                </button>
+                <button class="button secondary" onclick="openModal('image-modal')">
+                    Open Image Modal
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dropdowns -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Dropdowns</h2>
+            <p class="text-center">Versatile dropdown menus for navigation and actions</p>
+            
+            <div class="dropdown-examples">
+                <!-- Navigation Menu Dropdown -->
+                <div class="dropdown" data-type="menu">
+                    <button class="dropdown-trigger button secondary" 
+                            id="navigation-menu-trigger"
+                            onclick="toggleDropdown('navigation-menu')"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                        <i class="fas fa-bars"></i> Navigation Menu
+                    </button>
+                    
+                    <div class="dropdown-menu bottom-left" 
+                         id="navigation-menu-menu"
+                         role="menu"
+                         aria-labelledby="navigation-menu-trigger">
+                        <a class="dropdown-item" href="#" role="menuitem">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                        <a class="dropdown-item" href="#" role="menuitem">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                        <a class="dropdown-item" href="#" role="menuitem">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item danger" href="#" role="menuitem">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- User Actions Dropdown -->
+                <div class="dropdown" data-type="action">
+                    <button class="dropdown-trigger button secondary" 
+                            id="user-actions-trigger"
+                            onclick="toggleDropdown('user-actions')"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                        <i class="fas fa-user"></i> User Actions
+                    </button>
+                    
+                    <div class="dropdown-menu bottom-left" 
+                         id="user-actions-menu"
+                         role="menu"
+                         aria-labelledby="user-actions-trigger">
+                        <a class="dropdown-item" href="#" role="menuitem">
+                            <i class="fas fa-user"></i>
+                            <span>View Profile</span>
+                        </a>
+                        <a class="dropdown-item" href="#" role="menuitem">
+                            <i class="fas fa-cog"></i>
+                            <span>Account Settings</span>
+                        </a>
+                        <a class="dropdown-item" href="#" role="menuitem">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Billing</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" role="menuitem">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help & Support</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item danger" href="#" role="menuitem">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Sign Out</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Language Select Dropdown -->
+                <div class="dropdown" data-type="select">
+                    <button class="dropdown-trigger button secondary" 
+                            id="language-select-trigger"
+                            onclick="toggleDropdown('language-select')"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                        <i class="fas fa-globe"></i> Language Select
+                        <i class="dropdown-chevron fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="dropdown-menu bottom-left" 
+                         id="language-select-menu"
+                         role="menu"
+                         aria-labelledby="language-select-trigger">
+                        <button class="dropdown-item selected" 
+                                onclick="selectDropdownItem('language-select', 'en', 'English')"
+                                data-value="en">
+                            <span>English</span>
+                            <i class="dropdown-check fas fa-check"></i>
+                        </button>
+                        <button class="dropdown-item" 
+                                onclick="selectDropdownItem('language-select', 'es', 'Spanish')"
+                                data-value="es">
+                            <span>Spanish</span>
+                        </button>
+                        <button class="dropdown-item" 
+                                onclick="selectDropdownItem('language-select', 'fr', 'French')"
+                                data-value="fr">
+                            <span>French</span>
+                        </button>
+                        <button class="dropdown-item" 
+                                onclick="selectDropdownItem('language-select', 'de', 'German')"
+                                data-value="de">
+                            <span>German</span>
+                        </button>
+                        <button class="dropdown-item" 
+                                onclick="selectDropdownItem('language-select', 'ja', 'Japanese')"
+                                data-value="ja">
+                            <span>Japanese</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- More Actions Dropdown -->
+                <div class="dropdown" data-type="action">
+                    <button class="dropdown-trigger button secondary" 
+                            id="more-actions-trigger"
+                            onclick="toggleDropdown('more-actions')"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    
+                    <div class="dropdown-menu bottom-left" 
+                         id="more-actions-menu"
+                         role="menu"
+                         aria-labelledby="more-actions-trigger">
+                        <a class="dropdown-item" href="#" role="menuitem">
+                            <i class="fas fa-edit"></i>
+                            <span>Edit</span>
+                        </a>
+                        <a class="dropdown-item" href="#" role="menuitem">
+                            <i class="fas fa-copy"></i>
+                            <span>Duplicate</span>
+                        </a>
+                        <a class="dropdown-item" href="#" role="menuitem">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" role="menuitem">
+                            <i class="fas fa-archive"></i>
+                            <span>Archive</span>
+                        </a>
+                        <a class="dropdown-item danger" href="#" role="menuitem">
+                            <i class="fas fa-trash"></i>
+                            <span>Delete</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tooltips -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Tooltips</h2>
+            <p class="text-center">Contextual information that appears on hover or focus</p>
+            
+            <div class="tooltip-examples">
+                <div class="tooltip-demo-grid">
+                    <div class="tooltip-wrapper">
+                        <button class="button secondary tooltip-trigger"
+                                data-tooltip="This is a simple tooltip with helpful information."
+                                data-tooltip-position="top">
+                            Hover me
+                        </button>
+                    </div>
+                    <div class="tooltip-wrapper">
+                        <button class="button secondary tooltip-trigger"
+                                data-tooltip="Configure your account preferences and privacy settings."
+                                data-tooltip-position="right">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </button>
+                    </div>
+                    <div class="tooltip-wrapper">
+                        <button class="button danger tooltip-trigger"
+                                data-tooltip="Permanently remove this item. This action cannot be undone."
+                                data-tooltip-position="bottom">
+                            Delete
+                        </button>
+                    </div>
+                    <div class="tooltip-wrapper">
+                        <button class="button secondary tooltip-trigger"
+                                data-tooltip="Clean Framework provides semantic HTML components with no utility classes."
+                                data-tooltip-position="left">
+                            More info
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Badges -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Badges</h2>
+            <p class="text-center">Status indicators, labels, and tags for content categorization</p>
+            
+            <div class="badge-group">
+                <h3>Status Badges</h3>
+                <div class="badges">
+                    <span class="badge badge-success">Active</span>
+                    <span class="badge badge-warning">Pending</span>
+                    <span class="badge badge-danger">Inactive</span>
+                    <span class="badge badge-secondary">Draft</span>
+                </div>
+            </div>
+            
+            <div class="component-spacer-small"></div>
+            
+            <div class="badge-group">
+                <h3>Priority Labels</h3>
+                <div class="badges">
+                    <span class="badge badge-danger">High Priority</span>
+                    <span class="badge badge-warning">Medium Priority</span>
+                    <span class="badge badge-info">Low Priority</span>
+                    <span class="badge badge-secondary">Normal</span>
+                </div>
+            </div>
+            
+            <div class="component-spacer-small"></div>
+            
+            <div class="badge-group">
+                <h3>Category Tags</h3>
+                <div class="badges">
+                    <span class="badge badge-primary">Design</span>
+                    <span class="badge badge-info">Development</span>
+                    <span class="badge badge-success">Marketing</span>
+                    <span class="badge badge-warning">Sales</span>
+                </div>
+            </div>
+            
+            <div class="component-spacer-small"></div>
+            
+            <div class="badge-group">
+                <h3>Count Badges</h3>
+                <div class="badges">
+                    <span class="badge badge-primary">5</span>
+                    <span class="badge badge-success">12</span>
+                    <span class="badge badge-danger">99+</span>
+                    <span class="badge badge-info">New</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Clean Framework. Built with semantic HTML and component-based CSS.</p>
+        </div>
+    </footer>
+
+    <!-- Component JavaScript files -->
+    <script src="../components/navigation/navigation.js"></script>
+    <script src="../components/modal/modal.js"></script>
+    <script src="../components/dropdown/dropdown.js"></script>
+    <script src="../components/table/table.js"></script>
+    <script src="../components/tabs/tabs.js"></script>
+    <script src="../components/alert/alert.js"></script>
+    <script src="../components/tooltip/tooltip.js"></script>
+    <script src="../components/badge/badge.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="../main.js"></script>
+</body>
+</html>

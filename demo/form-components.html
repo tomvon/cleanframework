@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Components - Clean Framework</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <!-- Navigation Component -->
+        <nav class="nav">
+            <div class="container">
+                <a href="#" class="brand">Clean Framework</a>
+                <div class="nav-right">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="form-components.html" class="active">Forms</a>
+                        </li>
+                        <li>
+                            <a href="ui-components.html">UI Components</a>
+                        </li>
+                        <li>
+                            <a href="layout-components.html">Layout</a>
+                        </li>
+                        <li>
+                            <a href="marketing-components.html">Marketing</a>
+                        </li>
+                        <li>
+                            <a href="components-showcase.html">All Components</a>
+                        </li>
+                    </ul>
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme mode">
+                        <i class="theme-icon sun fas fa-sun active"></i>
+                        <i class="theme-icon moon fas fa-moon"></i>
+                        <i class="theme-icon system fas fa-circle-half-stroke"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero hero-small">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Form Components</h1>
+                <p class="hero-description">Form components with built-in validation, accessibility, and consistent styling</p>
+                <div class="hero-buttons">
+                    <a href="index.html" class="button secondary">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        Back to Home
+                    </a>
+                    <a href="components-showcase.html" class="button primary">
+                        <i class="fas fa-eye" aria-hidden="true"></i>
+                        All Components
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Basic Form -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Contact Form</h2>
+            <p class="text-center">Clean, accessible form styling with proper validation states</p>
+            
+            <!-- Contact Form -->
+            <form class="form" method="POST">
+                <div class="group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" placeholder="John Doe" required>
+                </div>
+                
+                <div class="group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="john@example.com" required>
+                </div>
+                
+                <div class="group">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Tell us what you think..." required></textarea>
+                </div>
+                
+                <div class="buttons">
+                    <button type="submit" class="button primary">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Multi-Step Form -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Multi-Step Form</h2>
+            <p class="text-center">Progressive disclosure with step navigation and built-in validation</p>
+            
+            <!-- Multi-Step Form -->
+            <form class="form form-multi" method="POST">
+                <!-- Progress Bar -->
+                <div class="progress">
+                    <div class="bar">
+                        <div class="fill" data-initial-width="50"></div>
+                    </div>
+                    
+                    <div class="steps">
+                        <div class="step active" data-step="0">
+                            <div class="number">1</div>
+                            <div class="label">Personal</div>
+                        </div>
+                        <div class="step" data-step="1">
+                            <div class="number">2</div>
+                            <div class="label">Preferences</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Form Nodes -->
+                <div class="nodes">
+                    <!-- Step 1: Personal Information -->
+                    <div class="node active" data-node="0">
+                        <h3 class="title">Personal Information</h3>
+                        <p class="description">Tell us about yourself</p>
+                        
+                        <div class="group">
+                            <label>First Name</label>
+                            <input type="text" name="first_name" value="John" placeholder="John" required>
+                        </div>
+                        
+                        <div class="group">
+                            <label>Email Address</label>
+                            <input type="email" name="email" value="john.smith@example.com" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Preferences -->
+                    <div class="node" data-node="1">
+                        <h3 class="title">Preferences</h3>
+                        <p class="description">Customize your experience</p>
+                        
+                        <div class="group">
+                            <label>Services Interested In</label>
+                            <div class="options">
+                                <div class="option">
+                                    <input type="checkbox" id="services_web-design" name="services[]" value="web-design" checked>
+                                    <label for="services_web-design">Web Design</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="services_web-dev" name="services[]" value="web-dev" checked>
+                                    <label for="services_web-dev">Web Development</label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="services_consulting" name="services[]" value="consulting">
+                                    <label for="services_consulting">Technical Consulting</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="navigation">
+                    <div class="left">
+                        <button type="button" class="button secondary" onclick="previousStep()">
+                            Previous
+                        </button>
+                    </div>
+                    <div class="right">
+                        <button type="button" class="button primary" onclick="nextStep()">
+                            Next
+                        </button>
+                        <button type="submit" class="button primary">
+                            Send Message
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Form Field Examples -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Input Types</h2>
+            <p class="text-center">All HTML5 input types with consistent styling and behavior</p>
+            
+            <div class="form-examples">
+                <div class="form-group">
+                    <label for="example-text">Text Input</label>
+                    <input type="text" id="example-text" name="example-text" placeholder="Enter text here" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="example-email">Email Input</label>
+                    <input type="email" id="example-email" name="example-email" placeholder="user@example.com" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="example-password">Password Input</label>
+                    <input type="password" id="example-password" name="example-password" placeholder="Enter password" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="example-select">Select Dropdown</label>
+                    <select id="example-select" name="example-select" class="form-control">
+                        <option value="">Choose an option</option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="example-textarea">Textarea</label>
+                    <textarea id="example-textarea" name="example-textarea" rows="4" placeholder="Enter your message here" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="example-file">File Upload</label>
+                    <input type="file" id="example-file" name="example-file" class="form-control">
+                    <small class="form-help">Supports PDF, DOC, and image files</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="example-range">Range Slider</label>
+                    <input type="range" id="example-range" name="example-range" min="0" max="100" value="50" class="form-control">
+                    <small class="form-help">Drag to adjust value</small>
+                </div>
+
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Checkbox Options</legend>
+                        <div class="options">
+                            <div class="option">
+                                <input type="checkbox" id="check1" name="example-checks[]" value="option1">
+                                <label for="check1">Option 1</label>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="check2" name="example-checks[]" value="option2" checked>
+                                <label for="check2">Option 2</label>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="check3" name="example-checks[]" value="option3">
+                                <label for="check3">Option 3</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Radio Button Options</legend>
+                        <div class="options">
+                            <div class="option">
+                                <input type="radio" id="radio1" name="example-radio" value="option1">
+                                <label for="radio1">Option 1</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="radio2" name="example-radio" value="option2" checked>
+                                <label for="radio2">Option 2</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="radio3" name="example-radio" value="option3">
+                                <label for="radio3">Option 3</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="form-group inline">
+                    <fieldset>
+                        <legend>Inline Checkboxes</legend>
+                        <div class="options">
+                            <div class="option">
+                                <input type="checkbox" id="inline1" name="example-inline[]" value="option1" checked>
+                                <label for="inline1">Option 1</label>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="inline2" name="example-inline[]" value="option2">
+                                <label for="inline2">Option 2</label>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="inline3" name="example-inline[]" value="option3" checked>
+                                <label for="inline3">Option 3</label>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" id="inline4" name="example-inline[]" value="option4">
+                                <label for="inline4">Option 4</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Validation States -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Validation States</h2>
+            <p class="text-center">Visual feedback for form validation with clear error messaging</p>
+            
+            <div class="form-examples">
+                <div class="form-group success">
+                    <label for="valid-input">Valid Input</label>
+                    <input type="text" id="valid-input" name="valid-input" value="Valid input" class="form-control">
+                    <small class="form-feedback">✓ This field is valid</small>
+                </div>
+
+                <div class="form-group error">
+                    <label for="invalid-input">Invalid Input</label>
+                    <input type="email" id="invalid-input" name="invalid-input" value="invalid-email" class="form-control">
+                    <small class="form-feedback">✗ Please enter a valid email address</small>
+                </div>
+
+                <div class="form-group warning">
+                    <label for="warning-input">Warning Input</label>
+                    <input type="password" id="warning-input" name="warning-input" value="weak" class="form-control">
+                    <small class="form-feedback">⚠ Password strength: weak</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Clean Framework. Built with semantic HTML and component-based CSS.</p>
+        </div>
+    </footer>
+
+    <!-- Component JavaScript files -->
+    <script src="../components/navigation/navigation.js"></script>
+    <script src="../components/form/form.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="../main.js"></script>
+</body>
+</html>

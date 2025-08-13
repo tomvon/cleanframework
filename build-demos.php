@@ -106,6 +106,12 @@ function processHtml($html) {
     $html = preg_replace('/href=["\']\/([^"\']+)["\']/i', "href=\"../$1\"", $html);
     $html = preg_replace('/src=["\']\/([^"\']+)["\']/i', "src=\"../$1\"", $html);
     
+    // Fix navigation links from .php to .html for GitHub demos
+    $html = preg_replace('/href=["\']([^"\']*?)\.php["\']/i', 'href="$1.html"', $html);
+    
+    // Fix specific navigation patterns that might use relative paths
+    $html = preg_replace('/href=["\']index\.html["\']/i', 'href="index.html"', $html);
+    
     // Add Font Awesome CDN if not present
     if (strpos($html, 'font-awesome') === false) {
         $faLink = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">';
@@ -144,8 +150,8 @@ function updateReadmeLinks() {
     
     $readme = file_get_contents($readmePath);
     
-    // First remove any existing cache busters to avoid duplicates
-    $readme = preg_replace('/\?[0-9]{14}/i', '', $readme);
+    // First remove any existing cache busters to avoid duplicates  
+    $readme = preg_replace('/\?[0-9]{14}(\?[0-9]{14})*/i', '', $readme);
     
     // Update all htmlpreview.github.io links with cache busting
     $readme = preg_replace(

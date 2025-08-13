@@ -55,14 +55,15 @@ The HTML structure communicates intent clearly to developers, designers, and too
 - **[UI Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/ui-components.html)** - Buttons, modals, dropdowns, alerts, tooltips
 - **[Layout Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/layout-components.html)** - Cards, grids, accordions, progress bars
 - **[Marketing Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/marketing-components.html)** - Heroes, features, testimonials, CTAs
+- **[Admin Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/admin-components.html)** - Sidebars, dashboards, data grids, admin UI
 - **[Complete Showcase](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/components-showcase.html)** - All components with examples
 
 ## Core Components
 
-Clean Framework includes 20+ essential semantic components:
+Clean Framework includes 25+ essential semantic components:
 
 **Layout & Structure:**
-- `.nav` - Navigation bars with theme support
+- `.nav` - Responsive navigation with CSS-only mobile handling and theme support
 - `.hero` - Hero sections with call-to-action
 - `.section` - Page sections
 - `.container` - Content containers
@@ -95,9 +96,18 @@ Clean Framework includes 20+ essential semantic components:
 - `.stats` - Animated statistics and counters
 - `.pricing` - Pricing tables and plans
 
+**Admin Components:**
+- `.sidebar` - Collapsible sidebar with unified mobile navigation
+- `.dashboard-card` - Metric cards with charts
+- `.datagrid` - Advanced data tables
+- `.dashboard-stats` - Quick stat displays
+- More admin components in development
+
 **Key Features:**
 - Dark/light/system theme switching
-- Fully responsive design
+- Fully responsive design with CSS-first approach
+- Unified mobile navigation system (no conflicts)
+- CSS-only icon states and transitions
 - Progressive JavaScript enhancement
 - Component-based SCSS architecture
 - Semantic, accessible HTML

@@ -1,11 +1,44 @@
 /**
- * Navigation Component JavaScript
+ * Navigation Component JavaScript - Simplified
  */
 
-// Mobile navigation toggle (if needed)
+// Unified Mobile Navigation Manager
+const MobileNav = {
+    activeMenu: null, // 'header' | 'sidebar' | null
+    
+    open(type) {
+        // Close any open menu first
+        this.closeAll();
+        
+        // Open the requested menu
+        this.activeMenu = type;
+        document.body.classList.add(`${type}-nav-open`);
+    },
+    
+    close() {
+        if (this.activeMenu) {
+            document.body.classList.remove(`${this.activeMenu}-nav-open`);
+            this.activeMenu = null;
+        }
+    },
+    
+    closeAll() {
+        document.body.classList.remove('header-nav-open', 'sidebar-nav-open');
+        this.activeMenu = null;
+    },
+    
+    toggle(type) {
+        if (this.activeMenu === type) {
+            this.close();
+        } else {
+            this.open(type);
+        }
+    }
+};
+
+// Mobile navigation toggle (simplified)
 function toggleMobileNav() {
-    const nav = document.querySelector('.nav');
-    nav.classList.toggle('mobile-open');
+    MobileNav.toggle('header');
 }
 
 // Smooth scroll for navigation links
@@ -62,6 +95,7 @@ function toggleTheme() {
 }
 
 function updateThemeIcon(theme) {
+    // Update button icons
     const sunIcon = document.querySelector('.theme-toggle .sun');
     const moonIcon = document.querySelector('.theme-toggle .moon');
     const systemIcon = document.querySelector('.theme-toggle .system');
@@ -86,6 +120,17 @@ function updateThemeIcon(theme) {
                 systemIcon.classList.add('active');
                 break;
         }
+    }
+    
+    // Update mobile text menu
+    const themeModes = document.querySelectorAll('.theme-mode');
+    themeModes.forEach(mode => {
+        mode.classList.remove('active');
+    });
+    
+    const activeMode = document.querySelector(`.theme-mode.${theme}-mode`);
+    if (activeMode) {
+        activeMode.classList.add('active');
     }
 }
 
@@ -126,13 +171,55 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
     }
 });
 
+// Close mobile menus when clicking outside
+function initClickOutside() {
+    document.addEventListener('click', (e) => {
+        const nav = document.querySelector('.nav');
+        const sidebar = document.getElementById('sidebar');
+        const navToggle = document.querySelector('.nav-toggle');
+        const sidebarToggle = document.querySelector('.sidebar-mobile-toggle');
+        
+        // Skip if click is on a toggle button
+        if (navToggle?.contains(e.target) || sidebarToggle?.contains(e.target)) {
+            return;
+        }
+        
+        // Close if clicking outside open menus
+        if (MobileNav.activeMenu === 'header' && nav && !nav.contains(e.target)) {
+            MobileNav.close();
+        } else if (MobileNav.activeMenu === 'sidebar' && sidebar && !sidebar.contains(e.target)) {
+            MobileNav.close();
+        }
+    });
+    
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            MobileNav.close();
+        }
+    });
+    
+    // Close mobile menus when resizing to desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            MobileNav.closeAll();
+        }
+    });
+}
+
+// Remove all JavaScript-based overflow detection
+// Let CSS handle everything with container queries or media queries
+
 // Export for main.js
 window.Navigation = {
     init: () => {
         initSmoothScroll();
         initTheme();
+        initClickOutside();
     }
 };
 
 // Expose functions globally for onclick handlers
 window.toggleTheme = toggleTheme;
+window.toggleMobileNav = toggleMobileNav;
+window.MobileNav = MobileNav;

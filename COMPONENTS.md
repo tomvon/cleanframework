@@ -8,6 +8,7 @@ Everything you need to know about Clean Framework components. Copy, paste, custo
 - [UI Components](#ui-components)
 - [Layout Components](#layout-components)
 - [Marketing Components](#marketing-components)
+- [Admin Components](#admin-components)
 
 ---
 
@@ -110,6 +111,68 @@ All HTML5 input types are supported with consistent styling:
 ---
 
 ## UI Components
+
+### Navigation
+
+A responsive header navigation that adapts intelligently to screen size. No JavaScript overflow detection needed!
+
+```html
+<nav class="nav">
+  <div class="container">
+    <!-- Mobile sidebar toggle (only shown when sidebar is present) -->
+    <button class="sidebar-mobile-toggle has-sidebar-only" onclick="toggleSidebar()" aria-label="Toggle sidebar">
+      <i class="fas fa-bars"></i>
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <a href="#" class="brand">YourBrand</a>
+    
+    <!-- Mobile menu toggle -->
+    <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <div class="nav-right" id="nav-menu">
+      <ul class="menu">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        
+        <!-- Theme toggle as menu item (mobile) -->
+        <li class="theme-menu-item">
+          <a href="#" onclick="toggleTheme(); return false;">
+            <span class="theme-mode light-mode">🌞 Light Mode</span>
+            <span class="theme-mode dark-mode">🌙 Dark Mode</span>
+            <span class="theme-mode system-mode">⚡ System Mode</span>
+          </a>
+        </li>
+      </ul>
+      
+      <!-- Desktop theme toggle button -->
+      <button class="theme-toggle desktop-only" onclick="toggleTheme()">
+        <i class="theme-icon sun fas fa-sun active"></i>
+        <i class="theme-icon moon fas fa-moon"></i>
+        <i class="theme-icon system fas fa-circle-half-stroke"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+```
+
+**Features:**
+- **Pure CSS responsive design** - Automatically switches to mobile menu at optimal breakpoints
+- **CSS-only icon states** - Hamburger ↔ X transitions handled without JavaScript
+- **Unified mobile navigation** - Single system manages both header and sidebar mobile states
+- **Theme system** - Built-in light/dark/system mode switcher
+- **No overflow detection** - Uses intelligent CSS breakpoints instead of JavaScript measurements
+- **Smooth transitions** - No flashing or layout jumps during resize
+
+**Responsive Behavior:**
+- **Desktop (>1100px)**: Full horizontal navigation
+- **Tablet (769-1100px)**: Hamburger menu to prevent wrapping
+- **Mobile (<768px)**: Full mobile menu with overlay
 
 ### Buttons
 
@@ -660,4 +723,220 @@ For live examples of all components, visit the demo pages:
 - [UI Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/ui-components.html)
 - [Layout Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/layout-components.html)
 - [Marketing Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/marketing-components.html)
+- [Admin Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/admin-components.html)
 - [Complete Showcase](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/components-showcase.html)
+
+---
+
+## Admin Components
+
+Components designed for admin panels, dashboards, and content management systems.
+
+### Sidebar Navigation
+
+Collapsible sidebar with sections, badges, and user profile. Works seamlessly with the header navigation using the unified mobile system.
+
+```html
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <a href="#" class="sidebar-brand">
+      <i class="sidebar-brand-icon fas fa-chart-line"></i>
+      <span class="sidebar-brand-text">Admin Panel</span>
+    </a>
+    <button class="sidebar-toggle-btn" onclick="toggleCompactSidebar()" aria-label="Toggle compact mode">
+      <i class="fas fa-compress"></i>
+    </button>
+  </div>
+  
+  <nav class="sidebar-nav">
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Main</div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link active">
+            <i class="sidebar-icon fas fa-tachometer-alt"></i>
+            <span class="sidebar-label">Dashboard</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="sidebar-icon fas fa-users"></i>
+            <span class="sidebar-label">Users</span>
+            <span class="sidebar-badge">124</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="sidebar-footer">
+    <a href="#" class="sidebar-user">
+      <div class="sidebar-user-avatar">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="sidebar-user-info">
+        <div class="sidebar-user-name">John Smith</div>
+        <div class="sidebar-user-role">Administrator</div>
+      </div>
+    </a>
+  </div>
+</aside>
+
+<!-- Overlay for mobile -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+```
+
+**Features:**
+- **Unified mobile navigation** - Integrates with header nav system
+- **CSS-only icon states** - Icons managed entirely by CSS
+- **Desktop modes**: Full sidebar or compact mode with toggle button
+- **Mobile overlay** - Clean slide-out navigation on mobile
+- **Fixed header support** - When sidebar is present, header becomes fixed
+- **Badge notifications** - Built-in support for counters and alerts
+- **Smooth transitions** - Hardware-accelerated animations
+
+**Layout Integration:**
+When using sidebar, wrap your content properly:
+```html
+<body class="has-sidebar">
+  <!-- Navigation component -->
+  <nav class="nav">...</nav>
+  
+  <!-- Sidebar component -->
+  <aside class="sidebar">...</aside>
+  
+  <!-- Main content -->
+  <main class="main-content">
+    <!-- Your page content -->
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">...</footer>
+</body>
+```
+
+### Dashboard Cards
+
+Metric cards for displaying key performance indicators.
+
+```html
+<!-- Standard Metric Card -->
+<div class="dashboard-card">
+  <div class="dashboard-card-header">
+    <h3 class="dashboard-card-title">Total Revenue</h3>
+    <div class="dashboard-card-icon dashboard-card-icon-success">
+      <i class="fas fa-dollar-sign"></i>
+    </div>
+  </div>
+  
+  <div class="dashboard-card-content">
+    <div class="dashboard-card-value">$124,563</div>
+    <div class="dashboard-card-change dashboard-card-change-positive">
+      <i class="dashboard-card-change-icon fas fa-arrow-up"></i>
+      +14.2%
+    </div>
+    <div class="dashboard-card-description">
+      Compared to last month
+    </div>
+  </div>
+</div>
+
+<!-- Progress Card -->
+<div class="dashboard-card dashboard-card-progress">
+  <div class="dashboard-card-header">
+    <h3 class="dashboard-card-title">Storage Used</h3>
+    <div class="dashboard-card-icon dashboard-card-icon-primary">
+      <i class="fas fa-hdd"></i>
+    </div>
+  </div>
+  
+  <div class="dashboard-card-content">
+    <div class="dashboard-card-value">
+      68.2 GB <span class="dashboard-card-value-suffix">of 100 GB</span>
+    </div>
+    
+    <div class="dashboard-card-progress-bar">
+      <div class="dashboard-card-progress-fill" 
+           style="width: 68%"
+           data-percentage="68">
+      </div>
+    </div>
+    
+    <div class="dashboard-card-progress-text">
+      <span>68% used</span>
+      <span>32% available</span>
+    </div>
+  </div>
+</div>
+```
+
+**Card Types:**
+- Standard metrics with trends
+- Progress bars
+- Mini charts
+- Quick stats
+
+### Quick Stats
+
+Compact statistics display for dashboards.
+
+```html
+<div class="dashboard-quick-stats">
+  <div class="dashboard-quick-stat">
+    <div class="dashboard-quick-stat-value">1,234</div>
+    <div class="dashboard-quick-stat-label">Total Sales</div>
+  </div>
+  <div class="dashboard-quick-stat">
+    <div class="dashboard-quick-stat-value">567</div>
+    <div class="dashboard-quick-stat-label">New Users</div>
+  </div>
+  <div class="dashboard-quick-stat">
+    <div class="dashboard-quick-stat-value">89%</div>
+    <div class="dashboard-quick-stat-label">Satisfaction</div>
+  </div>
+  <div class="dashboard-quick-stat">
+    <div class="dashboard-quick-stat-value">4.8</div>
+    <div class="dashboard-quick-stat-label">Avg Rating</div>
+  </div>
+</div>
+```
+
+### Admin Layout
+
+Complete admin interface structure.
+
+```html
+<body class="has-sidebar">
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <!-- Sidebar content -->
+  </aside>
+  
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Top Bar -->
+    <header class="admin-header">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <h1>Dashboard</h1>
+      <div class="admin-actions">
+        <button class="button primary">Add New</button>
+      </div>
+    </header>
+    
+    <!-- Dashboard Content -->
+    <main class="admin-content">
+      <!-- Dashboard cards and content -->
+    </main>
+  </div>
+</body>
+```
+
+**More Admin Components Coming Soon:**
+- Data Grid with sorting and filtering
+- Search bars with autocomplete
+- Activity feeds and timelines
+- File upload managers
+- User avatars and profiles
+- Status indicators

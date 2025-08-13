@@ -82,6 +82,16 @@ document.addEventListener('DOMContentLoaded', function() {
         window.Stats.init();
     }
     
+    // Initialize Sidebar component
+    if (window.Sidebar) {
+        window.Sidebar.init();
+    }
+    
+    // Initialize Dashboard component
+    if (window.Dashboard) {
+        window.Dashboard.init();
+    }
+    
     // All components initialized
     console.log('Clean Framework initialized');
 });

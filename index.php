@@ -11,6 +11,7 @@ $nav_items = [
     ['url' => 'ui-components.php', 'label' => 'UI Components'],
     ['url' => 'layout-components.php', 'label' => 'Layout'],
     ['url' => 'marketing-components.php', 'label' => 'Marketing'],
+    ['url' => 'admin-components.php', 'label' => 'Admin'],
     ['url' => 'components-showcase.php', 'label' => 'All Components']
 ];
 
@@ -43,6 +44,13 @@ $component_categories = [
         'icon' => 'fas fa-rocket',
         'url' => 'marketing-components.php',
         'components' => ['Hero sections', 'Features', 'Testimonials', 'CTA sections', 'Stats counters']
+    ],
+    [
+        'title' => 'Admin Components',
+        'description' => 'Professional components for admin panels, dashboards, and content management systems.',
+        'icon' => 'fas fa-cog',
+        'url' => 'admin-components.php',
+        'components' => ['Sidebar navigation', 'Dashboard cards', 'Data grids', 'Activity feeds', 'File managers', 'Search bars']
     ]
 ];
 

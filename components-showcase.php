@@ -13,6 +13,7 @@ $nav_items = [
     ['url' => 'ui-components.php', 'label' => 'UI Components'],
     ['url' => 'layout-components.php', 'label' => 'Layout'],
     ['url' => 'marketing-components.php', 'label' => 'Marketing'],
+    ['url' => 'admin-components.php', 'label' => 'Admin'],
     ['url' => 'components-showcase.php', 'label' => 'All Components', 'active' => true]
 ];
 

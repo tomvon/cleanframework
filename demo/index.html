@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="../__prepros.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clean Framework - Semantic CSS Framework</title>
     <meta name="description" content="Clean Framework: A semantic, component-based CSS framework. No utility pollution, just clean code that makes sense.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧼</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/style.css">
+    <link rel="stylesheet" href="../style.css">
     <script>
         // Prevent theme flash by setting theme before CSS loads
         (function() {
@@ -19,66 +20,87 @@
             }
         })();
     </script>
+    <!-- Generated: 2025-08-13 02:54:41 UTC by CleanFramework Demo Builder -->
 </head>
 <body>
-    <!-- Header Component -->
-    <header class="header">
-        <!-- Navigation Component -->
-        <nav class="nav">
-            <div class="container">
-                <a href="#" class="brand">Clean Framework</a>
-                
-                <!-- Mobile menu toggle -->
-                <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                    <i class="fas fa-times"></i>
-                </button>
-                
-                <div class="nav-right" id="nav-menu">
-                    <ul class="menu">
-                        <li>
-                            <a href="index.html" class="active">Home</a>
-                        </li>
-                        <li>
-                            <a href="form-components.html">Forms</a>
-                        </li>
-                        <li>
-                            <a href="ui-components.html">UI Components</a>
-                        </li>
-                        <li>
-                            <a href="layout-components.html">Layout</a>
-                        </li>
-                        <li>
-                            <a href="marketing-components.html">Marketing</a>
-                        </li>
-                        <li>
-                            <a href="admin-components.html">Admin</a>
-                        </li>
-                        <li>
-                            <a href="components-showcase.html">All Components</a>
-                        </li>
-                        
-                        <!-- Theme toggle as menu item -->
-                        <li class="theme-menu-item">
-                            <a href="#" onclick="toggleTheme(); return false;">
-                                <span class="theme-mode light-mode">🌞 Light Mode</span>
-                                <span class="theme-mode dark-mode">🌙 Dark Mode</span>
-                                <span class="theme-mode system-mode">⚡ System Mode</span>
-                            </a>
-                        </li>
-                    </ul>
-                    
-                    <!-- Desktop theme toggle button -->
-                    <button class="theme-toggle desktop-only" onclick="toggleTheme()" aria-label="Toggle theme mode">
-                        <i class="theme-icon sun fas fa-sun active"></i>
-                        <i class="theme-icon moon fas fa-moon"></i>
-                        <i class="theme-icon system fas fa-circle-half-stroke"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
-
+    
+<header class="header">
+    
+<nav class="nav">
+    <div class="container">
+        <!-- Mobile sidebar toggle (only when sidebar is present) -->
+        <button class="sidebar-mobile-toggle has-sidebar-only" onclick="toggleSidebar()" aria-label="Toggle sidebar">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <a href="#" class="brand">Clean Framework</a>
+        
+        <!-- Mobile menu toggle -->
+        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="nav-right" id="nav-menu">
+            <ul class="menu">
+                                    <li>
+                        <a href="index.php" 
+                           class="active">
+                            Home                        </a>
+                    </li>
+                                    <li>
+                        <a href="form-components.php" 
+                           class="">
+                            Forms                        </a>
+                    </li>
+                                    <li>
+                        <a href="ui-components.php" 
+                           class="">
+                            UI Components                        </a>
+                    </li>
+                                    <li>
+                        <a href="layout-components.php" 
+                           class="">
+                            Layout                        </a>
+                    </li>
+                                    <li>
+                        <a href="marketing-components.php" 
+                           class="">
+                            Marketing                        </a>
+                    </li>
+                                    <li>
+                        <a href="admin-components.php" 
+                           class="">
+                            Admin                        </a>
+                    </li>
+                                    <li>
+                        <a href="components-showcase.php" 
+                           class="">
+                            All Components                        </a>
+                    </li>
+                                
+                <!-- Theme toggle as menu item -->
+                <li class="theme-menu-item">
+                    <a href="#" onclick="toggleTheme(); return false;" class="theme-link">
+                        <span class="theme-text">
+                            <span class="theme-mode light-mode">🌞 Light Mode</span>
+                            <span class="theme-mode dark-mode">🌙 Dark Mode</span>
+                            <span class="theme-mode system-mode">⚡ System Mode</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Desktop theme toggle button -->
+            <button class="theme-toggle desktop-only" onclick="toggleTheme()" aria-label="Toggle theme mode">
+                <i class="theme-icon sun fas fa-sun active"></i>
+                <i class="theme-icon moon fas fa-moon"></i>
+                <i class="theme-icon system fas fa-circle-half-stroke"></i>
+            </button>
+        </div>
+    </div>
+</nav></header>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -93,7 +115,7 @@
                         <i class="fas fa-eye" aria-hidden="true"></i>
                         See It Work
                     </a>
-                    <a href="components-showcase.html" class="button secondary large">
+                    <a href="components-showcase.php" class="button secondary large">
                         <i class="fas fa-rocket" aria-hidden="true"></i>
                         All Components
                     </a>
@@ -112,91 +134,91 @@
                 </div>
                 
                 <div class="features-grid features-grid-3">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-code" aria-hidden="true"></i>
+                                            <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Semantic HTML</h3>
+                                <p class="feature-description">Intuitive class names that describe content structure. Write `.card` for cards, `.nav` for navigation.</p>
+                                <ul class="feature-details">
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Human-readable class names</li>
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Self-documenting markup</li>
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> AI-friendly patterns</li>
+                                                                    </ul>
+                            </div>
                         </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Semantic HTML</h3>
-                            <p class="feature-description">Intuitive class names that describe content structure. Write `.card` for cards, `.nav` for navigation.</p>
-                            <ul class="feature-details">
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Human-readable class names</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Self-documenting markup</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> AI-friendly patterns</li>
-                            </ul>
+                                            <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-feather-alt" aria-hidden="true"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Lightweight</h3>
+                                <p class="feature-description">Only 500 lines of CSS. Fast loading times with minimal overhead.</p>
+                                <ul class="feature-details">
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> 12kb minified CSS</li>
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Zero dependencies</li>
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Pure CSS & vanilla JS</li>
+                                                                    </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-feather-alt" aria-hidden="true"></i>
+                                            <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Modular Design</h3>
+                                <p class="feature-description">Independent components that can be used together or separately as needed.</p>
+                                <ul class="feature-details">
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Modular architecture</li>
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Independent components</li>
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Easy to maintain</li>
+                                                                    </ul>
+                            </div>
                         </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Lightweight</h3>
-                            <p class="feature-description">Only 500 lines of CSS. Fast loading times with minimal overhead.</p>
-                            <ul class="feature-details">
-                                <li><i class="fas fa-check" aria-hidden="true"></i> 12kb minified CSS</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Zero dependencies</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Pure CSS & vanilla JS</li>
-                            </ul>
+                                            <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Responsive</h3>
+                                <p class="feature-description">Mobile-first design that adapts seamlessly to any screen size or device.</p>
+                                <ul class="feature-details">
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Touch-friendly interactions</li>
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Flexible layouts</li>
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Progressive enhancement</li>
+                                                                    </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+                                            <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-accessibility" aria-hidden="true"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Accessible</h3>
+                                <p class="feature-description">WCAG 2.1 compliant with proper ARIA attributes and keyboard navigation support.</p>
+                                <ul class="feature-details">
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> WCAG 2.1 compliant</li>
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Screen reader friendly</li>
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Keyboard navigation</li>
+                                                                    </ul>
+                            </div>
                         </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Modular Design</h3>
-                            <p class="feature-description">Independent components that can be used together or separately as needed.</p>
-                            <ul class="feature-details">
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Modular architecture</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Independent components</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Easy to maintain</li>
-                            </ul>
+                                            <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-palette" aria-hidden="true"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Theme Support</h3>
+                                <p class="feature-description">Built-in dark mode with automatic system preference detection and manual controls.</p>
+                                <ul class="feature-details">
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> System preference detection</li>
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Manual theme toggle</li>
+                                                                            <li><i class="fas fa-check" aria-hidden="true"></i> Custom color schemes</li>
+                                                                    </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Responsive</h3>
-                            <p class="feature-description">Mobile-first design that adapts seamlessly to any screen size or device.</p>
-                            <ul class="feature-details">
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Touch-friendly interactions</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Flexible layouts</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Progressive enhancement</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-accessibility" aria-hidden="true"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Accessible</h3>
-                            <p class="feature-description">WCAG 2.1 compliant with proper ARIA attributes and keyboard navigation support.</p>
-                            <ul class="feature-details">
-                                <li><i class="fas fa-check" aria-hidden="true"></i> WCAG 2.1 compliant</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Screen reader friendly</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Keyboard navigation</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-palette" aria-hidden="true"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Theme Support</h3>
-                            <p class="feature-description">Built-in dark mode with automatic system preference detection and manual controls.</p>
-                            <ul class="feature-details">
-                                <li><i class="fas fa-check" aria-hidden="true"></i> System preference detection</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Manual theme toggle</li>
-                                <li><i class="fas fa-check" aria-hidden="true"></i> Custom color schemes</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                                    </div>
             </div>
         </div>
     </section>
@@ -210,113 +232,140 @@
             </div>
             
             <div class="features-cards">
-                <div class="feature-card">
-                    <div class="feature-card-header">
-                        <div class="feature-icon">
-                            <i class="fas fa-edit" aria-hidden="true"></i>
+                                    <div class="feature-card">
+                        <div class="feature-card-header">
+                            <div class="feature-icon">
+                                <i class="fas fa-edit" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="feature-title">Form Components</h3>
                         </div>
-                        <h3 class="feature-title">Form Components</h3>
-                    </div>
-                    <div class="feature-card-content">
-                        <p class="feature-description">Complete form elements with built-in validation and accessibility features.</p>
-                        
-                        <ul class="feature-details">
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Text inputs</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Multi-step forms</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> File uploads</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Validation</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Input groups</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Form layouts</li>
-                        </ul>
-                        
-                        <div style="margin-top: 1.5rem;">
-                            <a href="form-components.html" class="button primary">
-                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                View Components
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card-header">
-                        <div class="feature-icon">
-                            <i class="fas fa-cube" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">UI Components</h3>
-                    </div>
-                    <div class="feature-card-content">
-                        <p class="feature-description">Interactive components with consistent behavior and styling.</p>
-                        
-                        <ul class="feature-details">
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Buttons</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Modals</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Dropdowns</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Tables</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Tabs</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Alerts</li>
-                        </ul>
-                        
-                        <div style="margin-top: 1.5rem;">
-                            <a href="ui-components.html" class="button primary">
-                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                View Components
-                            </a>
+                        <div class="feature-card-content">
+                            <p class="feature-description">Complete form elements with built-in validation and accessibility features.</p>
+                            
+                            <ul class="feature-details">
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Text inputs</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Multi-step forms</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> File uploads</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Validation</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Input groups</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Form layouts</li>
+                                                            </ul>
+                            
+                            <div style="margin-top: 1.5rem;">
+                                <a href="form-components.php" class="button primary">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    View Components
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card-header">
-                        <div class="feature-icon">
-                            <i class="fas fa-th-large" aria-hidden="true"></i>
+                                    <div class="feature-card">
+                        <div class="feature-card-header">
+                            <div class="feature-icon">
+                                <i class="fas fa-cube" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="feature-title">UI Components</h3>
                         </div>
-                        <h3 class="feature-title">Layout Components</h3>
-                    </div>
-                    <div class="feature-card-content">
-                        <p class="feature-description">Structural components for content organization and layout.</p>
-                        
-                        <ul class="feature-details">
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Cards</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Accordions</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Breadcrumbs</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Progress bars</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Pricing tables</li>
-                        </ul>
-                        
-                        <div style="margin-top: 1.5rem;">
-                            <a href="layout-components.html" class="button primary">
-                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                View Components
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card-header">
-                        <div class="feature-icon">
-                            <i class="fas fa-rocket" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">Marketing Components</h3>
-                    </div>
-                    <div class="feature-card-content">
-                        <p class="feature-description">Conversion-focused components for landing pages and marketing sites.</p>
-                        
-                        <ul class="feature-details">
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Hero sections</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Features</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Testimonials</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> CTA sections</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Stats counters</li>
-                        </ul>
-                        
-                        <div style="margin-top: 1.5rem;">
-                            <a href="marketing-components.html" class="button primary">
-                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                                View Components
-                            </a>
+                        <div class="feature-card-content">
+                            <p class="feature-description">Interactive components with consistent behavior and styling.</p>
+                            
+                            <ul class="feature-details">
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Buttons</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Modals</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Dropdowns</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Tables</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Tabs</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Alerts</li>
+                                                            </ul>
+                            
+                            <div style="margin-top: 1.5rem;">
+                                <a href="ui-components.php" class="button primary">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    View Components
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                                    <div class="feature-card">
+                        <div class="feature-card-header">
+                            <div class="feature-icon">
+                                <i class="fas fa-th-large" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="feature-title">Layout Components</h3>
+                        </div>
+                        <div class="feature-card-content">
+                            <p class="feature-description">Structural components for content organization and layout.</p>
+                            
+                            <ul class="feature-details">
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Cards</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Accordions</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Breadcrumbs</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Progress bars</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Pricing tables</li>
+                                                            </ul>
+                            
+                            <div style="margin-top: 1.5rem;">
+                                <a href="layout-components.php" class="button primary">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    View Components
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="feature-card">
+                        <div class="feature-card-header">
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="feature-title">Marketing Components</h3>
+                        </div>
+                        <div class="feature-card-content">
+                            <p class="feature-description">Conversion-focused components for landing pages and marketing sites.</p>
+                            
+                            <ul class="feature-details">
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Hero sections</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Features</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Testimonials</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> CTA sections</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Stats counters</li>
+                                                            </ul>
+                            
+                            <div style="margin-top: 1.5rem;">
+                                <a href="marketing-components.php" class="button primary">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    View Components
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                    <div class="feature-card">
+                        <div class="feature-card-header">
+                            <div class="feature-icon">
+                                <i class="fas fa-cog" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="feature-title">Admin Components</h3>
+                        </div>
+                        <div class="feature-card-content">
+                            <p class="feature-description">Professional components for admin panels, dashboards, and content management systems.</p>
+                            
+                            <ul class="feature-details">
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Sidebar navigation</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Dashboard cards</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Data grids</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Activity feeds</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> File managers</li>
+                                                                    <li><i class="fas fa-check" aria-hidden="true"></i> Search bars</li>
+                                                            </ul>
+                            
+                            <div style="margin-top: 1.5rem;">
+                                <a href="admin-components.php" class="button primary">
+                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    View Components
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
         </div>
     </section>
 
@@ -402,7 +451,7 @@
                     </p>
                     
                     <div class="cta-buttons">
-                        <a href="components-showcase.html" class="button primary large">
+                        <a href="components-showcase.php" class="button primary large">
                             <i class="fas fa-rocket" aria-hidden="true"></i>
                             View Full Showcase
                         </a>

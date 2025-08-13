@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="../__prepros.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Components - Clean Framework</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧼</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/style.css">
+    <link rel="stylesheet" href="../style.css">
     <script>
         // Prevent theme flash by setting theme before CSS loads
         (function() {
@@ -18,52 +19,87 @@
             }
         })();
     </script>
+    <!-- Generated: 2025-08-13 02:54:41 UTC by CleanFramework Demo Builder -->
 </head>
 <body>
-    <!-- Header Component -->
-    <header class="header">
-        <!-- Navigation Component -->
-        <nav class="nav">
-            <div class="container">
-                <a href="#" class="brand">Clean Framework</a>
-                
-                <!-- Mobile menu toggle -->
-                <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                    <i class="fas fa-times"></i>
-                </button>
-                
-                <div class="nav-right" id="nav-menu">
-                    <ul class="menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="form-components.html" class="active">Forms</a></li>
-                        <li><a href="ui-components.html">UI Components</a></li>
-                        <li><a href="layout-components.html">Layout</a></li>
-                        <li><a href="marketing-components.html">Marketing</a></li>
-                        <li><a href="admin-components.html">Admin</a></li>
-                        <li><a href="components-showcase.html">All Components</a></li>
-                        
-                        <!-- Theme toggle as menu item -->
-                        <li class="theme-menu-item">
-                            <a href="#" onclick="toggleTheme(); return false;">
-                                <span class="theme-mode light-mode">🌞 Light Mode</span>
-                                <span class="theme-mode dark-mode">🌙 Dark Mode</span>
-                                <span class="theme-mode system-mode">⚡ System Mode</span>
-                            </a>
-                        </li>
-                    </ul>
-                    
-                    <!-- Desktop theme toggle button -->
-                    <button class="theme-toggle desktop-only" onclick="toggleTheme()" aria-label="Toggle theme mode">
-                        <i class="theme-icon sun fas fa-sun active"></i>
-                        <i class="theme-icon moon fas fa-moon"></i>
-                        <i class="theme-icon system fas fa-circle-half-stroke"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
-
+    
+<header class="header">
+    
+<nav class="nav">
+    <div class="container">
+        <!-- Mobile sidebar toggle (only when sidebar is present) -->
+        <button class="sidebar-mobile-toggle has-sidebar-only" onclick="toggleSidebar()" aria-label="Toggle sidebar">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <a href="#" class="brand">Clean Framework</a>
+        
+        <!-- Mobile menu toggle -->
+        <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="nav-right" id="nav-menu">
+            <ul class="menu">
+                                    <li>
+                        <a href="index.php" 
+                           class="">
+                            Home                        </a>
+                    </li>
+                                    <li>
+                        <a href="form-components.php" 
+                           class="active">
+                            Forms                        </a>
+                    </li>
+                                    <li>
+                        <a href="ui-components.php" 
+                           class="">
+                            UI Components                        </a>
+                    </li>
+                                    <li>
+                        <a href="layout-components.php" 
+                           class="">
+                            Layout                        </a>
+                    </li>
+                                    <li>
+                        <a href="marketing-components.php" 
+                           class="">
+                            Marketing                        </a>
+                    </li>
+                                    <li>
+                        <a href="admin-components.php" 
+                           class="">
+                            Admin                        </a>
+                    </li>
+                                    <li>
+                        <a href="components-showcase.php" 
+                           class="">
+                            All Components                        </a>
+                    </li>
+                                
+                <!-- Theme toggle as menu item -->
+                <li class="theme-menu-item">
+                    <a href="#" onclick="toggleTheme(); return false;" class="theme-link">
+                        <span class="theme-text">
+                            <span class="theme-mode light-mode">🌞 Light Mode</span>
+                            <span class="theme-mode dark-mode">🌙 Dark Mode</span>
+                            <span class="theme-mode system-mode">⚡ System Mode</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Desktop theme toggle button -->
+            <button class="theme-toggle desktop-only" onclick="toggleTheme()" aria-label="Toggle theme mode">
+                <i class="theme-icon sun fas fa-sun active"></i>
+                <i class="theme-icon moon fas fa-moon"></i>
+                <i class="theme-icon system fas fa-circle-half-stroke"></i>
+            </button>
+        </div>
+    </div>
+</nav></header>
     <!-- Page Header -->
     <section class="hero hero-small">
         <div class="container">
@@ -71,11 +107,11 @@
                 <h1 class="hero-title">Form Components</h1>
                 <p class="hero-description">Form components with built-in validation, accessibility, and consistent styling</p>
                 <div class="hero-buttons">
-                    <a href="index.html" class="button secondary">
+                    <a href="index.php" class="button secondary">
                         <i class="fas fa-arrow-left" aria-hidden="true"></i>
                         Back to Home
                     </a>
-                    <a href="components-showcase.html" class="button primary">
+                    <a href="components-showcase.php" class="button primary">
                         <i class="fas fa-eye" aria-hidden="true"></i>
                         All Components
                     </a>
@@ -90,30 +126,48 @@
             <h2 class="text-center">Contact Form</h2>
             <p class="text-center">Clean, accessible form styling with proper validation states</p>
             
-            <!-- Contact Form -->
-            <form class="form" method="POST">
-                <div class="group">
-                    <label>Your Name</label>
-                    <input type="text" name="name" placeholder="John Doe" required>
-                </div>
-                
-                <div class="group">
-                    <label>Email Address</label>
-                    <input type="email" name="email" placeholder="john@example.com" required>
-                </div>
-                
-                <div class="group">
-                    <label>Message</label>
-                    <textarea name="message" placeholder="Tell us what you think..." required></textarea>
-                </div>
-                
-                <div class="buttons">
-                    <button type="submit" class="button primary">
-                        Send Message
-                    </button>
-                </div>
-            </form>
-        </div>
+<form class="form"  
+      method="POST">
+    
+            <div class="group">
+            <label>Your Name</label>
+            
+                            <input type="text" 
+                       name="name"
+                       value=""
+                       placeholder="John Doe"
+                       required>
+                        
+                        
+                    </div>
+            <div class="group">
+            <label>Email Address</label>
+            
+                            <input type="email" 
+                       name="email"
+                       value=""
+                       placeholder="john@example.com"
+                       required>
+                        
+                        
+                    </div>
+            <div class="group">
+            <label>Message</label>
+            
+                            <textarea name="message" 
+                          placeholder="Tell us what you think..."
+                          required></textarea>
+            
+                        
+                        
+                    </div>
+        
+    <div class="buttons">
+        <button type="submit" class="button primary">
+            Send Message        </button>
+        
+            </div>
+</form>        </div>
     </section>
 
     <!-- Multi-Step Form -->
@@ -122,87 +176,112 @@
             <h2 class="text-center">Multi-Step Form</h2>
             <p class="text-center">Progressive disclosure with step navigation and built-in validation</p>
             
-            <!-- Multi-Step Form -->
-            <form class="form form-multi" method="POST">
-                <!-- Progress Bar -->
-                <div class="progress">
-                    <div class="bar">
-                        <div class="fill" data-initial-width="50"></div>
-                    </div>
-                    
-                    <div class="steps">
-                        <div class="step active" data-step="0">
-                            <div class="number">1</div>
-                            <div class="label">Personal</div>
-                        </div>
-                        <div class="step" data-step="1">
-                            <div class="number">2</div>
-                            <div class="label">Preferences</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Form Nodes -->
-                <div class="nodes">
-                    <!-- Step 1: Personal Information -->
-                    <div class="node active" data-node="0">
-                        <h3 class="title">Personal Information</h3>
-                        <p class="description">Tell us about yourself</p>
-                        
-                        <div class="group">
-                            <label>First Name</label>
-                            <input type="text" name="first_name" value="John" placeholder="John" required>
-                        </div>
-                        
-                        <div class="group">
-                            <label>Email Address</label>
-                            <input type="email" name="email" value="john.smith@example.com" placeholder="john@example.com" required>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 2: Preferences -->
-                    <div class="node" data-node="1">
-                        <h3 class="title">Preferences</h3>
-                        <p class="description">Customize your experience</p>
-                        
-                        <div class="group">
-                            <label>Services Interested In</label>
-                            <div class="options">
-                                <div class="option">
-                                    <input type="checkbox" id="services_web-design" name="services[]" value="web-design" checked>
-                                    <label for="services_web-design">Web Design</label>
-                                </div>
-                                <div class="option">
-                                    <input type="checkbox" id="services_web-dev" name="services[]" value="web-dev" checked>
-                                    <label for="services_web-dev">Web Development</label>
-                                </div>
-                                <div class="option">
-                                    <input type="checkbox" id="services_consulting" name="services[]" value="consulting">
-                                    <label for="services_consulting">Technical Consulting</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Navigation -->
-                <div class="navigation">
-                    <div class="left">
-                        <button type="button" class="button secondary" onclick="previousStep()">
-                            Previous
-                        </button>
-                    </div>
-                    <div class="right">
-                        <button type="button" class="button primary" onclick="nextStep()">
-                            Next
-                        </button>
-                        <button type="submit" class="button primary">
-                            Send Message
-                        </button>
-                    </div>
-                </div>
-            </form>
+<form class="form form-multi"  
+      method="POST">
+    
+    <!-- Progress Bar -->
+    <div class="progress">
+        <div class="bar">
+            <div class="fill" data-initial-width="50"></div>
         </div>
+        
+        <div class="steps">
+                            <div class="step active" data-step="0">
+                    <div class="number">1</div>
+                    <div class="label">Personal</div>
+                </div>
+                            <div class="step " data-step="1">
+                    <div class="number">2</div>
+                    <div class="label">Preferences</div>
+                </div>
+                    </div>
+    </div>
+    
+    <!-- Form Nodes -->
+    <div class="nodes">
+                    <div class="node active" data-node="0">
+                <h3 class="title">Personal Information</h3>
+                                    <p class="description">Tell us about yourself</p>
+                                
+                                    <div class="group">
+                        <label>First Name</label>
+                        
+                                                    <input type="text" 
+                                   name="first_name"
+                                   value="John"
+                                   placeholder="John"
+                                                                                                                                                                               required>
+                                                
+                                                
+                                            </div>
+                                    <div class="group">
+                        <label>Email Address</label>
+                        
+                                                    <input type="email" 
+                                   name="email"
+                                   value="john.smith@example.com"
+                                   placeholder="john@example.com"
+                                                                                                                                                                               required>
+                                                
+                                                
+                                            </div>
+                            </div>
+                    <div class="node " data-node="1">
+                <h3 class="title">Preferences</h3>
+                                    <p class="description">Customize your experience</p>
+                                
+                                    <div class="group">
+                        <label>Services Interested In</label>
+                        
+                                                    <div class="options">
+                                                                    <div class="option">
+                                        <input type="checkbox" 
+                                               id="services_web-design"
+                                               name="services[]"
+                                               value="web-design"
+                                               checked                                               >
+                                        <label for="services_web-design">Web Design</label>
+                                    </div>
+                                                                    <div class="option">
+                                        <input type="checkbox" 
+                                               id="services_web-dev"
+                                               name="services[]"
+                                               value="web-dev"
+                                               checked                                               >
+                                        <label for="services_web-dev">Web Development</label>
+                                    </div>
+                                                                    <div class="option">
+                                        <input type="checkbox" 
+                                               id="services_consulting"
+                                               name="services[]"
+                                               value="consulting"
+                                                                                              >
+                                        <label for="services_consulting">Technical Consulting</label>
+                                    </div>
+                                                            </div>
+                        
+                                                
+                                                
+                                            </div>
+                            </div>
+            </div>
+    
+    <!-- Navigation -->
+    <div class="navigation">
+        <div class="left">
+            <button type="button" class="button secondary" onclick="previousStep()">
+                Previous
+            </button>
+        </div>
+        <div class="right">
+            <button type="button" class="button primary" onclick="nextStep()">
+                Next
+            </button>
+            <button type="submit" class="button primary">
+                Send Message            </button>
+        </div>
+    </div>
+</form>        </div>
     </section>
 
     <!-- Form Field Examples -->

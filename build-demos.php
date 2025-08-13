@@ -119,7 +119,11 @@ function processHtml($html) {
     }
     
     // Move theme prevention script to very beginning of <head> to prevent flash
-    $themeScript = '    <script>
+    $themeScript = '    <style>
+        /* Prevent flash by forcing light theme initially */
+        :root { --background: #ffffff !important; --foreground: #111827 !important; }
+    </style>
+    <script>
         // Prevent theme flash by setting theme before any CSS loads
         (function() {
             const savedTheme = localStorage.getItem(\'theme\') || \'light\';

@@ -112,6 +112,9 @@ function processHtml($html) {
     // Fix specific navigation patterns that might use relative paths
     $html = preg_replace('/href=["\']index\.html["\']/i', 'href="index.html"', $html);
     
+    // Fix image paths for GitHub - convert relative img/ paths to GitHub raw content URLs
+    $html = preg_replace('/src=["\']img\/([^"\']+)["\']/i', 'src="https://raw.githubusercontent.com/tomvon/cleanframework/master/img/$1"', $html);
+    
     // Add Font Awesome CDN if not present
     if (strpos($html, 'font-awesome') === false) {
         $faLink = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">';

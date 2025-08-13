@@ -73,6 +73,10 @@ foreach ($pages as $sourcePage => $outputFile) {
     echo "\n";
 }
 
+// Update README.md with cache-busted links
+echo "📝 Updating README.md with cache-busted links\n";
+updateReadmeLinks();
+
 echo "🎉 Demo build complete!\n";
 echo "✅ Success: $success files\n";
 echo "❌ Failures: $failures files\n";
@@ -124,6 +128,41 @@ function processHtml($html) {
     $html = str_replace('//localhost:8848/', '../', $html);
     
     return $html;
+}
+
+/**
+ * Update README.md with cache-busted demo links
+ */
+function updateReadmeLinks() {
+    $readmePath = 'README.md';
+    $cacheBuster = date('YmdHis');
+    
+    if (!file_exists($readmePath)) {
+        echo "⚠️  README.md not found\n";
+        return;
+    }
+    
+    $readme = file_get_contents($readmePath);
+    
+    // First remove any existing cache busters to avoid duplicates
+    $readme = preg_replace('/\?[0-9]{14}/i', '', $readme);
+    
+    // Update all htmlpreview.github.io links with cache busting
+    $readme = preg_replace(
+        '/https:\/\/htmlpreview\.github\.io\/\?https:\/\/github\.com\/tomvon\/cleanframework\/blob\/master\/demo\/([^)?\s]+)\.html/i',
+        "https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/$1.html?$cacheBuster",
+        $readme
+    );
+    
+    // Also update any direct GitHub links to demos
+    $readme = preg_replace(
+        '/https:\/\/github\.com\/tomvon\/cleanframework\/blob\/master\/demo\/([^)?\s]+)\.html/i',
+        "https://github.com/tomvon/cleanframework/blob/master/demo/$1.html?$cacheBuster",
+        $readme
+    );
+    
+    file_put_contents($readmePath, $readme);
+    echo "✅ Updated README.md with cache buster: $cacheBuster\n";
 }
 
 /**

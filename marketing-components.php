@@ -76,11 +76,7 @@ $hero_buttons = [
     </section>
     
     <!-- Example Hero -->
-    <section class="hero">
-        <div class="container">
-            <?php include 'components/hero/hero.php'; ?>
-        </div>
-    </section>
+    <?php include 'components/hero/hero.php'; ?>
 
     <!-- Features -->
     <section class="section">

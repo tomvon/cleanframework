@@ -155,25 +155,25 @@ $form_steps = [
             <h2 class="text-center">Input Types</h2>
             <p class="text-center">All HTML5 input types with consistent styling and behavior</p>
             
-            <div class="form-examples">
-                <div class="form-group">
+            <div class="form">
+                <div class="group">
                     <label for="example-text">Text Input</label>
-                    <input type="text" id="example-text" name="example-text" placeholder="Enter text here" class="form-control">
+                    <input type="text" id="example-text" name="example-text" placeholder="Enter text here">
                 </div>
 
-                <div class="form-group">
+                <div class="group">
                     <label for="example-email">Email Input</label>
-                    <input type="email" id="example-email" name="example-email" placeholder="user@example.com" class="form-control">
+                    <input type="email" id="example-email" name="example-email" placeholder="user@example.com">
                 </div>
 
-                <div class="form-group">
+                <div class="group">
                     <label for="example-password">Password Input</label>
-                    <input type="password" id="example-password" name="example-password" placeholder="Enter password" class="form-control">
+                    <input type="password" id="example-password" name="example-password" placeholder="Enter password">
                 </div>
 
-                <div class="form-group">
+                <div class="group">
                     <label for="example-select">Select Dropdown</label>
-                    <select id="example-select" name="example-select" class="form-control">
+                    <select id="example-select" name="example-select">
                         <option value="">Choose an option</option>
                         <option value="option1">Option 1</option>
                         <option value="option2">Option 2</option>
@@ -181,24 +181,24 @@ $form_steps = [
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div class="group">
                     <label for="example-textarea">Textarea</label>
-                    <textarea id="example-textarea" name="example-textarea" rows="4" placeholder="Enter your message here" class="form-control"></textarea>
+                    <textarea id="example-textarea" name="example-textarea" rows="4" placeholder="Enter your message here"></textarea>
                 </div>
 
-                <div class="form-group">
+                <div class="group">
                     <label for="example-file">File Upload</label>
-                    <input type="file" id="example-file" name="example-file" class="form-control">
-                    <small class="form-help">Supports PDF, DOC, and image files</small>
+                    <input type="file" id="example-file" name="example-file">
+                    <small class="help">Supports PDF, DOC, and image files</small>
                 </div>
 
-                <div class="form-group">
+                <div class="group">
                     <label for="example-range">Range Slider</label>
-                    <input type="range" id="example-range" name="example-range" min="0" max="100" value="50" class="form-control">
-                    <small class="form-help">Drag to adjust value</small>
+                    <input type="range" id="example-range" name="example-range" min="0" max="100" value="50">
+                    <small class="help">Drag to adjust value</small>
                 </div>
 
-                <div class="form-group">
+                <div class="group">
                     <fieldset>
                         <legend>Checkbox Options</legend>
                         <div class="options">
@@ -218,7 +218,7 @@ $form_steps = [
                     </fieldset>
                 </div>
 
-                <div class="form-group">
+                <div class="group">
                     <fieldset>
                         <legend>Radio Button Options</legend>
                         <div class="options">
@@ -238,7 +238,7 @@ $form_steps = [
                     </fieldset>
                 </div>
 
-                <div class="form-group inline">
+                <div class="group inline">
                     <fieldset>
                         <legend>Inline Checkboxes</legend>
                         <div class="options">
@@ -271,23 +271,23 @@ $form_steps = [
             <h2 class="text-center">Validation States</h2>
             <p class="text-center">Visual feedback for form validation with clear error messaging</p>
             
-            <div class="form-examples">
-                <div class="form-group success">
+            <div class="form">
+                <div class="group">
                     <label for="valid-input">Valid Input</label>
-                    <input type="text" id="valid-input" name="valid-input" value="Valid input" class="form-control">
-                    <small class="form-feedback">✓ This field is valid</small>
+                    <input type="text" id="valid-input" name="valid-input" value="Valid input" style="border-color: var(--success);">
+                    <small class="help" style="color: var(--success);">✓ This field is valid</small>
                 </div>
 
-                <div class="form-group error">
+                <div class="group">
                     <label for="invalid-input">Invalid Input</label>
-                    <input type="email" id="invalid-input" name="invalid-input" value="invalid-email" class="form-control">
-                    <small class="form-feedback">✗ Please enter a valid email address</small>
+                    <input type="email" id="invalid-input" name="invalid-input" value="invalid-email" style="border-color: var(--danger);">
+                    <small class="error">✗ Please enter a valid email address</small>
                 </div>
 
-                <div class="form-group warning">
+                <div class="group">
                     <label for="warning-input">Warning Input</label>
-                    <input type="password" id="warning-input" name="warning-input" value="weak" class="form-control">
-                    <small class="form-feedback">⚠ Password strength: weak</small>
+                    <input type="password" id="warning-input" name="warning-input" value="weak" style="border-color: var(--warning);">
+                    <small class="help" style="color: var(--warning);">⚠ Password strength: weak</small>
                 </div>
             </div>
         </div>

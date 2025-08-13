@@ -26,28 +26,35 @@
         <nav class="nav">
             <div class="container">
                 <a href="#" class="brand">Clean Framework</a>
-                <div class="nav-right">
+                
+                <!-- Mobile menu toggle -->
+                <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div class="nav-right" id="nav-menu">
                     <ul class="menu">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="form-components.html">Forms</a>
-                        </li>
-                        <li>
-                            <a href="ui-components.html">UI Components</a>
-                        </li>
-                        <li>
-                            <a href="layout-components.html" class="active">Layout</a>
-                        </li>
-                        <li>
-                            <a href="marketing-components.html">Marketing</a>
-                        </li>
-                        <li>
-                            <a href="components-showcase.html">All Components</a>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="form-components.html">Forms</a></li>
+                        <li><a href="ui-components.html">UI Components</a></li>
+                        <li><a href="layout-components.html" class="active">Layout</a></li>
+                        <li><a href="marketing-components.html">Marketing</a></li>
+                        <li><a href="admin-components.html">Admin</a></li>
+                        <li><a href="components-showcase.html">All Components</a></li>
+                        
+                        <!-- Theme toggle as menu item -->
+                        <li class="theme-menu-item">
+                            <a href="#" onclick="toggleTheme(); return false;">
+                                <span class="theme-mode light-mode">🌞 Light Mode</span>
+                                <span class="theme-mode dark-mode">🌙 Dark Mode</span>
+                                <span class="theme-mode system-mode">⚡ System Mode</span>
+                            </a>
                         </li>
                     </ul>
-                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme mode">
+                    
+                    <!-- Desktop theme toggle button -->
+                    <button class="theme-toggle desktop-only" onclick="toggleTheme()" aria-label="Toggle theme mode">
                         <i class="theme-icon sun fas fa-sun active"></i>
                         <i class="theme-icon moon fas fa-moon"></i>
                         <i class="theme-icon system fas fa-circle-half-stroke"></i>

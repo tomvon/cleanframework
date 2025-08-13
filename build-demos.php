@@ -118,6 +118,25 @@ function processHtml($html) {
         $html = str_replace('</head>', "    $faLink\n</head>", $html);
     }
     
+    // Move theme prevention script to very beginning of <head> to prevent flash
+    $themeScript = '    <script>
+        // Prevent theme flash by setting theme before any CSS loads
+        (function() {
+            const savedTheme = localStorage.getItem(\'theme\') || \'light\';
+            if (savedTheme === \'system\') {
+                document.documentElement.removeAttribute(\'data-theme\');
+            } else {
+                document.documentElement.setAttribute(\'data-theme\', savedTheme);
+            }
+        })();
+    </script>' . "\n";
+    
+    // Remove existing theme script if present
+    $html = preg_replace('/<script>\s*\/\/ Prevent theme flash.*?<\/script>\s*/s', '', $html);
+    
+    // Insert theme script immediately after <head>
+    $html = str_replace('<head>', "<head>\n$themeScript", $html);
+    
     // Add generation info
     $timestamp = date('Y-m-d H:i:s T');
     $comment = "    <!-- Generated: $timestamp by CleanFramework Demo Builder (cache: $cacheBuster) -->\n";

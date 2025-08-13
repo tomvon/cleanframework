@@ -118,13 +118,9 @@ function processHtml($html) {
         $html = str_replace('</head>', "    $faLink\n</head>", $html);
     }
     
-    // Move theme prevention script to very beginning of <head> to prevent flash
-    $themeScript = '    <style>
-        /* Prevent flash by forcing light theme initially */
-        :root { --background: #ffffff !important; --foreground: #111827 !important; }
-    </style>
-    <script>
-        // Prevent theme flash by setting theme before any CSS loads
+    // Add theme prevention script early in <head>
+    $themeScript = '    <script>
+        // Set theme before CSS loads
         (function() {
             const savedTheme = localStorage.getItem(\'theme\') || \'light\';
             if (savedTheme === \'system\') {

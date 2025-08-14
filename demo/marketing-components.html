@@ -3,27 +3,29 @@
 <html lang="en">
 <head>
     <script>
-        // FOUC prevention - set theme immediately
+        // FOUC prevention - set theme immediately before any CSS loads
         (function() {
+            // Force light theme as default for GitHub previews to prevent flash
+            document.documentElement.removeAttribute('data-theme');
+            
             try {
                 const savedTheme = localStorage.getItem('theme');
                 const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
                 
-                let themeToApply = 'light'; // default
+                let themeToApply = 'light'; // default to light
                 
                 if (savedTheme === 'dark') {
                     themeToApply = 'dark';
-                } else if (savedTheme === 'system' || !savedTheme) {
-                    themeToApply = systemPrefersDark ? 'dark' : 'light';
+                } else if (savedTheme === 'system' && systemPrefersDark) {
+                    themeToApply = 'dark';
                 }
                 
+                // Only set dark theme if explicitly needed
                 if (themeToApply === 'dark') {
                     document.documentElement.setAttribute('data-theme', 'dark');
-                } else {
-                    document.documentElement.removeAttribute('data-theme');
                 }
             } catch (e) {
-                // Fallback to light theme if localStorage fails
+                // Fallback: ensure light theme
                 document.documentElement.removeAttribute('data-theme');
             }
         })();
@@ -33,8 +35,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketing Components - Clean Framework</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../style.css?20250814021836">
-        <!-- Generated: 2025-08-14 02:18:36 UTC by CleanFramework Demo Builder (cache: 20250814021836) -->
+    <link rel="stylesheet" href="../style.css?v=20250814023029&t=1755138629">
+        <!-- Generated: 2025-08-14 02:30:29 UTC by CleanFramework Demo Builder (cache: 20250814023029) -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -1066,13 +1068,13 @@
     </footer>
 
     <!-- Component JavaScript files -->
-    <script src="../components/navigation/navigation.js?20250814021836"></script>
-    <script src="../components/features/features.js?20250814021836"></script>
-    <script src="../components/testimonials/testimonials.js?20250814021836"></script>
-    <script src="../components/stats/stats.js?20250814021836"></script>
-    <script src="../components/cta/cta.js?20250814021836"></script>
+    <script src="../components/navigation/navigation.js?20250814023029"></script>
+    <script src="../components/features/features.js?20250814023029"></script>
+    <script src="../components/testimonials/testimonials.js?20250814023029"></script>
+    <script src="../components/stats/stats.js?20250814023029"></script>
+    <script src="../components/cta/cta.js?20250814023029"></script>
     
     <!-- Main JavaScript -->
-    <script src="../main.js?20250814021836"></script>
+    <script src="../main.js?20250814023029"></script>
 </body>
 </html>

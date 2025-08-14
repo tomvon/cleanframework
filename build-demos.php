@@ -93,8 +93,8 @@ function processHtml($html) {
     // Generate cache-busting timestamp - using date format for htmlpreview.github.io compatibility
     $cacheBuster = date('YmdHis');
     
-    // Fix stylesheet paths with cache busting - using simple format
-    $html = preg_replace('/href=["\']style\.css(\?[^"\']*)?["\']/i', "href=\"../style.css?$cacheBuster\"", $html);
+    // Fix stylesheet paths with aggressive cache busting
+    $html = preg_replace('/href=["\']style\.css(\?[^"\']*)?["\']/i', "href=\"../style.css?v=$cacheBuster&t=" . time() . "\"", $html);
     
     // Fix main.js path with cache busting
     $html = preg_replace('/src=["\']main\.js["\']/i', "src=\"../main.js?$cacheBuster\"", $html);
@@ -126,27 +126,29 @@ function processHtml($html) {
     
     // Add theme prevention script early in <head> - more robust version
     $themeScript = '    <script>
-        // FOUC prevention - set theme immediately
+        // FOUC prevention - set theme immediately before any CSS loads
         (function() {
+            // Force light theme as default for GitHub previews to prevent flash
+            document.documentElement.removeAttribute(\'data-theme\');
+            
             try {
                 const savedTheme = localStorage.getItem(\'theme\');
                 const systemPrefersDark = window.matchMedia && window.matchMedia(\'(prefers-color-scheme: dark)\').matches;
                 
-                let themeToApply = \'light\'; // default
+                let themeToApply = \'light\'; // default to light
                 
                 if (savedTheme === \'dark\') {
                     themeToApply = \'dark\';
-                } else if (savedTheme === \'system\' || !savedTheme) {
-                    themeToApply = systemPrefersDark ? \'dark\' : \'light\';
+                } else if (savedTheme === \'system\' && systemPrefersDark) {
+                    themeToApply = \'dark\';
                 }
                 
+                // Only set dark theme if explicitly needed
                 if (themeToApply === \'dark\') {
                     document.documentElement.setAttribute(\'data-theme\', \'dark\');
-                } else {
-                    document.documentElement.removeAttribute(\'data-theme\');
                 }
             } catch (e) {
-                // Fallback to light theme if localStorage fails
+                // Fallback: ensure light theme
                 document.documentElement.removeAttribute(\'data-theme\');
             }
         })();

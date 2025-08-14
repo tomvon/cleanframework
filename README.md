@@ -1,6 +1,6 @@
 # Clean Framework
 
-**[View Live Demo](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/index.html?20250814023029?20250814023029)** | **[Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/components-showcase.html?20250814023029?20250814023029)** | **[Documentation](COMPONENTS.md)**
+**[View Live Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/demo/index.html?v=20250814)** | **[Components](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/demo/components-showcase.html?v=20250814)** | **[Documentation](COMPONENTS.md)**
 
 **Semantic HTML. Readable CSS.**
 
@@ -50,13 +50,13 @@ The HTML structure communicates intent clearly to developers, designers, and too
 
 ### Live Examples
 
-- **[Framework Overview](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/index.html?20250814023029?20250814023029)** - Core concepts and getting started
-- **[Form Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/form-components.html?20250814023029?20250814023029)** - Input fields, validation, multi-step forms
-- **[UI Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/ui-components.html?20250814023029?20250814023029)** - Buttons, modals, dropdowns, alerts, tooltips
-- **[Layout Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/layout-components.html?20250814023029?20250814023029)** - Cards, grids, accordions, progress bars
-- **[Marketing Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/marketing-components.html?20250814023029?20250814023029)** - Heroes, features, testimonials, CTAs
-- **[Admin Components](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/admin-components.html?20250814023029?20250814023029)** - Sidebars, dashboards, data grids, admin UI
-- **[Complete Showcase](https://htmlpreview.github.io/?https://github.com/tomvon/cleanframework/blob/master/demo/components-showcase.html?20250814023029?20250814023029)** - All components with examples
+- **[Framework Overview](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/demo/index.html?v=20250814)** - Core concepts and getting started
+- **[Form Components](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/demo/form-components.html?v=20250814)** - Input fields, validation, multi-step forms
+- **[UI Components](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/demo/ui-components.html?v=20250814)** - Buttons, modals, dropdowns, alerts, tooltips
+- **[Layout Components](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/demo/layout-components.html?v=20250814)** - Cards, grids, accordions, progress bars
+- **[Marketing Components](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/demo/marketing-components.html?v=20250814)** - Heroes, features, testimonials, CTAs
+- **[Admin Components](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/demo/admin-components.html?v=20250814)** - Sidebars, dashboards, data grids, admin UI
+- **[Complete Showcase](https://htmlpreview.github.io/?https://raw.githubusercontent.com/tomvon/cleanframework/master/demo/components-showcase.html?v=20250814)** - All components with examples
 
 ## Core Components
 

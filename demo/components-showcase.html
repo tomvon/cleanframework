@@ -30,13 +30,144 @@
             }
         })();
     </script>
+    
+    <!-- Critical CSS for instant render -->
+    <style>
+        /* Critical CSS - Above the fold styles for faster initial render */
+:root {
+    --primary: #667eea;
+    --primary-hover: #5a67d8;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --radius: 8px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    
+    /* Light theme defaults */
+    --background: #ffffff;
+    --foreground: #111827;
+    --muted: #f3f4f6;
+    --border: #e5e7eb;
+    --card: #ffffff;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --background: #0d1117;
+        --foreground: #f0f6fc;
+        --muted: #21262d;
+        --border: #30363d;
+        --card: #21262d;
+    }
+}
+
+[data-theme="dark"] {
+    --background: #0d1117;
+    --foreground: #f0f6fc;
+    --muted: #21262d;
+    --border: #30363d;
+    --card: #21262d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--foreground);
+    background: var(--background);
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Critical header styles */
+.header {
+    position: sticky;
+    top: 0;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+.nav {
+    padding: 1rem 0;
+}
+
+/* Critical hero styles */
+.hero {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+    color: var(--foreground);
+}
+
+/* Critical button styles */
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button.primary {
+    background: var(--primary);
+    color: white;
+}
+
+.button.primary:hover {
+    background: var(--primary-hover);
+}
+
+/* Hide non-critical content initially */
+.section:not(.hero) { opacity: 0; }
+    </style>
+    
+    <!-- Preload main stylesheet (minified for performance) -->
+    <link rel="preload" href="../style.min.css?v=20250814&t=1755215533" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../style.min.css?v=20250814&t=1755215533"></noscript>
+    
+    <!-- Progressive loading script -->
+    <script>
+        // Show non-critical content after main CSS loads
+        window.addEventListener('load', function() {
+            const sections = document.querySelectorAll('.section:not(.hero)');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transition = 'opacity 0.3s ease';
+                }, index * 50);
+            });
+        });
+    </script>
 
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Components Showcase - Clean Framework</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../style.css?v=20250814023029&t=1755138629">
-        <!-- Generated: 2025-08-14 02:30:29 UTC by CleanFramework Demo Builder (cache: 20250814023029) -->
+    
+        <!-- Generated: 2025-08-14 23:52:13 UTC by CleanFramework Demo Builder (cache: 20250814) -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -64,37 +195,37 @@
         <div class="nav-right" id="nav-menu">
             <ul class="menu">
                                     <li>
-                        <a href="index.html" 
+                        <a href="index.html?v=20250814" 
                            class="">
                             Home                        </a>
                     </li>
                                     <li>
-                        <a href="form-components.html" 
+                        <a href="form-components.html?v=20250814" 
                            class="">
                             Forms                        </a>
                     </li>
                                     <li>
-                        <a href="ui-components.html" 
+                        <a href="ui-components.html?v=20250814" 
                            class="">
                             UI Components                        </a>
                     </li>
                                     <li>
-                        <a href="layout-components.html" 
+                        <a href="layout-components.html?v=20250814" 
                            class="">
                             Layout                        </a>
                     </li>
                                     <li>
-                        <a href="marketing-components.html" 
+                        <a href="marketing-components.html?v=20250814" 
                            class="">
                             Marketing                        </a>
                     </li>
                                     <li>
-                        <a href="admin-components.html" 
+                        <a href="admin-components.html?v=20250814" 
                            class="">
                             Admin                        </a>
                     </li>
                                     <li>
-                        <a href="components-showcase.html" 
+                        <a href="components-showcase.html?v=20250814" 
                            class="active">
                             All Components                        </a>
                     </li>
@@ -3042,24 +3173,24 @@
     </footer>
 
     <!-- Component JavaScript files -->
-    <script src="../components/navigation/navigation.js?20250814023029"></script>
-    <script src="../components/form/form.js?20250814023029"></script>
-    <script src="../components/modal/modal.js?20250814023029"></script>
-    <script src="../components/dropdown/dropdown.js?20250814023029"></script>
-    <script src="../components/table/table.js?20250814023029"></script>
-    <script src="../components/tabs/tabs.js?20250814023029"></script>
-    <script src="../components/alert/alert.js?20250814023029"></script>
-    <script src="../components/accordion/accordion.js?20250814023029"></script>
-    <script src="../components/tooltip/tooltip.js?20250814023029"></script>
-    <script src="../components/breadcrumb/breadcrumb.js?20250814023029"></script>
-    <script src="../components/badge/badge.js?20250814023029"></script>
-    <script src="../components/progress/progress.js?20250814023029"></script>
-    <script src="../components/testimonials/testimonials.js?20250814023029"></script>
-    <script src="../components/features/features.js?20250814023029"></script>
-    <script src="../components/cta/cta.js?20250814023029"></script>
-    <script src="../components/stats/stats.js?20250814023029"></script>
+    <script src="../components/navigation/navigation.js?20250814235213" defer></script>
+    <script src="../components/form/form.js?20250814235213" defer></script>
+    <script src="../components/modal/modal.js?20250814235213" defer></script>
+    <script src="../components/dropdown/dropdown.js?20250814235213" defer></script>
+    <script src="../components/table/table.js?20250814235213" defer></script>
+    <script src="../components/tabs/tabs.js?20250814235213" defer></script>
+    <script src="../components/alert/alert.js?20250814235213" defer></script>
+    <script src="../components/accordion/accordion.js?20250814235213" defer></script>
+    <script src="../components/tooltip/tooltip.js?20250814235213" defer></script>
+    <script src="../components/breadcrumb/breadcrumb.js?20250814235213" defer></script>
+    <script src="../components/badge/badge.js?20250814235213" defer></script>
+    <script src="../components/progress/progress.js?20250814235213" defer></script>
+    <script src="../components/testimonials/testimonials.js?20250814235213" defer></script>
+    <script src="../components/features/features.js?20250814235213" defer></script>
+    <script src="../components/cta/cta.js?20250814235213" defer></script>
+    <script src="../components/stats/stats.js?20250814235213" defer></script>
     
     <!-- Main JavaScript -->
-    <script src="../main.js?20250814023029"></script>
+    <script src="../main.js?20250814235213" defer></script>
 </body>
 </html>

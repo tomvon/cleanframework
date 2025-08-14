@@ -121,21 +121,39 @@ function processHtml($html) {
         $html = str_replace('</head>', "    $faLink\n</head>", $html);
     }
     
-    // Add theme prevention script early in <head>
+    // Remove prepros development script
+    $html = preg_replace('/<script src="[^"]*__prepros\.js"><\/script>\s*/i', '', $html);
+    
+    // Add theme prevention script early in <head> - more robust version
     $themeScript = '    <script>
-        // Set theme before CSS loads
+        // FOUC prevention - set theme immediately
         (function() {
-            const savedTheme = localStorage.getItem(\'theme\') || \'light\';
-            if (savedTheme === \'system\') {
+            try {
+                const savedTheme = localStorage.getItem(\'theme\');
+                const systemPrefersDark = window.matchMedia && window.matchMedia(\'(prefers-color-scheme: dark)\').matches;
+                
+                let themeToApply = \'light\'; // default
+                
+                if (savedTheme === \'dark\') {
+                    themeToApply = \'dark\';
+                } else if (savedTheme === \'system\' || !savedTheme) {
+                    themeToApply = systemPrefersDark ? \'dark\' : \'light\';
+                }
+                
+                if (themeToApply === \'dark\') {
+                    document.documentElement.setAttribute(\'data-theme\', \'dark\');
+                } else {
+                    document.documentElement.removeAttribute(\'data-theme\');
+                }
+            } catch (e) {
+                // Fallback to light theme if localStorage fails
                 document.documentElement.removeAttribute(\'data-theme\');
-            } else {
-                document.documentElement.setAttribute(\'data-theme\', savedTheme);
             }
         })();
     </script>' . "\n";
     
-    // Remove existing theme script if present
-    $html = preg_replace('/<script>\s*\/\/ Prevent theme flash.*?<\/script>\s*/s', '', $html);
+    // Remove any existing theme scripts (more comprehensive)
+    $html = preg_replace('/<script>\s*\/\/ (Set theme|FOUC prevention|Prevent theme flash).*?<\/script>\s*/s', '', $html);
     
     // Insert theme script immediately after <head>
     $html = str_replace('<head>', "<head>\n$themeScript", $html);

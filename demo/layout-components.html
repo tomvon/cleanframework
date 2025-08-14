@@ -3,24 +3,38 @@
 <html lang="en">
 <head>
     <script>
-        // Set theme before CSS loads
+        // FOUC prevention - set theme immediately
         (function() {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            if (savedTheme === 'system') {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                
+                let themeToApply = 'light'; // default
+                
+                if (savedTheme === 'dark') {
+                    themeToApply = 'dark';
+                } else if (savedTheme === 'system' || !savedTheme) {
+                    themeToApply = systemPrefersDark ? 'dark' : 'light';
+                }
+                
+                if (themeToApply === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                }
+            } catch (e) {
+                // Fallback to light theme if localStorage fails
                 document.documentElement.removeAttribute('data-theme');
-            } else {
-                document.documentElement.setAttribute('data-theme', savedTheme);
             }
         })();
     </script>
 
-<script src="../__prepros.js"></script>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Components - Clean Framework</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../style.css?20250814021521">
-        <!-- Generated: 2025-08-14 02:15:21 UTC by CleanFramework Demo Builder (cache: 20250814021521) -->
+    <link rel="stylesheet" href="../style.css?20250814021836">
+        <!-- Generated: 2025-08-14 02:18:36 UTC by CleanFramework Demo Builder (cache: 20250814021836) -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -694,12 +708,12 @@
     </footer>
 
     <!-- Component JavaScript files -->
-    <script src="../components/navigation/navigation.js?20250814021521"></script>
-    <script src="../components/accordion/accordion.js?20250814021521"></script>
-    <script src="../components/breadcrumb/breadcrumb.js?20250814021521"></script>
-    <script src="../components/progress/progress.js?20250814021521"></script>
+    <script src="../components/navigation/navigation.js?20250814021836"></script>
+    <script src="../components/accordion/accordion.js?20250814021836"></script>
+    <script src="../components/breadcrumb/breadcrumb.js?20250814021836"></script>
+    <script src="../components/progress/progress.js?20250814021836"></script>
     
     <!-- Main JavaScript -->
-    <script src="../main.js?20250814021521"></script>
+    <script src="../main.js?20250814021836"></script>
 </body>
 </html>

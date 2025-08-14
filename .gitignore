@@ -1,3 +1,71 @@
-.ddev
+# Local development environment
+.ddev/
 archive/
+
+# macOS system files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux system files
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Development tools & editors
+prepros.config
+prepros-6.config
+*.prepros
+node_modules/
+.vscode/
+.idea/
+.sublime-project
+.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Sass cache
+.sass-cache/
+*.css.map
+
+# Build artifacts
+dist/
+build/
+*.min.css
+*.min.js
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

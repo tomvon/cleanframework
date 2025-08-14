@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Components - Clean Framework</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../style.css?20250813141934">
+    <link rel="stylesheet" href="../style.css?20250814021521">
     <style>
         .admin-section {
             animation: fadeIn 0.3s ease-in-out;
@@ -57,7 +57,7 @@
             box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.2);
         }
     </style>
-    <!-- Generated: 2025-08-13 14:19:34 UTC by CleanFramework Demo Builder (cache: 20250813141934) -->
+    <!-- Generated: 2025-08-14 02:15:21 UTC by CleanFramework Demo Builder (cache: 20250814021521) -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -737,66 +737,1414 @@
         </div>
     </section>
 
-    <!-- Coming Soon Components -->
+    <!-- Data Grid -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">More Admin Components Coming Soon</h2>
-            <p class="text-center">We're actively developing additional components for admin interfaces</p>
+            <h2 class="text-center">Data Grid</h2>
+            <p class="text-center">Advanced data table with sorting, filtering, bulk actions, and inline editing</p>
             
-            <div class="features-cards">
-                <div class="feature-card">
-                    <div class="feature-card-header">
-                        <div class="feature-icon">
-                            <i class="fas fa-table" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">Data Grid</h3>
-                    </div>
-                    <div class="feature-card-content">
-                        <p class="feature-description">Advanced data table with sorting, filtering, bulk actions, and inline editing</p>
-                        <span class="badge badge-primary">In Development</span>
-                    </div>
+            
+<div class="datagrid">
+    <!-- Header with filters and actions -->
+    <div class="datagrid-header">
+        <div class="datagrid-header-content">
+            <h3 class="datagrid-title">User Management</h3>
+            
+            <div class="datagrid-actions">
+                <!-- Search -->
+                <div class="datagrid-search">
+                    <i class="fas fa-search datagrid-search-icon"></i>
+                    <input type="text" placeholder="Search users..." class="form-control">
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-card-header">
-                        <div class="feature-icon">
-                            <i class="fas fa-search" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">Search & Filters</h3>
-                    </div>
-                    <div class="feature-card-content">
-                        <p class="feature-description">Advanced search bars with autocomplete, filters, and saved searches</p>
-                        <span class="badge badge-warning">Coming Soon</span>
-                    </div>
+                <!-- Filter -->
+                <div class="datagrid-filter">
+                    <button class="datagrid-filter-button" onclick="toggleFilter(this)">
+                        <i class="fas fa-filter"></i>
+                        Filter
+                    </button>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-card-header">
-                        <div class="feature-icon">
-                            <i class="fas fa-stream" aria-hidden="true"></i>
+                <!-- Add New -->
+                <button class="button primary">
+                    <i class="fas fa-plus"></i>
+                    Add User
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Table container -->
+    <div class="datagrid-container">
+        <table class="datagrid-table">
+            <thead>
+                <tr>
+                    <th class="datagrid-cell-select">
+                        <input type="checkbox" id="selectAll">
+                    </th>
+                    <th class="sortable" onclick="sortTable('name')">
+                        Name
+                        <i class="fas fa-sort sort-icon"></i>
+                    </th>
+                    <th class="sortable" onclick="sortTable('role')">
+                        Role
+                        <i class="fas fa-sort sort-icon"></i>
+                    </th>
+                    <th class="sortable" onclick="sortTable('department')">
+                        Department
+                        <i class="fas fa-sort sort-icon"></i>
+                    </th>
+                    <th>Status</th>
+                    <th class="sortable" onclick="sortTable('last_active')">
+                        Last Active
+                        <i class="fas fa-sort sort-icon"></i>
+                    </th>
+                    <th class="datagrid-cell-actions">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                                <tr data-id="1">
+                    <td class="datagrid-cell-select">
+                        <input type="checkbox" class="row-select">
+                    </td>
+                    <td>
+                        <div class="datagrid-cell-avatar">
+                            <div class="datagrid-avatar">
+                                SJ                            </div>
+                            <div class="datagrid-user-info">
+                                <div class="datagrid-user-name">Sarah Johnson</div>
+                                <div class="datagrid-user-email">sarah.johnson@example.com</div>
+                            </div>
                         </div>
-                        <h3 class="feature-title">Activity Feed</h3>
-                    </div>
-                    <div class="feature-card-content">
-                        <p class="feature-description">Timeline components for activity logs, notifications, and updates</p>
-                        <span class="badge badge-warning">Coming Soon</span>
-                    </div>
+                    </td>
+                    <td>Administrator</td>
+                    <td>Engineering</td>
+                    <td class="datagrid-cell-status">
+                                                <span class="datagrid-status datagrid-status-active">
+                            <span class="datagrid-status-dot"></span>
+                            Active                        </span>
+                    </td>
+                    <td>2024-01-15 14:30</td>
+                    <td class="datagrid-cell-actions">
+                        <div class="datagrid-actions-menu">
+                            <button class="datagrid-action datagrid-action-primary" onclick="editUser(1)" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="datagrid-action" onclick="viewUser(1)" title="View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="datagrid-action datagrid-action-danger" onclick="deleteUser(1)" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                
+                <!-- Expandable row content (hidden by default) -->
+                <tr class="datagrid-row-expanded hidden">
+                    <td colspan="7">
+                        <div class="datagrid-expand-content">
+                            <h4>Additional Information</h4>
+                            <div class="datagrid-expand-grid">
+                                <div>
+                                    <strong>User ID:</strong> 1                                </div>
+                                <div>
+                                    <strong>Created:</strong> Jan 1, 2024
+                                </div>
+                                <div>
+                                    <strong>Last Login:</strong> 2024-01-15 14:30                                </div>
+                                <div>
+                                    <strong>Permissions:</strong> Full Access
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                                <tr data-id="2">
+                    <td class="datagrid-cell-select">
+                        <input type="checkbox" class="row-select">
+                    </td>
+                    <td>
+                        <div class="datagrid-cell-avatar">
+                            <div class="datagrid-avatar">
+                                MC                            </div>
+                            <div class="datagrid-user-info">
+                                <div class="datagrid-user-name">Michael Chen</div>
+                                <div class="datagrid-user-email">michael.chen@example.com</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Developer</td>
+                    <td>Engineering</td>
+                    <td class="datagrid-cell-status">
+                                                <span class="datagrid-status datagrid-status-active">
+                            <span class="datagrid-status-dot"></span>
+                            Active                        </span>
+                    </td>
+                    <td>2024-01-15 13:45</td>
+                    <td class="datagrid-cell-actions">
+                        <div class="datagrid-actions-menu">
+                            <button class="datagrid-action datagrid-action-primary" onclick="editUser(2)" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="datagrid-action" onclick="viewUser(2)" title="View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="datagrid-action datagrid-action-danger" onclick="deleteUser(2)" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                
+                <!-- Expandable row content (hidden by default) -->
+                <tr class="datagrid-row-expanded hidden">
+                    <td colspan="7">
+                        <div class="datagrid-expand-content">
+                            <h4>Additional Information</h4>
+                            <div class="datagrid-expand-grid">
+                                <div>
+                                    <strong>User ID:</strong> 2                                </div>
+                                <div>
+                                    <strong>Created:</strong> Jan 1, 2024
+                                </div>
+                                <div>
+                                    <strong>Last Login:</strong> 2024-01-15 13:45                                </div>
+                                <div>
+                                    <strong>Permissions:</strong> Full Access
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                                <tr data-id="3">
+                    <td class="datagrid-cell-select">
+                        <input type="checkbox" class="row-select">
+                    </td>
+                    <td>
+                        <div class="datagrid-cell-avatar">
+                            <div class="datagrid-avatar">
+                                ED                            </div>
+                            <div class="datagrid-user-info">
+                                <div class="datagrid-user-name">Emily Davis</div>
+                                <div class="datagrid-user-email">emily.davis@example.com</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Designer</td>
+                    <td>Design</td>
+                    <td class="datagrid-cell-status">
+                                                <span class="datagrid-status datagrid-status-inactive">
+                            <span class="datagrid-status-dot"></span>
+                            Inactive                        </span>
+                    </td>
+                    <td>2024-01-10 09:20</td>
+                    <td class="datagrid-cell-actions">
+                        <div class="datagrid-actions-menu">
+                            <button class="datagrid-action datagrid-action-primary" onclick="editUser(3)" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="datagrid-action" onclick="viewUser(3)" title="View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="datagrid-action datagrid-action-danger" onclick="deleteUser(3)" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                
+                <!-- Expandable row content (hidden by default) -->
+                <tr class="datagrid-row-expanded hidden">
+                    <td colspan="7">
+                        <div class="datagrid-expand-content">
+                            <h4>Additional Information</h4>
+                            <div class="datagrid-expand-grid">
+                                <div>
+                                    <strong>User ID:</strong> 3                                </div>
+                                <div>
+                                    <strong>Created:</strong> Jan 1, 2024
+                                </div>
+                                <div>
+                                    <strong>Last Login:</strong> 2024-01-10 09:20                                </div>
+                                <div>
+                                    <strong>Permissions:</strong> Full Access
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                                <tr data-id="4">
+                    <td class="datagrid-cell-select">
+                        <input type="checkbox" class="row-select">
+                    </td>
+                    <td>
+                        <div class="datagrid-cell-avatar">
+                            <div class="datagrid-avatar">
+                                JW                            </div>
+                            <div class="datagrid-user-info">
+                                <div class="datagrid-user-name">James Wilson</div>
+                                <div class="datagrid-user-email">james.wilson@example.com</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Manager</td>
+                    <td>Sales</td>
+                    <td class="datagrid-cell-status">
+                                                <span class="datagrid-status datagrid-status-active">
+                            <span class="datagrid-status-dot"></span>
+                            Active                        </span>
+                    </td>
+                    <td>2024-01-15 15:00</td>
+                    <td class="datagrid-cell-actions">
+                        <div class="datagrid-actions-menu">
+                            <button class="datagrid-action datagrid-action-primary" onclick="editUser(4)" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="datagrid-action" onclick="viewUser(4)" title="View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="datagrid-action datagrid-action-danger" onclick="deleteUser(4)" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                
+                <!-- Expandable row content (hidden by default) -->
+                <tr class="datagrid-row-expanded hidden">
+                    <td colspan="7">
+                        <div class="datagrid-expand-content">
+                            <h4>Additional Information</h4>
+                            <div class="datagrid-expand-grid">
+                                <div>
+                                    <strong>User ID:</strong> 4                                </div>
+                                <div>
+                                    <strong>Created:</strong> Jan 1, 2024
+                                </div>
+                                <div>
+                                    <strong>Last Login:</strong> 2024-01-15 15:00                                </div>
+                                <div>
+                                    <strong>Permissions:</strong> Full Access
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                                <tr data-id="5">
+                    <td class="datagrid-cell-select">
+                        <input type="checkbox" class="row-select">
+                    </td>
+                    <td>
+                        <div class="datagrid-cell-avatar">
+                            <div class="datagrid-avatar">
+                                MG                            </div>
+                            <div class="datagrid-user-info">
+                                <div class="datagrid-user-name">Maria Garcia</div>
+                                <div class="datagrid-user-email">maria.garcia@example.com</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Developer</td>
+                    <td>Engineering</td>
+                    <td class="datagrid-cell-status">
+                                                <span class="datagrid-status datagrid-status-pending">
+                            <span class="datagrid-status-dot"></span>
+                            Pending                        </span>
+                    </td>
+                    <td>2024-01-14 11:30</td>
+                    <td class="datagrid-cell-actions">
+                        <div class="datagrid-actions-menu">
+                            <button class="datagrid-action datagrid-action-primary" onclick="editUser(5)" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="datagrid-action" onclick="viewUser(5)" title="View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="datagrid-action datagrid-action-danger" onclick="deleteUser(5)" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                
+                <!-- Expandable row content (hidden by default) -->
+                <tr class="datagrid-row-expanded hidden">
+                    <td colspan="7">
+                        <div class="datagrid-expand-content">
+                            <h4>Additional Information</h4>
+                            <div class="datagrid-expand-grid">
+                                <div>
+                                    <strong>User ID:</strong> 5                                </div>
+                                <div>
+                                    <strong>Created:</strong> Jan 1, 2024
+                                </div>
+                                <div>
+                                    <strong>Last Login:</strong> 2024-01-14 11:30                                </div>
+                                <div>
+                                    <strong>Permissions:</strong> Full Access
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                                <tr data-id="6">
+                    <td class="datagrid-cell-select">
+                        <input type="checkbox" class="row-select">
+                    </td>
+                    <td>
+                        <div class="datagrid-cell-avatar">
+                            <div class="datagrid-avatar">
+                                RT                            </div>
+                            <div class="datagrid-user-info">
+                                <div class="datagrid-user-name">Robert Taylor</div>
+                                <div class="datagrid-user-email">robert.taylor@example.com</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Support</td>
+                    <td>Customer Service</td>
+                    <td class="datagrid-cell-status">
+                                                <span class="datagrid-status datagrid-status-active">
+                            <span class="datagrid-status-dot"></span>
+                            Active                        </span>
+                    </td>
+                    <td>2024-01-15 16:15</td>
+                    <td class="datagrid-cell-actions">
+                        <div class="datagrid-actions-menu">
+                            <button class="datagrid-action datagrid-action-primary" onclick="editUser(6)" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="datagrid-action" onclick="viewUser(6)" title="View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="datagrid-action datagrid-action-danger" onclick="deleteUser(6)" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                
+                <!-- Expandable row content (hidden by default) -->
+                <tr class="datagrid-row-expanded hidden">
+                    <td colspan="7">
+                        <div class="datagrid-expand-content">
+                            <h4>Additional Information</h4>
+                            <div class="datagrid-expand-grid">
+                                <div>
+                                    <strong>User ID:</strong> 6                                </div>
+                                <div>
+                                    <strong>Created:</strong> Jan 1, 2024
+                                </div>
+                                <div>
+                                    <strong>Last Login:</strong> 2024-01-15 16:15                                </div>
+                                <div>
+                                    <strong>Permissions:</strong> Full Access
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                            </tbody>
+        </table>
+    </div>
+    
+    <!-- Footer with pagination -->
+    <div class="datagrid-footer">
+        <div class="datagrid-footer-content">
+            <div class="datagrid-info">
+                Showing 1-6 of 6 entries
+                <span class="datagrid-selected-count hidden">
+                    · <strong>0</strong> selected
+                </span>
+            </div>
+            
+            <div class="datagrid-pagination">
+                <div class="datagrid-page-size">
+                    <label>Show:</label>
+                    <select>
+                        <option>10</option>
+                        <option>25</option>
+                        <option>50</option>
+                        <option>100</option>
+                    </select>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-card-header">
-                        <div class="feature-icon">
-                            <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">File Manager</h3>
-                    </div>
-                    <div class="feature-card-content">
-                        <p class="feature-description">Drag-and-drop file uploads with progress tracking and management</p>
-                        <span class="badge badge-warning">Coming Soon</span>
-                    </div>
+                <div class="datagrid-page-buttons">
+                    <button class="datagrid-page-button" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="datagrid-page-button active">1</button>
+                    <button class="datagrid-page-button" disabled>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
+    </div>
+</div>        </div>
+    </section>
+
+    <!-- Search & Filters -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Search & Filters</h2>
+            <p class="text-center">Advanced search with autocomplete, filters, saved searches, and multiple variants</p>
+            
+            
+<div class="search-component">
+    <!-- Advanced Search Bar -->
+    <div class="search-bar-advanced">
+        <div class="search-input-group">
+            <i class="fas fa-search search-icon"></i>
+            
+            <input type="text" 
+                   class="search-input" 
+                   placeholder="Search anything... Try 'status:active' or 'type:user'"
+                   id="advancedSearchInput"
+                   autocomplete="off">
+            
+            <!-- Search Suggestions Dropdown -->
+            <div class="search-suggestions hidden" id="searchSuggestions">
+                <!-- Recent Searches -->
+                <div class="search-suggestions-section">
+                    <div class="search-suggestions-header">
+                        <i class="fas fa-history"></i>
+                        Recent Searches
+                    </div>
+                                        <button class="search-suggestion-item" onclick="performSearch('john.doe@example.com')">
+                        <span class="search-suggestion-text">john.doe@example.com</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                                        <button class="search-suggestion-item" onclick="performSearch('order #12345')">
+                        <span class="search-suggestion-text">order #12345</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                                        <button class="search-suggestion-item" onclick="performSearch('status:pending')">
+                        <span class="search-suggestion-text">status:pending</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                                        <button class="search-suggestion-item" onclick="performSearch('MacBook Pro')">
+                        <span class="search-suggestion-text">MacBook Pro</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                                        <button class="search-suggestion-item" onclick="performSearch('invoice date:thismonth')">
+                        <span class="search-suggestion-text">invoice date:thismonth</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                                    </div>
+                
+                <!-- Saved Searches -->
+                <div class="search-suggestions-section">
+                    <div class="search-suggestions-header">
+                        <i class="fas fa-star"></i>
+                        Saved Searches
+                    </div>
+                                        <button class="search-suggestion-item" onclick="performSearch('status:active type:user')">
+                        <i class="fas fa-users search-suggestion-icon"></i>
+                        <span class="search-suggestion-text">Active Users</span>
+                        <span class="search-suggestion-query">status:active type:user</span>
+                    </button>
+                                        <button class="search-suggestion-item" onclick="performSearch('status:pending type:order')">
+                        <i class="fas fa-shopping-cart search-suggestion-icon"></i>
+                        <span class="search-suggestion-text">Pending Orders</span>
+                        <span class="search-suggestion-query">status:pending type:order</span>
+                    </button>
+                                        <button class="search-suggestion-item" onclick="performSearch('priority:high')">
+                        <i class="fas fa-exclamation-triangle search-suggestion-icon"></i>
+                        <span class="search-suggestion-text">High Priority</span>
+                        <span class="search-suggestion-query">priority:high</span>
+                    </button>
+                                        <button class="search-suggestion-item" onclick="performSearch('date:last7days')">
+                        <i class="fas fa-clock search-suggestion-icon"></i>
+                        <span class="search-suggestion-text">Recent Activity</span>
+                        <span class="search-suggestion-query">date:last7days</span>
+                    </button>
+                                    </div>
+            </div>
+            
+            <!-- Clear button -->
+            <button class="search-clear hidden" onclick="clearSearch()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <!-- Filter Toggle -->
+        <button class="search-filter-toggle" onclick="toggleFilters()">
+            <i class="fas fa-filter"></i>
+            Filters
+            <span class="filter-count hidden">0</span>
+        </button>
+        
+        <!-- Search Button -->
+        <button class="button primary search-button" onclick="executeSearch()">
+            <i class="fas fa-search"></i>
+            Search
+        </button>
+    </div>
+    
+    <!-- Filter Panel -->
+    <div class="search-filters-panel hidden" id="filterPanel">
+        <div class="search-filters-content form">
+            <!-- Category Filter -->
+            <div class="search-filter-group">
+                <label class="search-filter-label">Category</label>
+                <select onchange="updateFilterCount()">
+                                        <option value="all categories">All Categories</option>
+                                        <option value="products">Products</option>
+                                        <option value="users">Users</option>
+                                        <option value="orders">Orders</option>
+                                        <option value="invoices">Invoices</option>
+                                        <option value="reports">Reports</option>
+                                    </select>
+            </div>
+            
+            <!-- Date Filter -->
+            <div class="search-filter-group">
+                <label class="search-filter-label">Date Range</label>
+                <select onchange="updateFilterCount()">
+                                        <option value="anytime">Any time</option>
+                                        <option value="today">Today</option>
+                                        <option value="yesterday">Yesterday</option>
+                                        <option value="last7days">Last 7 days</option>
+                                        <option value="last30days">Last 30 days</option>
+                                        <option value="thismonth">This month</option>
+                                        <option value="lastmonth">Last month</option>
+                                        <option value="customrange">Custom range</option>
+                                    </select>
+            </div>
+            
+            <!-- Status Filter -->
+            <div class="search-filter-group">
+                <label class="search-filter-label">Status</label>
+                <select onchange="updateFilterCount()">
+                                        <option value="all status">All Status</option>
+                                        <option value="active">Active</option>
+                                        <option value="inactive">Inactive</option>
+                                        <option value="pending">Pending</option>
+                                        <option value="completed">Completed</option>
+                                        <option value="cancelled">Cancelled</option>
+                                    </select>
+            </div>
+            
+            <!-- Advanced Options -->
+            <div class="search-filter-group">
+                <label class="search-filter-label">Options</label>
+                <div class="search-filter-checkboxes">
+                    <label class="search-checkbox">
+                        <input type="checkbox" onchange="updateFilterCount()">
+                        <span>Include archived</span>
+                    </label>
+                    <label class="search-checkbox">
+                        <input type="checkbox" onchange="updateFilterCount()">
+                        <span>Exact match</span>
+                    </label>
+                    <label class="search-checkbox">
+                        <input type="checkbox" checked onchange="updateFilterCount()">
+                        <span>Search in content</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="search-filters-actions">
+            <button class="button secondary small" onclick="resetFilters()">
+                <i class="fas fa-undo"></i>
+                Reset
+            </button>
+            <button class="button primary small" onclick="applyFilters()">
+                <i class="fas fa-check"></i>
+                Apply Filters
+            </button>
+        </div>
+    </div>
+    
+    <!-- Search Tags (Active Filters) -->
+    <div class="search-tags hidden" id="searchTags">
+        <span class="search-tags-label">Active filters:</span>
+        <div class="search-tags-list" id="searchTagsList">
+            <!-- Tags will be dynamically added here -->
+        </div>
+        <button class="search-tags-clear" onclick="clearAllFilters()">
+            Clear all
+        </button>
+    </div>
+</div>
+
+<!-- Alternative: Compact Search -->
+<div class="search-component-compact">
+    <h3>Compact Search Bar</h3>
+    <div class="search-bar-compact">
+        <div class="search-compact-input-group">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Quick search..." class="search-compact-input">
+            <kbd>⌘K</kbd>
+        </div>
+    </div>
+</div>
+
+<!-- Alternative: Search with Categories -->
+<div class="search-component-categories">
+    <h3>Search with Category Selector</h3>
+    <div class="search-bar-categories">
+        <select class="search-category-select" onchange="updateCategoryPlaceholder(this)">
+            <option value="all">All</option>
+            <option value="products">Products</option>
+            <option value="users">Users</option>
+            <option value="orders">Orders</option>
+        </select>
+        <div class="search-category-divider"></div>
+        <input type="text" placeholder="Search everywhere..." class="search-category-input" id="categorySearchInput">
+        <button class="search-category-button">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+</div>        </div>
+    </section>
+
+    <!-- Activity Feed -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Activity Feed</h2>
+            <p class="text-center">Timeline for activity logs, notifications, and updates with filtering and real-time features</p>
+            
+            
+<div class="activity-feed">
+    <!-- Activity Header -->
+    <div class="activity-header">
+        <h3 class="activity-title">Activity Feed</h3>
+        
+        <div class="activity-controls">
+            <!-- Filter Dropdown -->
+            <div class="dropdown">
+                <button class="button secondary small dropdown-toggle" onclick="toggleDropdown(this)">
+                    <i class="fas fa-filter"></i>
+                    All Activities
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <button class="dropdown-item active" onclick="filterActivities('all')">
+                        <i class="fas fa-list"></i>
+                        All Activities
+                    </button>
+                    <button class="dropdown-item" onclick="filterActivities('users')">
+                        <i class="fas fa-users"></i>
+                        User Activities
+                    </button>
+                    <button class="dropdown-item" onclick="filterActivities('orders')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Orders
+                    </button>
+                    <button class="dropdown-item" onclick="filterActivities('system')">
+                        <i class="fas fa-cog"></i>
+                        System Events
+                    </button>
+                    <button class="dropdown-item" onclick="filterActivities('security')">
+                        <i class="fas fa-shield-alt"></i>
+                        Security
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Refresh Button -->
+            <button class="button small" onclick="refreshActivityFeed()">
+                <i class="fas fa-sync"></i>
+                Refresh
+            </button>
+        </div>
+    </div>
+    
+    <!-- Activity Timeline -->
+    <div class="activity-timeline">
+                <!-- Date Separator -->
+        <div class="activity-date">
+            <span class="activity-date-label">January 15, 2024</span>
+        </div>
+        
+                <!-- Activity Item -->
+        <div class="activity-item" data-type="user_added">
+            <div class="activity-marker">
+                <div class="activity-icon activity-icon-success">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+            </div>
+            
+            <div class="activity-content">
+                <div class="activity-main">
+                    <h4 class="activity-item-title">New user registered</h4>
+                    <p class="activity-description">Sarah Johnson joined as Administrator</p>
+                    
+                                        
+                                        <div class="activity-details">
+                                                <div class="activity-detail-item">
+                            <span class="activity-detail-label">Email:</span>
+                            <span class="activity-detail-value">sarah.johnson@example.com</span>
+                        </div>
+                                                <div class="activity-detail-item">
+                            <span class="activity-detail-label">Role:</span>
+                            <span class="activity-detail-value">Administrator</span>
+                        </div>
+                                                <div class="activity-detail-item">
+                            <span class="activity-detail-label">Department:</span>
+                            <span class="activity-detail-value">Engineering</span>
+                        </div>
+                                            </div>
+                                        
+                                    </div>
+                
+                <div class="activity-meta">
+                    <div class="activity-user">
+                        <div class="activity-avatar">
+                            S                        </div>
+                        <span class="activity-username">System</span>
+                    </div>
+                    <span class="activity-time">
+                        <i class="fas fa-clock"></i>
+                        5 minutes ago                    </span>
+                </div>
+            </div>
+        </div>
+                <!-- Activity Item -->
+        <div class="activity-item" data-type="order_completed">
+            <div class="activity-marker">
+                <div class="activity-icon activity-icon-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            
+            <div class="activity-content">
+                <div class="activity-main">
+                    <h4 class="activity-item-title">Order completed</h4>
+                    <p class="activity-description">Order #12345 has been successfully delivered</p>
+                    
+                                        
+                                        <div class="activity-details">
+                                                <div class="activity-detail-item">
+                            <span class="activity-detail-label">Order ID:</span>
+                            <span class="activity-detail-value">#12345</span>
+                        </div>
+                                                <div class="activity-detail-item">
+                            <span class="activity-detail-label">Customer:</span>
+                            <span class="activity-detail-value">John Doe</span>
+                        </div>
+                                                <div class="activity-detail-item">
+                            <span class="activity-detail-label">Amount:</span>
+                            <span class="activity-detail-value">$1,234.56</span>
+                        </div>
+                                                <div class="activity-detail-item">
+                            <span class="activity-detail-label">Items:</span>
+                            <span class="activity-detail-value">3 items</span>
+                        </div>
+                                            </div>
+                                        
+                                    </div>
+                
+                <div class="activity-meta">
+                    <div class="activity-user">
+                        <div class="activity-avatar">
+                            MC                        </div>
+                        <span class="activity-username">Michael Chen</span>
+                    </div>
+                    <span class="activity-time">
+                        <i class="fas fa-clock"></i>
+                        2 hours ago                    </span>
+                </div>
+            </div>
+        </div>
+                <!-- Activity Item -->
+        <div class="activity-item" data-type="system_update">
+            <div class="activity-marker">
+                <div class="activity-icon activity-icon-warning">
+                    <i class="fas fa-sync"></i>
+                </div>
+            </div>
+            
+            <div class="activity-content">
+                <div class="activity-main">
+                    <h4 class="activity-item-title">System update</h4>
+                    <p class="activity-description">Database maintenance completed successfully</p>
+                    
+                                        
+                                        
+                                    </div>
+                
+                <div class="activity-meta">
+                    <div class="activity-user">
+                        <div class="activity-avatar">
+                            S                        </div>
+                        <span class="activity-username">System</span>
+                    </div>
+                    <span class="activity-time">
+                        <i class="fas fa-clock"></i>
+                        3 hours ago                    </span>
+                </div>
+            </div>
+        </div>
+                <!-- Activity Item -->
+        <div class="activity-item" data-type="comment_added">
+            <div class="activity-marker">
+                <div class="activity-icon activity-icon-info">
+                    <i class="fas fa-comment"></i>
+                </div>
+            </div>
+            
+            <div class="activity-content">
+                <div class="activity-main">
+                    <h4 class="activity-item-title">New comment</h4>
+                    <p class="activity-description">Emily Davis commented on &quot;Q4 Sales Report&quot;</p>
+                    
+                                        <div class="activity-comment">
+                        <i class="fas fa-quote-left"></i>
+                        Great work on the sales figures! The growth in the enterprise segment is particularly impressive.                    </div>
+                                        
+                                        
+                                    </div>
+                
+                <div class="activity-meta">
+                    <div class="activity-user">
+                        <div class="activity-avatar">
+                            ED                        </div>
+                        <span class="activity-username">Emily Davis</span>
+                    </div>
+                    <span class="activity-time">
+                        <i class="fas fa-clock"></i>
+                        5 hours ago                    </span>
+                </div>
+            </div>
+        </div>
+                        <!-- Date Separator -->
+        <div class="activity-date">
+            <span class="activity-date-label">January 14, 2024</span>
+        </div>
+        
+                <!-- Activity Item -->
+        <div class="activity-item" data-type="file_uploaded">
+            <div class="activity-marker">
+                <div class="activity-icon activity-icon-secondary">
+                    <i class="fas fa-file-upload"></i>
+                </div>
+            </div>
+            
+            <div class="activity-content">
+                <div class="activity-main">
+                    <h4 class="activity-item-title">File uploaded</h4>
+                    <p class="activity-description">Q4 Financial Report.pdf uploaded to Documents</p>
+                    
+                                        
+                                        
+                                        <div class="activity-file">
+                        <i class="fas fa-file-pdf"></i>
+                        <div class="activity-file-info">
+                            <div class="activity-file-name">Q4 Financial Report.pdf</div>
+                            <div class="activity-file-meta">PDF • 2.4 MB</div>
+                        </div>
+                        <button class="button small">
+                            <i class="fas fa-download"></i>
+                            Download
+                        </button>
+                    </div>
+                                    </div>
+                
+                <div class="activity-meta">
+                    <div class="activity-user">
+                        <div class="activity-avatar">
+                            JW                        </div>
+                        <span class="activity-username">James Wilson</span>
+                    </div>
+                    <span class="activity-time">
+                        <i class="fas fa-clock"></i>
+                        Yesterday                    </span>
+                </div>
+            </div>
+        </div>
+                        <!-- Date Separator -->
+        <div class="activity-date">
+            <span class="activity-date-label">January 13, 2024</span>
+        </div>
+        
+                <!-- Activity Item -->
+        <div class="activity-item" data-type="security_alert">
+            <div class="activity-marker">
+                <div class="activity-icon activity-icon-danger">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+            </div>
+            
+            <div class="activity-content">
+                <div class="activity-main">
+                    <h4 class="activity-item-title">Security alert</h4>
+                    <p class="activity-description">Failed login attempts detected from unknown IP</p>
+                    
+                                        
+                                        <div class="activity-details">
+                                                <div class="activity-detail-item">
+                            <span class="activity-detail-label">IP Address:</span>
+                            <span class="activity-detail-value">192.168.1.100</span>
+                        </div>
+                                                <div class="activity-detail-item">
+                            <span class="activity-detail-label">Attempts:</span>
+                            <span class="activity-detail-value">5 failed attempts</span>
+                        </div>
+                                                <div class="activity-detail-item">
+                            <span class="activity-detail-label">Action:</span>
+                            <span class="activity-detail-value">IP temporarily blocked</span>
+                        </div>
+                                            </div>
+                                        
+                                    </div>
+                
+                <div class="activity-meta">
+                    <div class="activity-user">
+                        <div class="activity-avatar">
+                            SS                        </div>
+                        <span class="activity-username">Security System</span>
+                    </div>
+                    <span class="activity-time">
+                        <i class="fas fa-clock"></i>
+                        2 days ago                    </span>
+                </div>
+            </div>
+        </div>
+                        
+        <!-- Load More -->
+        <div class="activity-load-more">
+            <button class="button secondary" onclick="loadMoreActivities()">
+                <i class="fas fa-plus"></i>
+                Load More Activities
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Alternative: Compact Activity List -->
+<div class="activity-compact">
+    <h3>Compact Activity List</h3>
+    
+    <div class="activity-list">
+                <div class="activity-list-item">
+            <div class="activity-list-icon activity-icon-danger">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            
+            <div class="activity-list-content">
+                <div class="activity-list-text">
+                    <strong>Security System</strong>
+                    Failed login attempts detected from unknown IP                </div>
+                <div class="activity-list-time">2 days ago</div>
+            </div>
+        </div>
+            </div>
+    
+    <a href="#" class="activity-view-all">View all activities →</a>
+</div>        </div>
+    </section>
+
+    <!-- File Manager -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">File Manager</h2>
+            <p class="text-center">Drag-and-drop file uploads with progress tracking, file management, and preview functionality</p>
+            
+            
+<div class="file-manager">
+    <!-- File Manager Header -->
+    <div class="file-manager-header">
+        <div class="file-manager-title">
+            <h3>File Manager</h3>
+            <span class="file-count">5 files</span>
+        </div>
+        
+        <div class="file-manager-actions">
+            <!-- View Toggle -->
+            <div class="file-view-toggle">
+                <button class="file-view-btn active" data-view="grid" onclick="setFileView('grid')" title="Grid View">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="file-view-btn" data-view="list" onclick="setFileView('list')" title="List View">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+            
+            <!-- Sort Dropdown -->
+            <div class="dropdown">
+                <button class="button secondary small dropdown-toggle" onclick="toggleDropdown(this)">
+                    <i class="fas fa-sort"></i>
+                    Sort by Name
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <button class="dropdown-item active" onclick="sortFiles('name')">
+                        <i class="fas fa-sort-alpha-down"></i>
+                        Name
+                    </button>
+                    <button class="dropdown-item" onclick="sortFiles('date')">
+                        <i class="fas fa-sort-numeric-down"></i>
+                        Date Modified
+                    </button>
+                    <button class="dropdown-item" onclick="sortFiles('size')">
+                        <i class="fas fa-sort-amount-down"></i>
+                        File Size
+                    </button>
+                    <button class="dropdown-item" onclick="sortFiles('type')">
+                        <i class="fas fa-sort"></i>
+                        File Type
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Upload Button -->
+            <button class="button primary" onclick="openFileUpload()">
+                <i class="fas fa-upload"></i>
+                Upload Files
+            </button>
+        </div>
+    </div>
+    
+    <!-- Upload Area -->
+    <div class="file-upload-area" id="uploadArea">
+        <div class="file-upload-content">
+            <i class="fas fa-cloud-upload-alt file-upload-icon"></i>
+            <h4>Drop files here to upload</h4>
+            <p>or <button class="file-upload-browse" onclick="triggerFileInput()">browse files</button></p>
+            <div class="file-upload-info">
+                <small>Supports: PDF, DOC, XLS, PPT, Images (max 10MB each)</small>
+            </div>
+        </div>
+        <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png,.gif" class="hidden">
+    </div>
+    
+    <!-- Upload Progress -->
+    <div class="file-upload-progress hidden" id="uploadProgress">
+        <h4>Uploading Files...</h4>
+        <div class="upload-items" id="uploadItems">
+            <!-- Upload items will be added here dynamically -->
+        </div>
+    </div>
+    
+    <!-- File Grid/List -->
+    <div class="file-container" id="fileContainer">
+        <div class="file-grid" id="fileGrid">
+                        <div class="file-item" data-name="project proposal.pdf" data-date="2024-01-15 14:30:00" data-size="2.4 MB" data-type="pdf">
+                <div class="file-preview">
+                                        <div class="file-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                                        
+                    <!-- File Actions Overlay -->
+                    <div class="file-actions">
+                        <button class="file-action-btn" onclick="previewFile(1)" title="Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="file-action-btn" onclick="downloadFile(1)" title="Download">
+                            <i class="fas fa-download"></i>
+                        </button>
+                        <button class="file-action-btn file-action-danger" onclick="deleteFile(1)" title="Delete">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="file-info">
+                    <div class="file-name" title="Project Proposal.pdf">
+                        Project Proposal.pdf                    </div>
+                    <div class="file-meta">
+                        <span class="file-size">2.4 MB</span>
+                        <span class="file-date">Jan 15, 2024</span>
+                    </div>
+                    <div class="file-author">
+                        by Sarah Johnson                    </div>
+                </div>
+            </div>
+                        <div class="file-item" data-name="logo design.png" data-date="2024-01-15 12:45:00" data-size="156 KB" data-type="image">
+                <div class="file-preview">
+                                        <img src="https://raw.githubusercontent.com/tomvon/cleanframework/master/img/samples/pexels-earano-1330219.jpg" alt="Logo Design.png" class="file-thumbnail">
+                                        
+                    <!-- File Actions Overlay -->
+                    <div class="file-actions">
+                        <button class="file-action-btn" onclick="previewFile(2)" title="Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="file-action-btn" onclick="downloadFile(2)" title="Download">
+                            <i class="fas fa-download"></i>
+                        </button>
+                        <button class="file-action-btn file-action-danger" onclick="deleteFile(2)" title="Delete">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="file-info">
+                    <div class="file-name" title="Logo Design.png">
+                        Logo Design.png                    </div>
+                    <div class="file-meta">
+                        <span class="file-size">156 KB</span>
+                        <span class="file-date">Jan 15, 2024</span>
+                    </div>
+                    <div class="file-author">
+                        by Michael Chen                    </div>
+                </div>
+            </div>
+                        <div class="file-item" data-name="spreadsheet data.xlsx" data-date="2024-01-14 16:20:00" data-size="892 KB" data-type="excel">
+                <div class="file-preview">
+                                        <div class="file-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                                        
+                    <!-- File Actions Overlay -->
+                    <div class="file-actions">
+                        <button class="file-action-btn" onclick="previewFile(3)" title="Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="file-action-btn" onclick="downloadFile(3)" title="Download">
+                            <i class="fas fa-download"></i>
+                        </button>
+                        <button class="file-action-btn file-action-danger" onclick="deleteFile(3)" title="Delete">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="file-info">
+                    <div class="file-name" title="Spreadsheet Data.xlsx">
+                        Spreadsheet Data.xlsx                    </div>
+                    <div class="file-meta">
+                        <span class="file-size">892 KB</span>
+                        <span class="file-date">Jan 14, 2024</span>
+                    </div>
+                    <div class="file-author">
+                        by Emily Davis                    </div>
+                </div>
+            </div>
+                        <div class="file-item" data-name="meeting notes.docx" data-date="2024-01-14 09:15:00" data-size="45 KB" data-type="word">
+                <div class="file-preview">
+                                        <div class="file-icon">
+                        <i class="fas fa-file-word"></i>
+                    </div>
+                                        
+                    <!-- File Actions Overlay -->
+                    <div class="file-actions">
+                        <button class="file-action-btn" onclick="previewFile(4)" title="Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="file-action-btn" onclick="downloadFile(4)" title="Download">
+                            <i class="fas fa-download"></i>
+                        </button>
+                        <button class="file-action-btn file-action-danger" onclick="deleteFile(4)" title="Delete">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="file-info">
+                    <div class="file-name" title="Meeting Notes.docx">
+                        Meeting Notes.docx                    </div>
+                    <div class="file-meta">
+                        <span class="file-size">45 KB</span>
+                        <span class="file-date">Jan 14, 2024</span>
+                    </div>
+                    <div class="file-author">
+                        by James Wilson                    </div>
+                </div>
+            </div>
+                        <div class="file-item" data-name="presentation.pptx" data-date="2024-01-13 13:40:00" data-size="5.2 MB" data-type="powerpoint">
+                <div class="file-preview">
+                                        <div class="file-icon">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                                        
+                    <!-- File Actions Overlay -->
+                    <div class="file-actions">
+                        <button class="file-action-btn" onclick="previewFile(5)" title="Preview">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="file-action-btn" onclick="downloadFile(5)" title="Download">
+                            <i class="fas fa-download"></i>
+                        </button>
+                        <button class="file-action-btn file-action-danger" onclick="deleteFile(5)" title="Delete">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="file-info">
+                    <div class="file-name" title="Presentation.pptx">
+                        Presentation.pptx                    </div>
+                    <div class="file-meta">
+                        <span class="file-size">5.2 MB</span>
+                        <span class="file-date">Jan 13, 2024</span>
+                    </div>
+                    <div class="file-author">
+                        by Maria Garcia                    </div>
+                </div>
+            </div>
+                    </div>
+        
+        <!-- List View (Hidden by default) -->
+        <div class="file-list hidden" id="fileList">
+            <div class="file-list-header">
+                <div class="file-list-col file-list-name">Name</div>
+                <div class="file-list-col file-list-size">Size</div>
+                <div class="file-list-col file-list-modified">Modified</div>
+                <div class="file-list-col file-list-actions">Actions</div>
+            </div>
+            
+                        <div class="file-list-item" data-name="project proposal.pdf" data-date="2024-01-15 14:30:00" data-size="2.4 MB" data-type="pdf">
+                <div class="file-list-col file-list-name">
+                    <div class="file-list-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="file-list-info">
+                        <div class="file-list-filename">Project Proposal.pdf</div>
+                        <div class="file-list-author">by Sarah Johnson</div>
+                    </div>
+                </div>
+                <div class="file-list-col file-list-size">2.4 MB</div>
+                <div class="file-list-col file-list-modified">Jan 15, 2024 2:30 PM</div>
+                <div class="file-list-col file-list-actions">
+                    <button class="file-list-action" onclick="previewFile(1)" title="Preview">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="file-list-action" onclick="downloadFile(1)" title="Download">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="file-list-action file-action-danger" onclick="deleteFile(1)" title="Delete">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+                        <div class="file-list-item" data-name="logo design.png" data-date="2024-01-15 12:45:00" data-size="156 KB" data-type="image">
+                <div class="file-list-col file-list-name">
+                    <div class="file-list-icon">
+                        <i class="fas fa-file-image"></i>
+                    </div>
+                    <div class="file-list-info">
+                        <div class="file-list-filename">Logo Design.png</div>
+                        <div class="file-list-author">by Michael Chen</div>
+                    </div>
+                </div>
+                <div class="file-list-col file-list-size">156 KB</div>
+                <div class="file-list-col file-list-modified">Jan 15, 2024 12:45 PM</div>
+                <div class="file-list-col file-list-actions">
+                    <button class="file-list-action" onclick="previewFile(2)" title="Preview">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="file-list-action" onclick="downloadFile(2)" title="Download">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="file-list-action file-action-danger" onclick="deleteFile(2)" title="Delete">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+                        <div class="file-list-item" data-name="spreadsheet data.xlsx" data-date="2024-01-14 16:20:00" data-size="892 KB" data-type="excel">
+                <div class="file-list-col file-list-name">
+                    <div class="file-list-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <div class="file-list-info">
+                        <div class="file-list-filename">Spreadsheet Data.xlsx</div>
+                        <div class="file-list-author">by Emily Davis</div>
+                    </div>
+                </div>
+                <div class="file-list-col file-list-size">892 KB</div>
+                <div class="file-list-col file-list-modified">Jan 14, 2024 4:20 PM</div>
+                <div class="file-list-col file-list-actions">
+                    <button class="file-list-action" onclick="previewFile(3)" title="Preview">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="file-list-action" onclick="downloadFile(3)" title="Download">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="file-list-action file-action-danger" onclick="deleteFile(3)" title="Delete">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+                        <div class="file-list-item" data-name="meeting notes.docx" data-date="2024-01-14 09:15:00" data-size="45 KB" data-type="word">
+                <div class="file-list-col file-list-name">
+                    <div class="file-list-icon">
+                        <i class="fas fa-file-word"></i>
+                    </div>
+                    <div class="file-list-info">
+                        <div class="file-list-filename">Meeting Notes.docx</div>
+                        <div class="file-list-author">by James Wilson</div>
+                    </div>
+                </div>
+                <div class="file-list-col file-list-size">45 KB</div>
+                <div class="file-list-col file-list-modified">Jan 14, 2024 9:15 AM</div>
+                <div class="file-list-col file-list-actions">
+                    <button class="file-list-action" onclick="previewFile(4)" title="Preview">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="file-list-action" onclick="downloadFile(4)" title="Download">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="file-list-action file-action-danger" onclick="deleteFile(4)" title="Delete">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+                        <div class="file-list-item" data-name="presentation.pptx" data-date="2024-01-13 13:40:00" data-size="5.2 MB" data-type="powerpoint">
+                <div class="file-list-col file-list-name">
+                    <div class="file-list-icon">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <div class="file-list-info">
+                        <div class="file-list-filename">Presentation.pptx</div>
+                        <div class="file-list-author">by Maria Garcia</div>
+                    </div>
+                </div>
+                <div class="file-list-col file-list-size">5.2 MB</div>
+                <div class="file-list-col file-list-modified">Jan 13, 2024 1:40 PM</div>
+                <div class="file-list-col file-list-actions">
+                    <button class="file-list-action" onclick="previewFile(5)" title="Preview">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="file-list-action" onclick="downloadFile(5)" title="Download">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="file-list-action file-action-danger" onclick="deleteFile(5)" title="Delete">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+                    </div>
+    </div>
+    
+    <!-- Empty State -->
+    <div class="file-empty hidden" id="fileEmpty">
+        <i class="fas fa-folder-open file-empty-icon"></i>
+        <h4>No files uploaded yet</h4>
+        <p>Drag and drop files here or click the upload button to get started</p>
+        <button class="button primary" onclick="triggerFileInput()">
+            <i class="fas fa-upload"></i>
+            Upload Your First File
+        </button>
+    </div>
+</div>
+
+<!-- File Preview Modal -->
+<div class="file-preview-modal hidden" id="filePreviewModal">
+    <div class="file-preview-backdrop" onclick="closeFilePreview()"></div>
+    <div class="file-preview-content">
+        <div class="file-preview-header">
+            <h4 id="previewFileName">File Preview</h4>
+            <button class="file-preview-close" onclick="closeFilePreview()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="file-preview-body" id="filePreviewBody">
+            <!-- Preview content will be loaded here -->
+        </div>
+        <div class="file-preview-footer">
+            <button class="button secondary" onclick="closeFilePreview()">Close</button>
+            <button class="button primary" onclick="downloadCurrentFile()">
+                <i class="fas fa-download"></i>
+                Download
+            </button>
+        </div>
+    </div>
+</div>        </div>
     </section>
 
     </div> <!-- End main-content -->
@@ -808,12 +2156,16 @@
     </footer>
 
     <!-- Component JavaScript files -->
-    <script src="../components/navigation/navigation.js?20250813141934"></script>
-    <script src="../components/sidebar/sidebar.js?20250813141934"></script>
-    <script src="../components/dashboard/dashboard.js?20250813141934"></script>
+    <script src="../components/navigation/navigation.js?20250814021521"></script>
+    <script src="../components/sidebar/sidebar.js?20250814021521"></script>
+    <script src="../components/dashboard/dashboard.js?20250814021521"></script>
+    <script src="../components/datagrid/datagrid.js?20250814021521"></script>
+    <script src="../components/search/search.js?20250814021521"></script>
+    <script src="../components/activity/activity.js?20250814021521"></script>
+    <script src="../components/filemanager/filemanager.js?20250814021521"></script>
     
     <!-- Main JavaScript -->
-    <script src="../main.js?20250813141934"></script>
+    <script src="../main.js?20250814021521"></script>
     
 </body>
 </html>

@@ -31,3 +31,39 @@
 @use 'components/stats/stats';
 @use 'components/sidebar/sidebar';
 @use 'components/dashboard/dashboard';
+@use 'components/datagrid/datagrid';
+@use 'components/search/search';
+@use 'components/activity/activity';
+@use 'components/filemanager/filemanager';
+
+// Utility classes
+.hidden {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.show-flex {
+    display: flex !important;
+}
+
+.show-grid {
+    display: grid !important;
+}
+
+.show-inline {
+    display: inline !important;
+}
+
+.show-inline-block {
+    display: inline-block !important;
+}
+
+// Specific component utility classes
+.datagrid-expand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}

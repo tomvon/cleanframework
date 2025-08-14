@@ -155,8 +155,8 @@ function createFeatureRow(featureData, showDetails = true, reverse = false) {
 // Animate features on scroll
 function animateFeatures() {
     // Add CSS for animations
-    const style = document.createElement('style');
-    style.textContent = `
+    const featuresStyle = document.createElement('style');
+    featuresStyle.textContent = `
         .feature-item, .feature-card, .feature-row {
             opacity: 0;
             transform: translateY(30px);
@@ -172,7 +172,7 @@ function animateFeatures() {
             transform: translateY(-2px);
         }
     `;
-    document.head.appendChild(style);
+    document.head.appendChild(featuresStyle);
 }
 
 // Get feature data from DOM

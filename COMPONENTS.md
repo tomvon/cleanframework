@@ -933,10 +933,331 @@ Complete admin interface structure.
 </body>
 ```
 
-**More Admin Components Coming Soon:**
-- Data Grid with sorting and filtering
-- Search bars with autocomplete
-- Activity feeds and timelines
-- File upload managers
-- User avatars and profiles
-- Status indicators
+### Data Grid
+
+Advanced data table with sorting, filtering, search, and inline editing capabilities.
+
+```html
+<div class="datagrid">
+  <div class="datagrid-header">
+    <div class="datagrid-header-content">
+      <h3 class="datagrid-title">User Management</h3>
+      <div class="datagrid-actions">
+        <div class="datagrid-search">
+          <input type="text" placeholder="Search users..." class="datagrid-search-input">
+          <i class="fas fa-search datagrid-search-icon"></i>
+        </div>
+        <button class="button secondary small">
+          <i class="fas fa-download"></i>
+          Export
+        </button>
+        <button class="button primary small">
+          <i class="fas fa-plus"></i>
+          Add User
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="datagrid-container">
+    <table class="datagrid-table">
+      <thead>
+        <tr>
+          <th class="datagrid-header-cell">
+            <input type="checkbox" id="selectAll" class="row-select-all">
+          </th>
+          <th class="datagrid-header-cell sortable" data-sort="name">
+            Name
+            <i class="fas fa-sort datagrid-sort-icon"></i>
+          </th>
+          <th class="datagrid-header-cell sortable" data-sort="email">
+            Email
+            <i class="fas fa-sort datagrid-sort-icon"></i>
+          </th>
+          <th class="datagrid-header-cell">Role</th>
+          <th class="datagrid-header-cell">Status</th>
+          <th class="datagrid-header-cell">Last Login</th>
+          <th class="datagrid-header-cell">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="datagrid-row">
+          <td><input type="checkbox" class="row-select"></td>
+          <td class="datagrid-cell-name">
+            <div class="datagrid-user">
+              <div class="datagrid-avatar">JS</div>
+              <span class="datagrid-user-name">John Smith</span>
+            </div>
+          </td>
+          <td>john.smith@example.com</td>
+          <td><span class="badge primary">Admin</span></td>
+          <td><span class="badge success">Active</span></td>
+          <td>2024-01-15 14:30</td>
+          <td>
+            <div class="datagrid-actions-cell">
+              <button class="datagrid-action" title="Edit">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="datagrid-action datagrid-action-danger" title="Delete">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="datagrid-footer">
+    <div class="datagrid-footer-content">
+      <div class="datagrid-info">
+        Showing 1-10 of 25 entries
+        <span class="datagrid-selected-count hidden">
+          · <strong>0</strong> selected
+        </span>
+      </div>
+      <div class="datagrid-pagination">
+        <button class="datagrid-page-btn" disabled>Previous</button>
+        <div class="datagrid-page-numbers">
+          <button class="datagrid-page-number active">1</button>
+          <button class="datagrid-page-number">2</button>
+          <button class="datagrid-page-number">3</button>
+        </div>
+        <button class="datagrid-page-btn">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+**Features:**
+- **Advanced sorting** - Click column headers to sort ascending/descending
+- **Real-time search** - Filter rows as you type
+- **Bulk selection** - Select all or individual rows with checkboxes
+- **Expandable rows** - Double-click rows to reveal additional details
+- **Inline editing** - Edit cells directly in the table
+- **Pagination** - Navigate through large datasets
+- **Responsive design** - Mobile-friendly with horizontal scrolling
+
+### Search & Filters
+
+Powerful search component with autocomplete, advanced filters, and saved searches.
+
+```html
+<div class="search-component">
+  <div class="search-bar-advanced">
+    <div class="search-input-group">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" 
+             class="search-input" 
+             placeholder="Search anything... Try 'status:active' or 'type:user'"
+             id="advancedSearchInput"
+             autocomplete="off">
+      
+      <!-- Search Suggestions -->
+      <div class="search-suggestions hidden" id="searchSuggestions">
+        <div class="search-suggestions-section">
+          <div class="search-suggestions-header">
+            <i class="fas fa-history"></i>
+            Recent Searches
+          </div>
+          <button class="search-suggestion-item">
+            <span class="search-suggestion-text">john.doe@example.com</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      
+      <button class="search-clear hidden">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <button class="search-filter-toggle">
+      <i class="fas fa-filter"></i>
+      Filters
+      <span class="filter-count hidden">0</span>
+    </button>
+    
+    <button class="button primary search-button">
+      <i class="fas fa-search"></i>
+      Search
+    </button>
+  </div>
+  
+  <!-- Filter Panel -->
+  <div class="search-filters-panel hidden" id="filterPanel">
+    <div class="search-filters-content form">
+      <div class="search-filter-group">
+        <label class="search-filter-label">Category</label>
+        <select>
+          <option>All Categories</option>
+          <option>Products</option>
+          <option>Users</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+**Features:**
+- **Smart autocomplete** - Recent searches and saved queries
+- **Advanced filtering** - Category, date, status, and custom filters
+- **Search syntax** - Support for field:value query syntax
+- **Filter tags** - Visual representation of active filters
+- **Saved searches** - Quick access to common search patterns
+- **Keyboard shortcuts** - Cmd/Ctrl+K for quick search focus
+
+### Activity Feed
+
+Timeline component for displaying user activities, system events, and notifications.
+
+```html
+<div class="activity-feed">
+  <div class="activity-header">
+    <h3 class="activity-title">Recent Activity</h3>
+    <div class="activity-actions">
+      <button class="activity-filter dropdown-toggle">
+        <i class="fas fa-filter"></i>
+        All Activities
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <button class="activity-refresh" onclick="refreshActivityFeed()">
+        <i class="fas fa-sync-alt"></i>
+      </button>
+    </div>
+  </div>
+  
+  <div class="activity-timeline">
+    <div class="activity-date">
+      <span class="activity-date-label">Today</span>
+    </div>
+    
+    <div class="activity-item" data-type="user_login">
+      <div class="activity-marker">
+        <div class="activity-icon activity-icon-success">
+          <i class="fas fa-sign-in-alt"></i>
+        </div>
+      </div>
+      
+      <div class="activity-content">
+        <div class="activity-main">
+          <h4 class="activity-item-title">User logged in</h4>
+          <p class="activity-description">John Smith signed in from Chrome on macOS</p>
+        </div>
+        
+        <div class="activity-meta">
+          <div class="activity-user">
+            <div class="activity-avatar">JS</div>
+            <span class="activity-username">John Smith</span>
+          </div>
+          <span class="activity-time">
+            <i class="fas fa-clock"></i>
+            2 minutes ago
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="activity-load-more">
+    <button class="button secondary" onclick="loadMoreActivities()">
+      <i class="fas fa-plus"></i>
+      Load More Activities
+    </button>
+  </div>
+</div>
+```
+
+**Features:**
+- **Timeline layout** - Chronological display with date separators
+- **Activity filtering** - Filter by type, user, or date range
+- **Real-time updates** - Live badge notifications for new activities
+- **Load more** - Progressive loading for large activity lists
+- **Rich content** - Support for various activity types with custom icons
+- **User attribution** - Clear identification of who performed each action
+
+### File Manager
+
+Drag-and-drop file upload with progress tracking and file management interface.
+
+```html
+<div class="file-manager">
+  <div class="file-manager-header">
+    <div class="file-manager-title">
+      <h3>File Manager</h3>
+      <span class="file-count">5 files</span>
+    </div>
+    
+    <div class="file-manager-actions">
+      <div class="file-view-toggle">
+        <button class="file-view-btn active" data-view="grid">
+          <i class="fas fa-th"></i>
+        </button>
+        <button class="file-view-btn" data-view="list">
+          <i class="fas fa-list"></i>
+        </button>
+      </div>
+      
+      <button class="button primary">
+        <i class="fas fa-upload"></i>
+        Upload Files
+      </button>
+    </div>
+  </div>
+  
+  <!-- Upload Area -->
+  <div class="file-upload-area" id="uploadArea">
+    <div class="file-upload-content">
+      <i class="fas fa-cloud-upload-alt file-upload-icon"></i>
+      <h4>Drop files here to upload</h4>
+      <p>or <button class="file-upload-browse">browse files</button></p>
+      <div class="file-upload-info">
+        <small>Supports: PDF, DOC, XLS, PPT, Images (max 10MB each)</small>
+      </div>
+    </div>
+    <input type="file" id="fileInput" multiple class="hidden">
+  </div>
+  
+  <!-- File Grid -->
+  <div class="file-grid" id="fileGrid">
+    <div class="file-item">
+      <div class="file-preview">
+        <div class="file-icon">
+          <i class="fas fa-file-pdf"></i>
+        </div>
+        <div class="file-actions">
+          <button class="file-action-btn" title="Preview">
+            <i class="fas fa-eye"></i>
+          </button>
+          <button class="file-action-btn" title="Download">
+            <i class="fas fa-download"></i>
+          </button>
+          <button class="file-action-btn file-action-danger" title="Delete">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="file-info">
+        <div class="file-name">Project Proposal.pdf</div>
+        <div class="file-meta">
+          <span class="file-size">2.4 MB</span>
+          <span class="file-date">Jan 15, 2024</span>
+        </div>
+        <div class="file-author">by Sarah Johnson</div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+**Features:**
+- **Drag & drop upload** - Intuitive file dropping with visual feedback
+- **Progress tracking** - Real-time upload progress with cancel option
+- **Grid/List views** - Toggle between visual grid and detailed list
+- **File previews** - Image thumbnails and file type icons
+- **Sorting options** - Sort by name, date, size, or type
+- **File actions** - Preview, download, and delete operations
+- **File validation** - Type and size restrictions with user feedback

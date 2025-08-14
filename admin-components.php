@@ -433,65 +433,43 @@ include 'components/dashboard/dashboard.php';
         </div>
     </section>
 
-    <!-- Coming Soon Components -->
+    <!-- Data Grid -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">More Admin Components Coming Soon</h2>
-            <p class="text-center">We're actively developing additional components for admin interfaces</p>
+            <h2 class="text-center">Data Grid</h2>
+            <p class="text-center">Advanced data table with sorting, filtering, bulk actions, and inline editing</p>
             
-            <div class="features-cards">
-                <div class="feature-card">
-                    <div class="feature-card-header">
-                        <div class="feature-icon">
-                            <i class="fas fa-table" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">Data Grid</h3>
-                    </div>
-                    <div class="feature-card-content">
-                        <p class="feature-description">Advanced data table with sorting, filtering, bulk actions, and inline editing</p>
-                        <span class="badge badge-primary">In Development</span>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-card-header">
-                        <div class="feature-icon">
-                            <i class="fas fa-search" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">Search & Filters</h3>
-                    </div>
-                    <div class="feature-card-content">
-                        <p class="feature-description">Advanced search bars with autocomplete, filters, and saved searches</p>
-                        <span class="badge badge-warning">Coming Soon</span>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-card-header">
-                        <div class="feature-icon">
-                            <i class="fas fa-stream" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">Activity Feed</h3>
-                    </div>
-                    <div class="feature-card-content">
-                        <p class="feature-description">Timeline components for activity logs, notifications, and updates</p>
-                        <span class="badge badge-warning">Coming Soon</span>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-card-header">
-                        <div class="feature-icon">
-                            <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="feature-title">File Manager</h3>
-                    </div>
-                    <div class="feature-card-content">
-                        <p class="feature-description">Drag-and-drop file uploads with progress tracking and management</p>
-                        <span class="badge badge-warning">Coming Soon</span>
-                    </div>
-                </div>
-            </div>
+            <?php include 'components/datagrid/datagrid.php'; ?>
+        </div>
+    </section>
+
+    <!-- Search & Filters -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Search & Filters</h2>
+            <p class="text-center">Advanced search with autocomplete, filters, saved searches, and multiple variants</p>
+            
+            <?php include 'components/search/search.php'; ?>
+        </div>
+    </section>
+
+    <!-- Activity Feed -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Activity Feed</h2>
+            <p class="text-center">Timeline for activity logs, notifications, and updates with filtering and real-time features</p>
+            
+            <?php include 'components/activity/activity.php'; ?>
+        </div>
+    </section>
+
+    <!-- File Manager -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">File Manager</h2>
+            <p class="text-center">Drag-and-drop file uploads with progress tracking, file management, and preview functionality</p>
+            
+            <?php include 'components/filemanager/filemanager.php'; ?>
         </div>
     </section>
 
@@ -507,6 +485,10 @@ include 'components/dashboard/dashboard.php';
     <script src="components/navigation/navigation.js"></script>
     <script src="components/sidebar/sidebar.js"></script>
     <script src="components/dashboard/dashboard.js"></script>
+    <script src="components/datagrid/datagrid.js"></script>
+    <script src="components/search/search.js"></script>
+    <script src="components/activity/activity.js"></script>
+    <script src="components/filemanager/filemanager.js"></script>
     
     <!-- Main JavaScript -->
     <script src="main.js"></script>

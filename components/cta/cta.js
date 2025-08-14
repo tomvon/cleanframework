@@ -130,8 +130,8 @@ function initCTAAnimations() {
 
 // Add animation styles
 function addCTAAnimationStyles() {
-    const style = document.createElement('style');
-    style.textContent = `
+    const ctaStyle = document.createElement('style');
+    ctaStyle.textContent = `
         .cta-section {
             opacity: 0;
             transform: translateY(30px);
@@ -178,7 +178,7 @@ function addCTAAnimationStyles() {
             }
         }
     `;
-    document.head.appendChild(style);
+    document.head.appendChild(ctaStyle);
 }
 
 // Show CTA message

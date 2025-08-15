@@ -17,6 +17,58 @@ $nav_items = [
     ['url' => 'components-showcase.php', 'label' => 'All Components', 'active' => true]
 ];
 
+// Sidebar configuration for admin components demo
+$sidebar_config = [
+    'brand' => [
+        'name' => 'Component Demo',
+        'icon' => 'fas fa-cube',
+        'url' => '#'
+    ],
+    'user' => [
+        'name' => 'Demo User',
+        'role' => 'Admin',
+        'avatar' => null,
+        'url' => '#'
+    ],
+    'sections' => [
+        [
+            'title' => 'Components',
+            'items' => [
+                [
+                    'label' => 'Forms',
+                    'icon' => 'fas fa-edit',
+                    'url' => '#forms',
+                    'active' => false
+                ],
+                [
+                    'label' => 'UI Components',
+                    'icon' => 'fas fa-layer-group',
+                    'url' => '#ui-components',
+                    'active' => false
+                ],
+                [
+                    'label' => 'Layout',
+                    'icon' => 'fas fa-th-large',
+                    'url' => '#layout',
+                    'active' => false
+                ],
+                [
+                    'label' => 'Marketing',
+                    'icon' => 'fas fa-rocket',
+                    'url' => '#marketing',
+                    'active' => false
+                ],
+                [
+                    'label' => 'Admin',
+                    'icon' => 'fas fa-cog',
+                    'url' => '#admin',
+                    'active' => false
+                ]
+            ]
+        ]
+    ]
+];
+
 $hero_title = 'Clean Framework';
 $hero_subtitle = 'Semantic HTML. Component CSS. No utility pollution.';
 $hero_buttons = [
@@ -449,46 +501,49 @@ $form_steps = [
         })();
     </script>
 </head>
-<body>
+<body class="has-sidebar">
     <?php include 'components/header/header.php'; ?>
+    
+    <!-- Sidebar -->
+    <?php 
+    $sidebar = $sidebar_config;
+    include 'components/sidebar/sidebar.php'; 
+    ?>
+    
+    <!-- Main Content -->
+    <div class="main-content">
 
     <?php include 'components/hero/hero.php'; ?>
 
-    <section class="section features">
+    <!-- Forms Section -->
+    <section id="forms" class="section">
         <div class="container">
-            <h2 class="text-center">Why Clean Framework?</h2>
-            <?php include 'components/cards/cards.php'; ?>
+            <h2 class="text-center">Forms</h2>
+            <p class="text-center text-muted">Form components with built-in validation and accessibility</p>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Pricing That Makes Sense</h2>
-            <p class="text-center">No hidden fees, no surprises, no PhD required to understand</p>
-            <?php include 'components/pricing/pricing.php'; ?>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="text-center">What You Can Build</h2>
-            <p class="text-center">Real examples, not just pretty mockups</p>
-            <?php $cards = $image_cards; include 'components/cards/cards.php'; ?>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="text-center">Try It Yourself</h2>
-            <p class="text-center">Fill out this form to see how Clean Framework handles complex interactions</p>
+            <h3>Multi-Step Form</h3>
+            <p class="text-center">Complex forms broken down into manageable steps</p>
             <?php include 'components/form/form-multi.php'; ?>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Questions?</h2>
+            <h3>Contact Form</h3>
+            <p class="text-center">Simple contact form with validation</p>
             <?php include 'components/form/form.php'; ?>
+        </div>
+    </section>
+
+    <!-- UI Components Section -->
+    <section id="ui-components" class="section">
+        <div class="container">
+            <h2 class="text-center">UI Components</h2>
+            <p class="text-center text-muted">Interactive elements with consistent behavior and styling</p>
         </div>
     </section>
 
@@ -526,7 +581,7 @@ $form_steps = [
 
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Alert Component</h2>
+            <h3>Alerts & Notifications</h3>
             <p class="text-center">Interactive notifications for success, info, warning, and error messages</p>
             
             <div class="buttons">
@@ -548,15 +603,7 @@ $form_steps = [
 
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Accordion Component</h2>
-            <p class="text-center">Collapsible content sections for organizing information</p>
-            <?php include 'components/accordion/accordion.php'; ?>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="text-center">Tooltip Component</h2>
+            <h3>Tooltips</h3>
             <p class="text-center">Contextual help and information on hover or focus</p>
             <?php include 'components/tooltip/tooltip.php'; ?>
         </div>
@@ -564,7 +611,55 @@ $form_steps = [
 
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Breadcrumb Component</h2>
+            <h3>Badges</h3>
+            <p class="text-center">Labels, status indicators, and tags for categorization</p>
+            <?php include 'components/badge/badge.php'; ?>
+        </div>
+    </section>
+
+    <!-- Layout Section -->
+    <section id="layout" class="section">
+        <div class="container">
+            <h2 class="text-center">Layout</h2>
+            <p class="text-center text-muted">Structural components for content organization</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>Cards</h3>
+            <p class="text-center">Perfect little boxes for your content</p>
+            <?php include 'components/cards/cards.php'; ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>Image Cards</h3>
+            <p class="text-center">Real examples, not just pretty mockups</p>
+            <?php $cards = $image_cards; include 'components/cards/cards.php'; ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>Pricing Tables</h3>
+            <p class="text-center">No hidden fees, no surprises, no PhD required to understand</p>
+            <?php include 'components/pricing/pricing.php'; ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>Accordion</h3>
+            <p class="text-center">Collapsible content sections for organizing information</p>
+            <?php include 'components/accordion/accordion.php'; ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>Breadcrumbs</h3>
             <p class="text-center">Navigation hierarchy showing location in site structure</p>
             <?php include 'components/breadcrumb/breadcrumb.php'; ?>
         </div>
@@ -572,17 +667,17 @@ $form_steps = [
 
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Badge Component</h2>
-            <p class="text-center">Labels, status indicators, and tags for categorization</p>
-            <?php include 'components/badge/badge.php'; ?>
+            <h3>Progress Bars</h3>
+            <p class="text-center">Visual indicators for completion states and loading progress</p>
+            <?php include 'components/progress/progress.php'; ?>
         </div>
     </section>
 
-    <section class="section">
+    <!-- Marketing Section -->
+    <section id="marketing" class="section">
         <div class="container">
-            <h2 class="text-center">Progress Component</h2>
-            <p class="text-center">Visual indicators for completion states and loading progress</p>
-            <?php include 'components/progress/progress.php'; ?>
+            <h2 class="text-center">Marketing</h2>
+            <p class="text-center text-muted">Conversion-focused components for landing pages</p>
         </div>
     </section>
 
@@ -610,6 +705,62 @@ $form_steps = [
         </div>
     </section>
 
+    <!-- Admin Section -->
+    <section id="admin" class="section">
+        <div class="container">
+            <h2 class="text-center">Admin</h2>
+            <p class="text-center text-muted">Professional components for admin panels and dashboards</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>Sidebar Navigation</h3>
+            <p class="text-muted">The sidebar navigation is already active on this page! You can see it on the left side. It includes collapsible menu items, icons, and responsive mobile behavior.</p>
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i>
+                <strong>Live Demo:</strong> The sidebar you see on the left is the actual sidebar component in action. Try collapsing it with the toggle button in the header.
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>Dashboard Cards</h3>
+            <?php include 'components/dashboard/dashboard.php'; ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>Data Grid</h3>
+            <?php include 'components/datagrid/datagrid.php'; ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>Search & Filters</h3>
+            <?php include 'components/search/search.php'; ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>Activity Feed</h3>
+            <?php include 'components/activity/activity.php'; ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>File Manager</h3>
+            <?php include 'components/filemanager/filemanager.php'; ?>
+        </div>
+    </section>
+
+    </div> <!-- Close main-content -->
+    
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 CleanCorp. Built with Clean Framework.</p>
@@ -633,6 +784,12 @@ $form_steps = [
     <script src="components/features/features.js"></script>
     <script src="components/cta/cta.js"></script>
     <script src="components/stats/stats.js"></script>
+    <script src="components/sidebar/sidebar.js"></script>
+    <script src="components/dashboard/dashboard.js"></script>
+    <script src="components/datagrid/datagrid.js"></script>
+    <script src="components/search/search.js"></script>
+    <script src="components/activity/activity.js"></script>
+    <script src="components/filemanager/filemanager.js"></script>
     
     <!-- Main JavaScript -->
     <script src="main.js"></script>

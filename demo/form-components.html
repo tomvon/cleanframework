@@ -2,175 +2,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-        // FOUC prevention - set theme immediately before any CSS loads
-        (function() {
-            // Force light theme as default for GitHub previews to prevent flash
-            document.documentElement.removeAttribute('data-theme');
-            
-            try {
-                const savedTheme = localStorage.getItem('theme');
-                const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-                
-                let themeToApply = 'light'; // default to light
-                
-                if (savedTheme === 'dark') {
-                    themeToApply = 'dark';
-                } else if (savedTheme === 'system' && systemPrefersDark) {
-                    themeToApply = 'dark';
-                }
-                
-                // Only set dark theme if explicitly needed
-                if (themeToApply === 'dark') {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                }
-            } catch (e) {
-                // Fallback: ensure light theme
-                document.documentElement.removeAttribute('data-theme');
-            }
-        })();
-    </script>
-    
-    <!-- Critical CSS for instant render -->
-    <style>
-        /* Critical CSS - Above the fold styles for faster initial render */
-:root {
-    --primary: #667eea;
-    --primary-hover: #5a67d8;
-    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --radius: 8px;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    
-    /* Light theme defaults */
-    --background: #ffffff;
-    --foreground: #111827;
-    --muted: #f3f4f6;
-    --border: #e5e7eb;
-    --card: #ffffff;
-}
 
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme]) {
-        --background: #0d1117;
-        --foreground: #f0f6fc;
-        --muted: #21262d;
-        --border: #30363d;
-        --card: #21262d;
-    }
-}
-
-[data-theme="dark"] {
-    --background: #0d1117;
-    --foreground: #f0f6fc;
-    --muted: #21262d;
-    --border: #30363d;
-    --card: #21262d;
-}
-
-* { box-sizing: border-box; }
-
-body {
-    margin: 0;
-    font-family: var(--font-sans);
-    line-height: 1.6;
-    color: var(--foreground);
-    background: var(--background);
-    transition: color 0.2s ease, background-color 0.2s ease;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-/* Critical header styles */
-.header {
-    position: sticky;
-    top: 0;
-    background: var(--background);
-    border-bottom: 1px solid var(--border);
-    z-index: 1000;
-}
-
-.nav {
-    padding: 1rem 0;
-}
-
-/* Critical hero styles */
-.hero {
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0 0 1rem 0;
-    line-height: 1.2;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin: 0 0 1rem 0;
-    color: var(--foreground);
-}
-
-/* Critical button styles */
-.button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: var(--radius);
-    text-decoration: none;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.button.primary {
-    background: var(--primary);
-    color: white;
-}
-
-.button.primary:hover {
-    background: var(--primary-hover);
-}
-
-/* Hide non-critical content initially */
-.section:not(.hero) { opacity: 0; }
-    </style>
-    
-    <!-- Preload main stylesheet (minified for performance) -->
-    <link rel="preload" href="../style.min.css?v=20250814&t=1755215533" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../style.min.css?v=20250814&t=1755215533"></noscript>
-    
-    <!-- Progressive loading script -->
-    <script>
-        // Show non-critical content after main CSS loads
-        window.addEventListener('load', function() {
-            const sections = document.querySelectorAll('.section:not(.hero)');
-            sections.forEach((section, index) => {
-                setTimeout(() => {
-                    section.style.opacity = '1';
-                    section.style.transition = 'opacity 0.3s ease';
-                }, index * 50);
-            });
-        });
-    </script>
-
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Components - Clean Framework</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-        <!-- Generated: 2025-08-14 23:52:13 UTC by CleanFramework Demo Builder (cache: 20250814) -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        // Prevent theme flash by setting theme before CSS loads
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'system') {
+                document.documentElement.removeAttribute('data-theme');
+            } else {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        })();
+    </script>
 </head>
 <body>
     
@@ -195,37 +43,37 @@ body {
         <div class="nav-right" id="nav-menu">
             <ul class="menu">
                                     <li>
-                        <a href="index.html?v=20250814" 
+                        <a href="index.html" 
                            class="">
                             Home                        </a>
                     </li>
                                     <li>
-                        <a href="form-components.html?v=20250814" 
+                        <a href="form-components.html" 
                            class="active">
                             Forms                        </a>
                     </li>
                                     <li>
-                        <a href="ui-components.html?v=20250814" 
+                        <a href="ui-components.html" 
                            class="">
                             UI Components                        </a>
                     </li>
                                     <li>
-                        <a href="layout-components.html?v=20250814" 
+                        <a href="layout-components.html" 
                            class="">
                             Layout                        </a>
                     </li>
                                     <li>
-                        <a href="marketing-components.html?v=20250814" 
+                        <a href="marketing-components.html" 
                            class="">
                             Marketing                        </a>
                     </li>
                                     <li>
-                        <a href="admin-components.html?v=20250814" 
+                        <a href="admin-components.html" 
                            class="">
                             Admin                        </a>
                     </li>
                                     <li>
-                        <a href="components-showcase.html?v=20250814" 
+                        <a href="components-showcase.html" 
                            class="">
                             All Components                        </a>
                     </li>
@@ -258,11 +106,11 @@ body {
                 <h1 class="hero-title">Form Components</h1>
                 <p class="hero-description">Form components with built-in validation, accessibility, and consistent styling</p>
                 <div class="hero-buttons">
-                    <a href="index.html?v=20250814" class="button secondary">
+                    <a href="index.html" class="button secondary">
                         <i class="fas fa-arrow-left" aria-hidden="true"></i>
                         Back to Home
                     </a>
-                    <a href="components-showcase.html?v=20250814" class="button primary">
+                    <a href="components-showcase.html" class="button primary">
                         <i class="fas fa-eye" aria-hidden="true"></i>
                         All Components
                     </a>
@@ -586,10 +434,10 @@ body {
     </footer>
 
     <!-- Component JavaScript files -->
-    <script src="../components/navigation/navigation.js?20250814235213" defer></script>
-    <script src="../components/form/form.js?20250814235213" defer></script>
+    <script src="../components/navigation/navigation.js"></script>
+    <script src="../components/form/form.js"></script>
     
     <!-- Main JavaScript -->
-    <script src="../main.js?20250814235213" defer></script>
+    <script src="../main.js"></script>
 </body>
 </html>

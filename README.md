@@ -2,7 +2,7 @@
 
 **[View Live Demo](https://tomvon.github.io/cleanframework/demo/)** | **[Components](https://tomvon.github.io/cleanframework/demo/components-showcase.html)** | **[Documentation](COMPONENTS.md)**
 
-![Clean Framework Hero](img/cleanframework.jpg)
+![Clean Framework Hero](https://raw.githubusercontent.com/tomvon/cleanframework/master/img/cleanframework.jpg)
 
 **Semantic CSS for modern web development.**
 

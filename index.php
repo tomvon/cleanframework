@@ -59,37 +59,37 @@ $framework_features = [
     [
         'icon' => 'fas fa-code',
         'title' => 'Semantic HTML',
-        'description' => 'Intuitive class names that describe content structure. Write `.card` for cards, `.nav` for navigation.',
+        'description' => 'Intuitive class names that describe what they do. Write what you mean.',
         'details' => ['Human-readable class names', 'Self-documenting markup', 'AI-friendly patterns']
     ],
     [
         'icon' => 'fas fa-feather-alt',
         'title' => 'Lightweight',
-        'description' => 'Only 500 lines of CSS. Fast loading times with minimal overhead.',
-        'details' => ['12kb minified CSS', 'Zero dependencies', 'Pure CSS & vanilla JS']
+        'description' => 'Fast loading with minimal overhead. Your users will notice the difference.',
+        'details' => ['~150KB minified CSS', 'Zero dependencies', 'Pure CSS & vanilla JS']
     ],
     [
         'icon' => 'fas fa-puzzle-piece',
         'title' => 'Modular Design',
-        'description' => 'Independent components that can be used together or separately as needed.',
+        'description' => 'Independent components that work together seamlessly or stand alone.',
         'details' => ['Modular architecture', 'Independent components', 'Easy to maintain']
     ],
     [
         'icon' => 'fas fa-mobile-alt',
         'title' => 'Responsive',
-        'description' => 'Mobile-first design that adapts seamlessly to any screen size or device.',
+        'description' => 'Mobile-first design that adapts beautifully to any screen size.',
         'details' => ['Touch-friendly interactions', 'Flexible layouts', 'Progressive enhancement']
     ],
     [
         'icon' => 'fas fa-accessibility',
         'title' => 'Accessible',
-        'description' => 'WCAG 2.1 compliant with proper ARIA attributes and keyboard navigation support.',
+        'description' => 'Built with accessibility in mind, ensuring your content reaches everyone.',
         'details' => ['WCAG 2.1 compliant', 'Screen reader friendly', 'Keyboard navigation']
     ],
     [
         'icon' => 'fas fa-palette',
         'title' => 'Theme Support',
-        'description' => 'Built-in dark mode with automatic system preference detection and manual controls.',
+        'description' => 'Built-in dark mode with automatic system preference detection.',
         'details' => ['System preference detection', 'Manual theme toggle', 'Custom color schemes']
     ]
 ];
@@ -124,9 +124,9 @@ $framework_features = [
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Clean Framework</h1>
-                <p class="hero-subtitle">Semantic HTML. Readable CSS.</p>
+                <p class="hero-subtitle">Semantic CSS for modern web development</p>
                 <p class="hero-description">
-                    A CSS framework built on semantic HTML and intuitive class names. No cryptic abbreviations or utility classes to memorize.
+                    A component-based CSS framework with intuitive class names and clean, maintainable code.
                 </p>
                 <div class="hero-buttons">
                     <a href="#examples" class="button primary large">
@@ -287,10 +287,10 @@ $framework_features = [
         <div class="container">
             <div class="cta-section cta-gradient cta-centered">
                 <div class="cta-content">
-                    <h2 class="cta-title">Ready to Get Started?</h2>
-                    <p class="cta-subtitle">Join developers who trust Clean Framework</p>
+                    <h2 class="cta-title">Start Building Today</h2>
+                    <p class="cta-subtitle">Join developers building with semantic, maintainable CSS</p>
                     <p class="cta-description">
-                        Start building beautiful, semantic websites today. No learning curve, just clean code.
+                        Clean, semantic components with intuitive class names. Built for developers who value maintainable code.
                     </p>
                     
                     <div class="cta-buttons">

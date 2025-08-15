@@ -120,7 +120,7 @@ $pricing_plans = [
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Layout Components</h1>
-                <p class="hero-description">Building blocks that actually help you build things</p>
+                <p class="hero-description">Structural components for content organization and layout</p>
                 <div class="hero-buttons">
                     <a href="index.php" class="button secondary">
                         <i class="fas fa-arrow-left" aria-hidden="true"></i>
@@ -157,7 +157,7 @@ $pricing_plans = [
     <section class="section">
         <div class="container">
             <h2 class="text-center">Pricing Tables</h2>
-            <p class="text-center">Make your pricing crystal clear (and actually convert)</p>
+            <p class="text-center">Professional pricing tables with clear layouts</p>
             <?php include 'components/pricing/pricing.php'; ?>
         </div>
     </section>
@@ -166,7 +166,7 @@ $pricing_plans = [
     <section class="section">
         <div class="container">
             <h2 class="text-center">Accordions</h2>
-            <p class="text-center">Hide and show content without JavaScript wizardry</p>
+            <p class="text-center">Collapsible content sections for better organization</p>
             <?php include 'components/accordion/accordion.php'; ?>
         </div>
     </section>
@@ -175,7 +175,7 @@ $pricing_plans = [
     <section class="section">
         <div class="container">
             <h2 class="text-center">Breadcrumbs</h2>
-            <p class="text-center">Help users find their way back home</p>
+            <p class="text-center">Help users navigate your site structure</p>
             <?php include 'components/breadcrumb/breadcrumb.php'; ?>
         </div>
     </section>

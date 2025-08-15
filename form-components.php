@@ -116,7 +116,7 @@ $form_steps = [
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Form Components</h1>
-                <p class="hero-description">Form components with built-in validation, accessibility, and consistent styling</p>
+                <p class="hero-description">Professional form components with built-in validation and accessibility</p>
                 <div class="hero-buttons">
                     <a href="index.php" class="button secondary">
                         <i class="fas fa-arrow-left" aria-hidden="true"></i>

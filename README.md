@@ -2,7 +2,7 @@
 
 **[View Live Demo](https://tomvon.github.io/cleanframework/demo/)** | **[Components](https://tomvon.github.io/cleanframework/demo/components-showcase.html)** | **[Documentation](COMPONENTS.md)**
 
-**Semantic HTML. Readable CSS.**
+**Semantic CSS for modern web development.**
 
 Clean Framework provides semantic HTML components with intuitive class names. No cryptic abbreviations or utility classes to memorize.
 

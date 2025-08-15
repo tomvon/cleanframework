@@ -550,7 +550,7 @@ $form_steps = [
     <section class="section">
         <div class="container">
             <h2 class="text-center">Modals</h2>
-            <p class="text-center">Pop-ups that don't annoy your users</p>
+            <p class="text-center">Accessible dialog windows for forms and content</p>
             <?php include 'components/modal/modal.php'; ?>
         </div>
     </section>
@@ -558,7 +558,7 @@ $form_steps = [
     <section class="section">
         <div class="container">
             <h2 class="text-center">Dropdowns</h2>
-            <p class="text-center">Menus that actually drop down</p>
+            <p class="text-center">Versatile dropdown menus for navigation and actions</p>
             <?php include 'components/dropdown/dropdown.php'; ?>
         </div>
     </section>
@@ -566,7 +566,7 @@ $form_steps = [
     <section class="section">
         <div class="container">
             <h2 class="text-center">Data Tables</h2>
-            <p class="text-center">Tables that don't break on mobile</p>
+            <p class="text-center">Responsive data tables with sorting and filtering</p>
             <?php include 'components/table/table.php'; ?>
         </div>
     </section>

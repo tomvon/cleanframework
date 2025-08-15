@@ -44,7 +44,7 @@ $nav_items = [
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">UI Components</h1>
-                <p class="hero-description">Interactive elements with consistent behavior and professional styling</p>
+                <p class="hero-description">Interactive elements with consistent behavior and modern styling</p>
                 <div class="hero-buttons">
                     <a href="index.php" class="button secondary">
                         <i class="fas fa-arrow-left" aria-hidden="true"></i>

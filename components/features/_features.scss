@@ -45,6 +45,17 @@
     display: flex;
     gap: 1.5rem;
     align-items: flex-start;
+    background: var(--card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--border);
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+    }
     
     .feature-icon {
         flex-shrink: 0;
@@ -89,6 +100,17 @@
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
+    background: var(--card);
+    padding: 3rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--border);
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+    }
     
     &.feature-row-reverse {
         .feature-visual {

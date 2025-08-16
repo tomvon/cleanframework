@@ -13,6 +13,10 @@
     border-bottom: 1px solid var(--border);
     overflow-x: auto;
     
+    @media (max-width: 768px) {
+        overflow-x: visible;
+    }
+    
     .tab-button {
         background: transparent;
         border: none;
@@ -145,42 +149,6 @@
     }
 }
 
-// Underline style variant
-.tabs-container.underline {
-    background: transparent;
-    border: none;
-    
-    .tabs-nav {
-        background: transparent;
-        border-bottom: 2px solid var(--border);
-        padding: 0;
-        
-        .tab-button {
-            padding: 1rem 0;
-            margin-right: 2rem;
-            border-bottom: 2px solid transparent;
-            
-            &:hover {
-                background: transparent;
-                border-bottom-color: var(--muted-foreground);
-            }
-            
-            &.active {
-                background: transparent;
-                border-bottom-color: var(--primary);
-                color: var(--primary);
-            }
-        }
-    }
-    
-    .tabs-content {
-        background: transparent;
-        
-        .tab-panel {
-            padding: 2rem 0;
-        }
-    }
-}
 
 // Feature grid for content
 .feature-grid {
@@ -366,9 +334,22 @@
 // Responsive design
 @media (max-width: 768px) {
     .tabs-nav {
+        flex-direction: column;
+        overflow-x: visible;
+        
         .tab-button {
             padding: 0.75rem 1rem;
             font-size: 0.8125rem;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+            
+            &.active {
+                border-left: 3px solid var(--primary);
+            }
             
             i {
                 font-size: 0.75rem;
@@ -379,21 +360,6 @@
     .tabs-content {
         .tab-panel {
             padding: 1.5rem;
-        }
-    }
-    
-    .tabs-container.underline {
-        .tabs-nav {
-            .tab-button {
-                margin-right: 1rem;
-                padding: 0.75rem 0;
-            }
-        }
-        
-        .tabs-content {
-            .tab-panel {
-                padding: 1.5rem 0;
-            }
         }
     }
     

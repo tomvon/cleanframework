@@ -276,9 +276,41 @@
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+        padding: 1rem;
         
         .table-pagination-controls {
             justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            
+            .pagination-prev,
+            .pagination-next {
+                min-width: 0;
+                padding: 0.5rem 0.75rem;
+                font-size: 0.875rem;
+                white-space: nowrap;
+                
+                @media (max-width: 480px) {
+                    padding: 0.5rem;
+                    font-size: 0;
+                    
+                    i {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+            
+            .table-pagination-pages {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.25rem;
+                
+                .pagination-page {
+                    min-width: 40px;
+                    padding: 0.5rem;
+                    font-size: 0.875rem;
+                }
+            }
         }
     }
     

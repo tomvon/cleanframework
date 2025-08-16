@@ -66,7 +66,7 @@ $framework_features = [
         'icon' => 'fas fa-feather-alt',
         'title' => 'Lightweight',
         'description' => 'Fast loading with minimal overhead. Your users will notice the difference.',
-        'details' => ['~150KB minified CSS', 'Zero dependencies', 'Pure CSS & vanilla JS']
+        'details' => ['129KB minified CSS', 'Zero dependencies', 'Pure CSS & vanilla JS']
     ],
     [
         'icon' => 'fas fa-puzzle-piece',
@@ -81,7 +81,7 @@ $framework_features = [
         'details' => ['Touch-friendly interactions', 'Flexible layouts', 'Progressive enhancement']
     ],
     [
-        'icon' => 'fas fa-accessibility',
+        'icon' => 'fas fa-universal-access',
         'title' => 'Accessible',
         'description' => 'Built with accessibility in mind, ensuring your content reaches everyone.',
         'details' => ['WCAG 2.1 compliant', 'Screen reader friendly', 'Keyboard navigation']
@@ -228,11 +228,11 @@ $framework_features = [
                         </div>
                         <div class="stat-card-content">
                             <div class="stat-value">
-                                <span class="stat-number" data-value="12">0</span>
+                                <span class="stat-number" data-value="18">0</span>
                                 <span class="stat-suffix">kb</span>
                             </div>
                             <h3 class="stat-label">CSS Size</h3>
-                            <p class="stat-description">Minified and compressed</p>
+                            <p class="stat-description">Minified and gzipped</p>
                         </div>
                     </div>
                     

@@ -51,9 +51,24 @@ function initDropdowns() {
 }
 
 // Toggle dropdown visibility
-function toggleDropdown(dropdownId) {
-    const trigger = document.getElementById(dropdownId + '-trigger');
-    const menu = document.getElementById(dropdownId + '-menu');
+function toggleDropdown(param) {
+    let trigger, menu, dropdownId;
+    
+    // Handle both ID string and element parameter
+    if (typeof param === 'string') {
+        // Called with ID string
+        dropdownId = param;
+        trigger = document.getElementById(dropdownId + '-trigger');
+        menu = document.getElementById(dropdownId + '-menu');
+    } else {
+        // Called with button element (this)
+        trigger = param;
+        const dropdown = trigger.closest('.dropdown');
+        if (!dropdown) return;
+        
+        menu = dropdown.querySelector('.dropdown-menu');
+        dropdownId = dropdown.id || 'dropdown-' + Math.random().toString(36).substr(2, 9);
+    }
     
     if (!trigger || !menu) return;
     

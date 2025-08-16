@@ -33,6 +33,21 @@
     }
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 // Smaller hero variant for internal pages
 .hero-small {
     padding: 3rem 0;

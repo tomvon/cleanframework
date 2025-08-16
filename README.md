@@ -273,13 +273,59 @@ cleanframework/
 - ✅ Safari 14+
 - ✅ Edge 90+
 
+## Development
+
+### SCSS Architecture
+
+Clean Framework uses a modular SCSS architecture. **Never edit the compiled CSS files directly.**
+
+#### File Structure
+```
+style.scss                 # Main SCSS file (imports all components)
+style.css                  # Compiled CSS (auto-generated)
+style.min.css              # Minified CSS (auto-generated)
+components/
+  ├── layout/_layout.scss
+  ├── hero/_hero.scss
+  ├── features/_features.scss
+  ├── buttons/_buttons.scss
+  └── [component]/_[component].scss
+```
+
+#### Development Workflow
+
+1. **Edit SCSS files** in the `components/` directory
+2. **Compile CSS** from SCSS:
+   ```bash
+   sass style.scss style.css
+   sass --style=compressed style.scss style.min.css
+   ```
+3. **Rebuild demos** (if needed):
+   ```bash
+   php build-demos.php
+   ```
+
+#### Important Rules
+
+- ✅ **DO**: Edit SCSS files in `components/` directory
+- ✅ **DO**: Add new styles to appropriate component files
+- ❌ **DON'T**: Edit `style.css` or `style.min.css` directly
+- ❌ **DON'T**: Use inline styles or utility classes
+
+### Adding New Components
+
+1. Create `components/[name]/_[name].scss`
+2. Add import to main `style.scss`: `@use 'components/[name]/[name]';`
+3. Compile CSS using the workflow above
+
 ## Contributing
 
 1. Fork the repository
 2. Create a feature branch
-3. Maintain semantic HTML principles
-4. Test across supported browsers
-5. Submit pull request with clear description
+3. Follow the SCSS architecture guidelines above
+4. Maintain semantic HTML principles
+5. Test across supported browsers
+6. Submit pull request with clear description
 
 ## License
 

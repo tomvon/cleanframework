@@ -9,7 +9,7 @@
 $tabs_sets = $tabs_sets ?? [
     [
         'id' => 'features-tabs',
-        'style' => 'default', // default, pills, underline
+        'style' => 'default', // default, pills
         'tabs' => [
             [
                 'id' => 'overview',
@@ -60,28 +60,6 @@ $tabs_sets = $tabs_sets ?? [
                 'label' => 'Privacy',
                 'icon' => 'fas fa-shield-alt',
                 'content' => '<h3>Privacy Settings</h3><p>Control how your information is shared and used.</p><h4>Data Collection</h4><div class="privacy-options"><label><input type="radio" name="analytics" value="all" checked> Allow all analytics</label><label><input type="radio" name="analytics" value="essential"> Essential only</label><label><input type="radio" name="analytics" value="none"> No tracking</label></div><h4>Profile Visibility</h4><div class="privacy-options"><label><input type="checkbox" checked> Show profile to other users</label><label><input type="checkbox"> Allow search engines to index profile</label><label><input type="checkbox" checked> Show activity status</label></div>'
-            ]
-        ]
-    ],
-    [
-        'id' => 'stats-tabs',
-        'style' => 'underline',
-        'tabs' => [
-            [
-                'id' => 'overview',
-                'label' => 'Overview',
-                'active' => true,
-                'content' => '<div class="stats-grid"><div class="stat-card"><div class="stat-number">12,584</div><div class="stat-label">Total Users</div><div class="stat-change positive">+12%</div></div><div class="stat-card"><div class="stat-number">$45,230</div><div class="stat-label">Revenue</div><div class="stat-change positive">+8%</div></div><div class="stat-card"><div class="stat-number">98.5%</div><div class="stat-label">Uptime</div><div class="stat-change positive">+0.2%</div></div><div class="stat-card"><div class="stat-number">1,247</div><div class="stat-label">Active Sessions</div><div class="stat-change negative">-3%</div></div></div>'
-            ],
-            [
-                'id' => 'traffic',
-                'label' => 'Traffic',
-                'content' => '<h3>Traffic Analytics</h3><p>Detailed breakdown of your website traffic and user behavior.</p><div class="traffic-stats"><div class="traffic-item"><strong>Page Views:</strong> 45,672</div><div class="traffic-item"><strong>Unique Visitors:</strong> 12,584</div><div class="traffic-item"><strong>Bounce Rate:</strong> 32.4%</div><div class="traffic-item"><strong>Avg. Session Duration:</strong> 3m 24s</div></div>'
-            ],
-            [
-                'id' => 'performance',
-                'label' => 'Performance',
-                'content' => '<h3>Performance Metrics</h3><p>Monitor your application\'s performance and optimization opportunities.</p><div class="performance-metrics"><div class="metric"><h4>Load Time</h4><div class="metric-value">1.2s</div><div class="metric-status good">Good</div></div><div class="metric"><h4>First Paint</h4><div class="metric-value">0.8s</div><div class="metric-status good">Good</div></div><div class="metric"><h4>Largest Paint</h4><div class="metric-value">1.1s</div><div class="metric-status warning">Needs Improvement</div></div></div>'
             ]
         ]
     ]

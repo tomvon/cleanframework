@@ -350,6 +350,7 @@
 @media (max-width: 768px) {
     .stats-header {
         margin-bottom: 2rem;
+        text-align: center;
         
         h2 {
             font-size: 1.875rem;
@@ -357,11 +358,13 @@
         
         p {
             font-size: 1rem;
+            text-align: center;
         }
     }
     
     .stats-grid {
         gap: 1.5rem;
+        justify-content: flex-start;
         
         .stat-item {
             width: 200px;
@@ -370,6 +373,7 @@
     
     .stat-item {
         padding: 1.5rem 1rem;
+        text-align: left;
     }
     
     .stat-value {
@@ -382,9 +386,13 @@
     
     .stats-minimal .stats-row {
         gap: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
         
         .stat-minimal {
             width: 150px;
+            text-align: left;
         }
     }
     
@@ -398,10 +406,12 @@
     .stats-bar {
         flex-direction: column;
         gap: 1.5rem;
+        align-items: flex-start;
     }
     
     .stat-horizontal {
-        justify-content: center;
+        justify-content: flex-start;
+        width: 100%;
     }
 }
 
@@ -410,16 +420,37 @@
         padding: 1.5rem 1rem;
     }
     
+    .stats-section {
+        &:not(.stats-horizontal):not(.stats-minimal) {
+            text-align: left;
+            
+            .stats-header {
+                text-align: center;
+            }
+        }
+    }
+    
+    .stats-grid {
+        justify-content: flex-start;
+    }
+    
     .stat-card {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .stats-progress {
+        text-align: center;
     }
     
     .stat-progress-item .stat-progress-header {
         flex-direction: column;
         gap: 0.5rem;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
     }
     
     .stat-value {
@@ -430,10 +461,21 @@
         font-size: 1.5rem;
     }
     
-    .stats-grid .stat-item,
-    .stats-cards .stat-card,
+    .stats-grid .stat-item {
+        width: 100%;
+        max-width: none;
+        text-align: left;
+    }
+    
+    .stats-cards .stat-card {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+    }
+    
     .stats-minimal .stats-row .stat-minimal {
         width: 100%;
         max-width: none;
+        text-align: left;
     }
 }

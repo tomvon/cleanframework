@@ -483,6 +483,7 @@ include 'components/dashboard/dashboard.php';
 
     <!-- Component JavaScript files -->
     <script src="components/navigation/navigation.js"></script>
+    <script src="components/dropdown/dropdown.js"></script>
     <script src="components/sidebar/sidebar.js"></script>
     <script src="components/dashboard/dashboard.js"></script>
     <script src="components/datagrid/datagrid.js"></script>

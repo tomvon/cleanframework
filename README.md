@@ -1,6 +1,6 @@
 # Clean Framework
 
-**[View Live Demo](https://tomvon.github.io/cleanframework/demo/)** | **[Components](https://tomvon.github.io/cleanframework/demo/components-showcase.html)** | **[Documentation](COMPONENTS.md)**
+**[View Live Demo](https://tomvon.github.io/cleanframework/demo/?v=2024-08-16)** | **[Components](https://tomvon.github.io/cleanframework/demo/components-showcase.html?v=2024-08-16)** | **[Documentation](COMPONENTS.md)**
 
 ![Clean Framework Hero](https://raw.githubusercontent.com/tomvon/cleanframework/master/img/cleanframework.png)
 

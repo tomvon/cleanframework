@@ -2,12 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Components - Clean Framework</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=1755745751">
     <script>
         // Prevent theme flash by setting theme before CSS loads
         (function() {
@@ -414,22 +413,22 @@
             </div>
             
             <div class="form">
-                <div class="group">
+                <div class="group group-valid">
                     <label for="valid-input">Valid Input</label>
-                    <input type="text" id="valid-input" name="valid-input" value="Valid input" style="border-color: var(--success);">
-                    <small class="help" style="color: var(--success);">✓ This field is valid</small>
+                    <input type="text" id="valid-input" name="valid-input" value="Valid input">
+                    <small class="help">✓ This field is valid</small>
                 </div>
 
-                <div class="group">
+                <div class="group group-error">
                     <label for="invalid-input">Invalid Input</label>
-                    <input type="email" id="invalid-input" name="invalid-input" value="invalid-email" style="border-color: var(--danger);">
+                    <input type="email" id="invalid-input" name="invalid-input" value="invalid-email">
                     <small class="error">✗ Please enter a valid email address</small>
                 </div>
 
-                <div class="group">
+                <div class="group group-warning">
                     <label for="warning-input">Warning Input</label>
-                    <input type="password" id="warning-input" name="warning-input" value="weak" style="border-color: var(--warning);">
-                    <small class="help" style="color: var(--warning);">⚠ Password strength: weak</small>
+                    <input type="password" id="warning-input" name="warning-input" value="weak">
+                    <small class="help">⚠ Password strength: weak</small>
                 </div>
             </div>
         </div>
@@ -442,10 +441,10 @@
     </footer>
 
     <!-- Component JavaScript files -->
-    <script src="../components/navigation/navigation.js"></script>
-    <script src="../components/form/form.js"></script>
+    <script src="../components/navigation/navigation.js?v=1755745751"></script>
+    <script src="../components/form/form.js?v=1755745751"></script>
     
     <!-- Main JavaScript -->
-    <script src="../main.js"></script>
+    <script src="../main.js?v=1755745751"></script>
 </body>
 </html>

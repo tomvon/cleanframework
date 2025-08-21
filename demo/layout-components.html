@@ -2,12 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Components - Clean Framework</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=1755745751">
     <script>
         // Prevent theme flash by setting theme before CSS loads
         (function() {
@@ -652,12 +651,12 @@
                     <h3>Two Column Layout</h3>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
-                    <div style="background: var(--card); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                <div class="layout-grid layout-two-column">
+                    <div class="layout-column">
                         <h4>Left Column</h4>
                         <p>This is the left column content. Perfect for main content or primary information.</p>
                     </div>
-                    <div style="background: var(--card); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                    <div class="layout-column">
                         <h4>Right Column</h4>
                         <p>This is the right column content. Great for sidebars or secondary information.</p>
                     </div>
@@ -667,16 +666,16 @@
                     <h3>Three Column Layout</h3>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
-                    <div style="background: var(--card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                <div class="layout-grid layout-auto-fit">
+                    <div class="layout-column">
                         <h4>Column 1</h4>
                         <p>First column content.</p>
                     </div>
-                    <div style="background: var(--card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                    <div class="layout-column">
                         <h4>Column 2</h4>
                         <p>Second column content.</p>
                     </div>
-                    <div style="background: var(--card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                    <div class="layout-column">
                         <h4>Column 3</h4>
                         <p>Third column content.</p>
                     </div>
@@ -686,8 +685,8 @@
                     <h3>Container & Sections</h3>
                 </div>
                 
-                <div style="background: var(--muted); padding: 2rem; border-radius: var(--radius); margin-bottom: 2rem;">
-                    <div style="max-width: 1200px; margin: 0 auto; background: var(--card); padding: 2rem; border-radius: var(--radius);">
+                <div class="layout-container-example">
+                    <div class="layout-container-inner">
                         <h4>Container Example</h4>
                         <p>This demonstrates the container component with max-width and automatic centering. Perfect for maintaining readable line lengths and consistent layouts across different screen sizes.</p>
                     </div>
@@ -703,12 +702,12 @@
     </footer>
 
     <!-- Component JavaScript files -->
-    <script src="../components/navigation/navigation.js"></script>
-    <script src="../components/accordion/accordion.js"></script>
-    <script src="../components/breadcrumb/breadcrumb.js"></script>
-    <script src="../components/progress/progress.js"></script>
+    <script src="../components/navigation/navigation.js?v=1755745751"></script>
+    <script src="../components/accordion/accordion.js?v=1755745751"></script>
+    <script src="../components/breadcrumb/breadcrumb.js?v=1755745751"></script>
+    <script src="../components/progress/progress.js?v=1755745751"></script>
     
     <!-- Main JavaScript -->
-    <script src="../main.js"></script>
+    <script src="../main.js?v=1755745751"></script>
 </body>
 </html>

@@ -19,6 +19,10 @@ $pages = [
 
 echo "Building demos from $localServer\n\n";
 
+// Generate cache busting version based on current time
+$cacheVersion = time();
+echo "Cache version: $cacheVersion\n\n";
+
 // Ensure output directory exists
 if (!is_dir($outputDir)) {
     mkdir($outputDir, 0755, true);
@@ -44,10 +48,10 @@ foreach ($pages as $sourcePage => $outputFile) {
     // Fix navigation links from .php to .html
     $html = preg_replace('/href="([^"]*?)\.php"/i', 'href="$1.html"', $html);
     
-    // Fix CSS/JS paths to use parent directory
-    $html = preg_replace('/href="(style\.css|style\.min\.css)(\?[^"]*)?"/i', 'href="../$1"', $html);
-    $html = preg_replace('/src="(main\.js)(\?[^"]*)?"/i', 'src="../$1"', $html);
-    $html = preg_replace('/src="(components\/[^"]+)(\?[^"]*)?"/i', 'src="../$1"', $html);
+    // Fix CSS/JS paths to use parent directory and add cache busting
+    $html = preg_replace('/href="(style\.css|style\.min\.css)(\?[^"]*)?"/i', 'href="../$1?v=' . $cacheVersion . '"', $html);
+    $html = preg_replace('/src="(main\.js)(\?[^"]*)?"/i', 'src="../$1?v=' . $cacheVersion . '"', $html);
+    $html = preg_replace('/src="(components\/[^"]+)(\?[^"]*)?"/i', 'src="../$1?v=' . $cacheVersion . '"', $html);
     
     // Fix image paths for GitHub
     $html = preg_replace('/src="img\/([^"]+)"/i', 'src="../img/$1"', $html);

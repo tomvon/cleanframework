@@ -244,12 +244,12 @@ function togglePassword(fieldName) {
     
     if (input.type === 'password') {
         input.type = 'text';
-        eyeOpen.classList.add('hidden');
-        eyeClosed.classList.remove('hidden');
+        eyeOpen.classList.add('eye-closed');
+        eyeClosed.classList.remove('eye-closed');
     } else {
         input.type = 'password';
-        eyeOpen.classList.remove('hidden');
-        eyeClosed.classList.add('hidden');
+        eyeOpen.classList.remove('eye-closed');
+        eyeClosed.classList.add('eye-closed');
     }
 }
 

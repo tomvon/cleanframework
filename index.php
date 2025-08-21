@@ -199,7 +199,7 @@ $framework_features = [
                                 <?php endforeach; ?>
                             </ul>
                             
-                            <div style="margin-top: 1.5rem;">
+                            <div class="card-actions">
                                 <a href="<?= $category['url'] ?>" class="button primary">
                                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                     View Components

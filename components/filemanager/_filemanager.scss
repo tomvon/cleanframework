@@ -1,5 +1,22 @@
 // File Manager Component Styles
 
+// File manager view states
+.file-view-hidden {
+    display: none !important;
+}
+
+.file-upload-area-hidden {
+    display: none;
+}
+
+.file-upload-progress-hidden {
+    display: none;
+}
+
+.file-empty-hidden {
+    display: none;
+}
+
 .file-manager {
     background: var(--card);
     border: 1px solid var(--border);
@@ -90,6 +107,11 @@
             padding: 0.5rem 0.75rem;
         }
     }
+}
+
+// Hidden file input for upload functionality
+.file-input-hidden {
+    display: none;
 }
 
 // View Toggle
@@ -527,9 +549,13 @@
     right: 0;
     bottom: 0;
     z-index: 1000;
-    display: flex;
+    display: none; // Default hidden
     align-items: center;
     justify-content: center;
+    
+    &.file-preview-modal-open {
+        display: flex;
+    }
     padding: 2rem;
 }
 

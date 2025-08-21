@@ -133,11 +133,11 @@ $file_icons = [
                 <small>Supports: PDF, DOC, XLS, PPT, Images (max 10MB each)</small>
             </div>
         </div>
-        <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png,.gif" class="hidden">
+        <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png,.gif" class="file-input-hidden">
     </div>
     
     <!-- Upload Progress -->
-    <div class="file-upload-progress hidden" id="uploadProgress">
+    <div class="file-upload-progress file-upload-progress-hidden" id="uploadProgress">
         <h4>Uploading Files...</h4>
         <div class="upload-items" id="uploadItems">
             <!-- Upload items will be added here dynamically -->
@@ -189,7 +189,7 @@ $file_icons = [
         </div>
         
         <!-- List View (Hidden by default) -->
-        <div class="file-list hidden" id="fileList">
+        <div class="file-list file-view-hidden" id="fileList">
             <div class="file-list-header">
                 <div class="file-list-col file-list-name">Name</div>
                 <div class="file-list-col file-list-size">Size</div>
@@ -227,7 +227,7 @@ $file_icons = [
     </div>
     
     <!-- Empty State -->
-    <div class="file-empty hidden" id="fileEmpty">
+    <div class="file-empty file-empty-hidden" id="fileEmpty">
         <i class="fas fa-folder-open file-empty-icon"></i>
         <h4>No files uploaded yet</h4>
         <p>Drag and drop files here or click the upload button to get started</p>
@@ -239,7 +239,7 @@ $file_icons = [
 </div>
 
 <!-- File Preview Modal -->
-<div class="file-preview-modal hidden" id="filePreviewModal">
+<div class="file-preview-modal" id="filePreviewModal">
     <div class="file-preview-backdrop" onclick="closeFilePreview()"></div>
     <div class="file-preview-content">
         <div class="file-preview-header">

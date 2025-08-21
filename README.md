@@ -62,10 +62,11 @@ The HTML structure communicates intent clearly to developers, designers, and too
 
 ## Core Components
 
-Clean Framework includes 25+ essential semantic components:
+Clean Framework includes 30+ essential semantic components:
 
 **Layout & Structure:**
 - `.nav` - Responsive navigation with CSS-only mobile handling and theme support
+- `.sidebar` - Collapsible admin sidebar with unified mobile navigation system
 - `.hero` - Hero sections with call-to-action
 - `.section` - Page sections
 - `.container` - Content containers
@@ -97,22 +98,30 @@ Clean Framework includes 25+ essential semantic components:
 - `.cta` - Call-to-action sections
 - `.stats` - Animated statistics and counters
 - `.pricing` - Pricing tables and plans
+- `.faq` - **NEW:** Accessible accordion-style FAQ sections
+- `.logos` - **NEW:** Client logo showcases and partner displays
+- `.team` - **NEW:** Team member profiles with social links
+- `.banner` - **NEW:** Promotional banners with theme variants
 
 **Admin Components:**
-- `.sidebar` - Collapsible sidebar with unified mobile navigation
-- `.dashboard-card` - Metric cards with charts
-- `.datagrid` - Advanced data tables
-- `.dashboard-stats` - Quick stat displays
-- More admin components in development
+- `.dashboard-card` - Metric cards with progress bars and trend indicators
+- `.datagrid` - Advanced data tables with sorting, filtering, and bulk selection
+- `.dashboard-stats` - Quick stat displays for KPIs
+- `.search-component` - Advanced search with filters and autocomplete
+- `.activity-feed` - Timeline component for user activities and notifications
+- `.file-manager` - Drag-and-drop file upload with grid/list views
 
 **Key Features:**
-- Dark/light/system theme switching
+- Dark/light/system theme switching with CSS custom properties
 - Fully responsive design with CSS-first approach
-- Unified mobile navigation system (no conflicts)
+- Unified mobile navigation system (no conflicts between header/sidebar)
 - CSS-only icon states and transitions
-- Progressive JavaScript enhancement
-- Component-based SCSS architecture
-- Semantic, accessible HTML
+- Progressive JavaScript enhancement with event delegation
+- Component-based SCSS architecture using `@use` imports
+- Semantic, accessible HTML with ARIA support
+- **No utility classes** - semantic alternatives to `.hidden`, `.text-center`, etc.
+- Component-specific state management (`.banner-closed`, `.faq-question-open`)
+- Theme-aware styling using CSS `color-mix()` and custom properties
 
 Focused on essential components with clear naming conventions.
 
@@ -226,26 +235,39 @@ cleanframework/
 ├── main.js                 # Progressive JavaScript enhancements
 └── components/             # Modular component architecture
     ├── accordion/          # Collapsible content sections
+    ├── activity/           # Activity feed and timeline
     ├── alert/              # Toast notifications
     ├── badge/              # Status indicators
+    ├── banner/             # NEW: Promotional banners
     ├── breadcrumb/         # Navigation hierarchy
     ├── cards/              # Content containers
+    ├── comparison/         # Comparison tables
     ├── cta/                # Call-to-action sections
+    ├── dashboard/          # Dashboard components
+    ├── datagrid/           # Advanced data tables
     ├── dropdown/           # Dropdown menus
+    ├── faq/                # NEW: FAQ accordion sections
     ├── features/           # Feature showcases
-    ├── footer/             # Page footers
+    ├── filemanager/        # File upload and management
     ├── form/               # Forms and inputs
     ├── header/             # Page headers
     ├── hero/               # Hero sections
+    ├── layout/             # Base layout and utilities
+    ├── logos/              # NEW: Logo cloud showcases
+    ├── marketing/          # Marketing section styles
     ├── modal/              # Dialog overlays
-    ├── navigation/         # Site navigation
+    ├── navigation/         # Site navigation with theme support
     ├── pricing/            # Pricing tables
     ├── progress/           # Progress indicators
+    ├── search/             # Advanced search component
+    ├── sidebar/            # Admin sidebar navigation
     ├── stats/              # Statistics counters
     ├── table/              # Data tables
     ├── tabs/               # Tabbed content
+    ├── team/               # NEW: Team member profiles
     ├── testimonials/       # Customer reviews
-    └── tooltip/            # Contextual help
+    ├── tooltip/            # Contextual help
+    └── typography/         # Typography styles
 ```
 
 ## Documentation
@@ -257,14 +279,15 @@ cleanframework/
 
 ## Technical Overview
 
-**Components**: 20+ semantic UI components  
-**CSS Size**: 500 lines of compiled CSS  
-**Dependencies**: None  
-**JavaScript**: Optional progressive enhancement  
-**Theming**: CSS custom properties with automatic dark mode  
-**Accessibility**: WCAG 2.1 AA compliant with ARIA support  
+**Components**: 30+ semantic UI components covering marketing, admin, and general UI needs  
+**CSS Architecture**: Component-based SCSS with CSS custom properties  
+**Dependencies**: None (FontAwesome for icons recommended)  
+**JavaScript**: Optional progressive enhancement with event delegation  
+**Theming**: CSS custom properties with light/dark/system theme switching  
+**Accessibility**: WCAG 2.1 AA compliant with ARIA support and keyboard navigation  
 **Browser Support**: Modern browsers (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)  
-**Setup Time**: Under 5 minutes
+**Setup Time**: Under 5 minutes  
+**Philosophy**: Semantic HTML, no utility classes, component-specific state management
 
 ## Browser Support
 
@@ -309,8 +332,12 @@ components/
 
 - ✅ **DO**: Edit SCSS files in `components/` directory
 - ✅ **DO**: Add new styles to appropriate component files
+- ✅ **DO**: Use semantic class names (`.banner-closed`, `.faq-question-open`)
+- ✅ **DO**: Use CSS custom properties for themeable values
+- ✅ **DO**: Implement event delegation instead of inline handlers
 - ❌ **DON'T**: Edit `style.css` or `style.min.css` directly
-- ❌ **DON'T**: Use inline styles or utility classes
+- ❌ **DON'T**: Use inline styles or utility classes (`.hidden`, `.text-center`)
+- ❌ **DON'T**: Use non-semantic class names (`.btn-primary-lg-outline`)
 
 ### Adding New Components
 

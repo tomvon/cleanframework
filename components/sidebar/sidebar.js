@@ -67,6 +67,15 @@ function initCompactSidebar() {
     }
 }
 
+// Close sidebar (for mobile)
+function closeSidebar() {
+    if (window.innerWidth <= 768) {
+        if (window.MobileNav) {
+            window.MobileNav.close();
+        }
+    }
+}
+
 // Export for main.js
 window.Sidebar = {
     init: () => {
@@ -78,3 +87,4 @@ window.Sidebar = {
 // Expose functions globally for onclick handlers
 window.toggleSidebar = toggleSidebar;
 window.toggleCompactSidebar = toggleCompactSidebar;
+window.closeSidebar = closeSidebar;

@@ -157,7 +157,6 @@ function renderProgressCard($card) {
             
             <div class="dashboard-card-progress-bar">
                 <div class="<?= $progress_class ?>" 
-                     style="width: <?= $card['percentage'] ?>%"
                      data-percentage="<?= $card['percentage'] ?>">
                 </div>
             </div>
@@ -207,7 +206,7 @@ function renderChartCard($card) {
                         }
                     ?>
                         <div class="<?= $bar_class ?>" 
-                             style="height: <?= $height ?>px"
+                             data-height="<?= $height ?>"
                              title="Day <?= $index + 1 ?>: $<?= number_format($value * 100) ?>">
                         </div>
                     <?php endforeach; ?>

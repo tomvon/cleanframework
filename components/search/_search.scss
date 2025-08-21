@@ -310,6 +310,27 @@
     }
 }
 
+// Search state classes
+.search-suggestions-hidden {
+    display: none;
+}
+
+.search-clear-hidden {
+    display: none;
+}
+
+.search-filter-hidden {
+    display: none;
+}
+
+.search-count-hidden {
+    display: none;
+}
+
+.search-tags-hidden {
+    display: none;
+}
+
 // Compact Search Bar
 .search-component-compact {
     margin-bottom: 3rem;

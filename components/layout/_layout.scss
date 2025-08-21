@@ -169,6 +169,56 @@ body {
     padding: 4rem 0;
 }
 
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    h2, h3 {
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        margin-bottom: 0;
+        color: var(--muted-foreground);
+    }
+}
+
+// Layout grid systems
+.layout-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    
+    &.layout-two-column {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    &.layout-auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+.layout-column {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    
+    .layout-auto-fit & {
+        padding: 1.5rem;
+    }
+}
+
+// Responsive layout adjustments
+@media (max-width: 768px) {
+    .layout-grid {
+        &.layout-two-column {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
 // Alternating section backgrounds (skip hero section)
 // First section after hero gets primary background
 .section:nth-child(even):not(.hero) {
@@ -180,14 +230,23 @@ body {
     background: var(--section-bg-secondary);
 }
 
-// Utility classes
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+// Container example demonstration
+.layout-container-example {
+    background: var(--muted);
+    padding: 2rem;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+}
 
-.hidden { display: none; }
-.block { display: block; }
-.flex { display: flex; }
+.layout-container-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--card);
+    padding: 2rem;
+    border-radius: var(--radius);
+}
+
+// Utility classes removed - use semantic component classes instead
 
 // Responsive breakpoints
 @media (max-width: 768px) {

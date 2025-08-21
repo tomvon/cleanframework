@@ -199,6 +199,15 @@
     color: var(--foreground);
 }
 
+// Activity state classes
+.activity-filtered {
+    display: none;
+}
+
+.activity-badge-hidden {
+    display: none;
+}
+
 // Activity File
 .activity-file {
     display: flex;

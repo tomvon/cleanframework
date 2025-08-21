@@ -49,11 +49,11 @@ function animateChartBars() {
         const bars = container.querySelectorAll('.dashboard-card-chart-bar');
         
         bars.forEach((bar, index) => {
-            const originalHeight = bar.style.height;
+            const targetHeight = bar.dataset.height || '0';
             bar.style.height = '0px';
             
             setTimeout(() => {
-                bar.style.height = originalHeight;
+                bar.style.height = targetHeight + 'px';
             }, index * 100);
         });
     });

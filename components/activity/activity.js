@@ -31,7 +31,7 @@ function filterActivities(type) {
     // Filter activities
     activities.forEach(activity => {
         if (type === 'all') {
-            activity.classList.remove('hidden');
+            activity.classList.remove('activity-filtered');
         } else {
             const activityType = activity.dataset.type;
             let shouldShow = false;
@@ -52,9 +52,9 @@ function filterActivities(type) {
             }
             
             if (shouldShow) {
-                activity.classList.remove('hidden');
+                activity.classList.remove('activity-filtered');
             } else {
-                activity.classList.add('hidden');
+                activity.classList.add('activity-filtered');
             }
         }
     });
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add real-time updates simulation
     const activityBadge = document.createElement('span');
     activityBadge.className = 'activity-badge';
-    activityBadge.classList.add('hidden');
+    activityBadge.classList.add('activity-badge-hidden');
     
     const activityTitle = document.querySelector('.activity-title');
     if (activityTitle) {
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (random > 0.7) {
                 const count = parseInt(activityBadge.textContent || '0') + 1;
                 activityBadge.textContent = count;
-                activityBadge.classList.remove('hidden');
+                activityBadge.classList.remove('activity-badge-hidden');
             }
         }, 10000);
     }

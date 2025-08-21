@@ -654,6 +654,254 @@ Animated statistics display.
 </div>
 ```
 
+### FAQ (Frequently Asked Questions)
+
+Accessible accordion-style FAQ section with smooth animations.
+
+```html
+<div class="faq">
+  <div class="container">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <p class="faq-subtitle">Find answers to common questions about our services</p>
+    
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What is included in the basic plan?</span>
+          <i class="faq-icon fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>The basic plan includes access to all core features, 5GB of storage, email support, and up to 10 team members. You also get mobile app access and basic analytics.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can I upgrade or downgrade my plan anytime?</span>
+          <i class="faq-icon fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, you can change your plan at any time. Upgrades take effect immediately, while downgrades take effect at the next billing cycle. We'll prorate any charges or credits accordingly.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Is there a free trial available?</span>
+          <i class="faq-icon fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>We offer a 14-day free trial with no credit card required. You'll have access to all premium features during the trial period.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+**Features:**
+- **Accessible accordion** - Proper ARIA attributes and keyboard navigation
+- **Smooth animations** - CSS transitions for expand/collapse
+- **Event delegation** - Clean JavaScript without inline handlers
+- **Theme-aware styling** - Adapts to light/dark modes
+
+### Logo Cloud
+
+Showcase client logos, partners, or integrations in an elegant grid layout.
+
+```html
+<div class="logos">
+  <div class="container">
+    <h2 class="logos-title">Trusted by Leading Companies</h2>
+    <p class="logos-subtitle">Join thousands of satisfied customers worldwide</p>
+    
+    <div class="logos-grid">
+      <div class="logo-placeholder">TechCorp</div>
+      <div class="logo-placeholder">InnovateLab</div>
+      <div class="logo-placeholder">DataFlow</div>
+      <div class="logo-placeholder">CloudSync</div>
+      <div class="logo-placeholder">AI Solutions</div>
+      <div class="logo-placeholder">NextGen</div>
+      <div class="logo-placeholder">SmartBase</div>
+      <div class="logo-placeholder">DevTools</div>
+      <div class="logo-placeholder">ScaleUp</div>
+      <div class="logo-placeholder">FutureStack</div>
+      <div class="logo-placeholder">CodeCraft</div>
+      <div class="logo-placeholder">PixelPerfect</div>
+    </div>
+  </div>
+</div>
+```
+
+**Features:**
+- **Responsive grid** - Automatically adjusts to screen size
+- **Text-based logos** - Easy to customize, no image dependencies
+- **Theme integration** - Consistent with your brand colors
+- **Replace with images** - Simply swap placeholders with `<img>` tags
+
+### Team
+
+Showcase your team members with professional profiles and social links.
+
+```html
+<div class="team">
+  <div class="container">
+    <h2 class="team-title">Meet Our Team</h2>
+    <p class="team-subtitle">The amazing people behind our success</p>
+    
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="team-member-image">
+          <img src="img/samples/pexels-earano-1330219.jpg" alt="Sarah Johnson" loading="lazy">
+        </div>
+        <div class="team-member-content">
+          <h3 class="team-member-name">Sarah Johnson</h3>
+          <p class="team-member-role">CEO & Founder</p>
+          <p class="team-member-bio">Leading the company with 15+ years of industry experience.</p>
+          <div class="team-member-social">
+            <a href="#" class="team-social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="team-social-link" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="team-member">
+        <div class="team-member-image">
+          <img src="img/samples/pexels-george-desipris-801857.jpg" alt="Michael Chen" loading="lazy">
+        </div>
+        <div class="team-member-content">
+          <h3 class="team-member-name">Michael Chen</h3>
+          <p class="team-member-role">Lead Developer</p>
+          <p class="team-member-bio">Full-stack engineer passionate about clean, efficient code.</p>
+          <div class="team-member-social">
+            <a href="#" class="team-social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="team-social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="team-member">
+        <div class="team-member-image">
+          <img src="img/samples/pexels-pixabay-414320.jpg" alt="Emily Rodriguez" loading="lazy">
+        </div>
+        <div class="team-member-content">
+          <h3 class="team-member-name">Emily Rodriguez</h3>
+          <p class="team-member-role">Design Director</p>
+          <p class="team-member-bio">Creating beautiful, user-centered experiences for our customers.</p>
+          <div class="team-member-social">
+            <a href="#" class="team-social-link" aria-label="Dribbble">
+              <i class="fab fa-dribbble"></i>
+            </a>
+            <a href="#" class="team-social-link" aria-label="Behance">
+              <i class="fab fa-behance"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+**Features:**
+- **Responsive grid layout** - Adapts from 1-3 columns based on screen size
+- **Lazy loading images** - Optimized performance for large teams
+- **Social media integration** - Direct links to team member profiles
+- **Professional styling** - Clean, modern design that builds trust
+
+### Banner
+
+Promotional banners for announcements, offers, and important notifications.
+
+```html
+<!-- Accent Banner -->
+<div class="banner banner-accent">
+  <div class="banner-content">
+    <div class="banner-text">
+      <strong>New Feature Alert!</strong> Check out our latest dashboard updates with advanced analytics.
+    </div>
+    <div class="banner-actions">
+      <a href="#" class="banner-button">Learn More</a>
+      <button class="banner-close" aria-label="Close banner">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Info Banner -->
+<div class="banner banner-info">
+  <div class="banner-content">
+    <div class="banner-text">
+      <i class="fas fa-info-circle"></i>
+      <span>Scheduled maintenance on Sunday, Jan 28th from 2-4 AM EST. <a href="#" class="banner-link">View details</a></span>
+    </div>
+    <button class="banner-close" aria-label="Close banner">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+</div>
+
+<!-- Warning Banner -->
+<div class="banner banner-warning">
+  <div class="banner-content">
+    <div class="banner-text">
+      <i class="fas fa-exclamation-triangle"></i>
+      <span><strong>Action Required:</strong> Please update your payment information to avoid service interruption.</span>
+    </div>
+    <div class="banner-actions">
+      <a href="#" class="banner-button">Update Now</a>
+      <button class="banner-close" aria-label="Close banner">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Success Banner -->
+<div class="banner banner-success">
+  <div class="banner-content">
+    <div class="banner-text">
+      <i class="fas fa-check-circle"></i>
+      <span><strong>Success!</strong> Your account has been upgraded to Pro. Enjoy the new features!</span>
+    </div>
+    <button class="banner-close" aria-label="Close banner">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+</div>
+
+<!-- Offer Banner -->
+<div class="banner banner-offer">
+  <div class="banner-content">
+    <div class="banner-text">
+      <strong>Limited time offer: Get 50% off your first month!</strong>
+    </div>
+    <div class="banner-actions">
+      <a href="#" class="banner-button">Claim Offer</a>
+      <button class="banner-close" aria-label="Close banner">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+</div>
+```
+
+**Features:**
+- **Multiple variants** - Accent, info, warning, success, and offer styles
+- **Theme-aware colors** - Automatic light/dark mode adaptation using CSS variables
+- **Dismissible** - Users can close banners with semantic `.banner-closed` state
+- **Flexible content** - Support for icons, links, and action buttons
+- **Accessibility** - Proper ARIA labels and keyboard navigation
+
 ---
 
 ## Theming

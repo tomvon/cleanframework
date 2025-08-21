@@ -36,16 +36,19 @@ Clean means HTML that communicates structure clearly:
 
 - **Semantic HTML** - Classes that describe content structure and meaning
 - **Intuitive naming** - `.cards`, `.card`, `.hero`, `.nav` map to UI concepts  
-- **Focused scope** - 15 essential components, not hundreds of utilities
+- **No utility classes** - Avoid `.hidden`, `.text-center`, `.flex` in favor of semantic alternatives
+- **Component-specific states** - Use `.banner-closed`, `.faq-question-open` instead of generic utilities
+- **Focused scope** - Essential components, not hundreds of utilities
 - **Tool-friendly** - Predictable patterns that work with AI and automation
 - **Human-readable** - Code that remains clear to developers over time
 
 ## Implementation
 
-1. **15 semantic components** - Cover essential UI patterns without bloat
-2. **500 lines of CSS** - Efficient, focused codebase
+1. **30+ semantic components** - Cover essential UI patterns from marketing to admin interfaces
+2. **Efficient CSS** - Component-based SCSS architecture using CSS custom properties
 3. **Consistent patterns** - Predictable structure across all components
 4. **Zero configuration** - Include CSS and start building
+5. **Progressive JavaScript** - Optional enhancements that work without breaking core functionality
 
 ## Success Metrics
 

@@ -138,8 +138,10 @@ $pricing_plans = [
     <!-- Cards -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Cards</h2>
-            <p class="text-center">Perfect little boxes for your content</p>
+            <div class="section-header">
+                <h2>Cards</h2>
+                <p>Perfect little boxes for your content</p>
+            </div>
             <?php include 'components/cards/cards.php'; ?>
         </div>
     </section>
@@ -147,8 +149,10 @@ $pricing_plans = [
     <!-- Image Cards -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Image Cards</h2>
-            <p class="text-center">Cards with pictures that don't break your layout</p>
+            <div class="section-header">
+                <h2>Image Cards</h2>
+                <p>Cards with pictures that don't break your layout</p>
+            </div>
             <?php $cards = $image_cards; include 'components/cards/cards.php'; ?>
         </div>
     </section>
@@ -156,8 +160,10 @@ $pricing_plans = [
     <!-- Pricing -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Pricing Tables</h2>
-            <p class="text-center">Professional pricing tables with clear layouts</p>
+            <div class="section-header">
+                <h2>Pricing Tables</h2>
+                <p>Professional pricing tables with clear layouts</p>
+            </div>
             <?php include 'components/pricing/pricing.php'; ?>
         </div>
     </section>
@@ -165,8 +171,10 @@ $pricing_plans = [
     <!-- Accordion -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Accordions</h2>
-            <p class="text-center">Collapsible content sections for better organization</p>
+            <div class="section-header">
+                <h2>Accordions</h2>
+                <p>Collapsible content sections for better organization</p>
+            </div>
             <?php include 'components/accordion/accordion.php'; ?>
         </div>
     </section>
@@ -174,8 +182,10 @@ $pricing_plans = [
     <!-- Breadcrumbs -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Breadcrumbs</h2>
-            <p class="text-center">Help users navigate your site structure</p>
+            <div class="section-header">
+                <h2>Breadcrumbs</h2>
+                <p>Help users navigate your site structure</p>
+            </div>
             <?php include 'components/breadcrumb/breadcrumb.php'; ?>
         </div>
     </section>
@@ -183,8 +193,10 @@ $pricing_plans = [
     <!-- Progress Bars -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Progress Bars</h2>
-            <p class="text-center">Show progress without making users guess</p>
+            <div class="section-header">
+                <h2>Progress Bars</h2>
+                <p>Show progress without making users guess</p>
+            </div>
             <?php include 'components/progress/progress.php'; ?>
         </div>
     </section>
@@ -192,20 +204,22 @@ $pricing_plans = [
     <!-- Layout Examples -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Grid Layouts</h2>
-            <p class="text-center">Grids that actually make sense</p>
+            <div class="section-header">
+                <h2>Grid Layouts</h2>
+                <p>Grids that actually make sense</p>
+            </div>
             
             <div class="layout-examples">
                 <div class="section-header">
                     <h3>Two Column Layout</h3>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
-                    <div style="background: var(--card); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                <div class="layout-grid layout-two-column">
+                    <div class="layout-column">
                         <h4>Left Column</h4>
                         <p>This is the left column content. Perfect for main content or primary information.</p>
                     </div>
-                    <div style="background: var(--card); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                    <div class="layout-column">
                         <h4>Right Column</h4>
                         <p>This is the right column content. Great for sidebars or secondary information.</p>
                     </div>
@@ -215,16 +229,16 @@ $pricing_plans = [
                     <h3>Three Column Layout</h3>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
-                    <div style="background: var(--card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                <div class="layout-grid layout-auto-fit">
+                    <div class="layout-column">
                         <h4>Column 1</h4>
                         <p>First column content.</p>
                     </div>
-                    <div style="background: var(--card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                    <div class="layout-column">
                         <h4>Column 2</h4>
                         <p>Second column content.</p>
                     </div>
-                    <div style="background: var(--card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                    <div class="layout-column">
                         <h4>Column 3</h4>
                         <p>Third column content.</p>
                     </div>
@@ -234,8 +248,8 @@ $pricing_plans = [
                     <h3>Container & Sections</h3>
                 </div>
                 
-                <div style="background: var(--muted); padding: 2rem; border-radius: var(--radius); margin-bottom: 2rem;">
-                    <div style="max-width: 1200px; margin: 0 auto; background: var(--card); padding: 2rem; border-radius: var(--radius);">
+                <div class="layout-container-example">
+                    <div class="layout-container-inner">
                         <h4>Container Example</h4>
                         <p>This demonstrates the container component with max-width and automatic centering. Perfect for maintaining readable line lengths and consistent layouts across different screen sizes.</p>
                     </div>

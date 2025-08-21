@@ -70,8 +70,10 @@ $hero_buttons = [
     <!-- Hero Sections -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Hero Sections</h2>
-            <p class="text-center">First impressions that actually impress</p>
+            <div class="section-header">
+                <h2>Hero Sections</h2>
+                <p>First impressions that actually impress</p>
+            </div>
         </div>
     </section>
     
@@ -81,8 +83,10 @@ $hero_buttons = [
     <!-- Features -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Feature Sections</h2>
-            <p class="text-center">Show off what makes your product special</p>
+            <div class="section-header">
+                <h2>Feature Sections</h2>
+                <p>Show off what makes your product special</p>
+            </div>
             <?php include 'components/features/features.php'; ?>
         </div>
     </section>
@@ -90,8 +94,10 @@ $hero_buttons = [
     <!-- Testimonials -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Testimonials</h2>
-            <p class="text-center">Let your happy customers do the selling for you</p>
+            <div class="section-header">
+                <h2>Testimonials</h2>
+                <p>Let your happy customers do the selling for you</p>
+            </div>
             <?php include 'components/testimonials/testimonials.php'; ?>
         </div>
     </section>
@@ -99,8 +105,10 @@ $hero_buttons = [
     <!-- Stats/Counters -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Stats & Counters</h2>
-            <p class="text-center">Big numbers that make your business look impressive</p>
+            <div class="section-header">
+                <h2>Stats & Counters</h2>
+                <p>Big numbers that make your business look impressive</p>
+            </div>
             <?php include 'components/stats/stats.php'; ?>
         </div>
     </section>
@@ -108,17 +116,65 @@ $hero_buttons = [
     <!-- Call-to-Action Sections -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Call-to-Action Sections</h2>
-            <p class="text-center">The final push that turns visitors into customers</p>
+            <div class="section-header">
+                <h2>Call-to-Action Sections</h2>
+                <p>The final push that turns visitors into customers</p>
+            </div>
             <?php include 'components/cta/cta.php'; ?>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Address concerns and build confidence</p>
+            </div>
+            <?php include 'components/faq/faq.php'; ?>
+        </div>
+    </section>
+
+    <!-- Logo Cloud -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Logo Cloud</h2>
+                <p>Show off your clients, partners, or integrations</p>
+            </div>
+            <?php include 'components/logos/logos.php'; ?>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Team Members</h2>
+                <p>The people behind the product</p>
+            </div>
+            <?php include 'components/team/team.php'; ?>
+        </div>
+    </section>
+
+    <!-- Banner Examples -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Promotional Banners</h2>
+                <p>Announcements that grab attention</p>
+            </div>
+            <?php include 'components/banner/banner.php'; ?>
         </div>
     </section>
 
     <!-- Marketing Examples -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Marketing Layouts</h2>
-            <p class="text-center">Proven patterns that actually work</p>
+            <div class="section-header">
+                <h2>Marketing Layouts</h2>
+                <p>Proven patterns that actually work</p>
+            </div>
             
             <div class="layout-examples">
                 <!-- Value Proposition -->
@@ -217,6 +273,8 @@ $hero_buttons = [
     <script src="components/testimonials/testimonials.js"></script>
     <script src="components/stats/stats.js"></script>
     <script src="components/cta/cta.js"></script>
+    <script src="components/faq/faq.js"></script>
+    <script src="components/banner/banner.js"></script>
     
     <!-- Main JavaScript -->
     <script src="main.js"></script>

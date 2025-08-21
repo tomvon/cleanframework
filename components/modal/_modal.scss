@@ -184,6 +184,12 @@
             border-radius: var(--radius);
             cursor: zoom-in;
         }
+        
+        .modal-gallery-caption {
+            margin-top: 1rem;
+            color: var(--muted-text);
+            font-size: 0.875rem;
+        }
     }
 }
 

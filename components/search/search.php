@@ -40,7 +40,7 @@ $recent_searches = [
                    autocomplete="off">
             
             <!-- Search Suggestions Dropdown -->
-            <div class="search-suggestions hidden" id="searchSuggestions">
+            <div class="search-suggestions search-suggestions-hidden" id="searchSuggestions">
                 <!-- Recent Searches -->
                 <div class="search-suggestions-section">
                     <div class="search-suggestions-header">
@@ -72,7 +72,7 @@ $recent_searches = [
             </div>
             
             <!-- Clear button -->
-            <button class="search-clear hidden" onclick="clearSearch()">
+            <button class="search-clear search-clear-hidden" onclick="clearSearch()">
                 <i class="fas fa-times"></i>
             </button>
         </div>
@@ -81,7 +81,7 @@ $recent_searches = [
         <button class="search-filter-toggle" onclick="toggleFilters()">
             <i class="fas fa-filter"></i>
             Filters
-            <span class="filter-count hidden">0</span>
+            <span class="filter-count search-count-hidden">0</span>
         </button>
         
         <!-- Search Button -->
@@ -92,7 +92,7 @@ $recent_searches = [
     </div>
     
     <!-- Filter Panel -->
-    <div class="search-filters-panel hidden" id="filterPanel">
+    <div class="search-filters-panel search-filter-hidden" id="filterPanel">
         <div class="search-filters-content form">
             <!-- Category Filter -->
             <div class="search-filter-group">
@@ -157,7 +157,7 @@ $recent_searches = [
     </div>
     
     <!-- Search Tags (Active Filters) -->
-    <div class="search-tags hidden" id="searchTags">
+    <div class="search-tags search-tags-hidden" id="searchTags">
         <span class="search-tags-label">Active filters:</span>
         <div class="search-tags-list" id="searchTagsList">
             <!-- Tags will be dynamically added here -->

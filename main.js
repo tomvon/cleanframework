@@ -92,13 +92,23 @@ document.addEventListener('DOMContentLoaded', function() {
         window.Dashboard.init();
     }
     
+    // Initialize FAQ component
+    if (window.FAQ) {
+        window.FAQ.init();
+    }
+    
+    // Initialize Banner component
+    if (window.Banner) {
+        window.Banner.init();
+    }
+    
     // All components initialized
     console.log('Clean Framework initialized');
 });
 
-// Global utilities
+// Clean Framework Namespace
 window.CleanFramework = {
-    // Smooth scroll to element
+    // Core utilities
     scrollTo: (selector) => {
         const element = document.querySelector(selector);
         if (element) {
@@ -109,27 +119,24 @@ window.CleanFramework = {
         }
     },
     
-    // Toggle element visibility
-    toggle: (selector) => {
-        const element = document.querySelector(selector);
-        if (element) {
-            element.classList.toggle('hidden');
-        }
-    },
-    
-    // Show element
-    show: (selector) => {
-        const element = document.querySelector(selector);
-        if (element) {
-            element.classList.remove('hidden');
-        }
-    },
-    
-    // Hide element
-    hide: (selector) => {
-        const element = document.querySelector(selector);
-        if (element) {
-            element.classList.add('hidden');
-        }
-    }
+    // Component references
+    Navigation: window.Navigation || {},
+    Forms: window.Forms || {},
+    Dropdown: window.Dropdown || {},
+    Table: window.Table || {},
+    Tabs: window.Tabs || {},
+    Alerts: window.Alerts || {},
+    Accordion: window.Accordion || {},
+    Tooltip: window.Tooltip || {},
+    Breadcrumb: window.Breadcrumb || {},
+    Badge: window.Badge || {},
+    Progress: window.Progress || {},
+    Testimonials: window.Testimonials || {},
+    Features: window.Features || {},
+    CTA: window.CTA || {},
+    Stats: window.Stats || {},
+    Sidebar: window.Sidebar || {},
+    Dashboard: window.Dashboard || {},
+    FAQ: window.FAQ || {},
+    Banner: window.Banner || {}
 };

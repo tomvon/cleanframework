@@ -66,6 +66,11 @@
     }
 }
 
+// Card actions (buttons, links at bottom of card)
+.card-actions {
+    margin-top: 1.5rem;
+}
+
 // Responsive cards
 @media (max-width: 768px) {
     .cards {

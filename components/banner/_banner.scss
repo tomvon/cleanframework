@@ -1,0 +1,165 @@
+// Banner Component
+// Promotional announcements that respect theme
+
+.banner {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    
+    .banner-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .banner-text {
+        margin: 0;
+        font-weight: 500;
+        color: var(--text-color);
+    }
+    
+    .banner-cta {
+        background: var(--primary-color);
+        color: white;
+        padding: 0.5rem 1.25rem;
+        border-radius: var(--radius);
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-block;
+        transition: opacity 0.2s ease;
+        
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+    
+    .banner-close {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--muted-text);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.25rem;
+        line-height: 1;
+        opacity: 0.7;
+        
+        &:hover {
+            opacity: 1;
+            color: var(--text-color);
+        }
+    }
+    
+    // Accent variant
+    &.banner-accent {
+        background: color-mix(in srgb, var(--primary), transparent 85%);
+        border-color: color-mix(in srgb, var(--primary), transparent 60%);
+        
+        .banner-text {
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        
+        .banner-cta {
+            background: var(--primary);
+            color: var(--card);
+            
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+    
+    // Info variant  
+    &.banner-info {
+        background: color-mix(in srgb, var(--info), transparent 85%);
+        border-color: color-mix(in srgb, var(--info), transparent 60%);
+        
+        .banner-text {
+            color: color-mix(in srgb, var(--info), var(--text-color) 20%);
+        }
+        
+        .banner-cta {
+            background: var(--info);
+        }
+    }
+    
+    // Success variant
+    &.banner-success {
+        background: color-mix(in srgb, var(--success), transparent 85%);
+        border-color: color-mix(in srgb, var(--success), transparent 60%);
+        
+        .banner-text {
+            color: color-mix(in srgb, var(--success), var(--text-color) 20%);
+        }
+        
+        .banner-cta {
+            background: var(--success);
+        }
+    }
+    
+    // Warning variant
+    &.banner-warning {
+        background: color-mix(in srgb, var(--warning), transparent 85%);
+        border-color: color-mix(in srgb, var(--warning), transparent 60%);
+        
+        .banner-text {
+            color: color-mix(in srgb, var(--warning), var(--text-color) 20%);
+        }
+        
+        .banner-cta {
+            background: var(--warning);
+        }
+    }
+}
+
+// Mobile adjustments
+@media (max-width: 768px) {
+    .banner {
+        .banner-content {
+            gap: 1rem;
+        }
+        
+        .banner-close {
+            position: static;
+            transform: none;
+            margin-left: auto;
+        }
+    }
+}
+
+// Banner states
+.banner-closed {
+    display: none;
+}
+
+// Dark theme adjustments
+[data-theme="dark"] .banner {
+    &.banner-accent {
+        background: color-mix(in srgb, var(--primary), transparent 80%);
+        border-color: color-mix(in srgb, var(--primary), transparent 50%);
+    }
+    
+    &.banner-info {
+        background: color-mix(in srgb, var(--info), transparent 80%);
+        border-color: color-mix(in srgb, var(--info), transparent 50%);
+    }
+    
+    &.banner-success {
+        background: color-mix(in srgb, var(--success), transparent 80%);
+        border-color: color-mix(in srgb, var(--success), transparent 50%);
+    }
+    
+    &.banner-warning {
+        background: color-mix(in srgb, var(--warning), transparent 80%);
+        border-color: color-mix(in srgb, var(--warning), transparent 50%);
+    }
+}

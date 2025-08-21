@@ -119,7 +119,7 @@ $cta_sections = $cta_sections ?? [
         
         <div class="cta-form">
             <form class="newsletter-form" action="#" method="post">
-                <div class="form-group-inline">
+                <div class="newsletter-form-field">
                     <input 
                         type="email" 
                         name="email" 

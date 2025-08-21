@@ -32,10 +32,10 @@ function initializeDataGrid() {
             row.addEventListener('dblclick', function() {
                 const expandedRow = this.nextElementSibling;
                 if (expandedRow && expandedRow.classList.contains('datagrid-row-expanded')) {
-                    if (expandedRow.classList.contains('hidden')) {
-                        expandedRow.classList.remove('hidden');
+                    if (expandedRow.classList.contains('datagrid-row-collapsed')) {
+                        expandedRow.classList.remove('datagrid-row-collapsed');
                     } else {
-                        expandedRow.classList.add('hidden');
+                        expandedRow.classList.add('datagrid-row-collapsed');
                     }
                 }
             });
@@ -50,10 +50,10 @@ function updateSelectedCount() {
     
     if (selectedCountElement) {
         if (selectedCount > 0) {
-            selectedCountElement.classList.remove('hidden');
+            selectedCountElement.classList.remove('datagrid-count-hidden');
             selectedCountElement.querySelector('strong').textContent = selectedCount;
         } else {
-            selectedCountElement.classList.add('hidden');
+            selectedCountElement.classList.add('datagrid-count-hidden');
         }
     }
     
@@ -183,12 +183,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     const expandedRow = row.nextElementSibling;
                     
                     if (text.includes(searchTerm)) {
-                        row.classList.remove('hidden');
+                        row.classList.remove('datagrid-row-filtered');
                         // Keep expanded row state
                     } else {
-                        row.classList.add('hidden');
+                        row.classList.add('datagrid-row-filtered');
                         if (expandedRow && expandedRow.classList.contains('datagrid-row-expanded')) {
-                            expandedRow.classList.add('hidden');
+                            expandedRow.classList.add('datagrid-row-filtered');
                         }
                     }
                 }

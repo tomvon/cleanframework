@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketing Components - Clean Framework</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../style.css?v=20240816">
+    <link rel="stylesheet" href="../style.css">
     <script>
         // Prevent theme flash by setting theme before CSS loads
         (function() {
@@ -122,8 +122,10 @@
     <!-- Hero Sections -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Hero Sections</h2>
-            <p class="text-center">First impressions that actually impress</p>
+            <div class="section-header">
+                <h2>Hero Sections</h2>
+                <p>First impressions that actually impress</p>
+            </div>
         </div>
     </section>
     
@@ -147,8 +149,10 @@
     <!-- Features -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Feature Sections</h2>
-            <p class="text-center">Show off what makes your product special</p>
+            <div class="section-header">
+                <h2>Feature Sections</h2>
+                <p>Show off what makes your product special</p>
+            </div>
             
 <div class="features-section">
     <div class="features-header">
@@ -377,8 +381,10 @@
     <!-- Testimonials -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Testimonials</h2>
-            <p class="text-center">Let your happy customers do the selling for you</p>
+            <div class="section-header">
+                <h2>Testimonials</h2>
+                <p>Let your happy customers do the selling for you</p>
+            </div>
             
 <div class="testimonials-section">
     <div class="testimonials-header">
@@ -488,8 +494,10 @@
     <!-- Stats/Counters -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Stats & Counters</h2>
-            <p class="text-center">Big numbers that make your business look impressive</p>
+            <div class="section-header">
+                <h2>Stats & Counters</h2>
+                <p>Big numbers that make your business look impressive</p>
+            </div>
             
 <div class="stats-section">
     <div class="stats-header">
@@ -775,8 +783,10 @@
     <!-- Call-to-Action Sections -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Call-to-Action Sections</h2>
-            <p class="text-center">The final push that turns visitors into customers</p>
+            <div class="section-header">
+                <h2>Call-to-Action Sections</h2>
+                <p>The final push that turns visitors into customers</p>
+            </div>
             
 <!-- Primary CTA Section -->
 <div class="cta-section cta-primary cta-centered cta-gradient">
@@ -815,7 +825,7 @@
         
         <div class="cta-form">
             <form class="newsletter-form" action="#" method="post">
-                <div class="form-group-inline">
+                <div class="newsletter-form-field">
                     <input 
                         type="email" 
                         name="email" 
@@ -949,11 +959,190 @@
 </div>        </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Address concerns and build confidence</p>
+            </div>
+            
+<section class="section">
+    <div class="container">
+        <h2>FAQ</h2>
+        
+        <div class="faq">
+            <div class="faq-item">
+                <h3 class="faq-question">What is Clean Framework?</h3>
+                <div class="faq-answer">
+                    <p>Clean Framework is a semantic CSS framework that prioritizes readable HTML with intuitive class names. It provides essential UI components without the complexity of utility classes.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">How do I get started?</h3>
+                <div class="faq-answer">
+                    <p>Simply include the CSS file in your HTML and start using semantic component classes like .card, .hero, and .nav. No build process or configuration required.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Is JavaScript required?</h3>
+                <div class="faq-answer">
+                    <p>No, JavaScript is optional. The framework provides progressive enhancement - components work without JS but gain additional functionality when JS is included.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Can I customize the styles?</h3>
+                <div class="faq-answer">
+                    <p>Yes, the framework uses CSS custom properties for theming and provides SCSS source files for deeper customization. You can modify colors, spacing, and component styles to match your brand.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>        </div>
+    </section>
+
+    <!-- Logo Cloud -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Logo Cloud</h2>
+                <p>Show off your clients, partners, or integrations</p>
+            </div>
+            
+<section class="section">
+    <div class="container">
+        <div class="logos">
+            <p class="logos-title">Trusted by leading companies</p>
+            <div class="logos-grid">
+                <div class="logo-placeholder">TechCorp</div>
+                <div class="logo-placeholder">Innovate</div>
+                <div class="logo-placeholder">DataFlow</div>
+                <div class="logo-placeholder">CloudNine</div>
+                <div class="logo-placeholder">NetForge</div>
+                <div class="logo-placeholder">ByteWorks</div>
+            </div>
+        </div>
+    </div>
+</section>        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Team Members</h2>
+                <p>The people behind the product</p>
+            </div>
+            
+<section class="section">
+    <div class="container">
+        <h2>Our Team</h2>
+        
+        <div class="team">
+            <div class="team-grid">
+                <div class="team-member">
+                    <img class="team-avatar" src="../img/samples/pexels-earano-1330219.jpg" alt="Jane Smith" loading="lazy">
+                    <h3 class="team-name">Jane Smith</h3>
+                    <p class="team-role">CEO & Founder</p>
+                    <p class="team-bio">Leading the vision and strategy with 15 years of industry experience.</p>
+                    <div class="team-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img class="team-avatar" src="../img/samples/pexels-fabianwiktor-994605.jpg" alt="John Doe" loading="lazy">
+                    <h3 class="team-name">John Doe</h3>
+                    <p class="team-role">CTO</p>
+                    <p class="team-bio">Building scalable technology solutions and leading our engineering team.</p>
+                    <div class="team-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img class="team-avatar" src="../img/samples/pexels-george-desipris-801857.jpg" alt="Sarah Johnson" loading="lazy">
+                    <h3 class="team-name">Sarah Johnson</h3>
+                    <p class="team-role">Head of Design</p>
+                    <p class="team-bio">Creating beautiful and intuitive user experiences that delight customers.</p>
+                    <div class="team-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img class="team-avatar" src="../img/samples/pexels-pixabay-414320.jpg" alt="Mike Wilson" loading="lazy">
+                    <h3 class="team-name">Mike Wilson</h3>
+                    <p class="team-role">Head of Marketing</p>
+                    <p class="team-bio">Driving growth through innovative marketing strategies and brand development.</p>
+                    <div class="team-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>        </div>
+    </section>
+
+    <!-- Banner Examples -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Promotional Banners</h2>
+                <p>Announcements that grab attention</p>
+            </div>
+            
+<!-- Default Banner -->
+<div class="banner banner-accent">
+    <div class="banner-content">
+        <p class="banner-text">Limited time offer: Get 50% off your first month!</p>
+        <a href="#" class="banner-cta">Claim Offer</a>
+        <button class="banner-close" aria-label="Close banner">&times;</button>
+    </div>
+</div>
+
+<!-- Info Banner -->
+<div class="banner banner-info">
+    <div class="banner-content">
+        <p class="banner-text">New feature: Dark mode is now available in settings</p>
+        <a href="#" class="banner-cta">Try it now</a>
+        <button class="banner-close" aria-label="Close banner">&times;</button>
+    </div>
+</div>
+
+<!-- Success Banner -->
+<div class="banner banner-success">
+    <div class="banner-content">
+        <p class="banner-text">Your account has been upgraded successfully!</p>
+        <button class="banner-close" aria-label="Close banner">&times;</button>
+    </div>
+</div>
+
+<!-- Warning Banner -->
+<div class="banner banner-warning">
+    <div class="banner-content">
+        <p class="banner-text">Scheduled maintenance on Sunday, 2-4 AM EST</p>
+        <a href="#" class="banner-cta">Learn More</a>
+        <button class="banner-close" aria-label="Close banner">&times;</button>
+    </div>
+</div>        </div>
+    </section>
+
     <!-- Marketing Examples -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Marketing Layouts</h2>
-            <p class="text-center">Proven patterns that actually work</p>
+            <div class="section-header">
+                <h2>Marketing Layouts</h2>
+                <p>Proven patterns that actually work</p>
+            </div>
             
             <div class="layout-examples">
                 <!-- Value Proposition -->
@@ -1052,6 +1241,8 @@
     <script src="../components/testimonials/testimonials.js"></script>
     <script src="../components/stats/stats.js"></script>
     <script src="../components/cta/cta.js"></script>
+    <script src="../components/faq/faq.js"></script>
+    <script src="../components/banner/banner.js"></script>
     
     <!-- Main JavaScript -->
     <script src="../main.js"></script>

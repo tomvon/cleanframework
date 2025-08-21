@@ -1,0 +1,69 @@
+// Logo Cloud Component
+// Display client or partner logos
+
+.logos {
+    margin: 3rem 0;
+    text-align: center;
+    
+    .logos-title {
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--muted-text);
+        margin-bottom: 2rem;
+    }
+    
+    .logos-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem 3rem;
+        
+        img, .logo-placeholder {
+            height: 40px;
+            width: auto;
+            opacity: 0.6;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+            
+            &:hover {
+                opacity: 1;
+                filter: grayscale(0%);
+            }
+        }
+        
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--muted-text);
+        }
+    }
+}
+
+// Mobile adjustments
+@media (max-width: 768px) {
+    .logos {
+        .logos-grid {
+            gap: 1.5rem 2rem;
+            
+            img {
+                height: 30px;
+            }
+        }
+    }
+}
+
+// Dark theme
+[data-theme="dark"] .logos {
+    .logos-grid img {
+        opacity: 0.5;
+        
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}

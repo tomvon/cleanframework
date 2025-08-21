@@ -518,23 +518,29 @@ $form_steps = [
     <!-- Forms Section -->
     <section id="forms" class="section">
         <div class="container">
-            <h2 class="text-center">Forms</h2>
-            <p class="text-center text-muted">Form components with built-in validation and accessibility</p>
+            <div class="section-header">
+                <h2>Forms</h2>
+                <p>Form components with built-in validation and accessibility</p>
+            </div>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h3>Multi-Step Form</h3>
-            <p class="text-center">Complex forms broken down into manageable steps</p>
+            <div class="section-header">
+                <h3>Multi-Step Form</h3>
+                <p>Complex forms broken down into manageable steps</p>
+            </div>
             <?php include 'components/form/form-multi.php'; ?>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h3>Contact Form</h3>
-            <p class="text-center">Simple contact form with validation</p>
+            <div class="section-header">
+                <h3>Contact Form</h3>
+                <p>Simple contact form with validation</p>
+            </div>
             <?php include 'components/form/form.php'; ?>
         </div>
     </section>
@@ -542,47 +548,59 @@ $form_steps = [
     <!-- UI Components Section -->
     <section id="ui-components" class="section">
         <div class="container">
-            <h2 class="text-center">UI Components</h2>
-            <p class="text-center text-muted">Interactive elements with consistent behavior and styling</p>
+            <div class="section-header">
+                <h2>UI Components</h2>
+                <p>Interactive elements with consistent behavior and styling</p>
+            </div>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Modals</h2>
-            <p class="text-center">Accessible dialog windows for forms and content</p>
+            <div class="section-header">
+                <h2>Modals</h2>
+                <p>Accessible dialog windows for forms and content</p>
+            </div>
             <?php include 'components/modal/modal.php'; ?>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Dropdowns</h2>
-            <p class="text-center">Versatile dropdown menus for navigation and actions</p>
+            <div class="section-header">
+                <h2>Dropdowns</h2>
+                <p>Versatile dropdown menus for navigation and actions</p>
+            </div>
             <?php include 'components/dropdown/dropdown.php'; ?>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Data Tables</h2>
-            <p class="text-center">Responsive data tables with sorting and filtering</p>
+            <div class="section-header">
+                <h2>Data Tables</h2>
+                <p>Responsive data tables with sorting and filtering</p>
+            </div>
             <?php include 'components/table/table.php'; ?>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Tabs</h2>
-            <p class="text-center">Organize content without overwhelming users</p>
+            <div class="section-header">
+                <h2>Tabs</h2>
+                <p>Organize content without overwhelming users</p>
+            </div>
             <?php include 'components/tabs/tabs.php'; ?>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h3>Alerts & Notifications</h3>
-            <p class="text-center">Interactive notifications for success, info, warning, and error messages</p>
+            <div class="section-header">
+                <h3>Alerts & Notifications</h3>
+                <p>Interactive notifications for success, info, warning, and error messages</p>
+            </div>
             
             <div class="buttons">
                 <button class="button primary" onclick="showToast('Operation completed successfully!', 'success')">
@@ -603,16 +621,20 @@ $form_steps = [
 
     <section class="section">
         <div class="container">
-            <h3>Tooltips</h3>
-            <p class="text-center">Contextual help and information on hover or focus</p>
+            <div class="section-header">
+                <h3>Tooltips</h3>
+                <p>Contextual help and information on hover or focus</p>
+            </div>
             <?php include 'components/tooltip/tooltip.php'; ?>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h3>Badges</h3>
-            <p class="text-center">Labels, status indicators, and tags for categorization</p>
+            <div class="section-header">
+                <h3>Badges</h3>
+                <p>Labels, status indicators, and tags for categorization</p>
+            </div>
             <?php include 'components/badge/badge.php'; ?>
         </div>
     </section>
@@ -620,55 +642,69 @@ $form_steps = [
     <!-- Layout Section -->
     <section id="layout" class="section">
         <div class="container">
-            <h2 class="text-center">Layout</h2>
-            <p class="text-center text-muted">Structural components for content organization</p>
+            <div class="section-header">
+                <h2>Layout</h2>
+                <p>Structural components for content organization</p>
+            </div>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h3>Cards</h3>
-            <p class="text-center">Perfect little boxes for your content</p>
+            <div class="section-header">
+                <h3>Cards</h3>
+                <p>Perfect little boxes for your content</p>
+            </div>
             <?php include 'components/cards/cards.php'; ?>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h3>Image Cards</h3>
-            <p class="text-center">Real examples, not just pretty mockups</p>
+            <div class="section-header">
+                <h3>Image Cards</h3>
+                <p>Real examples, not just pretty mockups</p>
+            </div>
             <?php $cards = $image_cards; include 'components/cards/cards.php'; ?>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h3>Pricing Tables</h3>
-            <p class="text-center">No hidden fees, no surprises, no PhD required to understand</p>
+            <div class="section-header">
+                <h3>Pricing Tables</h3>
+                <p>No hidden fees, no surprises, no PhD required to understand</p>
+            </div>
             <?php include 'components/pricing/pricing.php'; ?>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h3>Accordion</h3>
-            <p class="text-center">Collapsible content sections for organizing information</p>
+            <div class="section-header">
+                <h3>Accordion</h3>
+                <p>Collapsible content sections for organizing information</p>
+            </div>
             <?php include 'components/accordion/accordion.php'; ?>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h3>Breadcrumbs</h3>
-            <p class="text-center">Navigation hierarchy showing location in site structure</p>
+            <div class="section-header">
+                <h3>Breadcrumbs</h3>
+                <p>Navigation hierarchy showing location in site structure</p>
+            </div>
             <?php include 'components/breadcrumb/breadcrumb.php'; ?>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <h3>Progress Bars</h3>
-            <p class="text-center">Visual indicators for completion states and loading progress</p>
+            <div class="section-header">
+                <h3>Progress Bars</h3>
+                <p>Visual indicators for completion states and loading progress</p>
+            </div>
             <?php include 'components/progress/progress.php'; ?>
         </div>
     </section>
@@ -676,8 +712,10 @@ $form_steps = [
     <!-- Marketing Section -->
     <section id="marketing" class="section">
         <div class="container">
-            <h2 class="text-center">Marketing</h2>
-            <p class="text-center text-muted">Conversion-focused components for landing pages</p>
+            <div class="section-header">
+                <h2>Marketing</h2>
+                <p>Conversion-focused components for landing pages</p>
+            </div>
         </div>
     </section>
 
@@ -705,18 +743,44 @@ $form_steps = [
         </div>
     </section>
 
+    <section class="section">
+        <div class="container">
+            <?php include 'components/faq/faq.php'; ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <?php include 'components/logos/logos.php'; ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <?php include 'components/team/team.php'; ?>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <?php include 'components/banner/banner.php'; ?>
+        </div>
+    </section>
+
     <!-- Admin Section -->
     <section id="admin" class="section">
         <div class="container">
-            <h2 class="text-center">Admin</h2>
-            <p class="text-center text-muted">Professional components for admin panels and dashboards</p>
+            <div class="section-header">
+                <h2>Admin</h2>
+                <p>Professional components for admin panels and dashboards</p>
+            </div>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
             <h3>Sidebar Navigation</h3>
-            <p class="text-muted">The sidebar navigation is already active on this page! You can see it on the left side. It includes collapsible menu items, icons, and responsive mobile behavior.</p>
+            <p>The sidebar navigation is already active on this page! You can see it on the left side. It includes collapsible menu items, icons, and responsive mobile behavior.</p>
             <div class="alert alert-info">
                 <i class="fas fa-info-circle"></i>
                 <strong>Live Demo:</strong> The sidebar you see on the left is the actual sidebar component in action. Try collapsing it with the toggle button in the header.
@@ -784,6 +848,8 @@ $form_steps = [
     <script src="components/features/features.js"></script>
     <script src="components/cta/cta.js"></script>
     <script src="components/stats/stats.js"></script>
+    <script src="components/faq/faq.js"></script>
+    <script src="components/banner/banner.js"></script>
     <script src="components/sidebar/sidebar.js"></script>
     <script src="components/dashboard/dashboard.js"></script>
     <script src="components/datagrid/datagrid.js"></script>

@@ -134,8 +134,10 @@ $form_steps = [
     <!-- Basic Form -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Contact Form</h2>
-            <p class="text-center">Clean, accessible form styling with proper validation states</p>
+            <div class="section-header">
+                <h2>Contact Form</h2>
+                <p>Clean, accessible form styling with proper validation states</p>
+            </div>
             <?php include 'components/form/form.php'; ?>
         </div>
     </section>
@@ -143,8 +145,10 @@ $form_steps = [
     <!-- Multi-Step Form -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Multi-Step Form</h2>
-            <p class="text-center">Progressive disclosure with step navigation and built-in validation</p>
+            <div class="section-header">
+                <h2>Multi-Step Form</h2>
+                <p>Progressive disclosure with step navigation and built-in validation</p>
+            </div>
             <?php include 'components/form/form-multi.php'; ?>
         </div>
     </section>
@@ -152,8 +156,10 @@ $form_steps = [
     <!-- Form Field Examples -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Input Types</h2>
-            <p class="text-center">All HTML5 input types with consistent styling and behavior</p>
+            <div class="section-header">
+                <h2>Input Types</h2>
+                <p>All HTML5 input types with consistent styling and behavior</p>
+            </div>
             
             <div class="form">
                 <div class="group">
@@ -268,26 +274,28 @@ $form_steps = [
     <!-- Validation States -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Validation States</h2>
-            <p class="text-center">Visual feedback for form validation with clear error messaging</p>
+            <div class="section-header">
+                <h2>Validation States</h2>
+                <p>Visual feedback for form validation with clear error messaging</p>
+            </div>
             
             <div class="form">
-                <div class="group">
+                <div class="group group-valid">
                     <label for="valid-input">Valid Input</label>
-                    <input type="text" id="valid-input" name="valid-input" value="Valid input" style="border-color: var(--success);">
-                    <small class="help" style="color: var(--success);">✓ This field is valid</small>
+                    <input type="text" id="valid-input" name="valid-input" value="Valid input">
+                    <small class="help">✓ This field is valid</small>
                 </div>
 
-                <div class="group">
+                <div class="group group-error">
                     <label for="invalid-input">Invalid Input</label>
-                    <input type="email" id="invalid-input" name="invalid-input" value="invalid-email" style="border-color: var(--danger);">
+                    <input type="email" id="invalid-input" name="invalid-input" value="invalid-email">
                     <small class="error">✗ Please enter a valid email address</small>
                 </div>
 
-                <div class="group">
+                <div class="group group-warning">
                     <label for="warning-input">Warning Input</label>
-                    <input type="password" id="warning-input" name="warning-input" value="weak" style="border-color: var(--warning);">
-                    <small class="help" style="color: var(--warning);">⚠ Password strength: weak</small>
+                    <input type="password" id="warning-input" name="warning-input" value="weak">
+                    <small class="help">⚠ Password strength: weak</small>
                 </div>
             </div>
         </div>

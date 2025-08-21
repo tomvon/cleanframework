@@ -18,14 +18,14 @@ function initializeSearch() {
         // Show suggestions on focus
         searchInput.addEventListener('focus', function() {
             if (this.value.length === 0) {
-                searchSuggestions.classList.remove('hidden');
+                searchSuggestions.classList.remove('search-suggestions-hidden');
             }
         });
         
         // Hide suggestions on blur (with delay for click handling)
         searchInput.addEventListener('blur', function() {
             setTimeout(() => {
-                searchSuggestions.classList.add('hidden');
+                searchSuggestions.classList.add('search-suggestions-hidden');
             }, 200);
         });
         
@@ -35,12 +35,12 @@ function initializeSearch() {
             const clearButton = this.parentElement.querySelector('.search-clear');
             
             if (value.length > 0) {
-                clearButton.classList.remove('hidden');
+                clearButton.classList.remove('search-clear-hidden');
                 // Here you would typically filter suggestions based on input
-                searchSuggestions.classList.remove('hidden');
+                searchSuggestions.classList.remove('search-suggestions-hidden');
             } else {
-                clearButton.classList.add('hidden');
-                searchSuggestions.classList.remove('hidden');
+                clearButton.classList.add('search-clear-hidden');
+                searchSuggestions.classList.remove('search-suggestions-hidden');
             }
         });
         
@@ -69,11 +69,11 @@ function toggleFilters() {
     const filterPanel = document.getElementById('filterPanel');
     const filterToggle = document.querySelector('.search-filter-toggle');
     
-    if (filterPanel.classList.contains('hidden')) {
-        filterPanel.classList.remove('hidden');
+    if (filterPanel.classList.contains('search-filter-hidden')) {
+        filterPanel.classList.remove('search-filter-hidden');
         filterToggle.classList.add('active');
     } else {
-        filterPanel.classList.add('hidden');
+        filterPanel.classList.add('search-filter-hidden');
         filterToggle.classList.remove('active');
     }
 }
@@ -84,7 +84,7 @@ function clearSearch() {
     const clearButton = document.querySelector('.search-clear');
     
     searchInput.value = '';
-    clearButton.classList.add('hidden');
+    clearButton.classList.add('search-clear-hidden');
     searchInput.focus();
 }
 
@@ -143,9 +143,9 @@ function updateFilterCount() {
     // Update count display
     if (activeFilters > 0) {
         filterCount.textContent = activeFilters;
-        filterCount.classList.remove('hidden');
+        filterCount.classList.remove('search-count-hidden');
     } else {
-        filterCount.classList.add('hidden');
+        filterCount.classList.add('search-count-hidden');
     }
 }
 
@@ -182,9 +182,9 @@ function applyFilters() {
     
     // Show/hide tags container
     if (hasActiveTags) {
-        searchTags.classList.remove('hidden');
+        searchTags.classList.remove('search-tags-hidden');
     } else {
-        searchTags.classList.add('hidden');
+        searchTags.classList.add('search-tags-hidden');
     }
     
     // Close filter panel

@@ -416,6 +416,19 @@
     }
 }
 
+// DataGrid state classes
+.datagrid-row-collapsed {
+    display: none;
+}
+
+.datagrid-count-hidden {
+    display: none;
+}
+
+.datagrid-row-filtered {
+    display: none;
+}
+
 // Empty state
 .datagrid-empty {
     padding: 3rem 1.5rem;

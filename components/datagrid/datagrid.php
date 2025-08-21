@@ -173,7 +173,7 @@ $datagrid_data = [
                 </tr>
                 
                 <!-- Expandable row content (hidden by default) -->
-                <tr class="datagrid-row-expanded hidden">
+                <tr class="datagrid-row-expanded datagrid-row-collapsed">
                     <td colspan="7">
                         <div class="datagrid-expand-content">
                             <h4>Additional Information</h4>
@@ -204,7 +204,7 @@ $datagrid_data = [
         <div class="datagrid-footer-content">
             <div class="datagrid-info">
                 Showing 1-6 of 6 entries
-                <span class="datagrid-selected-count hidden">
+                <span class="datagrid-selected-count datagrid-count-hidden">
                     · <strong>0</strong> selected
                 </span>
             </div>

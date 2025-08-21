@@ -62,8 +62,10 @@ $nav_items = [
     <!-- Buttons -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Buttons</h2>
-            <p class="text-center">Multiple button styles and states for different actions</p>
+            <div class="section-header">
+                <h2>Buttons</h2>
+                <p>Multiple button styles and states for different actions</p>
+            </div>
             
             <div class="buttons">
                 <button class="button primary">Primary Button</button>
@@ -95,8 +97,10 @@ $nav_items = [
     <!-- Alerts -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Alerts & Toasts</h2>
-            <p class="text-center">User notifications for success, error, warning, and info messages</p>
+            <div class="section-header">
+                <h2>Alerts & Toasts</h2>
+                <p>User notifications for success, error, warning, and info messages</p>
+            </div>
             
             <div class="buttons">
                 <button class="button primary" onclick="showToast('Operation completed successfully!', 'success')">
@@ -118,8 +122,10 @@ $nav_items = [
     <!-- Modals -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Modals</h2>
-            <p class="text-center">Accessible dialog windows for forms, confirmations, and content</p>
+            <div class="section-header">
+                <h2>Modals</h2>
+                <p>Accessible dialog windows for forms, confirmations, and content</p>
+            </div>
             <?php include 'components/modal/modal.php'; ?>
         </div>
     </section>
@@ -127,8 +133,10 @@ $nav_items = [
     <!-- Dropdowns -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Dropdowns</h2>
-            <p class="text-center">Versatile dropdown menus for navigation and actions</p>
+            <div class="section-header">
+                <h2>Dropdowns</h2>
+                <p>Versatile dropdown menus for navigation and actions</p>
+            </div>
             <?php include 'components/dropdown/dropdown.php'; ?>
         </div>
     </section>
@@ -136,8 +144,10 @@ $nav_items = [
     <!-- Tables -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Tables</h2>
-            <p class="text-center">Responsive data tables with sorting, filtering, and pagination</p>
+            <div class="section-header">
+                <h2>Tables</h2>
+                <p>Responsive data tables with sorting, filtering, and pagination</p>
+            </div>
             <?php include 'components/table/table.php'; ?>
         </div>
     </section>
@@ -145,8 +155,10 @@ $nav_items = [
     <!-- Tabs -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Tabs</h2>
-            <p class="text-center">Clean tabbed interfaces for content organization</p>
+            <div class="section-header">
+                <h2>Tabs</h2>
+                <p>Clean tabbed interfaces for content organization</p>
+            </div>
             <?php include 'components/tabs/tabs.php'; ?>
         </div>
     </section>
@@ -154,8 +166,10 @@ $nav_items = [
     <!-- Tooltips -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Tooltips</h2>
-            <p class="text-center">Contextual information that appears on hover or focus</p>
+            <div class="section-header">
+                <h2>Tooltips</h2>
+                <p>Contextual information that appears on hover or focus</p>
+            </div>
             <?php include 'components/tooltip/tooltip.php'; ?>
         </div>
     </section>
@@ -163,8 +177,10 @@ $nav_items = [
     <!-- Badges -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Badges</h2>
-            <p class="text-center">Status indicators, labels, and tags for content categorization</p>
+            <div class="section-header">
+                <h2>Badges</h2>
+                <p>Status indicators, labels, and tags for content categorization</p>
+            </div>
             <?php include 'components/badge/badge.php'; ?>
         </div>
     </section>

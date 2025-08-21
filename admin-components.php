@@ -285,8 +285,10 @@ include 'components/dashboard/dashboard.php';
     <!-- Sidebar Component Description -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Sidebar Navigation</h2>
-            <p class="text-center">The sidebar navigation is active on this page - see it on the left side!</p>
+            <div class="section-header">
+                <h2>Sidebar Navigation</h2>
+                <p>The sidebar navigation is active on this page - see it on the left side!</p>
+            </div>
             
             <div class="cards">
                 <div class="card">
@@ -319,8 +321,10 @@ include 'components/dashboard/dashboard.php';
     <!-- Dashboard Cards -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Dashboard Cards</h2>
-            <p class="text-center">Metric cards with icons, trends, progress bars, and mini charts</p>
+            <div class="section-header">
+                <h2>Dashboard Cards</h2>
+                <p>Metric cards with icons, trends, progress bars, and mini charts</p>
+            </div>
             
             <!-- Standard Metric Cards -->
             <div class="dashboard-section">
@@ -405,8 +409,10 @@ include 'components/dashboard/dashboard.php';
     <!-- Quick Stats -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Quick Stats</h2>
-            <p class="text-center">Compact statistics for space-efficient dashboards</p>
+            <div class="section-header">
+                <h2>Quick Stats</h2>
+                <p>Compact statistics for space-efficient dashboards</p>
+            </div>
             
             <div class="dashboard-quick-stats">
                 <div class="dashboard-quick-stat">
@@ -436,8 +442,10 @@ include 'components/dashboard/dashboard.php';
     <!-- Data Grid -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Data Grid</h2>
-            <p class="text-center">Advanced data table with sorting, filtering, bulk actions, and inline editing</p>
+            <div class="section-header">
+                <h2>Data Grid</h2>
+                <p>Advanced data table with sorting, filtering, bulk actions, and inline editing</p>
+            </div>
             
             <?php include 'components/datagrid/datagrid.php'; ?>
         </div>
@@ -446,8 +454,10 @@ include 'components/dashboard/dashboard.php';
     <!-- Search & Filters -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Search & Filters</h2>
-            <p class="text-center">Advanced search with autocomplete, filters, saved searches, and multiple variants</p>
+            <div class="section-header">
+                <h2>Search & Filters</h2>
+                <p>Advanced search with autocomplete, filters, saved searches, and multiple variants</p>
+            </div>
             
             <?php include 'components/search/search.php'; ?>
         </div>
@@ -456,8 +466,10 @@ include 'components/dashboard/dashboard.php';
     <!-- Activity Feed -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">Activity Feed</h2>
-            <p class="text-center">Timeline for activity logs, notifications, and updates with filtering and real-time features</p>
+            <div class="section-header">
+                <h2>Activity Feed</h2>
+                <p>Timeline for activity logs, notifications, and updates with filtering and real-time features</p>
+            </div>
             
             <?php include 'components/activity/activity.php'; ?>
         </div>
@@ -466,8 +478,10 @@ include 'components/dashboard/dashboard.php';
     <!-- File Manager -->
     <section class="section">
         <div class="container">
-            <h2 class="text-center">File Manager</h2>
-            <p class="text-center">Drag-and-drop file uploads with progress tracking, file management, and preview functionality</p>
+            <div class="section-header">
+                <h2>File Manager</h2>
+                <p>Drag-and-drop file uploads with progress tracking, file management, and preview functionality</p>
+            </div>
             
             <?php include 'components/filemanager/filemanager.php'; ?>
         </div>

@@ -6,6 +6,37 @@
     
     .group {
         margin-bottom: 1rem;
+        
+        // Validation states
+        &.group-valid {
+            input, textarea {
+                border-color: var(--success);
+            }
+            
+            .help {
+                color: var(--success);
+            }
+        }
+        
+        &.group-error {
+            input, textarea {
+                border-color: var(--danger);
+            }
+            
+            .error {
+                color: var(--danger);
+            }
+        }
+        
+        &.group-warning {
+            input, textarea {
+                border-color: var(--warning);
+            }
+            
+            .help {
+                color: var(--warning);
+            }
+        }
     }
     
     label {
@@ -318,10 +349,6 @@
                 height: 1rem;
                 
                 &.eye-closed {
-                    display: none;
-                }
-                
-                &.hidden {
                     display: none;
                 }
             }

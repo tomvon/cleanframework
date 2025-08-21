@@ -83,8 +83,8 @@ function processFiles(files) {
     const uploadItems = document.getElementById('uploadItems');
     
     // Hide upload area and show progress
-    uploadArea.classList.add('hidden');
-    uploadProgress.classList.remove('hidden');
+    uploadArea.classList.add('file-upload-area-hidden');
+    uploadProgress.classList.remove('file-upload-progress-hidden');
     
     // Clear previous uploads
     uploadItems.innerHTML = '';
@@ -204,8 +204,8 @@ function checkUploadComplete() {
     const uploadArea = document.getElementById('uploadArea');
     
     if (uploadItems.children.length === 0) {
-        uploadProgress.classList.add('hidden');
-        uploadArea.classList.remove('hidden');
+        uploadProgress.classList.add('file-upload-progress-hidden');
+        uploadArea.classList.remove('file-upload-area-hidden');
         
         // Reset file input
         document.getElementById('fileInput').value = '';
@@ -316,21 +316,40 @@ function setFileView(view) {
     const gridBtn = document.querySelector('.file-view-btn[data-view="grid"]');
     const listBtn = document.querySelector('.file-view-btn[data-view="list"]');
     
-    console.log('Found elements:', { gridView, listView, gridBtn, listBtn });
+    console.log('Found elements:', { 
+        gridView: gridView ? 'exists' : 'null', 
+        listView: listView ? 'exists' : 'null', 
+        gridBtn: gridBtn ? 'exists' : 'null', 
+        listBtn: listBtn ? 'exists' : 'null' 
+    });
     
     if (view === 'grid') {
-        if (gridView) gridView.classList.remove('hidden');
-        if (listView) listView.classList.add('hidden');
+        if (gridView) {
+            gridView.classList.remove('file-view-hidden');
+            console.log('Grid view shown');
+        }
+        if (listView) {
+            listView.classList.add('file-view-hidden');
+            console.log('List view hidden');
+        }
         if (gridBtn) gridBtn.classList.add('active');
         if (listBtn) listBtn.classList.remove('active');
-    } else {
-        if (gridView) gridView.classList.add('hidden');
-        if (listView) listView.classList.remove('hidden');
+    } else if (view === 'list') {
+        if (gridView) {
+            gridView.classList.add('file-view-hidden');
+            console.log('Grid view hidden');
+        }
+        if (listView) {
+            listView.classList.remove('file-view-hidden');
+            console.log('List view shown');
+        }
         if (listBtn) listBtn.classList.add('active');
         if (gridBtn) gridBtn.classList.remove('active');
     }
     
     console.log('View changed to:', view);
+    console.log('Grid classes:', gridView ? gridView.className : 'no grid');
+    console.log('List classes:', listView ? listView.className : 'no list');
 }
 
 // Sorting
@@ -389,11 +408,11 @@ function previewFile(fileId) {
         `;
     }
     
-    modal.classList.remove('hidden');
+    modal.classList.add('file-preview-modal-open');
 }
 
 function closeFilePreview() {
-    document.getElementById('filePreviewModal').classList.add('hidden');
+    document.getElementById('filePreviewModal').classList.remove('file-preview-modal-open');
     currentPreviewFile = null;
 }
 
@@ -557,3 +576,21 @@ fileManagerStyle.textContent = `
     }
 `;
 document.head.appendChild(fileManagerStyle);
+
+// Export for main.js
+window.FileManager = {
+    init: initFileManager
+};
+
+// Expose global functions for onclick handlers (temporary - will be replaced with event delegation)
+window.closeFilePreview = closeFilePreview;
+window.previewFile = previewFile;
+// Create switchView function (alias for setFileView)
+function switchView(view) {
+    setFileView(view);
+}
+
+window.switchView = switchView;
+window.setFileView = setFileView;
+window.downloadFile = downloadFile;
+window.downloadCurrentFile = downloadCurrentFile;

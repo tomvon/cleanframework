@@ -67,7 +67,7 @@ $modals = $modals ?? [
         'content' => '
             <div class="modal-gallery">
                 <img src="img/samples/pexels-pixabay-414320.jpg" alt="Full size image" class="modal-gallery-image">
-                <p class="text-center">Click the image to view full size</p>
+                <p class="modal-gallery-caption">Click the image to view full size</p>
             </div>
         ',
         'size' => 'large',

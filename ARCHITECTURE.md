@@ -12,33 +12,39 @@ cleanframework/
 ├── style.scss               # Main SCSS file (imports components)  
 ├── style.css                # Compiled CSS (auto-generated - DO NOT EDIT)
 ├── style.min.css            # Minified CSS (auto-generated - DO NOT EDIT)
-├── main.js                  # Main JavaScript file
+├── main.js                  # Main JavaScript coordinator
+├── build.sh                 # Demo build script
 ├── img/                     # Sample images
+├── demo/                    # Generated static demos
 ├── archive/                 # Original Clean Framework files
 └── components/
     ├── layout/
     │   └── _layout.scss     # Foundation variables & utilities
     ├── typography/
     │   └── _typography.scss # Typography styles
+    ├── buttons/
+    │   └── _buttons.scss    # Button styles
     ├── header/
     │   ├── header.php       # Header component
     │   └── _header.scss     # Header styles
     ├── navigation/
     │   ├── navigation.php   # Navigation component
-    │   ├── navigation.js    # Navigation JavaScript
+    │   ├── navigation.js    # Navigation JavaScript (theme, mobile nav)
     │   └── _navigation.scss # Navigation styles
+    ├── sidebar/
+    │   ├── sidebar.php      # Sidebar component
+    │   ├── sidebar.js       # Sidebar JavaScript
+    │   └── _sidebar.scss    # Sidebar styles
     ├── hero/
     │   ├── hero.php         # Hero component
     │   └── _hero.scss       # Hero styles
     ├── cards/
     │   ├── cards.php        # Cards component
     │   └── _cards.scss      # Cards styles
-    ├── buttons/
-    │   └── _buttons.scss    # Button styles
     ├── form/
     │   ├── form.php         # Form component
     │   ├── form-multi.php   # Multi-step form
-    │   ├── form.js          # Form JavaScript
+    │   ├── form.js          # Form JavaScript (validation, UI)
     │   └── _form.scss       # Form styles
     ├── pricing/
     │   ├── pricing.php      # Pricing component
@@ -51,10 +57,92 @@ cleanframework/
     │   ├── dropdown.php     # Dropdown component
     │   ├── dropdown.js      # Dropdown JavaScript
     │   └── _dropdown.scss   # Dropdown styles
-    └── table/
-        ├── table.php        # Table component
-        ├── table.js         # Table JavaScript
-        └── _table.scss      # Table styles
+    ├── table/
+    │   ├── table.php        # Table component
+    │   ├── table.js         # Table JavaScript
+    │   └── _table.scss      # Table styles
+    ├── tabs/
+    │   ├── tabs.php         # Tabs component
+    │   ├── tabs.js          # Tabs JavaScript
+    │   └── _tabs.scss       # Tabs styles
+    ├── accordion/
+    │   ├── accordion.php    # Accordion component
+    │   ├── accordion.js     # Accordion JavaScript
+    │   └── _accordion.scss  # Accordion styles
+    ├── alert/
+    │   ├── alert.php        # Alert component
+    │   ├── alert.js         # Alert JavaScript
+    │   └── _alert.scss      # Alert styles
+    ├── badge/
+    │   ├── badge.php        # Badge component
+    │   ├── badge.js         # Badge JavaScript
+    │   └── _badge.scss      # Badge styles
+    ├── breadcrumb/
+    │   ├── breadcrumb.php   # Breadcrumb component
+    │   ├── breadcrumb.js    # Breadcrumb JavaScript
+    │   └── _breadcrumb.scss # Breadcrumb styles
+    ├── progress/
+    │   ├── progress.php     # Progress component
+    │   ├── progress.js      # Progress JavaScript
+    │   └── _progress.scss   # Progress styles
+    ├── tooltip/
+    │   ├── tooltip.php      # Tooltip component
+    │   ├── tooltip.js       # Tooltip JavaScript
+    │   └── _tooltip.scss    # Tooltip styles
+    ├── search/
+    │   ├── search.php       # Search component
+    │   ├── search.js        # Search JavaScript
+    │   └── _search.scss     # Search styles
+    ├── features/
+    │   ├── features.php     # Features component
+    │   ├── features.js      # Features JavaScript
+    │   └── _features.scss   # Features styles
+    ├── testimonials/
+    │   ├── testimonials.php # Testimonials component
+    │   ├── testimonials.js  # Testimonials JavaScript
+    │   └── _testimonials.scss # Testimonials styles
+    ├── cta/
+    │   ├── cta.php          # Call-to-action component
+    │   ├── cta.js           # CTA JavaScript
+    │   └── _cta.scss        # CTA styles
+    ├── stats/
+    │   ├── stats.php        # Statistics component
+    │   ├── stats.js         # Statistics JavaScript
+    │   └── _stats.scss      # Statistics styles
+    ├── dashboard/
+    │   ├── dashboard.php    # Dashboard component
+    │   ├── dashboard.js     # Dashboard JavaScript
+    │   └── _dashboard.scss  # Dashboard styles
+    ├── datagrid/
+    │   ├── datagrid.php     # Data grid component
+    │   ├── datagrid.js      # Data grid JavaScript
+    │   └── _datagrid.scss   # Data grid styles
+    ├── filemanager/
+    │   ├── filemanager.php  # File manager component
+    │   ├── filemanager.js   # File manager JavaScript
+    │   └── _filemanager.scss # File manager styles
+    ├── activity/
+    │   ├── activity.php     # Activity feed component
+    │   ├── activity.js      # Activity JavaScript
+    │   └── _activity.scss   # Activity styles
+    ├── comparison/
+    │   └── _comparison.scss # Comparison table styles
+    ├── marketing/
+    │   └── _marketing.scss  # Marketing section styles
+    ├── faq/                 # NEW: FAQ Component
+    │   ├── faq.php          # FAQ accordion
+    │   ├── faq.js           # FAQ JavaScript
+    │   └── _faq.scss        # FAQ styles
+    ├── logos/               # NEW: Logo Cloud Component
+    │   ├── logos.php        # Client/partner logos
+    │   └── _logos.scss      # Logo cloud styles
+    ├── team/                # NEW: Team Component
+    │   ├── team.php         # Team member showcase
+    │   └── _team.scss       # Team styles
+    └── banner/              # NEW: Banner Component
+        ├── banner.php       # Promotional banners
+        ├── banner.js        # Banner JavaScript
+        └── _banner.scss     # Banner styles
 ```
 
 ## How It Works
@@ -216,13 +304,59 @@ cat components/navigation/navigation.js \
 - Easy to find and modify components
 - Clear data flow from PHP → HTML
 
+## Recent Improvements (2024)
+
+### Framework Cleanup & Semantic Patterns
+- **Removed all utility classes** (`.hidden`, `.text-center`, etc.) in favor of semantic alternatives
+- **Eliminated inline styles** - All styling through semantic CSS classes
+- **Standardized state management** - Component-specific semantic classes like `.banner-closed`, `.file-view-hidden`
+- **Event delegation patterns** - Replaced inline `onclick` handlers with proper event delegation
+- **Global function cleanup** - Organized JavaScript exports and reduced global pollution
+
+### New Marketing Components
+- **FAQ Component** - Accessible accordion-style Q&A
+- **Logo Cloud** - Client/partner logo showcase
+- **Team Component** - Team member profiles with grid layout
+- **Banner Component** - Promotional banners with theme variants
+
+### Enhanced JavaScript Architecture
+- **Component initialization** - Unified `main.js` coordinator pattern
+- **Mobile navigation** - Unified MobileNav system for consistent mobile UX
+- **Theme management** - Light/dark/system theme switching with proper persistence
+- **Semantic state classes** - Component-specific hidden/filtered states
+
+### CSS Custom Properties Integration
+- **Theme-aware colors** - All components use CSS variables for proper theme support
+- **Dynamic styling** - `data-*` attributes with CSS selectors instead of inline styles
+- **Color mixing** - Advanced color-mix() functions for theme variants
+
 ## Best Practices
 
 1. **Keep components focused** - One responsibility per component
 2. **Use semantic class names** - `.hero`, `.cards`, `.nav` 
-3. **Accept data via PHP variables** - Makes components reusable
-4. **Progressive JavaScript** - Enhance, don't require
-5. **SCSS organization** - One file per component
-6. **Consistent naming** - Same name for folder, files, and CSS classes
+3. **Semantic state management** - Use `.component-state-hidden` instead of `.hidden`
+4. **Accept data via PHP variables** - Makes components reusable
+5. **Progressive JavaScript** - Enhance, don't require
+6. **Event delegation** - Avoid inline handlers, use component-scoped event delegation
+7. **SCSS organization** - One file per component
+8. **Consistent naming** - Same name for folder, files, and CSS classes
+9. **CSS custom properties** - Use variables for all themeable values
+10. **Avoid utility classes** - Build semantic, component-specific styles
 
-This architecture scales from simple static sites to complex applications while maintaining the core Clean Framework principles of semantic HTML and component-based CSS.
+## Framework Philosophy Enforcement
+
+### ❌ Avoid These Patterns
+- Utility classes (`.hidden`, `.text-center`, `.flex`)
+- Inline styles (`style="display: none"`)
+- Global onclick handlers (`onclick="someFunction()"`)
+- CSS-in-JS or style-in-attributes patterns
+- Non-semantic class names (`.btn-primary-lg-outline`)
+
+### ✅ Embrace These Patterns  
+- Semantic component classes (`.banner`, `.faq-question`, `.team-member`)
+- Component-specific state classes (`.banner-closed`, `.faq-question-open`)
+- Event delegation with semantic selectors
+- CSS custom properties for themeable values
+- Progressive enhancement with graceful degradation
+
+This architecture scales from simple static sites to complex applications while maintaining the core Clean Framework principles of semantic HTML, component-based CSS, and clean JavaScript patterns.

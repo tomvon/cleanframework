@@ -1,0 +1,8 @@
+{
+  "version": "45d6680",
+  "date": "2025-08-22 01:32:48 UTC",
+  "files": {
+    "css": ["style.css", "style.min.css", "cleanframework.min.css"],
+    "js": ["main.js", "cleanframework.js", "cleanframework.min.js"]
+  }
+}

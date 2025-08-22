@@ -42,8 +42,9 @@ node_modules/
 # Build artifacts
 dist/
 build/
-*.min.css
-*.min.js
+# Keep minified files for GitHub distribution
+# *.min.css
+# *.min.js
 
 # Logs
 *.log

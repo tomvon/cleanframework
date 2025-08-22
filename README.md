@@ -8,6 +8,70 @@
 
 Clean Framework provides semantic HTML components with intuitive class names. No cryptic abbreviations or utility classes to memorize.
 
+## Getting Started
+
+### Quick Start via CDN
+
+The fastest way to get started - no download required:
+
+```html
+<!-- CSS (Latest version) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/cleanframework.min.css">
+
+<!-- JavaScript (optional) -->
+<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/cleanframework.min.js"></script>
+```
+
+For production, use a specific version:
+```html
+<!-- Locked to version 1.0.0 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v1.0.0/cleanframework.min.css">
+<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v1.0.0/cleanframework.min.js"></script>
+```
+
+### Installation
+
+#### Option 1: CDN (Recommended for quick prototypes)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Clean Framework App</title>
+    <!-- Clean Framework CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/cleanframework.min.css">
+</head>
+<body>
+    <!-- Your semantic HTML here -->
+    
+    <!-- Clean Framework JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/cleanframework.min.js"></script>
+</body>
+</html>
+```
+
+#### Option 2: Download and Self-Host
+
+1. **Download or clone** the repository
+2. **Include the CSS** in your HTML:
+   ```html
+   <!-- Development -->
+   <link rel="stylesheet" href="style.css">
+   
+   <!-- Production (minified) -->
+   <link rel="stylesheet" href="cleanframework.min.css">
+   ```
+3. **Add optional JavaScript** for enhanced functionality:
+   ```html
+   <!-- Development -->
+   <script src="main.js"></script>
+   
+   <!-- Production (minified, includes all components) -->
+   <script src="cleanframework.min.js"></script>
+   ```
+
 ## The Challenge
 
 Utility-first frameworks result in HTML like this:
@@ -35,20 +99,62 @@ Write HTML that describes content structure:
 
 The HTML structure communicates intent clearly to developers, designers, and tools.
 
-## Getting Started
+### Quick Example
 
-### Installation
+Here's a complete working example you can copy and paste:
 
-1. **Download or clone** the repository
-2. **Include the CSS** in your HTML:
-   ```html
-   <link rel="stylesheet" href="style.css">
-   ```
-3. **Add optional JavaScript** for enhanced functionality:
-   ```html
-   <script src="main.js"></script>
-   ```
-4. **Start building** with semantic HTML patterns
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Framework Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/cleanframework.min.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <a href="#" class="brand">My App</a>
+            <ul class="menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Clean Framework</h1>
+            <p>Build beautiful, semantic websites without utility classes.</p>
+            <button class="button primary">Get Started</button>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="cards">
+                <div class="card">
+                    <h3>Semantic HTML</h3>
+                    <p>Write HTML that describes your content structure.</p>
+                </div>
+                <div class="card">
+                    <h3>No Build Tools</h3>
+                    <p>Include one CSS file and start building immediately.</p>
+                </div>
+                <div class="card">
+                    <h3>Intuitive Classes</h3>
+                    <p>If it looks like a card, it's called .card</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/cleanframework.min.js"></script>
+</body>
+</html>
+```
 
 ### Live Examples
 
@@ -124,66 +230,6 @@ Clean Framework includes 30+ essential semantic components:
 - Theme-aware styling using CSS `color-mix()` and custom properties
 
 Focused on essential components with clear naming conventions.
-
-## Quick Start
-
-## Implementation
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clean Framework Application</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav class="nav">
-        <div class="container">
-            <a href="#" class="brand">Brand</a>
-            <ul class="menu">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Application Title</h1>
-                <p class="hero-description">Clear, concise description of purpose.</p>
-                <div class="hero-buttons">
-                    <button class="button primary">Primary Action</button>
-                    <button class="button secondary">Secondary Action</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="cards">
-                <div class="card">
-                    <h3 class="card-title">Feature</h3>
-                    <p class="card-content">Feature description.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Company Name</p>
-        </div>
-    </footer>
-    
-    <script src="main.js"></script>
-</body>
-</html>
-```
 
 ## Why Choose Clean Framework?
 
@@ -274,6 +320,8 @@ cleanframework/
 
 - **[MANIFESTO.md](MANIFESTO.md)** - The philosophy behind Clean Framework
 - **[COMPONENTS.md](COMPONENTS.md)** - Complete component documentation with examples
+- **[VERSIONING.md](VERSIONING.md)** - Release process and version management
+- **[CHANGELOG.md](CHANGELOG.md)** - Version history and release notes
 - **PHP source files** - Dynamic examples for local development (requires PHP server)
 - **Static demo files** - Pre-rendered HTML versions for easy viewing on GitHub
 
@@ -317,15 +365,28 @@ components/
 
 #### Development Workflow
 
-1. **Edit SCSS files** in the `components/` directory
-2. **Compile CSS** from SCSS:
+1. **Install dependencies** (one-time setup):
    ```bash
-   sass style.scss style.css
-   sass --style=compressed style.scss style.min.css
+   npm install
    ```
-3. **Rebuild demos** (if needed):
+
+2. **Build everything** for production:
    ```bash
-   php build-demos.php
+   ./build.sh
+   # OR
+   npm run build
+   ```
+
+3. **Individual build commands**:
+   ```bash
+   # Build CSS only (creates style.css, style.min.css, cleanframework.min.css)
+   npm run build:css
+   
+   # Build JavaScript only (creates cleanframework.js, cleanframework.min.js)
+   npm run build:js
+   
+   # Build demos only (requires local PHP server on port 8848)
+   npm run build:demos
    ```
 
 #### Important Rules

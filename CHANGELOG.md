@@ -6,11 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.1] - 2025-08-22
 ### Added
-- Minified CSS and JavaScript files for production use
-- Build system with npm scripts
-- Release management scripts
-- CDN support via jsDelivr
+- Minified CSS and JavaScript files for production use (cleanframework.min.css, cleanframework.min.js)
+- Comprehensive build system with npm scripts
+- Release management system with semantic versioning
+- CDN support via jsDelivr with version tags
+- Automated release script (release.sh)
+- Build process documentation (VERSIONING.md)
+- Combined JavaScript file with all components
+
+### Changed
+- Updated README with CDN installation options
+- Improved build process to generate minified assets automatically
+
+### Fixed
+- Build process now handles all components correctly
+- Demo files properly regenerated with cache busting
 
 ## [1.0.0] - 2024-08-16
 ### Added
@@ -25,5 +38,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fully responsive design
 - SCSS component architecture
 
-[Unreleased]: https://github.com/tomvon/cleanframework/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/tomvon/cleanframework/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/tomvon/cleanframework/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0

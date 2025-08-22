@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2025-08-21
+Added comprehensive human-AI collaboration philosophy and documentation
+
+- Created AI-PHILOSOPHY.md documenting framework's human-AI collaboration principles
+- Updated README with Human-AI Collaboration section and AI-optimized benefits
+- Enhanced MANIFESTO with human-AI partnership vision and respectful framework evolution
+- Updated CLAUDE.md to welcome AI assistants as true development partners
+- Fixed semantic class naming: replaced generic .visible with .form-button-visible/.form-actions-visible
+- Added REVIEW-2025.md with comprehensive framework analysis (9.2/10 score)
+- Updated package.json with AI-collaboration keywords and description
+- Positioned as first CSS framework explicitly designed for human-AI partnership
+
 ## [1.0.1] - 2025-08-22
 ### Added
 - Minified CSS and JavaScript files for production use (cleanframework.min.css, cleanframework.min.js)
@@ -39,5 +51,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SCSS component architecture
 
 [Unreleased]: https://github.com/tomvon/cleanframework/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/tomvon/cleanframework/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0
+
+[Unreleased]: https://github.com/tomvon/cleanframework/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/tomvon/cleanframework/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/tomvon/cleanframework/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0

@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2025-08-22
+Added comprehensive NPM package support with proper entry points, build system integration, and publishing workflow. Enhanced release script to include NPM publishing with authentication checks and confirmation prompts.
+
 ## [1.1.1] - 2025-08-21
 Enhanced Human-AI Collaboration documentation with detailed AI perspective
 
@@ -71,6 +74,20 @@ Added comprehensive human-AI collaboration philosophy and documentation
 [1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0
 
 [Unreleased]: https://github.com/tomvon/cleanframework/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/tomvon/cleanframework/compare/v1.1.0...v1.1.1
+[1.0.1]: https://github.com/tomvon/cleanframework/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0
+[1.1.0]: https://github.com/tomvon/cleanframework/compare/v1.0.1...v1.1.0
+[1.0.1]: https://github.com/tomvon/cleanframework/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0
+
+[Unreleased]: https://github.com/tomvon/cleanframework/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/tomvon/cleanframework/compare/v1.1.1...v1.2.0
+[1.0.1]: https://github.com/tomvon/cleanframework/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0
+[1.1.0]: https://github.com/tomvon/cleanframework/compare/v1.0.1...v1.1.0
+[1.0.1]: https://github.com/tomvon/cleanframework/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0
 [1.1.1]: https://github.com/tomvon/cleanframework/compare/v1.1.0...v1.1.1
 [1.0.1]: https://github.com/tomvon/cleanframework/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0

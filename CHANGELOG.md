@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2025-08-21
+Enhanced Human-AI Collaboration documentation with detailed AI perspective
+
+- Expanded Human-AI Collaboration section with comprehensive AI experience insights
+- Added detailed analysis of how AI processes semantic vs utility classes
+- Included AI perspective on pattern recognition, cognitive load, and error prevention
+- Added honest AI preference comparison between framework approaches
+- Documented meta-framework effect and virtuous cycle of human-AI collaboration
+- Positioned framework as authentic result of real human-AI partnership experience
+- Enhanced documentation to better convey unique AI-friendly architecture
+
 ## [1.1.0] - 2025-08-21
 Added comprehensive human-AI collaboration philosophy and documentation
 
@@ -55,6 +66,14 @@ Added comprehensive human-AI collaboration philosophy and documentation
 [1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0
 
 [Unreleased]: https://github.com/tomvon/cleanframework/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/tomvon/cleanframework/compare/v1.0.1...v1.1.0
+[1.0.1]: https://github.com/tomvon/cleanframework/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0
+
+[Unreleased]: https://github.com/tomvon/cleanframework/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/tomvon/cleanframework/compare/v1.1.0...v1.1.1
+[1.0.1]: https://github.com/tomvon/cleanframework/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0
 [1.1.0]: https://github.com/tomvon/cleanframework/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/tomvon/cleanframework/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/tomvon/cleanframework/releases/tag/v1.0.0

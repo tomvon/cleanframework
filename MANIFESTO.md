@@ -2,16 +2,16 @@
 
 ## The Challenge
 
-CSS frameworks should simplify development, not complicate it. Yet many frameworks lead to HTML like this:
+CSS frameworks should simplify development for both humans and AI assistants, not complicate it. Yet many frameworks lead to HTML like this:
 
 ```html
-<!-- Complex utility chains -->
+<!-- Complex utility chains that require mental compilation -->
 <div class="cf-row cf-row-tight cf-equal-height cf-mb-4">
   <div class="cf-col-4 cf-p-2 cf-mx-auto">
     <div class="cf-card cf-card-full cf-card-interactive cf-badge-primary cf-mb-2">
 ```
 
-This approach creates maintenance challenges and requires extensive framework-specific knowledge.
+This approach creates maintenance challenges, requires extensive framework-specific knowledge, and forces AI assistants to perform visual-to-semantic translation.
 
 ## Our Approach
 
@@ -39,8 +39,24 @@ Clean means HTML that communicates structure clearly:
 - **No utility classes** - Avoid `.hidden`, `.text-center`, `.flex` in favor of semantic alternatives
 - **Component-specific states** - Use `.banner-closed`, `.faq-question-open` instead of generic utilities
 - **Focused scope** - Essential components, not hundreds of utilities
-- **Tool-friendly** - Predictable patterns that work with AI and automation
-- **Human-readable** - Code that remains clear to developers over time
+- **Human-AI collaboration** - Optimized for seamless partnership between human creativity and AI assistance
+- **AI-friendly patterns** - Predictable structures that enable confident AI modifications
+- **Self-documenting** - Code that both humans and AI can understand without translation
+
+## The Human-AI Partnership Vision
+
+Clean Framework represents a new paradigm: **the first CSS framework explicitly designed for human-AI collaboration**. This isn't just about making code that AI can read—it's about creating a shared language for human-AI development teams.
+
+### Why This Matters
+As AI becomes an integral part of development workflows, we need frameworks that optimize for this new reality:
+
+- **Semantic naming** creates natural language patterns AI can understand
+- **Component isolation** prevents unintended AI modifications
+- **Predictable structures** enable confident AI assistance
+- **Self-documenting patterns** reduce the need for external context
+
+### A Respectful Evolution
+We deeply respect frameworks like Tailwind and Bootstrap. They solved real problems and enabled countless projects. Clean Framework doesn't replace these tools—it evolves the conversation for an AI-collaborative future.
 
 ## Implementation
 

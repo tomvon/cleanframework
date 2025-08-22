@@ -4,9 +4,9 @@
 
 ![Clean Framework Hero](https://raw.githubusercontent.com/tomvon/cleanframework/master/img/cleanframework.png)
 
-**Semantic CSS for modern web development.**
+**Semantic CSS for modern web development, built for human-AI collaboration.**
 
-Clean Framework provides semantic HTML components with intuitive class names. No cryptic abbreviations or utility classes to memorize.
+Clean Framework provides semantic HTML components with intuitive class names designed for beautiful websites and seamless AI partnership. No cryptic abbreviations or utility classes to memorize.
 
 ## Getting Started
 
@@ -97,7 +97,31 @@ Write HTML that describes content structure:
 </div>
 ```
 
-The HTML structure communicates intent clearly to developers, designers, and tools.
+The HTML structure communicates intent clearly to developers, designers, tools, and AI assistants.
+
+## Human-AI Collaboration
+
+Clean Framework was born from a unique collaboration between human creativity and AI intelligence. This partnership shaped every design decision, creating a framework that excels at two equally important goals:
+
+### 1. Beautiful, Semantic, Accessible Websites
+- Semantic HTML that describes content meaning
+- Responsive design that works across all devices
+- WCAG 2.1 AA accessibility compliance
+- Modern CSS features with graceful degradation
+
+### 2. Seamless Human-AI Partnership
+- Class names that AI can understand and predict
+- Component isolation that prevents unintended side effects
+- Predictable patterns that enable confident AI assistance
+- Self-documenting code that needs no translation layer
+
+### Why This Matters
+
+Traditional frameworks like Tailwind and Bootstrap are excellent tools built by talented teams for human developers. They solve real problems and have enabled countless projects.
+
+Clean Framework takes a different approach: **semantic meaning over visual description**. Instead of describing how something looks (`flex items-center justify-between`), we describe what it is (`.card-header`). This creates a shared language that both humans and AI can understand intuitively.
+
+The result is faster, more confident AI assistance and more maintainable code that remains meaningful over time.
 
 ### Quick Example
 
@@ -234,22 +258,25 @@ Focused on essential components with clear naming conventions.
 ## Why Choose Clean Framework?
 
 ### Semantic HTML
-HTML that describes content meaning rather than visual appearance. Classes like `.card` and `.nav` map directly to UI concepts.
+HTML that describes content meaning rather than visual appearance. Classes like `.card` and `.nav` map directly to UI concepts that both humans and AI understand.
+
+### AI-Optimized Development
+Built specifically for human-AI collaboration. AI assistants can understand, predict, and suggest code with remarkable accuracy because class names match natural language patterns.
 
 ### Intuitive Class Names
-Learn 15 component names instead of hundreds of utility classes. If it looks like a button, it's called `.button`.
+Learn 30+ component names instead of hundreds of utility classes. If it looks like a button, it's called `.button`. If it's a navigation menu, it's called `.nav`.
 
 ### Minimal Learning Curve
-Built on familiar HTML patterns and common UI terminology. No framework-specific concepts to master.
+Built on familiar HTML patterns and common UI terminology. No framework-specific concepts to master. AI assistants can start helping immediately.
 
-### Focused Scope
-15 essential components in 500 lines of CSS. Covers common use cases without unnecessary complexity.
+### Component Isolation
+Each component is self-contained, preventing side effects. AI can confidently modify one component without breaking others.
 
 ### Zero Configuration
-Include the CSS file and start building. No build tools, compilation steps, or configuration required.
+Include the CSS file and start building. No build tools, compilation steps, or configuration required. Perfect for rapid prototyping with AI assistance.
 
-### Maintainable Code
-Self-documenting HTML that remains readable months later. Reduces cognitive load during development.
+### Future-Proof Code
+Self-documenting HTML that remains meaningful over time. As AI tools evolve, this semantic approach will only become more valuable.
 
 ## The Test
 
@@ -319,9 +346,11 @@ cleanframework/
 ## Documentation
 
 - **[MANIFESTO.md](MANIFESTO.md)** - The philosophy behind Clean Framework
+- **[AI-PHILOSOPHY.md](AI-PHILOSOPHY.md)** - Human-AI collaboration principles and design decisions
 - **[COMPONENTS.md](COMPONENTS.md)** - Complete component documentation with examples
 - **[VERSIONING.md](VERSIONING.md)** - Release process and version management
 - **[CHANGELOG.md](CHANGELOG.md)** - Version history and release notes
+- **[CLAUDE.md](CLAUDE.md)** - Instructions for AI assistants working with the framework
 - **PHP source files** - Dynamic examples for local development (requires PHP server)
 - **Static demo files** - Pre-rendered HTML versions for easy viewing on GitHub
 
@@ -335,7 +364,8 @@ cleanframework/
 **Accessibility**: WCAG 2.1 AA compliant with ARIA support and keyboard navigation  
 **Browser Support**: Modern browsers (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)  
 **Setup Time**: Under 5 minutes  
-**Philosophy**: Semantic HTML, no utility classes, component-specific state management
+**Philosophy**: Semantic HTML, human-AI collaboration, no utility classes  
+**AI-Optimized**: Built specifically for seamless human-AI development partnerships
 
 ## Browser Support
 

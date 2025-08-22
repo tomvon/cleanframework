@@ -1,7 +1,7 @@
 {
   "name": "cleanframework",
   "version": "1.0.1",
-  "description": "**[View Live Demo](https://tomvon.github.io/cleanframework/demo/?v=2024-08-16)** | **[Components](https://tomvon.github.io/cleanframework/demo/components-showcase.html?v=2024-08-16)** | **[Documentation](COMPONENTS.md)**",
+  "description": "Semantic CSS framework built for human-AI collaboration. Beautiful websites with intuitive class names that both humans and AI understand.",
   "main": "main.js",
   "scripts": {
     "build:css": "sass style.scss style.css && sass --style=compressed style.scss cleanframework.min.css",
@@ -27,7 +27,11 @@
     "semantic",
     "clean",
     "components",
-    "ui"
+    "ui",
+    "ai-friendly",
+    "human-ai-collaboration",
+    "claude",
+    "ai-assisted-development"
   ],
   "author": "Tom Von",
   "license": "MIT",

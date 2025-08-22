@@ -650,7 +650,7 @@
             position: relative;
             z-index: 5;
             
-            &.visible {
+            &.form-actions-visible {
                 display: flex;
             }
             
@@ -1023,7 +1023,7 @@
             &:first-child {
                 display: none;
                 
-                &.visible {
+                &.form-button-visible {
                     display: inline-block;
                 }
             }
@@ -1032,7 +1032,7 @@
         .right button[type="submit"] {
             display: none;
             
-            &.visible {
+            &.form-button-visible {
                 display: inline-block;
             }
         }

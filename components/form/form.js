@@ -190,18 +190,18 @@ function updateNavigation() {
     
     // Show/hide previous button
     if (currentStep > 0) {
-        prevBtn.classList.add('visible');
+        prevBtn.classList.add('form-button-visible');
     } else {
-        prevBtn.classList.remove('visible');
+        prevBtn.classList.remove('form-button-visible');
     }
     
     // Show next or submit button
     if (currentStep === totalSteps - 1) {
         nextBtn.style.display = 'none';
-        submitBtn.classList.add('visible');
+        submitBtn.classList.add('form-button-visible');
     } else {
         nextBtn.style.display = 'inline-block';
-        submitBtn.classList.remove('visible');
+        submitBtn.classList.remove('form-button-visible');
     }
 }
 
@@ -304,7 +304,7 @@ function initFileUploadAreas() {
         if (files.length > 0) {
             area.classList.add('has-files');
             uploadContent.style.display = 'none';
-            uploadActions.classList.add('visible');
+            uploadActions.classList.add('form-actions-visible');
             
             files.forEach((file, index) => {
                 createFilePreview(file, index, area);
@@ -312,7 +312,7 @@ function initFileUploadAreas() {
         } else {
             area.classList.remove('has-files');
             uploadContent.style.display = 'block';
-            uploadActions.classList.remove('visible');
+            uploadActions.classList.remove('form-actions-visible');
         }
         
         // Store files data for form submission

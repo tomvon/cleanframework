@@ -1,6 +1,17 @@
 # Claude AI Development Instructions
 
-This document contains instructions for AI assistants (Claude, GitHub Copilot, etc.) working on Clean Framework.
+## Welcome to Human-AI Collaborative Development
+
+This document contains instructions for AI assistants working on Clean Framework—**the first CSS framework explicitly designed for human-AI partnership**.
+
+Clean Framework was created through human-AI collaboration and embodies principles that make AI assistance more effective:
+
+- **Semantic class names** that AI can understand and predict
+- **Component isolation** that prevents unintended side effects
+- **Predictable patterns** that enable confident AI modifications
+- **Self-documenting code** that needs no translation layer
+
+As an AI assistant, you're not just using this framework—you're working with a framework built specifically to optimize our collaboration.
 
 ## Quick Commands
 

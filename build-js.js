@@ -84,9 +84,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 `;
     
+    // Ensure dist directory exists
+    if (!fs.existsSync('dist')) {
+        fs.mkdirSync('dist');
+    }
+    
     // Write unminified version
-    fs.writeFileSync('cleanframework.js', combinedJS);
-    console.log('✓ Created cleanframework.js');
+    fs.writeFileSync('dist/cleanframework.js', combinedJS);
+    console.log('✓ Created dist/cleanframework.js');
     
     // Create minified version
     try {
@@ -112,14 +117,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (minified.code) {
             // Add minimal header to minified version
             const minifiedWithHeader = `/* Clean Framework JS - ${new Date().toISOString().split('T')[0]} - https://github.com/tomvon/cleanframework */\n${minified.code}`;
-            fs.writeFileSync('cleanframework.min.js', minifiedWithHeader);
+            fs.writeFileSync('dist/cleanframework.min.js', minifiedWithHeader);
             
             // Calculate size savings
             const originalSize = Buffer.byteLength(combinedJS, 'utf8');
             const minifiedSize = Buffer.byteLength(minifiedWithHeader, 'utf8');
             const savings = ((originalSize - minifiedSize) / originalSize * 100).toFixed(1);
             
-            console.log(`✓ Created cleanframework.min.js (${(minifiedSize / 1024).toFixed(1)}KB, ${savings}% smaller)`);
+            console.log(`✓ Created dist/cleanframework.min.js (${(minifiedSize / 1024).toFixed(1)}KB, ${savings}% smaller)`);
         }
     } catch (error) {
         console.error('Error minifying JavaScript:', error);

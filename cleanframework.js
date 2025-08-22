@@ -5642,6 +5642,100 @@ window.FAQ = {
     init: initFAQ
 };
 
+// ========== NOTIFICATION Component ==========
+/**
+ * Notification Component
+ * Provides interactive functionality for notification components
+ */
+
+window.Notification = {
+    init() {
+        this.bindEvents();
+        console.log('✓ Notification component initialized');
+    },
+
+    bindEvents() {
+        // Use event delegation for better performance
+        document.addEventListener('click', (e) => {
+            // Handle notification clicks
+            if (e.target.closest('.notification')) {
+                this.handleNotificationClick(e.target.closest('.notification'));
+            }
+            
+            // Handle notification button clicks
+            if (e.target.closest('.notification-button')) {
+                this.handleNotificationAction(e.target.closest('.notification-button'));
+            }
+        });
+        
+        // Handle other events as needed
+        document.addEventListener('keydown', (e) => {
+            if (e.target.closest('.notification')) {
+                this.handleKeydown(e);
+            }
+        });
+    },
+
+    handleNotificationClick(element) {
+        // Toggle active state
+        element.classList.toggle('notification-active');
+        
+        // Emit custom event
+        element.dispatchEvent(new CustomEvent('notification:click', {
+            detail: { element },
+            bubbles: true
+        }));
+    },
+
+    handleNotificationAction(button) {
+        const notificationElement = button.closest('.notification');
+        const action = button.dataset.action;
+        
+        switch (action) {
+            case 'toggle':
+                this.toggleNotification(notificationElement);
+                break;
+            case 'close':
+                this.closeNotification(notificationElement);
+                break;
+            default:
+                console.warn('Unknown notification action:', action);
+        }
+    },
+
+    toggleNotification(element) {
+        element.classList.toggle('notification-active');
+    },
+
+    closeNotification(element) {
+        element.classList.remove('notification-active');
+        element.style.display = 'none';
+    },
+
+    // Public API methods
+    show(selector) {
+        const element = document.querySelector(selector);
+        if (element) {
+            element.style.display = '';
+            element.classList.add('notification-active');
+        }
+    },
+
+    hide(selector) {
+        const element = document.querySelector(selector);
+        if (element) {
+            this.closeNotification(element);
+        }
+    },
+
+    handleKeydown(e) {
+        // Handle keyboard interactions
+        if (e.key === 'Escape') {
+            this.closeNotification(e.target.closest('.notification'));
+        }
+    }
+};
+
 // ========== BANNER Component ==========
 /**
  * Banner Component JavaScript
@@ -5680,7 +5774,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'Navigation', 'Forms', 'Dropdown', 'Modal', 'Table', 'Tabs', 
         'Alerts', 'Accordion', 'Tooltip', 'Breadcrumb', 'Badge', 'Progress',
         'Testimonials', 'Features', 'CTA', 'Stats', 'Sidebar', 'Dashboard',
-        'DataGrid', 'Search', 'Activity', 'FileManager', 'FAQ', 'Banner'
+        'DataGrid', 'Search', 'Activity', 'FileManager', 'FAQ', 'Banner', 'Notification'
     ];
     
     components.forEach(component => {

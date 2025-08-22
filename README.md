@@ -31,7 +31,29 @@ For production, use a specific version:
 
 ### Installation
 
-#### Option 1: CDN (Recommended for quick prototypes)
+#### Option 1: NPM (Recommended for projects with build systems)
+
+```bash
+npm install cleanframework
+```
+
+Then import in your JavaScript:
+```javascript
+// Import CSS
+import 'cleanframework/dist/cleanframework.css';
+
+// Import JavaScript components (optional)
+import 'cleanframework/dist/cleanframework.js';
+```
+
+Or import the source SCSS for customization:
+```scss
+@use 'cleanframework/style.scss';
+```
+
+**[See complete NPM usage guide →](NPM-USAGE.md)**
+
+#### Option 2: CDN (Recommended for quick prototypes)
 
 ```html
 <!DOCTYPE html>
@@ -318,6 +340,9 @@ Built on familiar HTML patterns and common UI terminology. No framework-specific
 ### Component Isolation
 Each component is self-contained, preventing side effects. AI can confidently modify one component without breaking others.
 
+### Easy to Extend
+Adding new components follows predictable semantic patterns that AI can understand and implement. The component-based architecture makes extension straightforward while maintaining consistency.
+
 ### Zero Configuration
 Include the CSS file and start building. No build tools, compilation steps, or configuration required. Perfect for rapid prototyping with AI assistance.
 
@@ -394,6 +419,7 @@ cleanframework/
 - **[MANIFESTO.md](MANIFESTO.md)** - The philosophy behind Clean Framework
 - **[AI-PHILOSOPHY.md](AI-PHILOSOPHY.md)** - Human-AI collaboration principles and design decisions
 - **[COMPONENTS.md](COMPONENTS.md)** - Complete component documentation with examples
+- **[EXTENDING.md](EXTENDING.md)** - How to add new components (AI-friendly guide)
 - **[VERSIONING.md](VERSIONING.md)** - Release process and version management
 - **[CHANGELOG.md](CHANGELOG.md)** - Version history and release notes
 - **[CLAUDE.md](CLAUDE.md)** - Instructions for AI assistants working with the framework

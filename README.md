@@ -415,6 +415,16 @@ components/
 5. Test across supported browsers
 6. Submit pull request with clear description
 
+### AI-Assisted Development
+
+This framework is optimized for AI-assisted development. If you're using Claude or another AI assistant:
+
+1. Review **[CLAUDE.md](CLAUDE.md)** for AI-specific instructions
+2. Say "ready for release" when changes are complete
+3. The AI will handle versioning, building, and release preparation
+
+See **[VERSIONING.md](VERSIONING.md)** for detailed release process.
+
 ## License
 
 MIT License. Use it, modify it, make it better.

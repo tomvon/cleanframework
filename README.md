@@ -443,18 +443,18 @@ components/
   └── [component]/_[component].scss
 ```
 
-#### Development Workflow
+#### Building the Framework
 
-1. **Install dependencies** (one-time setup):
+If you want to contribute or modify the framework:
+
+1. **Clone the repository**:
    ```bash
-   npm install
+   git clone https://github.com/tomvon/cleanframework.git
    ```
 
-2. **Build everything** for production:
+2. **Build the framework**:
    ```bash
    ./build.sh
-   # OR
-   npm run build
    ```
 
 3. **Individual build commands**:

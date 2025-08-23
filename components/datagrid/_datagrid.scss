@@ -6,6 +6,12 @@
     border-radius: 0.5rem;
     overflow: hidden;
     
+    &.datagrid-expanded {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
     // Header with filters and actions
     .datagrid-header {
         padding: 1rem 1.5rem;

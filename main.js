@@ -104,13 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // All components initialized
     console.log('Clean Framework initialized');
-    
-    // Show installation info if in development
-    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        console.log('📦 Clean Framework can be installed via NPM:');
-        console.log('   npm install cleanframework');
-        console.log('📖 Docs: https://github.com/tomvon/cleanframework');
-    }
 });
 
 // Clean Framework Namespace

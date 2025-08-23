@@ -6177,6 +6177,11 @@ body.modal-open {
   border-radius: 0.5rem;
   overflow: hidden;
 }
+.datagrid.datagrid-expanded {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
 .datagrid .datagrid-header {
   padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--border);
@@ -7969,11 +7974,6 @@ body.modal-open {
     max-width: 100%;
     max-height: 100%;
   }
-}
-.datagrid-expanded {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,11 +2,9 @@
   "name": "cleanframework",
   "version": "1.2.0",
   "description": "Semantic CSS framework built for human-AI collaboration. Beautiful websites with intuitive class names that both humans and AI understand.",
-  "main": "dist/cleanframework.js",
-  "style": "dist/cleanframework.css",
-  "sass": "style.scss",
+  "main": "main.js",
   "scripts": {
-    "build:css": "mkdir -p dist && sass style.scss dist/cleanframework.css && sass --style=compressed style.scss dist/cleanframework.min.css",
+    "build:css": "sass style.scss style.css && sass --style=compressed style.scss cleanframework.min.css",
     "build:js": "node build-js.js",
     "build:demos": "php build-demos.php",
     "build": "npm run build:css && npm run build:js && npm run build:demos",
@@ -18,7 +16,6 @@
     "version:tag": "git push && git push --tags",
     "release": "npm run build && npm run version:tag",
     "create-component": "node create-component.js",
-    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -44,12 +41,6 @@
     "url": "https://github.com/tomvon/cleanframework/issues"
   },
   "homepage": "https://github.com/tomvon/cleanframework#readme",
-  "files": [
-    "dist/",
-    "components/",
-    "style.scss",
-    "*.md"
-  ],
   "devDependencies": {
     "sass": "^1.90.0",
     "terser": "^5.43.1"

@@ -16,7 +16,6 @@ cleanframework/
 ├── build.sh                 # Demo build script
 ├── img/                     # Sample images
 ├── demo/                    # Generated static demos
-├── archive/                 # Original Clean Framework files
 └── components/
     ├── layout/
     │   └── _layout.scss     # Foundation variables & utilities
@@ -260,15 +259,7 @@ if (window.NewComponent) {
 ### For JavaScript Concatenation:
 Two approaches:
 
-**Option 1: Prepros Import/Concatenation**
-Create an `assets/js/build.js` file:
-```javascript
-// @prepros-prepend components/navigation/navigation.js
-// @prepros-prepend components/form/form.js
-// @prepros-prepend main.js
-```
-
-**Option 2: Simple Build Script**
+**Build Script Approach**
 Create `build-js.sh`:
 ```bash
 #!/bin/bash

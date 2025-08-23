@@ -106,8 +106,8 @@ echo "" >> CHANGELOG.tmp
 echo "[Unreleased]: https://github.com/tomvon/cleanframework/compare/v${NEW_VERSION}...HEAD" >> CHANGELOG.tmp
 echo "[${NEW_VERSION}]: https://github.com/tomvon/cleanframework/compare/v${CURRENT_VERSION}...v${NEW_VERSION}" >> CHANGELOG.tmp
 
-# Keep other version links
-grep '^\[[0-9]' CHANGELOG.md | grep -v "^\[${NEW_VERSION}\]" | grep -v '^\[Unreleased\]' >> CHANGELOG.tmp || true
+# Keep other version links (but avoid duplicates)
+grep '^\[[0-9]' CHANGELOG.md | grep -v "^\[${NEW_VERSION}\]" | grep -v '^\[Unreleased\]' | sort -u >> CHANGELOG.tmp || true
 
 mv CHANGELOG.tmp CHANGELOG.md
 echo -e "${GREEN}✓ CHANGELOG updated${NC}"
@@ -135,42 +135,7 @@ else
     git tag -a "v${NEW_VERSION}" -m "Release v${NEW_VERSION}"
 fi
 
-# 9. NPM Publishing
-echo -e "\n${BLUE}→ Publishing to NPM...${NC}"
-echo -e "${YELLOW}⚠ This will publish v${NEW_VERSION} to NPM registry${NC}"
-echo -n "Continue with NPM publish? (y/N): "
-read -r PUBLISH_CONFIRM
-
-if [[ $PUBLISH_CONFIRM =~ ^[Yy]$ ]]; then
-    echo -e "${BLUE}→ Checking NPM authentication...${NC}"
-    NPM_USER=$(npm whoami 2>/dev/null || echo "")
-    
-    if [ -z "$NPM_USER" ]; then
-        echo -e "${RED}✗ Not logged in to NPM. Please run 'npm login' first${NC}"
-        echo -e "${YELLOW}⚠ Skipping NPM publish${NC}"
-        NPM_PUBLISHED=false
-    else
-        echo -e "${GREEN}✓ Logged in as: ${NPM_USER}${NC}"
-        
-        echo -e "${BLUE}→ Running final build for NPM...${NC}"
-        npm run build
-        
-        echo -e "${BLUE}→ Publishing to NPM...${NC}"
-        if npm publish; then
-            echo -e "${GREEN}✓ Published to NPM successfully!${NC}"
-            NPM_PUBLISHED=true
-        else
-            echo -e "${RED}✗ NPM publish failed${NC}"
-            echo -e "${YELLOW}⚠ You can retry later with: npm publish${NC}"
-            NPM_PUBLISHED=false
-        fi
-    fi
-else
-    echo -e "${YELLOW}⚠ Skipping NPM publish${NC}"
-    NPM_PUBLISHED=false
-fi
-
-# 10. Summary
+# 9. Summary
 echo ""
 echo "========================================="
 echo -e "${GREEN}   ✓ Release v${NEW_VERSION} Ready!${NC}"
@@ -181,24 +146,12 @@ echo "  • Version: v${CURRENT_VERSION} → v${NEW_VERSION}"
 echo "  • Type: ${RELEASE_TYPE}"
 echo "  • Files updated: package.json, README.md, CHANGELOG.md"
 echo "  • Tag created: v${NEW_VERSION}"
-if [ "$NPM_PUBLISHED" = true ]; then
-    echo "  • Published to NPM: ✓"
-else
-    echo "  • Published to NPM: ✗ (skipped or failed)"
-fi
 echo ""
 echo -e "${YELLOW}Next step:${NC}"
 echo -e "${GREEN}git push && git push --tags${NC}"
 echo ""
-echo "Distribution URLs for v${NEW_VERSION}:"
-echo "  CDN CSS: https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v${NEW_VERSION}/cleanframework.min.css"
-echo "  CDN JS:  https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v${NEW_VERSION}/cleanframework.min.js"
-if [ "$NPM_PUBLISHED" = true ]; then
-    echo "  NPM:     npm install cleanframework@${NEW_VERSION}"
-    echo "  NPM CSS: node_modules/cleanframework/dist/cleanframework.min.css"
-    echo "  NPM JS:  node_modules/cleanframework/dist/cleanframework.min.js"
-fi
+echo "CDN URLs for v${NEW_VERSION}:"
+echo "  CSS: https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v${NEW_VERSION}/cleanframework.min.css"
+echo "  JS:  https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v${NEW_VERSION}/cleanframework.min.js"
 echo ""
-echo "Resources:"
-echo "  • NPM Package: https://www.npmjs.com/package/cleanframework"
-echo "  • GitHub Release: https://github.com/tomvon/cleanframework/releases/new?tag=v${NEW_VERSION}"
+echo "GitHub Release: https://github.com/tomvon/cleanframework/releases/new?tag=v${NEW_VERSION}"

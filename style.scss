@@ -41,10 +41,3 @@
 @use 'components/search/search';
 @use 'components/activity/activity';
 @use 'components/filemanager/filemanager';
-
-// Component-specific classes only
-.datagrid-expanded {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}

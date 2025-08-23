@@ -1,6 +1,6 @@
 # Clean Framework
 
-**[View Live Demo](https://tomvon.github.io/cleanframework/demo/?v=2024-08-16)** | **[Components](https://tomvon.github.io/cleanframework/demo/components-showcase.html?v=2024-08-16)** | **[Documentation](COMPONENTS.md)**
+**[View Live Demo](https://tomvon.github.io/cleanframework/demo/)** | **[Components](https://tomvon.github.io/cleanframework/demo/components-showcase.html)** | **[Documentation](COMPONENTS.md)**
 
 ![Clean Framework Hero](https://raw.githubusercontent.com/tomvon/cleanframework/master/img/cleanframework.png)
 
@@ -24,36 +24,14 @@ The fastest way to get started - no download required:
 
 For production, use a specific version:
 ```html
-<!-- Locked to version 1.0.1 -->
+<!-- Locked to version 1.2.0 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v1.2.0/cleanframework.min.css">
 <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v1.2.0/cleanframework.min.js"></script>
 ```
 
 ### Installation
 
-#### Option 1: NPM (Recommended for projects with build systems)
-
-```bash
-npm install cleanframework
-```
-
-Then import in your JavaScript:
-```javascript
-// Import CSS
-import 'cleanframework/dist/cleanframework.css';
-
-// Import JavaScript components (optional)
-import 'cleanframework/dist/cleanframework.js';
-```
-
-Or import the source SCSS for customization:
-```scss
-@use 'cleanframework/style.scss';
-```
-
-**[See complete NPM usage guide →](NPM-USAGE.md)**
-
-#### Option 2: CDN (Recommended for quick prototypes)
+#### CDN (Recommended)
 
 ```html
 <!DOCTYPE html>

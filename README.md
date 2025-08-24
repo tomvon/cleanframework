@@ -24,9 +24,9 @@ The fastest way to get started - no download required:
 
 For production, use a specific version:
 ```html
-<!-- Locked to version 2.0.0 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.0/cleanframework.min.css">
-<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.0/cleanframework.min.js"></script>
+<!-- Locked to version 2.0.1 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.css">
+<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.js"></script>
 ```
 
 ### Installation

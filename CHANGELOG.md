@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2025-08-24
+Enhanced README.md with comprehensive AI workflow documentation
+
+- Added detailed AI-Constraining Architecture section with code examples
+- Included practical AI workflow instructions for both humans and AI assistants  
+- Added complete AI workflow example showing proper template usage
+- Enhanced value proposition with specific success rate improvements (30% → 90%)
+- Created quick reference guide for AI assistants with clear dos and don'ts
+
 ## [2.0.0] - 2025-08-24
 ### Major Evolution: AI-Constraining Architecture
 - **BREAKING**: Evolved from collaborative to constraint-based AI approach

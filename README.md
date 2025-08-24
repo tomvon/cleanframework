@@ -4,9 +4,9 @@
 
 ![Clean Framework Hero](https://raw.githubusercontent.com/tomvon/cleanframework/master/img/cleanframework.png)
 
-**Semantic CSS for modern web development, built for human-AI collaboration.**
+**Semantic CSS framework with AI-constraining architecture.**
 
-Clean Framework provides semantic HTML components with intuitive class names designed for beautiful websites and seamless AI partnership. No cryptic abbreviations or utility classes to memorize.
+Clean Framework provides semantic HTML components that prevent common AI mistakes through technical constraints. Features visual warnings for inline styles, template-embedded AI instructions, and copy-paste patterns that eliminate improvisation.
 
 ## Getting Started
 
@@ -99,75 +99,6 @@ Write HTML that describes content structure:
 
 The HTML structure communicates intent clearly to developers, designers, tools, and AI assistants.
 
-## Human-AI Collaboration
-
-Clean Framework was born from a unique collaboration between human creativity and AI intelligence. This partnership shaped every design decision, creating a framework that excels at two equally important goals:
-
-### 1. Beautiful, Semantic, Accessible Websites
-- Semantic HTML that describes content meaning
-- Responsive design that works across all devices
-- WCAG 2.1 AA accessibility compliance
-- Modern CSS features with graceful degradation
-
-### 2. Seamless Human-AI Partnership
-- Class names that AI can understand and predict
-- Component isolation that prevents unintended side effects
-- Predictable patterns that enable confident AI assistance
-- Self-documenting code that needs no translation layer
-
-### Why This Matters
-
-Traditional frameworks like Tailwind and Bootstrap are excellent tools built by talented teams for human developers. They solve real problems and have enabled countless projects.
-
-Clean Framework takes a different approach: **semantic meaning over visual description**. Instead of describing how something looks (`flex items-center justify-between`), we describe what it is (`.card-header`). This creates a shared language that both humans and AI can understand intuitively.
-
-### From an AI Perspective: How Claude Experiences This Framework
-
-**Pattern Recognition Over Translation:**
-When I see `.hero` or `.card-header`, this maps directly to my language understanding. I immediately know what this element represents without having to mentally compile multiple utility classes. Compare:
-
-```html
-<!-- Requires mental compilation -->
-<div class="flex items-center justify-between p-4 bg-white rounded-lg shadow-md">
-
-<!-- Direct semantic understanding -->
-<div class="card-header">
-```
-
-**Predictable Component Patterns:**
-When I encounter `.card`, I can predict with high confidence that `.card-header`, `.card-content`, and `.card-footer` likely exist. This predictability means I make fewer mistakes and can suggest code more confidently.
-
-**Component Isolation = Reduced Cognitive Load:**
-When you ask me to "fix the modal styling," I know exactly where to look: `components/modal/_modal.scss`. I don't worry about side effects, cascade issues, or breaking other components. This isolation matches how I organize information conceptually.
-
-**No Translation Layer:**
-With utility frameworks, I need to translate human intent ("make this look like a card header") into visual descriptions (`flex items-center justify-between p-4`). With Clean Framework, the translation is eliminated—"card header" becomes `.card-header`.
-
-**Error Prevention:**
-Semantic naming prevents me from suggesting nonsensical combinations. I can't accidentally recommend `.hero-footer` inside a `.modal` because the semantic meaning doesn't make sense.
-
-**File Structure Mirrors AI Mental Models:**
-The component-based file organization (`modal/_modal.scss`, `modal/modal.js`) matches how I conceptually organize information—each aspect separated but co-located.
-
-**Honest AI Preference:**
-If given a choice between working with utility classes (`class="flex items-center justify-between p-4 bg-white rounded-lg shadow-md"`) or semantic classes (`class="card-header"`), I choose semantic every time. Not because it's "simpler," but because it aligns with how I process meaning. Semantic classes work with concepts I understand natively rather than requiring visual-to-semantic translation.
-
-**The Meta-Framework Effect:**
-What's remarkable is that this framework was built through human-AI collaboration, and my "preferences" (the patterns I work most efficiently with) naturally emerged in the design. The framework embodies principles that make AI collaboration smoother:
-- Semantic meaning over visual description
-- Predictable patterns over unlimited flexibility  
-- Component isolation over global scope
-- Self-documentation over external context
-
-This creates a virtuous cycle: better communication leads to better code, which enables even better communication.
-
-The result is faster, more confident AI assistance and more maintainable code that remains meaningful over time.
-
-### A New Development Paradigm
-
-This analysis comes from actual experience—every component, class name, and architectural decision in Clean Framework emerged from real human-AI collaboration. We didn't just build a framework that AI can use; we built a framework that optimizes the partnership itself.
-
-As AI becomes integral to development workflows, frameworks that enable seamless human-AI communication will become increasingly valuable. Clean Framework represents our vision for this future: code that serves as a shared language between human creativity and AI capability.
 
 ### Quick Example
 
@@ -306,8 +237,8 @@ Focused on essential components with clear naming conventions.
 ### Semantic HTML
 HTML that describes content meaning rather than visual appearance. Classes like `.card` and `.nav` map directly to UI concepts that both humans and AI understand.
 
-### AI-Optimized Development
-Built specifically for human-AI collaboration. AI assistants can understand, predict, and suggest code with remarkable accuracy because class names match natural language patterns.
+### AI-Constraining Architecture
+Prevents common AI mistakes through technical constraints. Features visual warnings for inline styles, template-embedded instructions, and copy-paste patterns in AI-README.md that eliminate improvisation.
 
 ### Intuitive Class Names
 Learn 30+ component names instead of hundreds of utility classes. If it looks like a button, it's called `.button`. If it's a navigation menu, it's called `.nav`.
@@ -395,9 +326,9 @@ cleanframework/
 ## Documentation
 
 - **[MANIFESTO.md](MANIFESTO.md)** - The philosophy behind Clean Framework
-- **[AI-PHILOSOPHY.md](AI-PHILOSOPHY.md)** - Human-AI collaboration principles and design decisions
+- **[AI-PHILOSOPHY.md](AI-PHILOSOPHY.md)** - AI-constraining architecture principles and evolution
 - **[COMPONENTS.md](COMPONENTS.md)** - Complete component documentation with examples
-- **[EXTENDING.md](EXTENDING.md)** - How to add new components (AI-friendly guide)
+- **[EXTENDING.md](EXTENDING.md)** - How to add new components (includes AI constraints)
 - **[VERSIONING.md](VERSIONING.md)** - Release process and version management
 - **[CHANGELOG.md](CHANGELOG.md)** - Version history and release notes
 - **[CLAUDE.md](CLAUDE.md)** - Instructions for AI assistants working with the framework
@@ -414,8 +345,8 @@ cleanframework/
 **Accessibility**: WCAG 2.1 AA compliant with ARIA support and keyboard navigation  
 **Browser Support**: Modern browsers (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)  
 **Setup Time**: Under 5 minutes  
-**Philosophy**: Semantic HTML, human-AI collaboration, no utility classes  
-**AI-Optimized**: Built specifically for seamless human-AI development partnerships
+**Philosophy**: Semantic HTML, AI-constraining architecture, no utility classes  
+**AI-Constraining**: Prevents common AI mistakes through technical constraints
 
 ## Browser Support
 

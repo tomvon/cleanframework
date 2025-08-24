@@ -386,4 +386,4 @@ Clean Framework is **excellently architected for extension** with semantic patte
 3. AI helps customize the generated component
 4. Component is ready to use
 
-The result is a framework that's both human-friendly and AI-friendly for extension, with **automated tooling that eliminates the previous manual workflow friction**. This represents a significant improvement in developer experience and AI collaboration efficiency.
+The result is a framework that's both human-friendly and includes AI constraints for safe extension, with **automated tooling that eliminates the previous manual workflow friction**. This represents a significant improvement in developer experience and AI constraint enforcement.

@@ -39,24 +39,24 @@ Clean means HTML that communicates structure clearly:
 - **No utility classes** - Avoid `.hidden`, `.text-center`, `.flex` in favor of semantic alternatives
 - **Component-specific states** - Use `.banner-closed`, `.faq-question-open` instead of generic utilities
 - **Focused scope** - Essential components, not hundreds of utilities
-- **Human-AI collaboration** - Optimized for seamless partnership between human creativity and AI assistance
-- **AI-friendly patterns** - Predictable structures that enable confident AI modifications
-- **Self-documenting** - Code that both humans and AI can understand without translation
+- **AI-constraining architecture** - Technical constraints that prevent common AI mistakes  
+- **Visual warning system** - Immediate feedback when AI violates framework rules
+- **Copy-paste patterns** - Templates that eliminate AI improvisation needs
 
-## The Human-AI Partnership Vision
+## The AI-Constraining Vision
 
-Clean Framework represents a new paradigm: **the first CSS framework explicitly designed for human-AI collaboration**. This isn't just about making code that AI can read—it's about creating a shared language for human-AI development teams.
+Clean Framework evolved from collaboration to constraint: **the first CSS framework that actively prevents AI mistakes** rather than hoping AI remembers rules.
 
 ### Why This Matters
-As AI becomes an integral part of development workflows, we need frameworks that optimize for this new reality:
+Through real-world testing, we discovered AI assistants consistently revert to generic patterns under pressure, regardless of instructions:
 
-- **Semantic naming** creates natural language patterns AI can understand
-- **Component isolation** prevents unintended AI modifications
-- **Predictable structures** enable confident AI assistance
-- **Self-documenting patterns** reduce the need for external context
+- **Visual warnings** prevent inline styles immediately
+- **Template-embedded instructions** guide AI behavior at the source  
+- **Copy-paste patterns** eliminate improvisation needs
+- **Technical constraints** make wrong choices impossible
 
 ### A Respectful Evolution
-We deeply respect frameworks like Tailwind and Bootstrap. They solved real problems and enabled countless projects. Clean Framework doesn't replace these tools—it evolves the conversation for an AI-collaborative future.
+We deeply respect frameworks like Tailwind and Bootstrap. They solved real problems and enabled countless projects. Clean Framework doesn't replace these tools—it evolves the conversation for an AI-constrained future.
 
 ## Implementation
 

@@ -1,17 +1,15 @@
 # Claude AI Development Instructions
 
-## Welcome to Human-AI Collaborative Development
+## AI-Constraining Framework Architecture
 
-This document contains instructions for AI assistants working on Clean Framework—**the first CSS framework explicitly designed for human-AI partnership**.
+Clean Framework uses an **AI-constraining approach** rather than relying on AI to remember rules. The framework actively prevents common AI mistakes through:
 
-Clean Framework was created through human-AI collaboration and embodies principles that make AI assistance more effective:
+- **CSS-based inline style protection** with visual warnings
+- **Template-embedded AI instructions** in component files  
+- **Copy-paste patterns** in AI-README.md to prevent improvisation
+- **Progressive complexity management** that shields AI from overwhelming context
 
-- **Semantic class names** that AI can understand and predict
-- **Component isolation** that prevents unintended side effects
-- **Predictable patterns** that enable confident AI modifications
-- **Self-documenting code** that needs no translation layer
-
-As an AI assistant, you're not just using this framework—you're working with a framework built specifically to optimize our collaboration.
+**Key Point**: This framework constrains AI behavior to prevent mistakes, rather than hoping AI remembers best practices.
 
 ## Quick Commands
 
@@ -221,15 +219,17 @@ git reset --hard HEAD~1
 
 ## AI Context
 
-When working on Clean Framework, remember:
+Clean Framework uses AI-constraining architecture. Follow these rules:
 
-1. **This is a semantic CSS framework** - No utility classes ever
-2. **Components are self-contained** - Each component in its own folder
-3. **Progressive enhancement** - CSS works without JS
-4. **Accessibility first** - ARIA, keyboard nav, focus states
-5. **Version everything** - Every release gets a tag
-6. **Document changes** - Update CHANGELOG.md for every change
-7. **Test before release** - Run build.sh and check demos
+1. **NEVER use inline styles** - Framework CSS will show visual warnings
+2. **NEVER add custom CSS classes** - Use only Clean Framework semantic classes
+3. **NEVER implement theme toggles or mobile menus** - Already built-in and automatic
+4. **USE AI-README.md copy-paste templates** - Don't improvise new patterns
+5. **ONLY modify text content** - Component structure is locked
+6. **READ component template comments** - They contain AI-specific constraints
+7. **Test in browser** - Visual warnings appear when rules are violated
+
+The framework prevents AI mistakes rather than relying on AI memory.
 
 ## Quick Reference
 

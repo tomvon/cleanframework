@@ -1,6 +1,6 @@
 /**
  * Clean Framework - Combined JavaScript
- * Version: 2025-08-23
+ * Version: 2025-08-24
  * 
  * This file contains all component JavaScript modules.
  * For production use, include cleanframework.min.js instead.

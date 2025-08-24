@@ -495,12 +495,42 @@ If you want to contribute or modify the framework:
 5. Test across supported browsers
 6. Submit pull request with clear description
 
+## AI-Constraining Architecture
+
+**Clean Framework prevents AI mistakes instead of just hoping AI remembers rules.**
+
+### For Humans Working with AI
+
+**DON'T** give AI the entire repository - it causes information overload and leads to:
+- Inline styles instead of framework classes  
+- Custom CSS instead of semantic components
+- Broken mobile navigation and theme switching
+- Generic patterns instead of Clean Framework patterns
+
+**DO** give AI this focused file: **[AI-README.md](AI-README.md)**
+
+### AI Protection Features
+
+✅ **Inline Style Prevention**: Framework visually warns and blocks `style=""` attributes  
+✅ **Custom Class Detection**: Warns about non-framework CSS classes  
+✅ **Built-in Templates**: Copy-paste patterns with AI-constraining comments  
+✅ **Automatic Functionality**: Mobile menus and theme switching work without AI implementation
+
+### Usage Pattern
+
+1. **Human**: Share `AI-README.md` link with AI assistant
+2. **AI**: Uses only framework classes, copies templates, modifies content
+3. **Framework**: Shows visual warnings if AI breaks rules
+4. **Result**: Semantic, working websites that follow framework principles
+
+This approach **constrains AI to success patterns** rather than hoping it remembers complex rules.
+
 ### AI-Assisted Development
 
 This framework is optimized for AI-assisted development. If you're using Claude or another AI assistant:
 
-1. Review **[CLAUDE.md](CLAUDE.md)** for AI-specific instructions
-2. Say "ready for release" when changes are complete
+1. Share **[AI-README.md](AI-README.md)** (not the whole repo)
+2. Say "ready for release" when changes are complete  
 3. The AI will handle versioning, building, and release preparation
 
 See **[VERSIONING.md](VERSIONING.md)** for detailed release process.

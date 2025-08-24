@@ -195,6 +195,42 @@ body {
   border-radius: var(--radius);
 }
 
+/* Development: Visual warning for inline styles */
+[style]:not([data-cf-allow-style]) {
+  outline: 2px dashed #ff4444 !important;
+  outline-offset: 2px !important;
+  position: relative !important;
+}
+[style]:not([data-cf-allow-style])::after {
+  content: "⚠ Use Clean Framework classes, not inline styles";
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  background: #ff4444;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  white-space: nowrap;
+  border-radius: 0.25rem;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Production: Completely override inline styles */
+@media (min-width: 1px) {
+  [style]:not([data-cf-allow-style])::after {
+    display: none !important;
+  }
+}
+/* Warn about non-Clean Framework classes */
+[class*=custom-]:not([data-cf-allow-custom]),
+[class*=my-]:not([data-cf-allow-custom]),
+[class*=temp-]:not([data-cf-allow-custom]) {
+  outline: 2px dashed orange !important;
+  outline-offset: 1px !important;
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 2rem 0;

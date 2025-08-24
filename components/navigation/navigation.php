@@ -4,7 +4,15 @@
  */
 ?>
 
-<nav class="nav">
+<!-- ========================================================================= -->
+<!-- CF-AI: NAVIGATION - Fully functional nav with mobile menu & theme toggle -->
+<!-- CF-AI: DO NOT modify JavaScript or CSS - mobile menu works automatically -->
+<!-- CF-AI: DO NOT add custom menu toggle code - already built-in             -->
+<!-- CF-AI: ONLY change menu items, brand text, and links                     -->
+<!-- CF-AI: Theme switching happens automatically - never implement custom    -->
+<!-- ========================================================================= -->
+
+<nav class="nav" data-cf-template="navigation-complete">
     <div class="container">
         <!-- Mobile sidebar toggle (only when sidebar is present) -->
         <button class="sidebar-mobile-toggle has-sidebar-only" onclick="toggleSidebar()" aria-label="Toggle sidebar">

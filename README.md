@@ -1,5 +1,7 @@
 # Clean Framework
 
+**This project is in beta. It is an ongoing AI collaboration experiment in working with AI to create an AI friendly frontend web framework. As a framework it works well and sticks with the philosophy of being semantic and not using utility classes. This, and it's component based setup are deliberate for AI, and frankly, humans as well. In terms of working with AI your milage may vary. AIs have a tendency to default to "muscle memory" from their training, have a hard time working with CSS (because they are essentially blind) and keeping framework knowledge in memory. The goal of this project is to work with AI, understand it's limitations, help with training and try to find solutions that work with both humans and AI. This project is frontend web design focused since there are still many challenges in this area of AI software development. Also, it's a really fun project.**
+
 **[View Live Demo](https://tomvon.github.io/cleanframework/demo/)** | **[Components](https://tomvon.github.io/cleanframework/demo/components-showcase.html)** | **[Documentation](COMPONENTS.md)**
 
 ![Clean Framework Hero](https://raw.githubusercontent.com/tomvon/cleanframework/master/img/cleanframework.png)

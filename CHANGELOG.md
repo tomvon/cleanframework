@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.1] - 2026-10-28
+Fix the inline-style warning flagging the framework's own runtime styles.
+
 ### Fixed
 - The inline-style warning (red dashed outline) no longer flags styles the framework's own JS sets at runtime (chart bars, table rows, progress bars)
 

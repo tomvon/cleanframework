@@ -2,8 +2,6 @@
 
 A semantic CSS framework with 30+ components and no utility classes. Class names say what something is (`.card`, `.nav`, `.modal`), not how it looks. Built to be easy for humans and AI assistants to write correctly.
 
-Beta, and an ongoing experiment in working with AI on frontend code.
-
 **[Live Demo](https://tomvon.github.io/cleanframework/demo/)** | **[Components](COMPONENTS.md)** | **[AI-README](AI-README.md)** | **[Changelog](CHANGELOG.md)**
 
 ![Clean Framework Hero](https://raw.githubusercontent.com/tomvon/cleanframework/master/img/cleanframework.png)

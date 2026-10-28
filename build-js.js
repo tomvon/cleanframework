@@ -60,6 +60,10 @@ async function buildJS() {
     combinedJS += `
 // ========== Initialize All Components ==========
 document.addEventListener('DOMContentLoaded', function() {
+    // Styles the framework's own JS sets at runtime are allowed; only markup-authored inline styles get the red warning
+    new MutationObserver(muts => muts.forEach(m => m.target.setAttribute('data-cf-allow-style', '')))
+        .observe(document.body, { attributes: true, attributeFilter: ['style'], subtree: true });
+
     // Initialize all available components
     const components = [
         'Navigation', 'Forms', 'Dropdown', 'Modal', 'Table', 'Tabs', 

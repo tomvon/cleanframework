@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- The inline-style warning (red dashed outline) no longer flags styles the framework's own JS sets at runtime (chart bars, table rows, progress bars)
+
 ## [3.0.0] - 2026-10-28
 Replace Sass with native CSS nesting, ship only the two minified bundles, simplify the release process, add tests and CI, and trim the docs.
 

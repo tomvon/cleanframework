@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.2] - 2026-10-28
+Mini chart bars are visible in dark mode.
+
 ## [3.0.1] - 2026-10-28
 Fix the inline-style warning flagging the framework's own runtime styles.
 

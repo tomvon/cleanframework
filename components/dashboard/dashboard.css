@@ -175,7 +175,7 @@
             padding: 0 0.5rem;
             
             .dashboard-card-chart-bar {
-                background: var(--muted);
+                background: color-mix(in srgb, var(--primary) 25%, transparent);
                 border-radius: 2px 2px 0 0;
                 min-width: 8px;
                 transition: all 0.2s ease;

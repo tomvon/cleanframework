@@ -18,8 +18,8 @@ The fastest way to get started - no download required:
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.css">
-<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.0/cleanframework.min.css">
+<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.0/cleanframework.min.js"></script>
 ```
 
 Always pin a version (`@v2.0.1`). `@latest` will silently pick up breaking changes on the next major release.
@@ -36,13 +36,13 @@ Always pin a version (`@v2.0.1`). `@latest` will silently pick up breaking chang
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Clean Framework App</title>
     <!-- Clean Framework CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.0/cleanframework.min.css">
 </head>
 <body>
     <!-- Your semantic HTML here -->
     
     <!-- Clean Framework JS (optional) -->
-    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.0/cleanframework.min.js"></script>
 </body>
 </html>
 ```
@@ -140,7 +140,7 @@ AI gets exact templates to copy instead of improvising:
 <html lang="en">
 <head>
     <title>[Restaurant Name]</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.0/cleanframework.min.css">
 </head>
 <body>
     <nav class="nav">
@@ -163,7 +163,7 @@ AI gets exact templates to copy instead of improvising:
         </div>
     </section>
     
-    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.0/cleanframework.min.js"></script>
 </body>
 </html>
 ```
@@ -206,7 +206,7 @@ When asking AI to build with Clean Framework, say:
 <html lang="en">
 <head>
     <title>Acme Solutions</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.0/cleanframework.min.css">
 </head>
 <body>
     <nav class="nav">
@@ -231,7 +231,7 @@ When asking AI to build with Clean Framework, say:
         </div>
     </section>
     
-    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.0/cleanframework.min.js"></script>
 </body>
 </html>
 ```
@@ -268,7 +268,7 @@ Here's a complete working example you can copy and paste:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clean Framework Example</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.0/cleanframework.min.css">
 </head>
 <body>
     <nav class="nav">
@@ -309,7 +309,7 @@ Here's a complete working example you can copy and paste:
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.0/cleanframework.min.js"></script>
 </body>
 </html>
 ```

@@ -76,27 +76,27 @@ function createComponentDirectory(name) {
     log(`✓ Created directory: ${dir}`, 'green');
 }
 
-function generateSCSS(name, type) {
+function generateCSS(name, type) {
     const className = name;
     const componentName = name.split('-').map(word => 
         word.charAt(0).toUpperCase() + word.slice(1)
     ).join(' ');
     
-    const scssContent = `// ${componentName} Component
-// ${getComponentDescription(type)}
+    const cssContent = `/* ${componentName} Component */
+/* ${getComponentDescription(type)} */
 
 .${className} {
-    // Base component styles
+    /* Base component styles */
     position: relative;
     
-    // Use CSS custom properties for theming
+    /* Use CSS custom properties for theming */
     background: var(--background);
     color: var(--foreground);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 1rem;
     
-    // Component states
+    /* Component states */
     &.${className}-active {
         background: var(--primary);
         color: var(--primary-foreground);
@@ -107,7 +107,7 @@ function generateSCSS(name, type) {
         pointer-events: none;
     }
     
-    // Component variants
+    /* Component variants */
     &.${className}-large {
         padding: 1.5rem;
         font-size: 1.125rem;
@@ -118,13 +118,13 @@ function generateSCSS(name, type) {
         font-size: 0.875rem;
     }
     
-    // Responsive design
+    /* Responsive design */
     @media (max-width: 640px) {
         padding: 0.75rem;
     }
 }
 
-// Component-specific elements
+/* Component-specific elements */
 .${className}-header {
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -142,9 +142,9 @@ function generateSCSS(name, type) {
     border-top: 1px solid var(--border);
 }`;
 
-    const filePath = `components/${name}/_${name}.scss`;
-    fs.writeFileSync(filePath, scssContent);
-    log(`✓ Created SCSS: ${filePath}`, 'green');
+    const filePath = `components/${name}/${name}.css`;
+    fs.writeFileSync(filePath, cssContent);
+    log(`✓ Created CSS: ${filePath}`, 'green');
 }
 
 function generatePHP(name) {
@@ -287,17 +287,17 @@ window.${componentName} = {
     log(`✓ Created JavaScript: ${filePath}`, 'green');
 }
 
-function updateStyleSCSS(name) {
-    const stylePath = 'style.scss';
+function updateMainCSS(name) {
+    const stylePath = 'main.css';
     const content = fs.readFileSync(stylePath, 'utf8');
-    const newImport = `@use 'components/${name}/${name}';`;
+    const newImport = `@import "components/${name}/${name}.css";`;
     
-    // Find the last @use import and add after it
+    // Find the last @import and add after it
     const lines = content.split('\n');
     let lastImportIndex = -1;
     
     for (let i = 0; i < lines.length; i++) {
-        if (lines[i].startsWith('@use \'components/')) {
+        if (lines[i].startsWith('@import "components/')) {
             lastImportIndex = i;
         }
     }
@@ -388,10 +388,10 @@ function updateMainJS(name, includeJS) {
 function runBuild() {
     try {
         log('\n→ Running build process...', 'blue');
-        execSync('./build.sh', { stdio: 'pipe' });
+        execSync('npm run build', { stdio: 'pipe' });
         log('✓ Build completed successfully', 'green');
     } catch (error) {
-        log('⚠ Build had issues. Please run ./build.sh manually to check.', 'yellow');
+        log('⚠ Build had issues. Please run npm run build manually to check.', 'yellow');
     }
 }
 
@@ -415,12 +415,12 @@ function showUsageInstructions(name, options) {
     log('='.repeat(50), 'blue');
     
     log('\nFiles created:', 'blue');
-    log(`  • components/${name}/_${name}.scss`, 'green');
+    log(`  • components/${name}/${name}.css`, 'green');
     if (options.includePHP) log(`  • components/${name}/${name}.php`, 'green');
     if (options.includeJS) log(`  • components/${name}/${name}.js`, 'green');
     
     log('\nIntegration files updated:', 'blue');
-    log('  • style.scss', 'green');
+    log('  • main.css', 'green');
     if (options.includeJS) {
         log('  • build-js.js', 'green');
         log('  • main.js', 'green');
@@ -442,7 +442,7 @@ function showUsageInstructions(name, options) {
     }
     
     log('\nNext steps:', 'blue');
-    log('  1. Customize the SCSS styles for your needs', 'yellow');
+    log('  1. Customize the CSS styles for your needs', 'yellow');
     if (options.includePHP) log('  2. Update the PHP template with your markup', 'yellow');
     if (options.includeJS) log('  3. Add your JavaScript functionality', 'yellow');
     log('  4. Test the component in your demo pages', 'yellow');
@@ -461,7 +461,7 @@ function main() {
     validateComponentName(componentName);
     createComponentDirectory(componentName);
     
-    generateSCSS(componentName, options.type);
+    generateCSS(componentName, options.type);
     
     if (options.includePHP) {
         generatePHP(componentName);
@@ -471,7 +471,7 @@ function main() {
         generateJS(componentName);
     }
     
-    updateStyleSCSS(componentName);
+    updateMainCSS(componentName);
     updateBuildJS(componentName, options.includeJS);
     updateMainJS(componentName, options.includeJS);
     

@@ -49,7 +49,7 @@ foreach ($pages as $sourcePage => $outputFile) {
     $html = preg_replace('/href="([^"]*?)\.php"/i', 'href="$1.html"', $html);
     
     // Fix CSS/JS paths to use parent directory and add cache busting
-    $html = preg_replace('/href="(style\.css|style\.min\.css)(\?[^"]*)?"/i', 'href="../$1?v=' . $cacheVersion . '"', $html);
+    $html = preg_replace('/href="main\.css(\?[^"]*)?"/i', 'href="../cleanframework.min.css?v=' . $cacheVersion . '"', $html);
     $html = preg_replace('/src="(main\.js)(\?[^"]*)?"/i', 'src="../$1?v=' . $cacheVersion . '"', $html);
     $html = preg_replace('/src="(components\/[^"]+)(\?[^"]*)?"/i', 'src="../$1?v=' . $cacheVersion . '"', $html);
     

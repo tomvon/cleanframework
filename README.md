@@ -8,7 +8,7 @@
 
 **The first CSS framework that actively prevents AI mistakes through technical constraints.**
 
-Clean Framework provides semantic HTML components with visual warnings for inline styles, template-embedded AI instructions, and copy-paste patterns. Success rate improved from 30% to 90% in AI-assisted development.
+Clean Framework provides semantic HTML components with visual warnings for inline styles, template-embedded AI instructions, and copy-paste patterns. In our own use it noticeably cuts the inline-style and custom-CSS mistakes AI assistants make (anecdotal, not benchmarked).
 
 ## Getting Started
 
@@ -17,19 +17,12 @@ Clean Framework provides semantic HTML components with visual warnings for inlin
 The fastest way to get started - no download required:
 
 ```html
-<!-- CSS (Latest version) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/cleanframework.min.css">
-
-<!-- JavaScript (optional) -->
-<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/cleanframework.min.js"></script>
-```
-
-For production, use a specific version:
-```html
-<!-- Locked to version 2.0.1 -->
+<!-- CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.css">
 <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.js"></script>
 ```
+
+Always pin a version (`@v2.0.1`). `@latest` will silently pick up breaking changes on the next major release.
 
 ### Installation
 
@@ -43,13 +36,13 @@ For production, use a specific version:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Clean Framework App</title>
     <!-- Clean Framework CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/cleanframework.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.css">
 </head>
 <body>
     <!-- Your semantic HTML here -->
     
     <!-- Clean Framework JS (optional) -->
-    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/cleanframework.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.js"></script>
 </body>
 </html>
 ```
@@ -59,10 +52,10 @@ For production, use a specific version:
 1. **Download or clone** the repository
 2. **Include the CSS** in your HTML:
    ```html
-   <!-- Development -->
-   <link rel="stylesheet" href="style.css">
+   <!-- Development (source, @imports each component) -->
+   <link rel="stylesheet" href="main.css">
    
-   <!-- Production (minified) -->
+   <!-- Production (minified bundle) -->
    <link rel="stylesheet" href="cleanframework.min.css">
    ```
 3. **Add optional JavaScript** for enhanced functionality:
@@ -113,8 +106,6 @@ When given full repository context, AI assistants consistently make these mistak
 - Reimplementing mobile menus and theme toggles that already work
 - Mixing utility classes with semantic classes
 
-**Success rate with traditional frameworks: ~30%**
-
 ### The Solution
 
 Clean Framework uses **technical constraints** to prevent these mistakes:
@@ -149,7 +140,7 @@ AI gets exact templates to copy instead of improvising:
 <html lang="en">
 <head>
     <title>[Restaurant Name]</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/cleanframework.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.css">
 </head>
 <body>
     <nav class="nav">
@@ -172,12 +163,10 @@ AI gets exact templates to copy instead of improvising:
         </div>
     </section>
     
-    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/cleanframework.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.js"></script>
 </body>
 </html>
 ```
-
-**Result: Success rate improved to ~90%**
 
 ### How to Work with AI Using Clean Framework
 
@@ -217,7 +206,7 @@ When asking AI to build with Clean Framework, say:
 <html lang="en">
 <head>
     <title>Acme Solutions</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/cleanframework.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.css">
 </head>
 <body>
     <nav class="nav">
@@ -242,7 +231,7 @@ When asking AI to build with Clean Framework, say:
         </div>
     </section>
     
-    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@latest/cleanframework.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.js"></script>
 </body>
 </html>
 ```
@@ -279,7 +268,7 @@ Here's a complete working example you can copy and paste:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clean Framework Example</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/cleanframework.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.css">
 </head>
 <body>
     <nav class="nav">
@@ -320,7 +309,7 @@ Here's a complete working example you can copy and paste:
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@master/cleanframework.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v2.0.1/cleanframework.min.js"></script>
 </body>
 </html>
 ```
@@ -392,7 +381,7 @@ Clean Framework includes 30+ essential semantic components:
 - Unified mobile navigation system (no conflicts between header/sidebar)
 - CSS-only icon states and transitions
 - Progressive JavaScript enhancement with event delegation
-- Component-based SCSS architecture using `@use` imports
+- Plain CSS with native nesting, no preprocessor
 - Semantic, accessible HTML with ARIA support
 - **No utility classes** - semantic alternatives to `.hidden`, `.text-center`, etc.
 - Component-specific state management (`.banner-closed`, `.faq-question-open`)
@@ -436,7 +425,6 @@ Self-documenting HTML that remains meaningful over time. As AI tools evolve, thi
 ```
 cleanframework/
 ├── README.md                 # This file
-├── MANIFESTO.md             # Framework philosophy 
 ├── COMPONENTS.md            # Detailed component documentation
 ├── demo/                    # Static HTML demos (GitHub compatible)
 │   ├── index.html           # Main landing page demo
@@ -451,8 +439,9 @@ cleanframework/
 ├── layout-components.php    # Layout components (PHP source)
 ├── marketing-components.php # Marketing components (PHP source)
 ├── components-showcase.php  # All components (PHP source)
-├── style.css               # Compiled CSS (use this in production)
-├── style.scss              # Main SCSS source file
+├── main.css                # CSS source (@imports each component)
+├── cleanframework.min.css  # Built CSS bundle (use this in production)
+├── cleanframework.min.js   # Built JS bundle
 ├── main.js                 # Progressive JavaScript enhancements
 └── components/             # Modular component architecture
     ├── accordion/          # Collapsible content sections
@@ -493,11 +482,7 @@ cleanframework/
 
 ## Documentation
 
-- **[MANIFESTO.md](MANIFESTO.md)** - The philosophy behind Clean Framework
-- **[AI-PHILOSOPHY.md](AI-PHILOSOPHY.md)** - AI-constraining architecture principles and evolution
 - **[COMPONENTS.md](COMPONENTS.md)** - Complete component documentation with examples
-- **[EXTENDING.md](EXTENDING.md)** - How to add new components (includes AI constraints)
-- **[VERSIONING.md](VERSIONING.md)** - Release process and version management
 - **[CHANGELOG.md](CHANGELOG.md)** - Version history and release notes
 - **[CLAUDE.md](CLAUDE.md)** - Instructions for AI assistants working with the framework
 - **PHP source files** - Dynamic examples for local development (requires PHP server)
@@ -506,90 +491,82 @@ cleanframework/
 ## Technical Overview
 
 **Components**: 30+ semantic UI components covering marketing, admin, and general UI needs  
-**CSS Architecture**: Component-based SCSS with CSS custom properties  
+**CSS Architecture**: Component-based plain CSS (native nesting) with CSS custom properties  
 **Dependencies**: None (FontAwesome for icons recommended)  
 **JavaScript**: Optional progressive enhancement with event delegation  
 **Theming**: CSS custom properties with light/dark/system theme switching  
 **Accessibility**: WCAG 2.1 AA compliant with ARIA support and keyboard navigation  
-**Browser Support**: Modern browsers (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)  
+**Browser Support**: Modern browsers (Chrome/Edge 120+, Firefox 117+, Safari 17.2+), because of native CSS nesting  
 **Setup Time**: Under 5 minutes  
 **Philosophy**: Semantic HTML, AI-constraining architecture, no utility classes  
 **AI-Constraining**: Prevents common AI mistakes through technical constraints
 
 ## Browser Support
 
-- ✅ Chrome 90+
-- ✅ Firefox 88+ 
-- ✅ Safari 14+
-- ✅ Edge 90+
+- ✅ Chrome / Edge 120+
+- ✅ Firefox 117+
+- ✅ Safari 17.2+
+
+(Native CSS nesting and `color-mix()` are required.)
 
 ## Development
 
-### SCSS Architecture
+### CSS Architecture
 
-Clean Framework uses a modular SCSS architecture. **Never edit the compiled CSS files directly.**
+Plain CSS with native nesting. No preprocessor. Edit the component files; `main.css` pulls them together with `@import`, so during development you can link `main.css` directly and just refresh.
 
-#### File Structure
 ```
-style.scss                 # Main SCSS file (imports all components)
-style.css                  # Compiled CSS (auto-generated)
-style.min.css              # Minified CSS (auto-generated)
+main.css                   # Source entry (@imports every component)
+cleanframework.min.css     # Built bundle (generated, committed for the CDN)
+cleanframework.min.js      # Built bundle (generated, committed for the CDN)
 components/
-  ├── layout/_layout.scss
-  ├── hero/_hero.scss
-  ├── features/_features.scss
-  ├── buttons/_buttons.scss
-  └── [component]/_[component].scss
+  ├── layout/layout.css
+  ├── hero/hero.css
+  ├── buttons/buttons.css
+  └── [component]/[component].css
 ```
 
-#### Building the Framework
+#### Building
 
-If you want to contribute or modify the framework:
+```bash
+git clone https://github.com/tomvon/cleanframework.git
+npm install
+npm run build        # CSS + JS bundles
+npm test             # build + sanity checks (also runs in CI)
+npm run build:demos  # static demos (needs `php -S localhost:8848` running)
+```
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/tomvon/cleanframework.git
-   ```
+#### Rules
 
-2. **Build the framework**:
-   ```bash
-   ./build.sh
-   ```
-
-3. **Individual build commands**:
-   ```bash
-   # Build CSS only (creates style.css, style.min.css, cleanframework.min.css)
-   npm run build:css
-   
-   # Build JavaScript only (creates cleanframework.js, cleanframework.min.js)
-   npm run build:js
-   
-   # Build demos only (requires local PHP server on port 8848)
-   npm run build:demos
-   ```
-
-#### Important Rules
-
-- ✅ **DO**: Edit SCSS files in `components/` directory
-- ✅ **DO**: Add new styles to appropriate component files
-- ✅ **DO**: Use semantic class names (`.banner-closed`, `.faq-question-open`)
-- ✅ **DO**: Use CSS custom properties for themeable values
-- ✅ **DO**: Implement event delegation instead of inline handlers
-- ❌ **DON'T**: Edit `style.css` or `style.min.css` directly
-- ❌ **DON'T**: Use inline styles or utility classes (`.hidden`, `.text-center`)
-- ❌ **DON'T**: Use non-semantic class names (`.btn-primary-lg-outline`)
+- ✅ Edit the files in `components/`, never the built `*.min.*` files
+- ✅ Semantic class names (`.banner-closed`, `.faq-question-open`)
+- ✅ CSS custom properties for themeable values
+- ✅ Event delegation instead of inline handlers
+- ❌ No inline styles or utility classes (`.hidden`, `.text-center`)
+- ❌ No non-semantic class names (`.btn-primary-lg-outline`)
 
 ### Adding New Components
 
-1. Create `components/[name]/_[name].scss`
-2. Add import to main `style.scss`: `@use 'components/[name]/[name]';`
-3. Compile CSS using the workflow above
+```bash
+npm run create-component
+```
+
+Or by hand: create `components/[name]/[name].css`, add `@import "components/[name]/[name].css";` to `main.css`, then `npm run build`.
+
+### Releasing
+
+```bash
+npm version patch   # or minor / major
+git push --follow-tags
+```
+
+`npm version` rebuilds the bundles, updates the pinned version in the README and AI-README CDN links, commits and tags. Add notes to `CHANGELOG.md` first.
 
 ## Contributing
 
 1. Fork the repository
 2. Create a feature branch
-3. Follow the SCSS architecture guidelines above
+3. Follow the CSS architecture guidelines above
 4. Maintain semantic HTML principles
 5. Test across supported browsers
 6. Submit pull request with clear description
@@ -629,10 +606,7 @@ This approach **constrains AI to success patterns** rather than hoping it rememb
 This framework is optimized for AI-assisted development. If you're using Claude or another AI assistant:
 
 1. Share **[AI-README.md](AI-README.md)** (not the whole repo)
-2. Say "ready for release" when changes are complete  
-3. The AI will handle versioning, building, and release preparation
-
-See **[VERSIONING.md](VERSIONING.md)** for detailed release process.
+2. Say "ready for release" when changes are complete; the AI runs the release steps in CLAUDE.md
 
 ## License
 

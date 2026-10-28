@@ -103,7 +103,7 @@ $framework_features = [
     <title>Clean Framework - Semantic CSS Framework</title>
     <meta name="description" content="Clean Framework: A semantic, component-based CSS framework. No utility pollution, just clean code that makes sense.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="main.css?v=<?= time() ?>">
     <script>
         // Prevent theme flash by setting theme before CSS loads
         (function() {

@@ -4,19 +4,13 @@
   "description": "Semantic CSS framework built for human-AI collaboration. Beautiful websites with intuitive class names that both humans and AI understand.",
   "main": "main.js",
   "scripts": {
-    "build:css": "sass style.scss style.css && sass --style=compressed style.scss cleanframework.min.css",
+    "build:css": "esbuild main.css --bundle --minify --outfile=cleanframework.min.css",
     "build:js": "node build-js.js",
     "build:demos": "php build-demos.php",
-    "build": "npm run build:css && npm run build:js && npm run build:demos",
-    "prebuild": "echo 'Starting Clean Framework build...'",
-    "postbuild": "echo 'Build complete! Ready to push to GitHub.'",
-    "version:patch": "npm version patch && npm run build && npm run version:tag",
-    "version:minor": "npm version minor && npm run build && npm run version:tag",
-    "version:major": "npm version major && npm run build && npm run version:tag",
-    "version:tag": "git push && git push --tags",
-    "release": "npm run build && npm run version:tag",
+    "build": "npm run build:css && npm run build:js",
+    "test": "node test.js",
     "create-component": "node create-component.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "version": "node -e \"const fs=require('fs'),v=require('./package.json').version;for(const f of ['README.md','AI-README.md'])fs.writeFileSync(f,fs.readFileSync(f,'utf8').replace(/cleanframework@v[0-9.]+/g,'cleanframework@v'+v)+'')\" && npm run build && git add README.md AI-README.md cleanframework.min.css cleanframework.min.js"
   },
   "repository": {
     "type": "git",
@@ -42,7 +36,7 @@
   },
   "homepage": "https://github.com/tomvon/cleanframework#readme",
   "devDependencies": {
-    "sass": "^1.90.0",
+    "esbuild": "^0.28.2",
     "terser": "^5.43.1"
   }
 }

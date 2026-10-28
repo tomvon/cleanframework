@@ -19,61 +19,13 @@ When the user says **"ready for release"**, follow the Release Workflow below.
 
 ### When User Says: "ready for release"
 
-1. **First, check current status:**
-```bash
-git status
-git diff --stat
-```
+1. Run `git status` and `git diff --stat`, and `npm test` (must print OK).
+2. Ask: patch (bug fixes), minor (new features, backward compatible) or major (breaking), plus a one-line summary.
+3. Move the `[Unreleased]` items in `CHANGELOG.md` under a new version heading and commit everything.
+4. Run `npm version <patch|minor|major>`. It rebuilds the bundles, updates the pinned `@vX.Y.Z` CDN links in README.md and AI-README.md, commits and tags.
+5. Tell the user to run `git push --follow-tags` (never push for them).
 
-2. **Ask the user:**
-```
-What type of release is this?
-- patch (bug fixes only) 
-- minor (new features, backward compatible)
-- major (breaking changes)
-
-Please also provide a brief summary of the changes.
-```
-
-3. **Based on their response, execute:**
-
-#### For PATCH Release (bug fixes):
-```bash
-# 1. Ensure working directory is clean
-git add -A
-git commit -m "Pre-release updates"
-
-# 2. Bump version
-npm version patch --no-git-tag-version
-
-# 3. Run build
-./build.sh
-
-# 4. Update README CDN links
-# Replace @v1.0.x with new version in README.md
-
-# 5. Update CHANGELOG.md
-# Move items from [Unreleased] to new version section
-
-# 6. Commit release
-git add -A
-git commit -m "Release vX.X.X
-
-- Brief summary of changes"
-
-# 7. Create tag
-git tag -a vX.X.X -m "Release vX.X.X"
-
-# 8. Show user the commands to push
-echo "Ready to push! Run:"
-echo "git push && git push --tags"
-```
-
-#### For MINOR Release (new features):
-Same as patch, but use `npm version minor --no-git-tag-version`
-
-#### For MAJOR Release (breaking changes):
-Same as patch, but use `npm version major --no-git-tag-version`
+CI (`.github/workflows/build.yml`) fails if the committed `cleanframework.min.*` files don't match the source.
 
 ## Development Guidelines
 
@@ -82,14 +34,15 @@ Same as patch, but use `npm version major --no-git-tag-version`
 When adding a new component:
 
 1. **Create component files:**
-   - `components/[name]/_[name].scss` - Styles
+   - `components/[name]/[name].css` - Styles (plain CSS, native nesting, no preprocessor)
    - `components/[name]/[name].js` - JavaScript (if needed)
    - `components/[name]/[name].php` - Demo snippet
 
 2. **Update main files:**
-   - Add `@use 'components/[name]/[name]';` to `style.scss`
+   - Add `@import "components/[name]/[name].css";` to `main.css`
    - Add initialization to `main.js` if component has JS
    - Add to `build-js.js` component list
+   - Or run `npm run create-component`, which does all of the above
 
 3. **Update documentation:**
    - Add to `COMPONENTS.md` with examples
@@ -110,7 +63,7 @@ Always verify before marking "ready for release":
 
 1. **Build runs successfully:**
 ```bash
-./build.sh
+npm run build
 ```
 
 2. **No console errors in demos:**
@@ -122,7 +75,7 @@ Always verify before marking "ready for release":
 
 3. **CSS validates:**
 ```bash
-# Minified CSS should be ~140KB
+# Minified CSS should be ~115KB
 ls -lh cleanframework.min.css
 ```
 
@@ -153,25 +106,12 @@ ls -lh cleanframework.min.js
 3. Add migration notes to CHANGELOG.md
 4. Say "ready for release" and choose "major"
 
-## Release Checklist
-
-Before any release, ensure:
-
-- [ ] All changes committed
-- [ ] Build runs without errors
-- [ ] Demos work correctly
-- [ ] CHANGELOG.md updated
-- [ ] Version number bumped
-- [ ] CDN links in README updated
-- [ ] Git tag created
-- [ ] Ready to push to GitHub
-
 ## CDN URL Patterns
 
 After release, these URLs will work:
 
 ```html
-<!-- Latest (auto-updates) -->
+<!-- Latest: don't use, it picks up breaking changes -->
 @latest
 
 <!-- Specific version (recommended) -->
@@ -186,9 +126,9 @@ After release, these URLs will work:
 
 ## Semantic Versioning Rules
 
-- **1.0.0 → 1.0.1** (PATCH): Bug fixes, typos, small CSS tweaks
-- **1.0.0 → 1.1.0** (MINOR): New components, new features, new options
-- **1.0.0 → 2.0.0** (MAJOR): Breaking changes, renamed classes, removed features
+- **PATCH**: bug fixes, typos, small CSS tweaks
+- **MINOR**: new components, features, options
+- **MAJOR**: breaking changes, renamed classes, removed features
 
 ## Post-Release
 
@@ -238,12 +178,15 @@ The framework prevents AI mistakes rather than relying on AI memory.
 php -S localhost:8848
 
 # Build everything
-./build.sh
+npm run build
 
 # Run specific build
 npm run build:css
 npm run build:js
-npm run build:demos
+npm run build:demos  # needs php -S localhost:8848
+
+# Test (build + sanity checks)
+npm test
 
 # Check current version
 node -p "require('./package.json').version"

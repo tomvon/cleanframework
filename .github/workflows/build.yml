@@ -1,0 +1,13 @@
+name: build
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm ci
+      - run: npm test
+      # The built files are committed (jsDelivr serves them), so they must match the source.
+      - run: git diff --exit-code -- cleanframework.min.css cleanframework.min.js

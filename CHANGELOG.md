@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2026-10-28
+Replace Sass with native CSS nesting, ship only the two minified bundles, simplify the release process, add tests and CI, and trim the docs.
+
+### Changed
+- **BREAKING (browser support)**: source is now plain CSS with native nesting; Sass is gone. Requires Chrome/Edge 120+, Firefox 117+, Safari 17.2+
+- Source entry is `main.css` (`@import`s each component); link it directly during development, no build needed
+- Ship only `cleanframework.min.css` and `cleanframework.min.js`; removed `style.css`, `style.min.css`, `cleanframework.js` and source maps
+- Merged the two identical mobile-nav blocks into a single `@media (max-width: 1100px)`
+- Release is now `npm version <patch|minor|major>` (rebuilds, updates pinned CDN links, tags); removed `build.sh`, `release.sh`, `ai-release.sh`
+- CDN links in docs are pinned to a version instead of `@latest`
+- Builds are deterministic (no date stamps) and `build-info.json` is removed
+
+### Added
+- `npm test` (build + sanity checks) and a GitHub Actions workflow that fails if the committed bundles are stale
+
+### Removed
+- MANIFESTO, ARCHITECTURE, EXTENDING, VERSIONING, AI-PHILOSOPHY and REVIEW-2025 docs (README, COMPONENTS, AI-README and CLAUDE.md remain)
+- The unmeasured "30% to 90% success rate" claim
+
 ## [2.0.1] - 2025-08-24
 Enhanced README.md with comprehensive AI workflow documentation
 

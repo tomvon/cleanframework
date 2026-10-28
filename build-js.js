@@ -37,10 +37,7 @@ async function buildJS() {
     
     let combinedJS = `/**
  * Clean Framework - Combined JavaScript
- * Version: ${new Date().toISOString().split('T')[0]}
- * 
  * This file contains all component JavaScript modules.
- * For production use, include cleanframework.min.js instead.
  */
 
 `;
@@ -84,10 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 `;
     
-    // Write unminified version
-    fs.writeFileSync('cleanframework.js', combinedJS);
-    console.log('✓ Created cleanframework.js');
-    
     // Create minified version
     try {
         const minified = await minify(combinedJS, {
@@ -111,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (minified.code) {
             // Add minimal header to minified version
-            const minifiedWithHeader = `/* Clean Framework JS - ${new Date().toISOString().split('T')[0]} - https://github.com/tomvon/cleanframework */\n${minified.code}`;
+            const minifiedWithHeader = `/* Clean Framework JS - https://github.com/tomvon/cleanframework */\n${minified.code}`;
             fs.writeFileSync('cleanframework.min.js', minifiedWithHeader);
             
             // Calculate size savings

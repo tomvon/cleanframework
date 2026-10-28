@@ -11,8 +11,8 @@ Beta, and an ongoing experiment in working with AI on frontend code.
 ## Use it
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.1/cleanframework.min.css">
-<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.1/cleanframework.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.2/cleanframework.min.css">
+<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.2/cleanframework.min.js"></script>
 ```
 
 The JavaScript is optional (mobile menu, theme toggle, modals, tabs and so on). Pin a version; `@latest` will pick up breaking changes.

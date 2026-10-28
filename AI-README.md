@@ -19,8 +19,8 @@
 
 ## CDN Links (Copy These Exactly)
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.1/cleanframework.min.css">
-<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.1/cleanframework.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.2/cleanframework.min.css">
+<script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.2/cleanframework.min.js"></script>
 ```
 
 ---
@@ -35,7 +35,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[YOUR TITLE]</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.1/cleanframework.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.2/cleanframework.min.css">
 </head>
 <body>
     <!-- Navigation (works automatically) -->
@@ -66,7 +66,7 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.1/cleanframework.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tomvon/cleanframework@v3.0.2/cleanframework.min.js"></script>
 </body>
 </html>
 ```
